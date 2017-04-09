@@ -1,0 +1,91 @@
+﻿@model PagedList.IPagedList<Sough.Models.Ware>
+@using PagedList.Mvc;
+
+@{
+    ViewBag.Title = "wilaya";
+}
+
+@Styles.Render("~/Content/ads")
+<link href="~/Content/css/show-products/wares_byr_searchmain.css" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/index/index.css")" rel="stylesheet" type="text/css" />
+<link href="~/Content/css/toujjar-theme/featurebox_select_wfr.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+    .gw-search {
+        padding-top: 20px;
+        padding-bottom: 20px;
+        padding-left:3px;
+        background-color: #f3fafe; /*#eceff1*/
+        border: 1px solid #ddd;
+        -webkit-border-radius: 4px;
+        -moz-border-radius: 4px;
+        border-radius: 4px;
+    }
+
+    #cat {
+        width: 190px;
+    }
+
+    #ville {
+        width: 155px;
+    }
+</style>
+
+<div id="content">
+    <div class="row">
+        <div class="col-sm-9 col-md-7 gw-search">
+            <form action="../Search/Control" method="post" id="form1" class="navbar-form navbar-left" role="search">
+                <div class="form-group" id="cat">
+                    <select id="basic" name="cat" class="selectpicker show-tick form-control select-navbar" required>
+                        @Html.Partial("_CheckCategorieSelect")
+                    </select>
+                </div>
+                <div class="form-group" id="ville">
+                    <select name="ville" id="basic" class="selectpicker show-tick form-control select-navbar" required>
+                       @Html.Partial("_CheckVilleSelect")
+                    </select>
+                </div>
+                <div class="input-group" id="btn-search">
+                    <div class="input-group-btn">
+                        <button class="btn btn-default" type="submit">Cherche <i class="@Sough.App_Code.Ticons.search"></i></button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <div class="row row-z">
+    </div> <!-- espace -->
+    <div class="row" id="loading" style="display: none;">
+        <div class="row">
+        <div class="col-md-10 text-center">
+            <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
+            <span class="sr-only">Loading...</span>
+        </div>
+        </div>
+    </div>
+    @try {
+        <div id="List">
+            @Html.Partial("~/Views/Ad/_WaresList.cshtml", Model)
+        </div>
+    }
+    catch (Exception e)
+    {
+        <p>Error1 :  </p><br />
+        <p>@e.Data</p>
+        <p>@e.Message</p>
+    }
+
+    
+
+</div>@* End div corps *@
+
+@section Scripts {
+    @Scripts.Render("~/bundles/select-options")
+    @Scripts.Render("~/bundles/select-options")
+
+    <script type="text/javascript" src="~/Scripts/show/wares_by_r.js"></script>
+    
+    @Scripts.Render("~/bundles/select-options")
+
+}

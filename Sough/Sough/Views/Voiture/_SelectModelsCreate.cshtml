@@ -1,0 +1,493 @@
+﻿<div id="brands" style="display:none;">
+    <span>
+        @*onblur="checkModele('select' , 'model_Audi')">*@
+
+
+    <select id="model_Audi" style="display:none;" class="Audi featurebox_select_small"
+            onblur="checkModele('select' , 'model_Audi')">
+        <option id="opt_audi" value=""></option>
+        <option value="100">100</option>
+        <option value="80">80</option>
+        <option value="90">90</option>
+        <option value="A1">A1</option>
+        <option value="A2">A2</option>
+        <option value="A3">A3</option>
+        <option value="A4">A4</option>
+        <option value="A5">A5</option>
+        <option value="A6">A6</option>
+        <option value="A7">A7</option>
+        <option value="A8">A8</option>
+        <option value="Cabriolet">Cabriolet</option>
+        <option value="Coupe">Coupe</option>
+        <option value="Q3">Q3</option>
+        <option value="Q5">Q5</option>
+        <option value="Q7">Q7</option>
+        <option value="R8">R8</option>
+        <option value="Tt">Tt</option>
+        <option value="V8">V8</option>
+        <option value="autre" onclick="autreModeles();">@Sough.Resource.LabelAutre</option>
+    </select>
+</span>
+<span>
+    <select id="model_Bmw" style="display:none;" class="BMW featurebox_select_small"
+            onblur="checkModele('select', 'model_Bmw')">
+        <option value="" id="opt_bmw"></option>
+        <option value="X1">X1</option>
+        <option value="X3">X3</option>
+        <option value="X4">X4</option>
+        <option value="X5">X5</option>
+        <option value="X6">X6</option>
+        <option value="autre" onclick="autreModeles();">@Sough.Resource.LabelAutre</option>
+    </select>
+</span>
+<span>
+    <select id="model_Hyundai" style="display:none;" class="Hyundai featurebox_select_small"
+            onblur="checkModele('select', 'model_Hyundai')">
+        <option value="" id="opt_hyundai"></option>
+        <option value="Elantra">Elantra</option>
+        <option value="Genesis">Genesis</option>
+        <option value="Lantra">Lantra</option>
+        <option value="Matrix">Matrix</option>
+        <option value="Pony">Pony</option>
+        <option value="Satellite">Satellite</option>
+        <option value="Sonata">Sonata</option>
+        <option value="autre" onclick="autreModeles();">@Sough.Resource.LabelAutre</option>
+    </select>
+</span>
+<span>
+    <select id="model_Land-Rover" class="LandRover featurebox_select_small" style="display:none;"
+            onblur="checkModele('select', 'model_Land-Rover')">
+        <option value="" id="opt_landrover"></option>
+        <option value="Range Rover">Range Rover</option>
+        <option value="autre" onclick="autreModeles();">@Sough.Resource.LabelAutre</option>
+    </select>
+</span>
+<span>
+    <select id="model_Mercedes" style="display:none;" class="Mercedes featurebox_select_small"
+            onblur="checkModele('select', 'model_Mercedes')">
+        <option value="" id="opt_mercedes"></option>
+        <option value="190">190</option>
+        <option value="CDI">CDI</option>
+        <option value="300gd">Classe G (300GD)</option>
+        <option value="elegance">Elegance</option>
+        <option value="elegance">ML</option>
+        <option value="autre" onclick="autreModeles();">@Sough.Resource.LabelAutre</option>
+    </select>
+</span>
+
+<span>
+    <select id="model_Nissan" class="Nissan featurebox_select_small" style="display:none;"
+            onblur="checkModele('select', 'model_Nissan')">
+        <option value="" id="opt_nissan"></option>
+        <option value="patrol">Patrol</option>
+        <option value="primera">Primera</option>
+        <option value="sunny">Sunny</option>
+        <option value="autre" onclick="autreModeles();">@Sough.Resource.LabelAutre</option>
+    </select>
+</span>
+
+<span>
+    <select id="model_Renault" class="Renault featurebox_select_small" style="display:none;"
+            onblur="checkModele('select', 'model_Renault')">
+        <option value="" id="opt_renault"></option>
+        <option value="clio">Clio</option>
+        <option value="express">Express</option>
+        <option value="kangoo">Kangoo</option>
+        <option value="Laguna">Laguna</option>
+        <option value="megane">Megane</option>
+        <option value="R4">R4</option>
+        <option value="R5">R5</option>
+        <option value="R9">R9</option>
+        <option value="R11">R11</option>
+        <option value="R19">R19</option>
+        <option value="R21">R21</option>
+        <option value="R25">R25</option>
+        <option value="autre" onclick="autreModeles();">@Sough.Resource.LabelAutre</option>
+    </select>
+</span>
+<span>
+    <select id="model_Toyota" class="Toyota featurebox_select_small" style="display:none;"
+            onblur="checkModele('select', 'model_Toyota')">
+        <option value="" id="opt_toyota"></option>
+        <option value="auris">Auris</option>
+        <option value="avensis">Avensis</option>
+        <option value="camry">Camry</option>
+        <option value="carina">Carina</option>
+        <option value="corolla">Corolla</option>
+        <option value="corolla">GX</option>
+        <option value="hilux">Hilux</option>
+        <option value="land-cruiser">Land Cruiser</option>
+        <option value="prado">Prado</option>
+        <option value="Rav4">Rav 4</option>
+        <option value="v8">V8</option>
+        <option value="corolla">VX</option>
+        <option value="yaris">Yaris</option>
+        <option value="autre" onclick="autreModeles();">@Sough.Resource.LabelAutre</option>
+    </select>
+</span>
+
+<input class="form-control not_modele" type="text" id="not_modele"
+       style="display:none;" onblur="checkModele('input','not_modele');" pattern=" .{0}|.{2,}" />
+
+</div>
+
+
+<script type="text/javascript">
+
+    var car_model = "";
+    var audi = document.getElementById('model_Audi');
+    var bmw = document.getElementById('model_Bmw'); 
+    var mercedes = document.getElementById('model_Mercedes');
+    var nissan = document.getElementById('model_Nissan');
+    var renault = document.getElementById('model_Renault');
+    var toyota = document.getElementById('model_Toyota');
+    var not_modele = document.getElementById('not_modele');
+    var landrover = document.getElementById('model_Land-Rover');
+    var hyundai = document.getElementById('model_Hyundai');
+
+    function getModels(id) {
+
+        console.log("car change");
+
+        var string = "";
+        string = $("select#marque option:selected").text();
+
+        if (string == "Audi") {
+            $("#model").hide();
+
+            if (car_model != "")
+                $("#brands ." + car_model).hide();
+
+            car_model = $("select#marque option:selected").text();
+            audi.setAttribute('name', 'Modele');
+            
+            type_modele = 'select';
+            id_modele = 'model_Audi';
+
+            bmw.setAttribute('name', '');
+            mercedes.setAttribute('name', '');
+            nissan.setAttribute('name', '');
+            renault.setAttribute('name', '');
+            toyota.setAttribute('name', '');
+            not_modele.setAttribute('name', '');
+            landrover.setAttribute('name', '');
+            landrover.style.display = "none";
+            hyundai.style.display = "none";
+
+
+            $("#opt_landrover").text(""); $("#model_Land-Rover").val("");
+            $("#opt_audi").text(""); $("#model_Audi").val("");
+            $("#opt_bmw").text(""); $("#model_Bmw").val("");
+            $("#opt_mercedes").text(""); $("#model_Mercedes").val("");
+            $("#opt_nissan").text(""); $("#model_Nissan").val("");
+            $("#opt_renault").text(""); $("#model_Renault").val("");
+            $("#opt_toyota").text(""); $("#model_Toyota").val("");
+
+            $("#opt_audi").text("Modèle");
+            $("#brands .not_modele").hide();
+            $("#brands .Audi").show();
+            $("#brands").show();
+            $("#div-model").show();
+        }
+        else if (string == "BMW") {
+            $("#model").hide();
+
+            if (car_model != "")
+                $("#brands ." + car_model).hide();
+
+            car_model = $("select#marque option:selected").text();
+            bmw.setAttribute('name', 'Modele');
+
+            type_modele = 'select';
+            id_modele = 'model_Bmw';
+
+            audi.setAttribute('name', '');
+            mercedes.setAttribute('name', '');
+            nissan.setAttribute('name', '');
+            renault.setAttribute('name', '');
+            toyota.setAttribute('name', '');
+            not_modele.setAttribute('name', '');
+            landrover.setAttribute('name', '');
+            landrover.style.display = "none";
+            hyundai.style.display = "none";
+
+
+            $("#opt_landrover").text(""); $("#model_Land-Rover").val("");
+            $("#opt_audi").text(""); $("#model_Audi").val("");
+            $("#opt_bmw").text(""); $("#model_Bmw").val("");
+            $("#opt_mercedes").text(""); $("#model_Mercedes").val("");
+            $("#opt_nissan").text(""); $("#model_Nissan").val("");
+            $("#opt_renault").text(""); $("#model_Renault").val("");
+            $("#opt_toyota").text(""); $("#model_Toyota").val("");
+
+
+            $("#opt_bmw").text("Modèle");
+            $("#brands .not_modele").hide();
+            $("#brands .BMW").show();
+            $("#brands").show();
+            $("#div-model").show();
+        }
+        else if (string == "Hyundai") {
+            $("#model").hide();
+
+            if (car_model != "")
+                $("#brands ." + car_model).hide();
+
+            car_model = $("select#marque option:selected").text();
+            hyundai.setAttribute('name', 'Modele');
+
+            type_modele = 'select';
+            id_modele = 'model_Hyundai';
+
+            audi.setAttribute('name', '');
+            bmw.setAttribute('name', '');
+            mercedes.setAttribute('name', '');
+            nissan.setAttribute('name', '');
+            renault.setAttribute('name', '');
+            toyota.setAttribute('name', '');
+            not_modele.setAttribute('name', '');
+            landrover.setAttribute('name', '');
+            landrover.style.display = "none";
+
+            $("#opt_landrover").text(""); $("#model_Land-Rover").val("");
+            $("#opt_audi").text(""); $("#model_Audi").val("");
+            $("#opt_bmw").text(""); $("#model_Bmw").val("");
+            $("#opt_hyundai").text(""); $("#model_Hyundai").val("");
+            $("#opt_mercedes").text(""); $("#model_Mercedes").val("");
+            $("#opt_nissan").text(""); $("#model_Nissan").val("");
+            $("#opt_renault").text(""); $("#model_Renault").val("");
+            $("#opt_toyota").text(""); $("#model_Toyota").val("");
+
+
+            $("#opt_hyundai").text("Modèle");
+            $("#brands .not_modele").hide();
+            $("#brands .Hyundai").show();
+            $("#brands").show();
+            $("#div-model").show();
+        }
+        else if (string == "Land Rover") {
+            $("#model").hide();
+            console.log("----land rover-----")
+            if (car_model != "")
+                $("#brands ." + car_model).hide();
+
+            car_model = $("select#marque option:selected").text();
+            landrover.setAttribute('name', 'Modele');
+
+            type_modele = 'select';
+            id_modele = 'model_Land-Rover';
+
+            bmw.setAttribute('name', '');
+            mercedes.setAttribute('name', '');
+            nissan.setAttribute('name', '');
+            renault.setAttribute('name', '');
+            toyota.setAttribute('name', '');
+            not_modele.setAttribute('name', '');
+            audi.setAttribute('name', '');
+            hyundai.style.display = "none";
+
+
+            $("#opt_audi").text(""); $("#model_Audi").val("");
+            $("#opt_landrover").text(""); $("#model_Land-Rover").val("");
+            $("#opt_bmw").text(""); $("#model_Bmw").val("");
+            $("#opt_mercedes").text(""); $("#model_Mercedes").val("");
+            $("#opt_nissan").text(""); $("#model_Nissan").val("");
+            $("#opt_renault").text(""); $("#model_Renault").val("");
+            $("#opt_toyota").text(""); $("#model_Toyota").val("");
+
+            $("#opt_landrover").text("Modèle");
+            $("#brands .not_modele").hide();
+            $("#brands .LandRover").show();
+            $("#brands").show();
+            $("#div-model").show();
+        }
+
+        else if (string == "Mercedes") {
+            $("#model").hide();
+
+            if (car_model != "")
+                $("#brands ." + car_model).hide();
+
+            car_model = $("select#marque option:selected").text();
+            mercedes.setAttribute('name', 'Modele');
+
+            type_modele = 'select';
+            id_modele = 'model_Mercedes';
+
+            audi.setAttribute('name', '');
+            bmw.setAttribute('name', '');
+            nissan.setAttribute('name', '');
+            renault.setAttribute('name', '');
+            toyota.setAttribute('name', '');
+            not_modele.setAttribute('name', '');
+            landrover.setAttribute('name', '');
+            landrover.style.display = "none";
+            hyundai.style.display = "none";
+
+
+            $("#opt_landrover").text(""); $("#model_Land-Rover").val("");
+
+            $("#opt_audi").text(""); $("#model_Audi").val("");
+            $("#opt_bmw").text(""); $("#model_Bmw").val("");
+            $("#opt_mercedes").text(""); $("#model_Mercedes").val("");
+            $("#opt_nissan").text(""); $("#model_Nissan").val("");
+            $("#opt_renault").text(""); $("#model_Renault").val("");
+            $("#opt_toyota").text(""); $("#model_Toyota").val("");
+
+
+            $("#opt_mercedes").text("Modèle");
+            $("#brands .not_modele").hide();
+            $("#brands .Mercedes").show();
+            $("#brands").show();
+            $("#div-model").show();
+        }
+        else if (string == "Nissan") {
+            $("#model").hide();
+
+            if (car_model != "")
+                $("#brands ." + car_model).hide();
+
+            car_model = $("select#marque option:selected").text();
+            nissan.setAttribute('name', 'Modele');
+
+            type_modele = 'select';
+            id_modele = 'model_Nissan';
+
+            audi.setAttribute('name', '');
+            bmw.setAttribute('name', '');
+            mercedes.setAttribute('name', '');
+            renault.setAttribute('name', '');
+            toyota.setAttribute('name', '');
+            not_modele.setAttribute('name', '');
+            landrover.setAttribute('name', '');
+            landrover.style.display = "none";
+            hyundai.style.display = "none";
+
+            $("#opt_landrover").text(""); $("#model_Land-Rover").val("");
+
+            $("#opt_audi").text(""); $("#model_Audi").val("");
+            $("#opt_bmw").text(""); $("#model_Bmw").val("");
+            $("#opt_mercedes").text(""); $("#model_Mercedes").val("");
+            $("#opt_nissan").text(""); $("#model_Nissan").val("");
+            $("#opt_renault").text(""); $("#model_Renault").val("");
+            $("#opt_toyota").text(""); $("#model_Toyota").val("");
+
+
+            $("#opt_nissan").text("Modèle");
+            $("#brands .not_modele").hide();
+            $("#brands .Nissan").show();
+            $("#brands").show();
+            $("#div-model").show();
+        }
+
+
+        else if (string == "Renault") {
+            $("#model").hide();
+
+            if (car_model != "")
+                $("#brands ." + car_model).hide();
+
+            car_model = $("select#marque option:selected").text();
+            renault.setAttribute('name', 'Modele');
+
+            type_modele = 'select';
+            id_modele = 'model_Renault';
+
+            audi.setAttribute('name', '');
+            bmw.setAttribute('name', '');
+            mercedes.setAttribute('name', '');
+            nissan.setAttribute('name', '');
+            toyota.setAttribute('name', '');
+            not_modele.setAttribute('name', '');
+            landrover.setAttribute('name', '');
+            landrover.style.display = "none";
+            hyundai.style.display = "none";
+
+            $("#opt_landrover").text(""); $("#model_Land-Rover").val("");
+
+            $("#opt_audi").text(""); $("#model_Audi").val("");
+            $("#opt_bmw").text(""); $("#model_Bmw").val("");
+            $("#opt_mercedes").text(""); $("#model_Mercedes").val("");
+            $("#opt_nissan").text(""); $("#model_Nissan").val("");
+            $("#opt_renault").text(""); $("#model_Renault").val("");
+            $("#opt_toyota").text(""); $("#model_Toyota").val("");
+
+            $("#opt_renault").text("Modèle");
+            $("#brands .not_modele").hide();
+            $("#brands .Renault").show();
+            $("#brands").show();
+            $("#div-model").show();
+        }
+        else if (string == "Toyota") {
+            $("#model").hide();
+
+            if (car_model != "")
+                $("#brands ." + car_model).hide();
+
+            car_model = $("select#marque option:selected").text();
+            toyota.setAttribute('name', 'Modele');
+
+            type_modele = 'select';
+            id_modele = 'model_Toyota';
+
+            audi.setAttribute('name', '');
+            bmw.setAttribute('name', '');
+            mercedes.setAttribute('name', '');
+            nissan.setAttribute('name', '');
+            renault.setAttribute('name', '');
+            not_modele.setAttribute('name', '');
+            landrover.setAttribute('name', '');
+            landrover.style.display = "none";
+            hyundai.style.display = "none";
+
+            $("#opt_landrover").text(""); $("#model_Land-Rover").val("");
+            $("#opt_audi").text(""); $("#model_Audi").val("");
+            $("#opt_bmw").text(""); $("#model_Bmw").val("");
+            $("#opt_mercedes").text(""); $("#model_Mercedes").val("");
+            $("#opt_nissan").text(""); $("#model_Nissan").val("");
+            $("#opt_renault").text(""); $("#model_Renault").val("");
+            $("#opt_toyota").text(""); $("#model_Toyota").val("");
+
+
+            $("#opt_toyota").text("Modèle");
+            $("#brands .not_modele").hide();
+            $("#brands .Toyota").show();
+            $("#brands").show();
+            $("#div-model").show();
+        }
+        else {
+            autreModeles();
+
+        }
+    }
+
+    function autreModeles() {
+
+        type_modele = 'input';
+        id_modele = 'not_modele';
+
+        console.log("une marque n'a pas de modele")
+        audi.setAttribute('name', '');
+        bmw.setAttribute('name', '');
+        mercedes.setAttribute('name', '');
+        nissan.setAttribute('name', '');
+        renault.setAttribute('name', '');
+        toyota.setAttribute('name', '');
+        landrover.setAttribute('name', '');
+        hyundai.setAttribute('name', '');
+        not_modele.setAttribute('name', 'Modele');
+
+        $("#opt_hyundai").text(""); $("#model_Hyundai").hide();
+        $("#opt_landrover").text(""); $("#model_Land-Rover").hide();
+        $("#opt_audi").text(""); $("#model_Audi").hide();
+        $("#opt_bmw").text(""); $("#model_Bmw").hide();
+        $("#opt_mercedes").text(""); $("#model_Mercedes").hide();
+        $("#opt_nissan").text(""); $("#model_Nissan").hide();
+        $("#opt_renault").text(""); $("#model_Renault").hide();
+        $("#opt_toyota").text(""); $("#model_Toyota").hide();
+
+        $("#brands .not_modele").show();
+        $("#brands").show();
+        $("#div-model").show();
+    }
+</script>

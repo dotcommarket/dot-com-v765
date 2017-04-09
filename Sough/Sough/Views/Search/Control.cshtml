@@ -1,0 +1,16 @@
+﻿@model List<Sough.Models.Voiture>
+@model List<Sough.Models.Ammeublement>
+
+@{
+    ViewBag.Title = "Control";
+}
+
+<h1>Control</h1>
+
+@foreach (var car in Model)
+{
+    <p>@car.marque</p><br />
+    
+}
+
+

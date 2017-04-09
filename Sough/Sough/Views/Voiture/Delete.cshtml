@@ -1,0 +1,89 @@
+﻿@model Sough.Models.Voiture
+
+@{
+    ViewBag.Title = "Delete";
+}
+
+<h2>Delete</h2>
+
+<h3>Are you sure you want to delete this?</h3>
+<fieldset>
+    <legend>Voiture</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.prix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.prix)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.marque)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.marque)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Modele)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Modele)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ville)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ville)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.kilometrage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.kilometrage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.carburant)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.carburant)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BoiteDeVitesse)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BoiteDeVitesse)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.trader_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.trader_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phone)
+    </div>
+</fieldset>
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    <p>
+        <input type="submit" value="Delete" /> |
+        @Html.ActionLink("Back to List", "Index")
+    </p>
+}

@@ -1,0 +1,228 @@
+﻿@model Sough.Models.Vetement
+
+@{
+    ViewBag.Title = "Create";
+}
+@Styles.Render("~/Content/create")
+
+<h2>Create</h2>
+
+<form action="~/Vetement/Create" id="form" name="Form" method="post">
+      @Html.AntiForgeryToken()
+      @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Vetement</legend>
+        <input type="hidden" name="image1" id="image1" />
+        <input type="hidden" name="image2" id="image2" />
+        <input type="hidden" name="image3" id="image3" />
+        <input type="hidden" name="image4" id="image4" />
+        <div class="editor-label">
+            @Html.LabelFor(model => model.type)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.type)
+            @Html.ValidationMessageFor(model => model.type)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.description)
+            @Html.ValidationMessageFor(model => model.description)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.trader_name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.trader_name)
+            @Html.ValidationMessageFor(model => model.trader_name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.trader_facebook)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.trader_facebook)
+            @Html.ValidationMessageFor(model => model.trader_facebook)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.trader_instagram)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.trader_instagram)
+            @Html.ValidationMessageFor(model => model.trader_instagram)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.phone)
+            @Html.ValidationMessageFor(model => model.phone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ville)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ville)
+            @Html.ValidationMessageFor(model => model.ville)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.prix)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.prix)
+            @Html.ValidationMessageFor(model => model.prix)
+        </div>
+
+        <div class="row row-images">
+            <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="lbl-img">
+                <h3>@Sough.Resource.LabelImageVoiture</h3>
+            </div>
+
+            <div class="col-xs-6 col-sm-3 col-md-3">
+                <div>
+                    <div>
+                        <input id="_f1" name="files" type="file" accept="image/*"
+                               onchange="loadImage(1,event)" style="visibility:hidden;"
+                               title="Veuillerz selectionné 4 images pour votre voiture" />
+                    </div>
+                    <div id="div-img1" style="padding: 0 !important;">
+                        <span class="img-thumbnail avatar2" style="margin-left: 0 !important;" onclick="imgClickUpload(1);">
+                            <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load1"
+                               style="display:none;"></i>
+                            <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i1"></i>
+
+
+
+                            <i class="span-up">@Sough.Resource.create_lbl_img_main</i>
+                            <img src="" id="output1" style="display:none;" />
+
+
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3" id="div-img2">
+                <div id="multiple">
+                    <!--loadImage(2, event)-->
+                    <input id="_f2" class="multiple" name="files" type="file" accept="image/*" onchange="loadImage(2, event)" style="visibility:hidden;" title="Veuillerz selectionné 4 images pour votre voiture" />
+                    <div>
+                        <span class="img-thumbnail avatar2" onclick="imgClickUpload(2);">
+                            <img src="" id="output2" style="display:none;" />
+                            <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load2"
+                               style="display:none;"></i>
+                            <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i2"></i>
+                        </span>
+                    </div>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3" id="div-img3">
+                <div id="multiple">
+                    <input id="_f3" class="multiple" name="files" type="file" accept="image/*" onchange="loadImage(3, event)" style="visibility:hidden;" title="Veuillerz selectionné 4 images pour votre voiture" />
+                </div>
+                <div>
+                    <span class="img-thumbnail avatar2" onclick="imgClickUpload(3);">
+                        <img src="" id="output3" style="display:none;" />
+                        <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load3"
+                           style="display:none;"></i>
+                        <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i3"></i>
+                    </span>
+                </div>
+            </div>
+            <div class="col-xs-6 col-sm-3 col-md-3" id="div-img4">
+                <div id="multiple">
+                    <input id="_f4" class="multiple" name="files" type="file" accept="image/*" onchange="loadImage(4, event)" style="visibility:hidden;" title="Veuillerz selectionné 4 images pour votre voiture" />
+                </div>
+                <div>
+                    <span class="img-thumbnail avatar2" onclick="imgClickUpload(4);">
+                        <img src="" id="output4" style="display:none;" />
+                        <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load4"
+                           style="display:none;"></i>
+                        <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i4"></i>
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.password)
+            @Html.ValidationMessageFor(model => model.password)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" id="submit" />
+        </p>
+        <p>
+            <input type="submit" value="Verifier" id="show_box" />
+        </p>
+    </fieldset>
+</form>
+
+    <div>
+        @Html.ActionLink("Back to List", "Index")
+    </div>
+
+    <div id="Modal-AD" class="modal-ad" style="display:none;">
+        <div class="content modal-content">
+            <span class="close">×</span>
+            <div class="row">
+                <div class="col-xs-12 modal-ad-bg">
+
+                    <div class="col-xs-5 modal-ad-img-bg">
+                        <ul class="modal-ad-img-bg">
+
+                            <li>
+                                <img id="b_img1" class="modal-ad-image img-reponsive" />
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div class="col-xs-1"></div>
+                    <div class="col-xs-6 modal-ad-data-bg">
+                        <h5 class="modal-ad-h4" id="x"></h5><br />
+                    </div>
+                    <div class="col-xs-6 modal-ad-subdata-bg">
+                        <div id="s_phone"></div>
+                        <div id="s_face" style="margin-top:14px;"></div>
+                        <div id="s_insta" style="margin-top:14px;"></div>
+                        <div id="s_name" style="margin-top:14px;"></div>
+                        <div id="s_email" style="margin-top:14px;"></div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6  col-md-4">
+
+                        <div class="text-center">
+                            <h3 id="txt-h3" class="text-success"></h3>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+    @section Scripts {
+        @Scripts.Render("~/bundles/create")
+        @Scripts.Render("~/bundles/jqueryval")
+    }

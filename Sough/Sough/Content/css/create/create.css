@@ -1,0 +1,235 @@
+﻿
+
+input[type="radio"]
+{
+/*padding:10px;*/
+}
+#lbl-img {
+    margin-bottom: -35px;
+}
+
+#div-img1 {   
+    /*margin-left:-25px;*/
+    padding-left:0 !important;
+}
+
+
+
+#div-img2 {
+    margin-right: 3.7px;
+}
+
+#div-img3 {
+    margin-right: 3.7px;
+}
+
+
+#div-img4 {
+    margin-right: 3.7px;
+}
+
+#div-img5 {
+    margin-right: 30.7px;
+     background: gray;
+     float:left; line-height: 180px;     text-align: center;
+    vertical-align: bottom;
+}
+
+.input-space2 {
+    margin-top: 3.7777777px;
+}
+
+.row-images {
+    /*margin-right: 26.7777777px;*/
+    margin-top: 47.7px;
+    margin-bottom:47px;
+}
+
+
+blockquote{
+    margin-top:90px;
+}
+
+
+.modal-ad-h4 {
+    margin-bottom: -23px;
+}
+
+.modal-ad-bg {
+    background-color: #fefefe;
+}
+
+.modal-ad-data-bg {
+    margin-top: -13px;
+    margin-bottom: 9px;
+}
+
+.modal-ad-subdata-bg {
+    margin-top: -50px; /*la hauteur et la marge top de ligne color et voiture*/
+    margin-left: 20px;
+}
+
+.modal-ad-img-bg {
+    margin-left: -30px;
+    margin-right: -9px;
+}
+
+.modal-ad-data-bg {
+    margin-left: 17px;
+}
+
+.modal-ad-btn-bg {
+    margin-top: -7px;
+}
+
+
+.modal-ad-image {
+    background-size: 100%;
+    width: 100%;
+    height: 150.7px;
+}
+
+
+
+.modal-ad {
+    position: fixed;
+    top: 25%;
+    left: 30%;
+    padding: 2px;
+    /* needed styles for the overlay */
+    z-index: 10; /* keep on top of other elements on the page */
+    overflow: auto;
+    width: 500px;
+    height: auto;
+    padding-left: 20px;
+}
+
+/* Modal Content */
+.modal-content {
+    background-color: #fefefe;
+    margin: auto;
+    padding-left: 20px;
+    padding-right: 20px;
+    padding-bottom: 10px;
+    border: 1px solid #888;
+    width: 100%;
+}
+
+/* The Close Button */
+.close {
+    color: #aaaaaa;
+    float: right;
+    font-size: 28px;
+    font-weight: bold;
+}
+
+    .close:hover,
+    .close:focus {
+        color: #000;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+
+
+
+
+
+/*  images  */
+
+.avatar1, .avatar2 {
+    
+    height: 150px;
+    width: 150px;
+    margin: 0 auto;
+    align-content:center;
+}
+
+
+.avatar2 {
+    display: inline-block;
+    text-align:center;
+    display: block;
+}
+.avatar2 i{
+    text-align:center;
+    display: block;
+    vertical-align:central;
+}
+span .upimg{
+    width:100%;
+    height:100%;
+}
+
+ span:hover,
+    span:focus {
+        cursor: pointer;
+    }
+
+.span-up{
+    color:#aaaaaa;
+}
+
+
+#i1{
+    color:#aaaaaa;
+    margin-top : 40px;
+}
+#i2,#i3,#i4{
+    color:#d7d7d7;
+    margin-top : 50px;
+}
+#load1{
+    color:#aaaaaa;
+    margin-top : 50px;
+}
+#load2,#load3,#load4{
+    color:#d7d7d7;
+    margin-top : 50px;
+}
+
+/* end*/
+
+#col-fb{
+    margin-right:15px;
+}
+
+input[type="radio"]{
+    margin-right:5px;
+}
+.div-radio{
+    margin-right:15px;
+}
+
+.div-icon-info {
+        display: inline-block;
+    }
+
+    .icon-info {
+        margin-top:-10px;
+        margin-right:10px;
+        vertical-align: middle;
+    }
+
+    .t-text {
+        font-family: 'Open Sans', sans-serif;
+        font-size:25px;
+    }
+
+.btn-ok{
+    margin-left:20px;
+}
+.row-submit{
+    margin-top:60px;
+}
+
+.pass-blockquote{
+    margin-top:-30px;
+}
+
+.img-thumbnail{
+    border-radius:3px;
+}
+.img-thumbnail img{
+    border-radius:3px;
+}

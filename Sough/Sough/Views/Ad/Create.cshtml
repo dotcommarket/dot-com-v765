@@ -1,0 +1,28 @@
+﻿@*@model Sough.Models.Ad*@
+
+
+@{
+    ViewBag.Title = "Sujet";  
+}
+
+@Styles.Render("~/Content/featurebox_select")
+
+<div class="container content">
+    <div class="row content">
+        <div class="col-md-6">
+           <span>
+               <div>
+                   <select onchange="setSubject();" id="cat" name="cat" class="featurebox_select_large">
+                       <option value="">&#171;Sujet&#187;</option>
+                       @Html.Partial("_CategoriesController")
+                   </select>
+               </div>
+           </span>
+
+        </div>
+    </div> <!-- fin row content -->
+</div> <!-- fin container content -->
+
+
+@section Scripts {
+    <script type="text/javascript" src="~/Scripts/create/create-ad.js"></script>}

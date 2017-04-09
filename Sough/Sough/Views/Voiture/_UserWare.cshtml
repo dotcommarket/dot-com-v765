@@ -1,0 +1,158 @@
+﻿@model PagedList.IPagedList<Sough.Models.Voiture>
+
+@{
+    Sough.Helpers.TraitementDonnees td = new Sough.Helpers.TraitementDonnees();
+}
+
+@if (Model.Count > 1) { 
+
+    <div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8">
+            <div class="virgule text-center">
+                @if (Model.Count == 2)
+                {
+                <h3>Autre produit de ce commerçant</h3>  
+                }
+                else
+                {
+                <h3>Autres produits de ce commerçant</h3>  
+                }
+            </div>
+
+        </div>
+    </div>
+    </div>
+    
+}
+
+
+    @{
+
+        Sough.Helpers.Tdate t;
+        string src = "";
+
+        for (int i = 0; i < Model.Count; i++)
+        {
+            if((Model.PageNumber == 1) && (i == 0)){ continue; }
+           
+            Sough.Models.Voiture car = Model[i];            
+            t = new Sough.Helpers.Tdate();
+            src = "../Voiture/ShowWare?id=" + car.Id;
+            
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="t-thumbnail">
+                    
+                    <div class="thumbnail">
+                        <img src="@Url.Action("GetAdImageByName", "Voiture",
+                                       routeValues: new { id = car.Id,n=1 })"
+                             class="img-reponsive" alt="loading...">
+                    </div>
+
+                    <div class="caption">
+                        <table>
+                            <tr>
+                                <td><h4>@car.marque</h4></td>
+                                <td><h4>@car.Modele</h4></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <i>@car.kilometrage km</i>
+                                </td>
+                                <td>@car.carburant</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">@car.BoiteDeVitesse</td>
+                                <td>@car.EstNeuf</td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <i class="@Sough.App_Code.Ticons.map_marker">@car.ville</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <span class="label label-success">
+                                        @td.FormaterPrix(car.prix)
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1"><h5>@t.FormaterDate(car.temps, "fr")</h5></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <p>
+                                        <a href="@src" class="btn btn-default" role="button">
+                                            <i class="@Sough.App_Code.Ticons.showAD"></i> @Sough.Resource.btn_entree
+                                        </a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    }
+
+@{
+    if (Model.PageCount > 1)
+    {
+
+<div class="row">
+    <div id="myPager" class="text-center">
+        
+            <div class="pagination-container">
+                <ul class="pagination">
+                     @{
+                        int first = 0;
+                        for (int i = 1; i <= Model.PageCount; i++)
+                        {
+                            string href = "../Voiture/ShowWarePagination?page=" + i;
+                            int page;
+
+                            if ((Model.PageNumber != 1) && (Model.PageCount >= 2) && (first == 0))
+                            {
+                                first = 1;
+                                page = (Model.PageNumber - 1);
+
+                                string prev = "../Voiture/ShowWarePagination?page=" + page;
+                                <li class="PagedList-skipToPrevious">
+                                    <a class="page-number" href="javascript:void();" onclick="aPager('@prev',@page);" rel="prev">
+                                        «
+                                    </a>
+                                </li>
+                            }
+
+                        if (Model.PageNumber == i)
+                        {
+                            <li class="active"><a>@i</a></li>
+                        }
+                        else
+                        {
+                            <li><a class="page-number" href="javascript:void();" onclick="aPager('@href',@i);">@i</a></li>
+                        }
+
+                        if ((Model.PageCount >= 2) && (i == Model.PageCount) && (Model.PageNumber != Model.PageCount))
+                        {
+                            page = (Model.PageNumber + 1);
+                            href = "../Voiture/ShowWarePagination?page=" + page;
+                            <li class="PagedList-skipToNext"><a class="page-number" href="javascript:void();" onclick="aPager('@href',@page);" rel="next">»</a></li>
+                        }
+                      }
+                      }
+                </ul>
+        </div>
+    </div>
+</div>
+
+}
+}
+
+<script type="text/javascript">
+    var loading = document.getElementById('loading');
+    loading.style.display = "none";
+</script>

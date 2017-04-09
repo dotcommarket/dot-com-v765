@@ -1,0 +1,596 @@
+﻿@model Sough.Models.Voiture
+
+@{
+    ViewBag.Title = "Formulaire";
+
+}
+<script type="text/javascript">
+    
+    function estNeufClick(id,x) {
+        var EstNeuf = "";
+        if (document.getElementById('estneuf0').checked == true) {
+            if (x === "Neuf")
+                EstNeuf = "Neuf";
+        } else if (document.getElementById('estneuf1').checked == true) {
+            if (x === "Occasion")
+                EstNeuf = "Occasion";
+        }
+        document.getElementById('estneuf').value = EstNeuf;
+        
+    }
+</script>
+@Styles.Render("~/Content/create")
+<link href="~/Content/css/create/car_create.css" rel="stylesheet" type="text/css" />
+<link href="~/Content/css/toujjar-theme/span-input-select.css" rel="stylesheet" type="text/css" />
+
+<!-- /-->
+<div class="col-xs-12 col-sm-12 col-md-12">
+   
+    <form action="~/Voiture/Create" id="form" name="Form" method="post" 
+          onsubmit="return formValidate();">
+
+        @Html.ValidationSummary(true)
+
+        <fieldset class="container">
+
+            <input type="hidden" id="color" name="color" value="" />
+            <input type="hidden" name="car_shape" id="car_shape" value="" />
+            <input type="hidden" name="EstNeuf" id="estneuf" value="" />
+
+            <input type="hidden" name="image1" id="image1" />
+            <input type="hidden" name="image2" id="image2" />
+            <input type="hidden" name="image3" id="image3" />
+            <input type="hidden" name="image4" id="image4" />
+
+            @if (ViewBag.msg == "ok")
+            {
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6  col-md-7">
+                        <div class="alert alert-info" role="alert">
+
+                            <div class="div-icon-info">
+                                <i class="@Sough.App_Code.Ticons.ok fa-3x icon-info" aria-hidden="true"></i>
+                                <span class="t-text">
+                                    Votre produit est maintenent sur la plate-forme Toujjar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else if (ViewBag.msg == "nook")
+            {
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6  col-md-7">
+                        <div class="alert alert-danger" role="alert">
+
+                            <div class="div-icon-info">
+                                <i class="@Sough.App_Code.Ticons.attention fa-3x icon-info" aria-hidden="true"></i>
+                                <span class="t-text">
+                                    Les données sont incompletes !!
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+            <div class="row leftmarge">
+                <div class="col-xs-12 col-sm-9 col-md-7">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="lbl">
+                                <h3>@Html.LabelFor(model => model.trader_name, new { @class = "control-label" })</h3>
+                            </div>
+                            <div class="controls">
+                                <input class="form-control" type="text" id="name" name="trader_name"
+                                       onblur="checkNom()" pattern=".{0}|.{2,}" />
+                                <p class="help-block" id="help-name"></p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-6 col-sm-6 col-md-2">
+                            <div class="lbl">
+                                <input name="agree_face" type="checkbox" value="" onclick="inputFace()">
+                                @Sough.Resource.LabelFacebook
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-2">
+                            <div class="lbl">
+                                <input name="agree_insta" type="checkbox" value="" onclick="inputInsta();">
+                                @Sough.Resource.LabelInstagram
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="row-sn" style="display:none">
+                        <div class="col-md-6 col-xs-11 col-sm-5" id="col-fb" style="display:none">
+                            <div class="control-group">
+
+                                <div class="input-group margin-bottom-sm" style="margin-right: 33px;">
+                                    <input class="form-control" type="text" id="face_input" name="trader_facebook"
+                                           pattern=".{0}|.{2,}" placeholder="facebook" /><span class="input-group-addon"><i class="fa fa-facebook"></i></span>
+                                </div>
+
+                            </div>
+                            <p class="help-block"></p>
+
+                        </div>
+                        <div class="col-md-6 col-xs-11 col-sm-5" id="col-insta" style="display:none">
+                            <div class="control-group">
+
+                                <div class="input-group margin-bottom-sm" style="position:relative; margin-right: 33px;">
+                                    <input class="form-control" type="text" id="insta_input" name="trader_instagram"
+                                           pattern=".{0}|.{2,}" placeholder="instagram">
+                                    <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.instagram"></i></span>
+                                </div>
+
+                            </div>
+                            <p class="help-block"></p>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6  col-md-5">
+                            <div class="control-group">
+                                <div class="lbl">
+                                    <h3>@Html.LabelFor(model => model.email, new { @class = "control-label" })</h3>
+                                </div>
+                                <div class="input-group margin-bottom-sm" style="position:relative;">
+                                    <input class="form-control" type="email" name="Email" id="email"
+                                           onblur="checkEmail()" style="padding-right: 33px;"
+                                           placeholder="@Sough.Resource.placeholder_email" />
+                                    <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.envelope"></i></span>
+                                </div>
+                            </div>
+                            <p class="help-block" id="help-email"></p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-md-5">
+                            <div class="control-group">
+                                <div class="lbl">
+                                    <h3>@Html.LabelFor(model => model.phone, new { @class = "control-label" })</h3>
+                                </div>
+                                <div class="input-group margin-bottom-sm" style="position:relative;">
+
+                                    <input class="form-control" type="text" id="phone"
+                                           pattern=".{8,13}" name="phone" onblur="checkPhone()"
+                                           required title="minimum 8 numero et maximum 13"
+                                           style="padding-right: 33px;"
+                                           placeholder="@Sough.Resource.create_placeholder_tel" />
+                                    <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.whatsapp"></i></span>
+                                </div>
+                                <p class="help-block" id="help-phone"></p>
+
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-5">
+                    <blockquote>
+                        <p>@Sough.Resource.create_blockquote1_p</p>
+                        <footer>@Sough.Resource.create_blockquote1_footer</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="row input-space1">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <h3>@Html.LabelFor(model => model.marque, new { @class = "control-label" })</h3>
+                    <span>
+                        @*<div id="car_brand_cb_select">*@
+                        @Html.Partial("~/Views/Voiture/_SelectMarqueCreate.cshtml")
+                        @*</div>*@
+                    </span>
+                    <p class="help-block" id="help-marque"></p>
+                </div>
+            </div>
+            <div class="row input-space2">
+                <div class="col-xs-12 col-sm-8 col-md-5" id="div-model" style="display:none;">
+                    <div class="lbl">
+                        <h3>@Html.LabelFor(model => model.Modele, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="btn-group rich_dropdown">
+                        @Html.Partial("~/Views/Voiture/_SelectModelsCreate.cshtml")
+
+                        <p class="help-block" id="help-modele"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+                    
+                    <div class="controls control-label">
+                        <div class="div-radio">
+                            <input type="radio" name="EstNeuf" id="estneuf0" onclick="estNeufClick('estneuf0','Neuf');" value="Neuf">Neuf
+                        </div>
+                        <div class="div-radio">
+                            <input type="radio" name="EstNeuf" id="estneuf1" onclick="estNeufClick('estneuf1','Occasion');" value="Occasion">Occasion
+                        </div>
+                        <p class="help-block" id="help-EstNeuf"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row input-space2">
+                <div class="col-xs-12 col-sm-6  col-md-4">
+                    <div class="lbl">
+                        <h3>@Html.LabelFor(model => model.kilometrage, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="controls">
+                        <div class="input-group">
+                            <input class="form-control" id="kilometrage" type="number" min="0" max="40000000" name="kilometrage" onblur="checkKilometrage();" required /><span class="input-group-addon">km</span>
+                        </div>
+                        <p class="help-block" id="help-kilometrage"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <div class="lbl">
+                        <h3>@Html.LabelFor(model => model.carburant, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="form-group">
+                        <span>
+                            <select name="carburant" id="carburant" class="featurebox_select"
+                                    onblur="selectRequird('carburant', 'help-carburant', 'Selectionnez le type du carburant')"
+                                    required>
+                                <option value="">&#171;@Sough.Resource.select_choisir&#187;</option>
+                                <option value="essance">@Sough.Resource.essance</option>
+                                <option value="gasoile">@Sough.Resource.gasoile</option>
+                            </select>
+                        </span>
+                        <p class="help-block" id="help-carburant"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row input-space2">
+                <div class="col-xs-12">
+                    <h3>@Html.LabelFor(model => model.color, new { @class = "control-label" })</h3><br />
+                    <ul class="car_colors">
+
+                        <li id="grey" onclick="toggleCarColor('grey',2);" class="">
+                            <div title="gris">
+                                <input type="hidden" id="color_grey" />
+                            </div>
+                        </li>
+                        <li id="white" onclick="toggleCarColor('white',1);" class="">
+                            <div title="blanc">
+                                <input type="hidden" id="color_white" />
+                            </div>
+                        </li>
+                        <li id="brown" onclick="toggleCarColor('brown',3);" class="">
+                            <div title="marron">
+                                <input type="hidden" id="color_brown" />
+                            </div>
+                        </li>
+                        <li id="black" onclick="toggleCarColor('black',4);" class="">
+                            <div title="noire"> <input type="hidden" id="color_black" /> </div>
+                        </li>
+                        <li id="red" onclick="toggleCarColor('red',5);" class="">
+                            <div title="rouge">
+                                <input type="hidden" id="color_red" />
+                            </div>
+                        </li>
+                        <li id="yellow" onclick="toggleCarColor('yellow',6);" class="">
+                            <div title="jaune">
+                                <input type="hidden" id="color_yellow" />
+                            </div>
+                        </li>
+                        <li id="green" onclick="toggleCarColor('green',7);" class="">
+                            <div title="vert">
+                                <input type="hidden" id="color_green" />
+                            </div>
+                        </li>
+                        <li id="blue" onclick="toggleCarColor('blue',8);" class="">
+                            <div title="bleu">
+                                <input type="hidden" id="color_blue" />
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="car_shapes">
+
+                        <li id="cs_2" class="car_shape_2 car_shape_box_black" onclick="toggleCarShape('SUV', '2');">
+                            <div class="ic-1-b" id="vic1"></div>
+                            <div class="lbl">
+                                SUV
+                            </div>
+                        </li>
+                        <li id="cs_3" class="car_shape_3 car_shape_box_black" onclick="toggleCarShape('Berline', '3');">
+                            <div class="ic-2-b" id="vic2"></div>
+                            <div class="lbl">
+                                Berline
+                            </div>
+                        </li>
+                        <li id="cs_4" class="car_shape_4 car_shape_box_black" onclick="toggleCarShape('Pickup', '4');">
+                            <div class="ic-3-b" id="vic3"></div>
+                            <div class="lbl">Pickup</div>
+                        </li>
+                        <li id="cs_5" class="car_shape_5 car_shape_box_black" onclick="toggleCarShape('Break', '5');">
+                            <div class="ic-4-b" id="vic4"></div>
+                            <div class="lbl">
+                                Break
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3" style="margin-top:25px;">
+                    <p class="help-block" id="help-color-shape"></p>
+                </div>
+            </div>
+
+            <div class="row input-space2">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <div>
+                        <h3>@Html.LabelFor(model => model.BoiteDeVitesse, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="form-group">
+                        <span>
+                            <select name="BoiteDeVitesse" id="boite" class="featurebox_select"
+                                    onblur="selectRequird('boite', 'help-boite', 'Selectionnez le type du boite')"
+                                    required>
+                                <option value="">&#171;@Sough.Resource.select_choisir&#187;</option>
+                                <option value="manuel">@Sough.Resource.manuel</option>
+                                <option value="automatique">@Sough.Resource.automatique</option>
+                            </select>
+                        </span>
+                        <p class="help-block" id="help-boite"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row input-space1">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <h3>@Html.LabelFor(model => model.ville, new { @class = "control-label" })</h3>
+                    <div class="form-group">
+                        <span>
+                            <select name="ville" id="ville" class="featurebox_select"
+                                    onblur="selectRequird('ville', 'help-ville', 'Selectionnez une ville')"
+                                    required>
+                                @Html.Partial("_VillesSelect")
+                            </select>
+                        </span>
+                        <p class="help-block" id="help-ville"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row content">
+                <div class="col-xs-12 col-sm-6  col-md-4">
+                    <div class="lbl">
+                        <h3>@Html.LabelFor(model => model.prix, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="controls">
+                        <div class="input-group">
+                            <input type="number" id="prix" class="form-control" min="200000" max="400000000" name="prix" onblur="checkPrix();" required />
+                            <span class="input-group-addon">@Sough.Resource.uguiya</span>
+                        </div>
+                        <p class="help-block" id="help-prix"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-images">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="lbl-img">
+                    <h3>@Sough.Resource.LabelImageVoiture</h3>
+                </div>
+                
+                <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div>
+                        <div>
+                            <input id="_f1" name="files" type="file" accept="image/*"
+                                   onchange="loadImage(1,event)" style="visibility:hidden;"
+                                   title="Veuillerz selectionné 4 images pour votre voiture" />
+                        </div>
+                        <div id="div-img1" style="padding: 0 !important;">
+                            <span class="img-thumbnail avatar2" style="margin-left: 0 !important;" onclick="imgClickUpload(1);">
+                                <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load1"
+                                   style="display:none;"></i>
+                                <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i1"></i>
+
+
+
+                                <i class="span-up">@Sough.Resource.create_lbl_img_main</i>
+                                <img src="" id="output1" style="display:none;" />
+
+
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3" id="div-img2">
+                    <div id="multiple">
+                        <!--loadImage(2, event)-->
+                        <input id="_f2" class="multiple" name="files" type="file" accept="image/*" onchange="loadImage(2, event)" style="visibility:hidden;" title="Veuillerz selectionné 4 images pour votre voiture" />
+                        <div>
+                            <span class="img-thumbnail avatar2" onclick="imgClickUpload(2);">
+                                <img src="" id="output2" style="display:none;" />
+                                <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load2"
+                                   style="display:none;"></i>
+                                <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i2"></i>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3" id="div-img3">
+                    <div id="multiple">
+                        <input id="_f3" class="multiple" name="files" type="file" accept="image/*" onchange="loadImage(3, event)" style="visibility:hidden;" title="Veuillerz selectionné 4 images pour votre voiture" />
+                    </div>
+                    <div>
+                        <span class="img-thumbnail avatar2" onclick="imgClickUpload(3);">
+                            <img src="" id="output3" style="display:none;" />
+                            <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load3"
+                               style="display:none;"></i>
+                            <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i3"></i>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-3 col-md-3" id="div-img4">
+                    <div id="multiple">
+                        <input id="_f4" class="multiple" name="files" type="file" accept="image/*" onchange="loadImage(4, event)" style="visibility:hidden;" title="Veuillerz selectionné 4 images pour votre voiture" />
+                    </div>
+                    <div>
+                        <span class="img-thumbnail avatar2" onclick="imgClickUpload(4);">
+                            <img src="" id="output4" style="display:none;" />
+                            <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load4"
+                               style="display:none;"></i>
+                            <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i4"></i>
+                        </span>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row content" style="margin-top:-20px;">
+                <div class="col-xs-12 col-sm-12 col-md-4">
+                    <p class="help-block" id="help-image"></p>
+                </div>
+            </div>
+
+            <div class="row input-space1 content">
+                <div class="col-xs-12 col-sm-8 col-md-7">
+                    <div class="col-xs-12 col-sm-8  col-md-8">
+                        <div class="control-group">
+                            <h3>@Sough.Resource.LabelPassword</h3>
+                            <div class="controls input-group margin-bottom-sm">
+                                <input class="form-control" type="password" onblur="checkPass();" id="password" name="password"
+                                       placeholder="@Sough.Resource.placeholder_password" required>
+                                <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.ilock"></i></span>
+                            </div>
+                            <p class="help-block" id="help-pass"></p>
+                        </div>
+
+                    </div>
+
+                    <div class="col-xs-12 col-sm-6  col-md-8">
+                        <div class="control-group">
+                            <h3>@Sough.Resource.LabelPasswordConfirme</h3>
+                            <div class="controls input-group margin-bottom-sm">
+                                <input class="form-control" name="password" type="password" id="conf_pass" onblur="checkConfPass();" required />
+                                <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.ilock"></i></span>
+
+                            </div>
+                            <p class="help-block" id="help-conf-pass"></p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-5">
+                    <div class="pass-blockquote">
+                        <blockquote id="blockquote-pass">
+                            <p>@Sough.Resource.create_pourquoi</p>
+                            <footer>@Sough.Resource.pourquoi_pass</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row input-space1 hidden-xs row-submit">
+                <!-- row md-->
+                <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div>
+                        <button type="button" id="show_box" class="btn Btn2">
+                            <span class="@Sough.App_Code.Ticons.camera"></span>
+                            @Sough.Resource.btn2
+                        </button>
+                    </div>
+                </div>
+                <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div class="btn-ok">
+                        <button type="submit" onclick="formValidate();" id="submit" class="btn Btn1">
+                            <span class="@Sough.App_Code.Ticons.ok"></span>
+                            @Sough.Resource.btn1
+                        </button>
+                    </div>
+                </div>
+            </div>
+            <div class="row input-space1 hidden-sm hidden-md hidden-lg input-space1">
+                <!-- row sm-->
+
+                <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div>
+                        <button type="submit" onclick="formValidate();" id="submit" class="btn Btn1">
+                            <span class="@Sough.App_Code.Ticons.ok"></span>
+                            @Sough.Resource.btn1
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+
+    </form>
+
+</div>
+  <div id="Modal-AD" class="modal-ad" style="display:none;">
+    <div class="content modal-content">
+        <span class="close">×</span>
+        <div class="row">
+            <div class="col-xs-12 modal-ad-bg">
+
+                <div class="col-xs-5 modal-ad-img-bg">
+                    <ul class="modal-ad-img-bg">
+
+                        <li>
+                            <img id="b_img1" class="modal-ad-image img-reponsive" />
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-1"></div>
+                <div class="col-xs-6 modal-ad-data-bg">
+                    <h5 class="modal-ad-h4" id="s_marque"></h5><br />
+                    <h5 class="modal-ad-h4" id="s_modele"></h5><br />
+                    <h5 class="modal-ad-h4" id="s_kilometrage"></h5><br />
+                    <h5 class="modal-ad-h4" id="s_carburant"></h5><br />
+                    <h5 class="modal-ad-h4" id="s_boite"></h5><br />
+                    <h5 class="modal-ad-h4" id="s_ville"></h5><br />
+                    <h5 class="modal-ad-h4" id="s_EstNeuf"></h5><br />
+                    <ul class="car_colors modal-car_colors">
+                        <li id="" class="show-li-color">
+                            <div></div>
+                        </li>
+                        <li class="show-li-car">
+                            <div class="" id="vic" style="width:64px;height:38px;"></div>
+                        </li>
+
+                    </ul>
+                </div>
+                <div class="col-xs-6 modal-ad-subdata-bg">
+                    <div id="s_phone"></div>
+                    <div id="s_face" style="margin-top:14px;"></div>
+                    <div id="s_insta" style="margin-top:14px;"></div>
+                    <div id="s_name" style="margin-top:14px;"></div>
+                    <div id="s_email" style="margin-top:14px;"></div>
+                </div>
+                <div class="col-xs-12 col-sm-6  col-md-4">
+
+                    <div class="text-center">
+                        <h3 id="txt-h3" class="text-success"></h3>
+                    </div>
+
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+</div>
+
+    @section Scripts {
+           
+        <script type="text/javascript" src="~/Scripts/create/car_validation.js"></script>
+        <script type="text/javascript" src="~/Scripts/create/car-create-js.js"></script>
+       
+        @Scripts.Render("~/bundles/create")
+    }

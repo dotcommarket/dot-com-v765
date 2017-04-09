@@ -1,0 +1,94 @@
+﻿@model PagedList.IPagedList<Sough.Models.Vetement>
+
+@{
+    Sough.Helpers.TraitementDonnees td = new Sough.Helpers.TraitementDonnees();
+}
+
+@if (Model.Count > 1) { 
+
+    <div class="content">
+    <div class="row">
+        <div class="col-xs-12 col-sm-12 col-md-8">
+            <div class="virgule text-center">
+                @if (Model.Count == 2)
+                {
+                <h3>Autre produit de ce commerçant</h3>  
+                }
+                else
+                {
+                <h3>Autres produits de ce commerçant</h3>  
+                }
+            </div>
+
+        </div>
+    </div>
+    </div>
+    
+}
+
+
+    @{
+
+        Sough.Helpers.Tdate t;
+        string src = "";
+
+        for (int i = 0; i < Model.Count; i++)
+        {
+            Sough.Models.Vetement car = Model[i];
+            if (i == Model.Count - 1)
+            {
+                System.Diagnostics.Debug.WriteLine("Last item in list");
+                break;
+            }
+            t = new Sough.Helpers.Tdate();
+            src = "../Vetement/ShowWare?id=" + car.Id;
+            <div class="col-xs-12 col-sm-3 col-md-3">
+                <div class="t-thumbnail">
+                    
+                    <div class="thumbnail">
+                        <img src="@Url.Action("GetAdImageByName", "Vetement",
+                                       routeValues: new { id = car.Id,n=1 })"
+                             class="img-reponsive" alt="loading...">
+                    </div>
+
+                    <div class="caption">
+                        <table>
+                            <tr>
+                                <td><h4>@car.type</h4></td>
+                            </tr>
+                            <tr>
+                                <td>@car.description</td>
+                            </tr>
+                            
+                            <tr>
+                                <td class="td1">
+                                    <i class="@Sough.App_Code.Ticons.map_marker">@car.ville</i>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <span class="label label-success">
+                                        @td.FormaterPrix(car.prix)
+                                    </span>
+                                </td>
+                            </tr>
+                            <tr>
+                                <td class="td1"><h5>@t.FormaterDate(car.temps, "fr")</h5></td>
+                            </tr>
+                            <tr>
+                                <td class="td1">
+                                    <p>
+                                        <a href="@src" class="btn btn-default" role="button">
+                                            <i class="@Sough.App_Code.Ticons.showAD"></i> @Sough.Resource.btn_entree
+                                        </a>
+                                    </p>
+                                </td>
+                            </tr>
+                        </table>
+
+                    </div>
+                </div>
+            </div>
+
+        }
+    }

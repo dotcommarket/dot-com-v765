@@ -1,0 +1,126 @@
+﻿@model Sough.Models.Vetement
+
+@{
+    ViewBag.Title = "Edit";
+}
+
+<h2>Edit</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>Vetement</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.type)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.type)
+            @Html.ValidationMessageFor(model => model.type)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.description)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.description)
+            @Html.ValidationMessageFor(model => model.description)
+        </div>
+
+        @Html.HiddenFor(model => model.Id)
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.trader_name)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.trader_name)
+            @Html.ValidationMessageFor(model => model.trader_name)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.email)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.email)
+            @Html.ValidationMessageFor(model => model.email)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.trader_facebook)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.trader_facebook)
+            @Html.ValidationMessageFor(model => model.trader_facebook)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.trader_instagram)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.trader_instagram)
+            @Html.ValidationMessageFor(model => model.trader_instagram)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.phone)
+            @Html.ValidationMessageFor(model => model.phone)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ville)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ville)
+            @Html.ValidationMessageFor(model => model.ville)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.prix)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.prix)
+            @Html.ValidationMessageFor(model => model.prix)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.temps)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.temps)
+            @Html.ValidationMessageFor(model => model.temps)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.img_count)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.img_count)
+            @Html.ValidationMessageFor(model => model.img_count)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.password)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.password)
+            @Html.ValidationMessageFor(model => model.password)
+        </div>
+
+        <p>
+            <input type="submit" value="Save" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

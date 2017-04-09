@@ -1,0 +1,111 @@
+﻿@model Sough.Models.Voiture
+
+@{
+    ViewBag.Title = "Details";
+    long _id = -1;
+    _id = Model.Id;
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Voiture</legend>
+    <div class="display-label">
+        Id
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Id)
+    </div>
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.prix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.prix)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.marque)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.marque)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.Modele)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.Modele)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ville)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ville)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.kilometrage)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.kilometrage)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.carburant)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.carburant)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.BoiteDeVitesse)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.BoiteDeVitesse)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phone)
+    </div>
+    @if (_id != -1)
+    {
+        <div class="row">
+            <div class="col-xs-2">
+                <img width="100" height="100" class="img img-rounded"
+                     src="@Url.Action("GetAdImageByName", "Voiture",
+                          routeValues: new { id = _id,n=1 })" />
+            </div>
+            <div class="col-xs-2">
+                <img width="100" height="100" class="img img-rounded"
+                     src="@Url.Action("GetAdImageByName", "Voiture",
+                          routeValues: new { id = _id,n=2 })" />
+            </div>
+            <div class="col-xs-2">
+                <img width="100" height="100" class="img img-rounded"
+                     src="@Url.Action("GetAdImageByName", "Voiture",
+                          routeValues: new { id = _id,n=3 })" />
+            </div>
+            <div class="col-xs-2">
+                <img width="100" height="100" class="img img-rounded"
+                     src="@Url.Action("GetAdImageByName", "Voiture",
+                          routeValues: new { id = _id,n=4 })" />
+            </div>
+    </div>
+    }
+    
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    @Scripts.Render("~/bundles/js")
+}

@@ -1,0 +1,197 @@
+﻿
+.HomepageCategories-item-figure::after {
+    -webkit-transform: scale(.9);
+    transform: scale(.9);
+    opacity: .3;
+    top: -1px;
+    left: -1px;
+    border: 2px solid #a4def5;
+}
+
+.HomepageCategories-item-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.HomepageCategories-item-price {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.43;
+    color: #34b5e8;
+}
+
+.HomepageCategories-item-figure {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto 20px;
+    border-radius: 50%;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+    .HomepageCategories-item-figure::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 148px;
+        height: 148px;
+        border: 2px solid #DEDEDE;
+        border-radius: 50%;
+        -webkit-transition: all .1s ease-out;
+        transition: all .1s ease-out;
+        content: "";
+    }
+
+.HomepageCategories-item-image {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-top: 48px;
+}
+
+.HomepageCategories-item-link {
+    color: inherit;
+}
+
+    .HomepageCategories-item-link:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+        .HomepageCategories-item-link:hover .HomepageCategories-item-figure::after {
+            -webkit-transform: scale(.9);
+            transform: scale(.9);
+            opacity: .3;
+            top: -1px;
+            left: -1px;
+            border: 2px solid #a4def5;
+        }
+
+.HomepageCategories-item-name {
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.HomepageCategories-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    margin-left: -12px;
+    margin-right: -12px;
+    zoom: 1;
+    
+}
+
+    .HomepageCategories-list:after, .HomepageCategories-list:before {
+        content: "";
+        display: table;
+    }
+
+    .HomepageCategories-list:after {
+        clear: both;
+    }
+
+.HomepageCategories-item {
+    position: relative;
+    min-height: 1px;
+    padding-left: 12px;
+    padding-right: 12px;
+    margin-bottom: 20px;
+    text-align: center;
+}
+
+
+
+.HomepageCategories-item-link {
+    color: inherit;
+}
+
+    .HomepageCategories-item-link:hover {
+        text-decoration: none;
+        color: inherit;
+    }
+
+        .HomepageCategories-item-link:hover .HomepageCategories-item-figure::after {
+            -webkit-transform: scale(.9);
+            transform: scale(.9);
+            opacity: .3;
+            top: -1px;
+            left: -1px;
+            border: 2px solid #a4def5;
+        }
+
+.HomepageCategories-item-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    font-size: 1.25rem;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+.HomepageCategories-item-price {
+    font-size: 14px;
+    font-size: .875rem;
+    line-height: 1.43;
+    color: #34b5e8;
+}
+
+.HomepageCategories-item-figure {
+    display: block;
+    position: relative;
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    border-radius: 50%;
+    -webkit-transition: all .2s ease-out;
+    transition: all .2s ease-out;
+}
+
+    .HomepageCategories-item-figure::after {
+        display: block;
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 148px;
+        height: 148px;
+        border: 2px solid #b7b7b7;
+        border-radius: 50%;
+        -webkit-transition: all .1s ease-out;
+        transition: all .1s ease-out;
+        content: "";
+    }
+
+.HomepageCategories-item-image {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-top: 48px;
+}
+
+.HomepageCategories-item-image {
+    display: inline-block;
+    width: 64px;
+    height: 64px;
+    margin-top: 48px;
+}
+
+.HomepageCategories-item-name {
+    margin-bottom: 10px;
+    font-size: 20px;
+    line-height: 1.6;
+    font-weight: 400;
+}
+
+#icon-car-fr {
+    background: url("/Content/icons/car_64.png") center;
+}
+#icon-vetement-fr{
+    background: url("/Content/icons/shirt.png") center;
+}

@@ -1,0 +1,99 @@
+﻿@model Sough.Models.Vetement
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Vetement</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.type)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.type)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.description)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.description)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.trader_name)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.trader_name)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.trader_facebook)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.trader_facebook)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.trader_instagram)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.trader_instagram)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ville)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ville)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.prix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.prix)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.temps)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.temps)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.img_count)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.img_count)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.password)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.password)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

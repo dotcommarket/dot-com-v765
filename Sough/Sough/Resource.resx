@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <data name="adPrix" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="categorie" xml:space="preserve">
+    <value>التصنيف</value>
+  </data>
+  <data name="btn1" xml:space="preserve">
+    <value>تم</value>
+  </data>
+  <data name="LabelEmail" xml:space="preserve">
+    <value>البريد الألكتروني</value>
+  </data>
+  <data name="info" xml:space="preserve">
+    <value>المعلومات</value>
+  </data>
+  <data name="nom" xml:space="preserve">
+    <value>الإسم</value>
+  </data>
+  <data name="phone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="prix" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="ville" xml:space="preserve">
+    <value>المدينة</value>
+  </data>
+  <data name="villeRqd" xml:space="preserve">
+    <value>ادخل اسم المدينة التي تتواجد فيها</value>
+  </data>
+  <data name="LabelTraderName" xml:space="preserve">
+    <value>الإسم</value>
+  </data>
+  <data name="LabelBoiteDeVitesse" xml:space="preserve">
+    <value>ابوات فيتس</value>
+  </data>
+  <data name="LabelCarburant" xml:space="preserve">
+    <value>نوعية الوقود</value>
+  </data>
+  <data name="LabelKilometrage" xml:space="preserve">
+    <value>المسافة المقطوعة</value>
+  </data>
+  <data name="LabelMarque" xml:space="preserve">
+    <value>نوع السيارة</value>
+  </data>
+  <data name="LabelPrix" xml:space="preserve">
+    <value>السعر</value>
+  </data>
+  <data name="LabelVille" xml:space="preserve">
+    <value>المدينة</value>
+  </data>
+  <data name="LabelModele" xml:space="preserve">
+    <value>المودل</value>
+  </data>
+  <data name="LabelPhone" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="tc" xml:space="preserve">
+    <value>جميع الفئات</value>
+  </data>
+  <data name="LabelPassword" xml:space="preserve">
+    <value>اختر كلمة مرور</value>
+  </data>
+  <data name="LabelIamAgree" xml:space="preserve">
+    <value>أنا موافق على شروط الإستخدام</value>
+  </data>
+  <data name="btn2" xml:space="preserve">
+    <value>شاهد شكل الإعلان</value>
+  </data>
+  <data name="LabelCartier" xml:space="preserve">
+    <value>الحي</value>
+  </data>
+  <data name="LabelEstMeuble" xml:space="preserve">
+    <value>مفروش أو غير مفروش</value>
+  </data>
+  <data name="LabelImageVoiture" xml:space="preserve">
+    <value>اربع صور أساسيين</value>
+  </data>
+  <data name="LabelLoyerMensuel" xml:space="preserve">
+    <value>سعر الإيجار للشهر</value>
+  </data>
+  <data name="LabelPieces" xml:space="preserve">
+    <value>عدد الغرف</value>
+  </data>
+  <data name="LabelSurface" xml:space="preserve">
+    <value>المساحة</value>
+  </data>
+  <data name="LabelTypeDeBien" xml:space="preserve">
+    <value>نوع العقار</value>
+  </data>
+  <data name="select_choisir" xml:space="preserve">
+    <value>اختيار</value>
+  </data>
+  <data name="select_ville_aioun" xml:space="preserve">
+    <value>لعيون</value>
+  </data>
+  <data name="select_ville_akjoujt" xml:space="preserve">
+    <value>اكجوجت</value>
+  </data>
+  <data name="select_ville_aleg" xml:space="preserve">
+    <value>ألاك</value>
+  </data>
+  <data name="select_ville_atar" xml:space="preserve">
+    <value>أطار</value>
+  </data>
+  <data name="select_ville_kaedi" xml:space="preserve">
+    <value>كيهيدي</value>
+  </data>
+  <data name="select_ville_kiffa" xml:space="preserve">
+    <value>كيفة</value>
+  </data>
+  <data name="select_ville_ndb" xml:space="preserve">
+    <value>انواذيبو</value>
+  </data>
+  <data name="select_ville_nema" xml:space="preserve">
+    <value>النعمة</value>
+  </data>
+  <data name="select_ville_nktt" xml:space="preserve">
+    <value>انواكشوط</value>
+  </data>
+  <data name="select_ville_rosso" xml:space="preserve">
+    <value>روصو</value>
+  </data>
+  <data name="select_ville_selibaby" xml:space="preserve">
+    <value>سيليبابي</value>
+  </data>
+  <data name="select_ville_tidjikja" xml:space="preserve">
+    <value>تجكجة</value>
+  </data>
+  <data name="select_ville_zouerate" xml:space="preserve">
+    <value>ازويرات</value>
+  </data>
+  <data name="uguiya" xml:space="preserve">
+    <value>اوقية</value>
+  </data>
+  <data name="UnOuPlus" xml:space="preserve">
+    <value>واحدة أو أكثر</value>
+  </data>
+  <data name="CreatAdValueBtn" xml:space="preserve">
+    <value>valider</value>
+  </data>
+  <data name="SGb" xml:space="preserve">
+    <value>Gb</value>
+  </data>
+  <data name="SMP" xml:space="preserve">
+    <value>MP</value>
+  </data>
+  <data name="LabelVilles" xml:space="preserve">
+    <value>المدن</value>
+  </data>
+  <data name="select_ville_guerou" xml:space="preserve">
+    <value>كرو</value>
+  </data>
+  <data name="select_ville_magta_lahjar" xml:space="preserve">
+    <value>مقطع لحجار</value>
+  </data>
+  <data name="label_couleur_et_type" xml:space="preserve">
+    <value>لون و شكل السيارة</value>
+  </data>
+  <data name="LabelPasswordConfirme" xml:space="preserve">
+    <value>أعد كتابة كلمة المرور</value>
+  </data>
+  <data name="LabelAutre" xml:space="preserve">
+    <value>آخر</value>
+  </data>
+  <data name="LabelFacebook" xml:space="preserve">
+    <value>فيس بوك</value>
+  </data>
+  <data name="LabelInstagram" xml:space="preserve">
+    <value>انستااكرام</value>
+  </data>
+  <data name="LabelCylindre" xml:space="preserve">
+    <value />
+  </data>
+  <data name="LabelVitesse" xml:space="preserve">
+    <value>السرعة</value>
+  </data>
+  <data name="automatique" xml:space="preserve">
+    <value>اتوماتيك</value>
+  </data>
+  <data name="essance" xml:space="preserve">
+    <value>اسانس</value>
+  </data>
+  <data name="gasoile" xml:space="preserve">
+    <value>كزوال</value>
+  </data>
+  <data name="manuel" xml:space="preserve">
+    <value>مانييل</value>
+  </data>
+  <data name="Neuf_fem" xml:space="preserve">
+    <value>جديدة</value>
+  </data>
+  <data name="Neuf_mas" xml:space="preserve">
+    <value>جديد</value>
+  </data>
+  <data name="Occasion_fem" xml:space="preserve">
+    <value>مستعملة</value>
+  </data>
+  <data name="Occasion_mas" xml:space="preserve">
+    <value>مستعمل</value>
+  </data>
+  <data name="placeholder_email" xml:space="preserve">
+    <value>xyz@example.com</value>
+  </data>
+  <data name="placeholder_password" xml:space="preserve">
+    <value>كلمة المرور</value>
+  </data>
+  <data name="create_lbl_img_main" xml:space="preserve">
+    <value>الصورة الرئيسية</value>
+  </data>
+  <data name="create_blockquote1_footer" xml:space="preserve">
+    <value>فقط رقم الهاتف إجباري.</value>
+  </data>
+  <data name="create_blockquote1_p" xml:space="preserve">
+    <value>بيانات التاجر.</value>
+  </data>
+  <data name="create_placeholder_tel" xml:space="preserve">
+    <value>رقم الهاتف</value>
+  </data>
+  <data name="btn_entree" xml:space="preserve">
+    <value>ادخل</value>
+  </data>
+  <data name="create_pourquoi" xml:space="preserve">
+    <value>اعلاش كود ؟</value>
+  </data>
+  <data name="pourquoi_pass" xml:space="preserve">
+    <value>الكود ورقم الهاتف أساسيين من أجل تغيير البيانات إذا أردتم ذلك, والوصول إلى بضاعتكم.</value>
+  </data>
+</root>

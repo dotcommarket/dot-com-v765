@@ -1,0 +1,260 @@
+﻿<div class="row hidden-xs visible-sm hidden-md ">
+    <div class="col-sm-3">
+        <span class="price_filter">
+
+            <div class="featurebox">
+                <input type="number" class="price_filter" min="0" max="400000000" name="pmn"
+                       placeholder="Prix min">
+            </div>
+
+        </span>
+    </div>
+    <div class="col-sm-3">
+        <span>
+            <div>
+                @Html.Partial("~/Views/Voiture/_SelectMarqueAds.cshtml")
+            </div>
+        </span>
+    </div>
+    <div class="col-sm-3">
+        <span>
+            <div>
+                @Html.Partial("~/Views/Voiture/_SelectModels.cshtml")
+            </div>
+        </span>
+    </div>
+    <div class="col-sm-3">
+        <span>
+            <div class="featurebox">
+                <select name="boite" class="featurebox_select_medium">
+                    <option value="">@Sough.Resource.LabelBoiteDeVitesse</option>
+                    <option value="manuel">@Sough.Resource.manuel</option>
+                    <option value="automatique">@Sough.Resource.automatique</option>
+                </select>
+            </div>
+        </span>
+    </div>
+</div>
+<div class="row hidden-xs visible-sm hidden-md ">
+    <div class="col-sm-3">
+        <span class="price_filter">
+            <div class="featurebox">
+                <input type="number" class="price_filter" min="0" max="400000000" name="pmx"
+                       placeholder="Prix max">
+            </div>
+
+        </span>
+    </div>
+    <div class="col-sm-3">
+        <span>
+            <select id="sm_ville" onchange="deselectSelect('sm','ville');" name="ville" class="featurebox_select_medium">
+                @Html.Partial("_CheckVilleSelect")
+            </select>
+        </span>
+    </div>
+    <div class="col-sm-3">
+        <span class="right">
+            <div>
+                <select name="cat" class="featurebox_select_medium">
+                    @Html.Partial("_CheckCategorieSelect")
+                </select>
+            </div>
+        </span>
+    </div>
+    <div class="col-sm-3">
+        <span>
+            <div class="featurebox">
+                <select name="carburant" class="featurebox_select_medium">
+                    <option value="">@Sough.Resource.LabelCarburant</option>
+                    <option value="essance">@Sough.Resource.essance</option>
+                    <option value="gasoile">@Sough.Resource.gasoile</option>
+                </select>
+            </div>
+        </span>
+    </div>
+</div>
+<div class="row hidden-xs visible-sm hidden-md ">
+    <div class="col-sm-3">
+        <span>
+            <div class="featurebox">
+                <select class="featurebox_select" name="km_min">
+                    <option value="" selected="selected">KM min</option>
+                    <option value="0">0</option>
+                    <option value="5000">5.000</option>
+                    <option value="10000">10.000</option>
+                    <option value="15000">15.000</option>
+                    <option value="20000">20.000</option>
+                    <option value="25000">25.000</option>
+                    <option value="30000">30.000</option>
+                    <option value="35000">35.000</option>
+                    <option value="40000">40.000</option>
+                    <option value="45000">45.000</option>
+                    <option value="50000">50.000</option>
+                    <option value="55000">55.000</option>
+                    <option value="60000">60.000</option>
+                    <option value="65000">65.000</option>
+                    <option value="70000">70.000</option>
+
+                    <option value="70000">80.000</option>
+                    <option value="70000">90.000</option>
+                    <option value="70000">100.000</option>
+                    <option value="70000">110.000</option>
+                    <option value="70000">150.000</option>
+                </select>
+            </div>
+        </span>
+    </div>
+    <div class="col-sm-3">
+        <span>
+            <div class="featurebox">
+                <select class="featurebox_select" name="km_max">
+                    <option value="" selected="selected">KM max</option>
+                    <option value="0">0</option>
+                    <option value="5000">5.000</option>
+                    <option value="10000">10.000</option>
+                    <option value="15000">15.000</option>
+                    <option value="20000">20.000</option>
+                    <option value="25000">25.000</option>
+                    <option value="30000">30.000</option>
+                    <option value="35000">35.000</option>
+                    <option value="40000">40.000</option>
+                    <option value="45000">45.000</option>
+                    <option value="50000">50.000</option>
+                    <option value="55000">55.000</option>
+                    <option value="60000">60.000</option>
+                    <option value="65000">65.000</option>
+                    <option value="70000">70.000</option>
+
+                    <option value="70000">80.000</option>
+                    <option value="70000">90.000</option>
+                    <option value="70000">100.000</option>
+                    <option value="70000">110.000</option>
+                    <option value="70000">150.000</option>
+                </select>
+            </div>
+        </span>
+    </div>
+
+    <div class="col-sm-3">
+        <div class="lbl">
+            <input name="neuf" id="sm_neuf" type="checkbox" value="Neuf">
+            @Sough.Resource.Neuf_fem
+        </div>
+    </div>
+    <div class="col-sm-3">
+        <div class="lbl">
+            <input name="occ" id="sm_occ" type="checkbox" value="Occasion">
+            @Sough.Resource.Occasion_fem
+        </div>
+    </div>
+</div>
+<div class="row hidden-xs visible-sm hidden-md ">
+    <div>
+        <ul class="car_shapes">
+            <li id="sm_cs_1" class="col-sm-3 car_shape_2 car_shape_box_black" onclick="toggleCarShape(1, 'SUV','sm');">
+                <div class="ic-1-b" id="sm_vic1"></div>
+                <label for="label" title="grands voiture 4x4">SUV</label>
+            </li>
+            <li id="sm_cs_2" class="col-sm-3 car_shape_3 car_shape_box_black" onclick="toggleCarShape(2, 'Berline', 'sm');">
+                <div class="ic-2-b" id="sm_vic2"></div>
+                <label title="Voiture berline , exemple: toyota avensis , mercedess 190" for="label">Berline</label>
+            </li>
+            <li id="sm_cs_3" class="col-sm-3 car_shape_4 car_shape_box_black" onclick="toggleCarShape(3, 'Pickup', 'sm');">
+                <div class="ic-3-b" id="sm_vic3"></div>
+                <label for="car_shape" title="voiture 4x4 avec bassin, exemple : toyota hilux">Pickup</label>
+            </li>
+            <li id="sm_cs_4" class="col-sm-3 car_shape_5 car_shape_box_black" onclick="toggleCarShape(4, 'Break', 'sm');">
+                <div class="ic-4-b" id="sm_vic4"></div>
+                <label for="car_shape" title="voiture break">Break</label>
+            </li>
+
+        </ul>
+        <ul class="car_colors">
+
+            <li id="sm_grey" onclick="toggleCarColor('grey', 2,'sm');" class="">
+                <div></div>
+            </li>
+            <li id="sm_white" onclick="toggleCarColor('white', 1, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_brown" onclick="toggleCarColor('brown', 3, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_black" onclick="toggleCarColor('black', 4, 'sm');" class="">
+                <div>  </div>
+            </li>
+            <li id="sm_red" onclick="toggleCarColor('red', 5, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_yellow" onclick="toggleCarColor('yellow', 6, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_green" onclick="toggleCarColor('green', 7, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_blue" onclick="toggleCarColor('blue', 8, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+        </ul>
+    </div>
+</div>
+@*<div class="row hidden-xs visible-sm hidden-md ">
+    <div>
+        <ul class="car_colors">
+
+            <li id="sm_grey" onclick="toggleCarColor('grey', 2,'sm');" class="">
+                <div></div>
+            </li>
+            <li id="sm_white" onclick="toggleCarColor('white', 1, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_brown" onclick="toggleCarColor('brown', 3, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_black" onclick="toggleCarColor('black', 4, 'sm');" class="">
+                <div>  </div>
+            </li>
+            <li id="sm_red" onclick="toggleCarColor('red', 5, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_yellow" onclick="toggleCarColor('yellow', 6, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_green" onclick="toggleCarColor('green', 7, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+            <li id="sm_blue" onclick="toggleCarColor('blue', 8, 'sm');" class="">
+                <div>
+                </div>
+            </li>
+        </ul>
+    </div>
+
+</div>*@
+<div class="row hidden-xs visible-sm hidden-md">
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-3">
+
+    </div>
+    <div class="col-sm-3">
+        <button id="btn-sm" class="btn Btn3" type="submit">
+            Chercher <i class="@Sough.App_Code.Ticons.search"></i>
+        </button>
+    </div>
+</div>

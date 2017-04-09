@@ -1,0 +1,33 @@
+﻿/*icon shapes*/
+
+ul.car_shapes li label {
+    display: block;
+    padding-bottom: 5px;
+}
+
+
+.car_shapes .car_shape_2 {
+    background-position: -16px -8px;
+}
+
+.car_shape_3 {
+    background-position: -110px -8px;
+}
+
+.car_shape_4 {
+    background-position: -208px -8px;
+}
+
+.car_shape_5 {
+    background-position: -309px -8px;
+}
+
+.car_shape_6 {
+    background-position: -404px -8px;
+}
+
+.car_shape_7 {
+    background-position: -498px -8px;
+}
+
+/* end icon shape*/

@@ -1,0 +1,1077 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{C2437738-D5DE-4C18-BEB6-5178EB200D4F}</ProjectGuid>
+    <ProjectTypeGuids>{E3E379DF-F4C6-4180-9B81-6769533ABE47};{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Sough</RootNamespace>
+    <AssemblyName>Sough</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <MvcBuildViews>false</MvcBuildViews>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <WebGreaseLibPath>..\packages\WebGrease.1.5.2\lib</WebGreaseLibPath>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Antlr3.Runtime, Version=3.4.1.9004, Culture=neutral, PublicKeyToken=eb42632606e9261f, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Antlr.3.4.1.9004\lib\Antlr3.Runtime.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Newtonsoft.Json, Version=4.5.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Newtonsoft.Json.5.0.8\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList">
+      <HintPath>..\packages\PagedList.1.17.0.0\lib\net40\PagedList.dll</HintPath>
+    </Reference>
+    <Reference Include="PagedList.Mvc">
+      <HintPath>..\packages\PagedList.Mvc.4.5.0.0\lib\net40\PagedList.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Data.Entity" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Optimization, Version=1.1.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\Microsoft.AspNet.Web.Optimization.1.1.3\lib\net40\System.Web.Optimization.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Abstractions" />
+    <Reference Include="System.Web.Routing" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Transactions" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+    <Reference Include="EntityFramework">
+      <HintPath>..\packages\EntityFramework.5.0.0\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.Mvc.FixedDisplayModes, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.FixedDisplayModes.1.0.0\lib\net40\Microsoft.Web.Mvc.FixedDisplayModes.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http">
+    </Reference>
+    <Reference Include="System.Net.Http.Formatting, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Client.4.0.30506.0\lib\net40\System.Net.Http.Formatting.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Net.Http.WebRequest">
+    </Reference>
+    <Reference Include="System.Web.Helpers, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.Helpers.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.Core.4.0.30506.0\lib\net40\System.Web.Http.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.WebHost, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.WebHost.4.0.30506.0\lib\net40\System.Web.Http.WebHost.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Mvc.4.0.30506.0\lib\net40\System.Web.Mvc.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.Razor.2.0.30506.0\lib\net40\System.Web.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Deployment, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Deployment.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.WebPages.Razor, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.2.0.30506.0\lib\net40\System.Web.WebPages.Razor.dll</HintPath>
+    </Reference>
+    <Reference Include="WebGrease, Version=1.5.2.14234, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\packages\WebGrease.1.5.2\lib\WebGrease.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.Data, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.Data.2.0.30506.0\lib\net40\WebMatrix.Data.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Web.WebPages.OAuth, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.OAuth.2.0.30506.0\lib\net40\Microsoft.Web.WebPages.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="WebMatrix.WebData, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebPages.WebData.2.0.30506.0\lib\net40\WebMatrix.WebData.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.AspNet, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.AspNet.4.1.4.12333\lib\net45-full\DotNetOpenAuth.AspNet.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.Core, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth.Consumer, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Consumer.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.Consumer.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OAuth, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OAuth.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.Core.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.dll</HintPath>
+    </Reference>
+    <Reference Include="DotNetOpenAuth.OpenId.RelyingParty, Version=4.1.0.0, Culture=neutral, PublicKeyToken=2780ccd10d57b246, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\DotNetOpenAuth.OpenId.RelyingParty.4.1.4.12333\lib\net45-full\DotNetOpenAuth.OpenId.RelyingParty.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Web.Http.OData, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.AspNet.WebApi.OData.4.0.30506\lib\net40\System.Web.Http.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.Edm, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.Edm.5.2.0\lib\net40\Microsoft.Data.Edm.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Data.OData, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\Microsoft.Data.OData.5.2.0\lib\net40\Microsoft.Data.OData.dll</HintPath>
+    </Reference>
+    <Reference Include="System.Spatial, Version=5.2.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <Private>True</Private>
+      <HintPath>..\packages\System.Spatial.5.2.0\lib\net40\System.Spatial.dll</HintPath>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="App_Code\Ticons.cs" />
+    <Content Include="Content\css\create\car_create.css" />
+    <Content Include="Content\css\show-products\car-ads.css" />
+    <Content Include="Content\css\show-products\wares_byr_searchmain.css" />
+    <Content Include="Content\css\toujjar-theme\featurebox_select.css" />
+    <Content Include="Content\css\toujjar-theme\featurebox_select_wfr.css" />
+    <Content Include="Content\icons\map\rim_r10_c3.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c3_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c5.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c5_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c5_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c5_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c9.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c9_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c9_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c9_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c9_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r10_c9_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r12_c5.jpg" />
+    <Content Include="Content\icons\map\rim_r12_c5_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r12_c9.jpg" />
+    <Content Include="Content\icons\map\rim_r12_c9_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r12_c9_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r12_c9_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c14_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c14_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c3.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c3_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c4.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c4_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c4_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c4_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c9.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c9_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c9_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c9_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c9_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r13_c9_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c1.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c1_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c2.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c2_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c2_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c2_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c4.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c4_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c4_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c4_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c4_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c4_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c7.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c7_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c7_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r14_c7_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c16.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c16_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c16_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c16_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c22.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c22_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c22_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c22_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c22_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c22_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c24.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c24_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c24_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c24_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c9.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c9_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c9_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r15_c9_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c14_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c14_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c16.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c16_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c16_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c16_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c16_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c16_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c17.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c17_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c17_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c17_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c7.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c7_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c7_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c7_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c8.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c8_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c8_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c8_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c8_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r16_c8_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c14_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c14_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c14_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c14_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c16.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c16_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c16_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c16_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c16_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c16_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c16_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c16_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c17.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c17_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c17_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c17_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c17_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c17_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c21.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c21_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c21_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r17_c21_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r18_c2.jpg" />
+    <Content Include="Content\icons\map\rim_r18_c2_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r18_c4.jpg" />
+    <Content Include="Content\icons\map\rim_r18_c4_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r18_c4_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r18_c4_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c17.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c17_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c17_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c17_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c17_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c17_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c20.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c20_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c20_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c20_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c20_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c20_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c20_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c20_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c21.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c21_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c21_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c21_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c21_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c21_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c22.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c22_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c22_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c22_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c22_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c22_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c22_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c22_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c23.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c23_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c23_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c23_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c23_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r19_c23_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r1_c1.jpg" />
+    <Content Include="Content\icons\map\rim_r1_c1_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c16.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c16_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c16_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c16_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c16_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c16_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c17.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c17_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c17_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c17_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c20.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c20_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c20_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c20_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c20_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c20_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c21.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c21_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c21_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c21_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c22.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c22_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c22_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c22_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c22_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c22_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c23.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c23_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c23_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r20_c23_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c12.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c12_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c12_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c12_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c12_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c12_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c12_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c12_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c14_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c14_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c14_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c14_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c14_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c14_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c17.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c17_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c17_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c17_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c17_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c17_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c18.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c18_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c18_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c18_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c8.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c8_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c8_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c8_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c8_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r21_c8_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c12.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c12_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c12_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c12_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c12_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c12_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c4.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c4_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c8.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c8_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c8_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r22_c8_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c12.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c12_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c12_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c12_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c14_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c14_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c14_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c14_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c8.jpg" />
+    <Content Include="Content\icons\map\rim_r23_c8_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c14_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c14_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c14_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c14_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c15.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c15_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c15_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c15_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c15_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c15_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c15_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c15_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c18.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c18_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c18_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c18_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c18_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c18_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c19.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c19_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c19_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r24_c19_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r25_c22.jpg" />
+    <Content Include="Content\icons\map\rim_r25_c22_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r25_c22_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r25_c22_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r25_c23.jpg" />
+    <Content Include="Content\icons\map\rim_r25_c23_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r26_c20.jpg" />
+    <Content Include="Content\icons\map\rim_r26_c20_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r26_c20_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r26_c20_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r26_c21.jpg" />
+    <Content Include="Content\icons\map\rim_r26_c21_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c12.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c12_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c14_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c14_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c15.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c15_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c15_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c15_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c15_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r27_c15_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r28_c14.jpg" />
+    <Content Include="Content\icons\map\rim_r28_c14_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r28_c15.jpg" />
+    <Content Include="Content\icons\map\rim_r28_c15_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r28_c15_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r28_c15_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r28_c19.jpg" />
+    <Content Include="Content\icons\map\rim_r28_c19_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r29_c15.jpg" />
+    <Content Include="Content\icons\map\rim_r29_c15_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r2_c1.jpg" />
+    <Content Include="Content\icons\map\rim_r2_c13.jpg" />
+    <Content Include="Content\icons\map\rim_r2_c13_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r2_c13_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r2_c13_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r2_c1_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r2_c27.jpg" />
+    <Content Include="Content\icons\map\rim_r2_c27_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c1.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c13.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c13_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c13_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c13_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c13_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c13_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c1_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c25.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c25_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c25_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c25_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c9.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c9_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c9_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r3_c9_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c13.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c13_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c13_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c13_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c13_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c13_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c22.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c22_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c22_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c22_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c22_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c22_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c22_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c22_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c25.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c25_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c25_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c25_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c25_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c25_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c26.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c26_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c26_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r4_c26_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c1.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c10.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c10_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c10_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c10_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c1_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c3.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c3_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c3_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c3_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c9.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c9_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c9_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c9_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c9_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r5_c9_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c13.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c13_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c13_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c13_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c22.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c22_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c22_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c22_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c22_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c22_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c25.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c25_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c25_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c25_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c26.jpg" />
+    <Content Include="Content\icons\map\rim_r6_c26_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c10.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c10_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c10_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c10_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c10_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c10_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c11.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c11_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c11_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c11_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c3.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c3_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c3_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c3_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c5.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c5_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c5_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c5_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c5_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c5_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c9.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c9_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c9_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c9_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c9_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c9_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c9_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r7_c9_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c13.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c13_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c13_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c13_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c16.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c16_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c16_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c16_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c16_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c16_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c22.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c22_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c22_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c22_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c22_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c22_s6.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c22_s7.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c22_s8.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c24.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c24_s2.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c24_s3.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c24_s4.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c24_s5.jpg" />
+    <Content Include="Content\icons\map\rim_r9_c24_s6.jpg" />
+    <Content Include="Content\icons\map\spacer.gif" />
+    <Content Include="Images\rim.fw.png" />
+    <Content Include="Scripts\bootstrap\bootstrap-toolkit.min.js" />
+    <Content Include="Scripts\create\create-ad.js" />
+    <Content Include="Scripts\options.js" />
+    <Content Include="Scripts\show\cookies.js" />
+    <Content Include="Content\icons\ic-1-b.png" />
+    <Content Include="Content\icons\ic-1-o.png" />
+    <Content Include="Content\icons\ic-2-b.png" />
+    <Content Include="Content\icons\ic-2-o.png" />
+    <Content Include="Content\icons\ic-3-b.png" />
+    <Content Include="Content\icons\ic-3-o.png" />
+    <Content Include="Content\icons\ic-4-b.png" />
+    <Content Include="Content\icons\ic-4-o.png" />
+    <Content Include="Models\Iware.cs" />
+    <Compile Include="App_Start\AuthConfig.cs" />
+    <Compile Include="App_Start\BundleConfig.cs" />
+    <Compile Include="App_Start\FilterConfig.cs" />
+    <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="App_Start\WebApiConfig.cs" />
+    <Compile Include="BaseController.cs" />
+    <Compile Include="Controllers\AdController.cs" />
+    <Compile Include="Controllers\CategorieController.cs" />
+    <Compile Include="Controllers\ErrorController.cs" />
+    <Compile Include="Controllers\GallerieController.cs" />
+    <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\SearchController.cs" />
+    <Compile Include="Controllers\VetementController.cs" />
+    <Compile Include="Controllers\VoitureController.cs" />
+    <Compile Include="Filters\InitializeSimpleMembershipAttribute.cs" />
+    <Compile Include="GererLang.cs" />
+    <Compile Include="Global.asax.cs">
+      <DependentUpon>Global.asax</DependentUpon>
+    </Compile>
+    <Compile Include="Helpers\AdHelper.cs" />
+    <Compile Include="Helpers\CP.cs" />
+    <Compile Include="Helpers\ImagesActions.cs" />
+    <Compile Include="Helpers\LocatingModal.cs" />
+    <Compile Include="Helpers\Tdate.cs" />
+    <Compile Include="Helpers\TjjConst.cs" />
+    <Compile Include="Helpers\TraitementDonnees.cs" />
+    <Compile Include="Helpers\VoitureHelp.cs" />
+    <Compile Include="Migrations\201703271635513_first-mig.cs" />
+    <Compile Include="Migrations\201703271635513_first-mig.Designer.cs">
+      <DependentUpon>201703271635513_first-mig.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Ammeublement.cs" />
+    <Compile Include="Models\ArtTable.cs" />
+    <Compile Include="Models\BureauCommerce.cs" />
+    <Compile Include="Models\Cadeau.cs" />
+    <Compile Include="Models\Chameau.cs" />
+    <Compile Include="Models\Chevre.cs" />
+    <Compile Include="Models\CommerceMarche.cs" />
+    <Compile Include="Models\CourParticulier.cs" />
+    <Compile Include="Models\Decoration.cs" />
+    <Compile Include="Models\EcoleAuto.cs" />
+    <Compile Include="Models\Electromenager.cs" />
+    <Compile Include="Models\EquipementAuto.cs" />
+    <Compile Include="Models\EquipementIndustriel.cs" />
+    <Compile Include="Models\FournitureBureau.cs" />
+    <Compile Include="Models\Gallerie1.cs" />
+    <Compile Include="Models\Informatique.cs" />
+    <Compile Include="Models\Jardinage.cs" />
+    <Compile Include="Models\Jeu.cs" />
+    <Compile Include="Models\LocationImmobilier.cs" />
+    <Compile Include="Models\MaterielMedical.cs" />
+    <Compile Include="Models\MGrosOeuvre.cs" />
+    <Compile Include="Models\Moto.cs" />
+    <Compile Include="Models\Mtransport.cs" />
+    <Compile Include="Models\Ordinateur.cs" />
+    <Compile Include="Models\RestaurantHotellerie.cs" />
+    <Compile Include="Models\ServiceMaison.cs" />
+    <Compile Include="Models\Telephone.cs" />
+    <Compile Include="Models\Television.cs" />
+    <Compile Include="Models\ToujjarDatabase.cs" />
+    <Compile Include="Models\Vache.cs" />
+    <Compile Include="Models\VenteImmobilier.cs" />
+    <Compile Include="Models\Vetement.cs" />
+    <Compile Include="Models\Voiture.cs" />
+    <Compile Include="Models\VoitureSCH.cs" />
+    <Compile Include="Models\Ware.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Resource.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Resource.fr.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resource.fr.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Content\css\images-style\icons.css" />
+    <Content Include="Content\css\images-style\images.css" />
+    <Content Include="Content\css\index\figure.css" />
+    <Content Include="Content\css\index\index.css" />
+    <Content Include="Content\css\module\gfx\popeye\bg1.png" />
+    <Content Include="Content\css\module\gfx\popeye\compact1.png" />
+    <Content Include="Content\css\module\gfx\popeye\compact2.png" />
+    <Content Include="Content\css\module\gfx\popeye\compact3.png" />
+    <Content Include="Content\css\module\gfx\popeye\compact4.png" />
+    <Content Include="Content\css\module\gfx\popeye\enlarge1.png" />
+    <Content Include="Content\css\module\gfx\popeye\enlarge2.png" />
+    <Content Include="Content\css\module\gfx\popeye\enlarge3.png" />
+    <Content Include="Content\css\module\gfx\popeye\enlarge4.png" />
+    <Content Include="Content\css\module\gfx\popeye\loading1.gif" />
+    <Content Include="Content\css\module\gfx\popeye\loading2.gif" />
+    <Content Include="Content\css\module\gfx\popeye\loading3.gif" />
+    <Content Include="Content\css\module\gfx\popeye\next1.png" />
+    <Content Include="Content\css\module\gfx\popeye\next3.png" />
+    <Content Include="Content\css\module\gfx\popeye\prev1.png" />
+    <Content Include="Content\css\module\gfx\popeye\prev3.png" />
+    <Content Include="Content\css\module\gfx\site\bg.jpg" />
+    <Content Include="Content\css\module\jquery.popeye.css" />
+    <Content Include="Content\css\module\jquery.popeye.style.css" />
+    <Content Include="Content\css\module\lightslider.css" />
+    <Content Include="Content\css\module\pace.css" />
+    <Content Include="Content\css\module\PagedList.css" />
+    <Content Include="Content\css\create\create.css" />
+    <Content Include="Content\css\toujjar-theme\span-input-select.css" />
+    <Content Include="Content\css\trik\reveal.css" />
+    <Content Include="Content\css\show-products\search_main.css" />
+    <Content Include="Content\css\show-products\show-product.css" />
+    <Content Include="Content\css\show-products\ads.css" />
+    <Content Include="Content\css\trik\Site.css" />
+    <Content Include="Content\css\toujjar-theme\bootstrap-select.min.css" />
+    <Content Include="Content\css\toujjar-theme\bootstrap-theme.css" />
+    <Content Include="Content\css\toujjar-theme\bootstrap-theme.min.css" />
+    <Content Include="Content\css\toujjar-theme\bootstrap.css" />
+    <Content Include="Content\css\toujjar-theme\bootstrap.min.css" />
+    <Content Include="Content\css\toujjar-theme\font-awesome.css" />
+    <Content Include="Content\css\toujjar-theme\font-awesome.min.css" />
+    <Content Include="Content\css\toujjar-theme\toujjar-style.css" />
+    <Content Include="Content\css\trik\toujjar-ui.min.css" />
+    <Content Include="Content\css\trik\trick.css" />
+    <Content Include="favicon.ico" />
+    <Content Include="fonts\fontawesome-webfont.svg" />
+    <Content Include="fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="Global.asax" />
+    <Content Include="Images\Entypo_d83d%280%29_512.png" />
+    <Content Include="Images\icon_site_48.png" />
+    <Content Include="Images\icon_site_512.png" />
+    <Content Include="Images\upload_1024.png" />
+    <Content Include="Images\upload_image_1024.png" />
+    <Content Include="Images\icon_default.png" />
+    <Content Include="Images\upload_image_512.png" />
+    <Content Include="Images\up_img_1024.png" />
+    <Content Include="Images\up_img_512.png" />
+    <Content Include="Images\web.png" />
+    <Content Include="App_Code\GlyphIcon.cshtml" />
+    <Content Include="Content\less\.csscomb.json" />
+    <Content Include="Content\less\.csslintrc" />
+    <Content Include="Content\less\alerts.less" />
+    <Content Include="Content\less\badges.less" />
+    <Content Include="Content\less\bootstrap.less" />
+    <Content Include="Content\less\breadcrumbs.less" />
+    <Content Include="Content\less\button-groups.less" />
+    <Content Include="Content\less\buttons.less" />
+    <Content Include="Content\less\carousel.less" />
+    <Content Include="Content\less\close.less" />
+    <Content Include="Content\less\code.less" />
+    <Content Include="Content\less\component-animations.less" />
+    <Content Include="Content\less\dropdowns.less" />
+    <Content Include="Content\less\forms.less" />
+    <Content Include="Content\less\glyphicons.less" />
+    <Content Include="Content\less\grid.less" />
+    <Content Include="Content\less\input-groups.less" />
+    <Content Include="Content\less\jumbotron.less" />
+    <Content Include="Content\less\labels.less" />
+    <Content Include="Content\less\list-group.less" />
+    <Content Include="Content\less\media.less" />
+    <Content Include="Content\less\mixins.less" />
+    <Content Include="Content\less\mixins\alerts.less" />
+    <Content Include="Content\less\mixins\background-variant.less" />
+    <Content Include="Content\less\mixins\border-radius.less" />
+    <Content Include="Content\less\mixins\buttons.less" />
+    <Content Include="Content\less\mixins\center-block.less" />
+    <Content Include="Content\less\mixins\clearfix.less" />
+    <Content Include="Content\less\mixins\forms.less" />
+    <Content Include="Content\less\mixins\gradients.less" />
+    <Content Include="Content\less\mixins\grid-framework.less" />
+    <Content Include="Content\less\mixins\grid.less" />
+    <Content Include="Content\less\mixins\hide-text.less" />
+    <Content Include="Content\less\mixins\image.less" />
+    <Content Include="Content\less\mixins\labels.less" />
+    <Content Include="Content\less\mixins\list-group.less" />
+    <Content Include="Content\less\mixins\nav-divider.less" />
+    <Content Include="Content\less\mixins\nav-vertical-align.less" />
+    <Content Include="Content\less\mixins\opacity.less" />
+    <Content Include="Content\less\mixins\pagination.less" />
+    <Content Include="Content\less\mixins\panels.less" />
+    <Content Include="Content\less\mixins\progress-bar.less" />
+    <Content Include="Content\less\mixins\reset-filter.less" />
+    <Content Include="Content\less\mixins\reset-text.less" />
+    <Content Include="Content\less\mixins\resize.less" />
+    <Content Include="Content\less\mixins\responsive-visibility.less" />
+    <Content Include="Content\less\mixins\size.less" />
+    <Content Include="Content\less\mixins\tab-focus.less" />
+    <Content Include="Content\less\mixins\table-row.less" />
+    <Content Include="Content\less\mixins\text-emphasis.less" />
+    <Content Include="Content\less\mixins\text-overflow.less" />
+    <Content Include="Content\less\mixins\vendor-prefixes.less" />
+    <Content Include="Content\less\modals.less" />
+    <Content Include="Content\less\navbar.less" />
+    <Content Include="Content\less\navs.less" />
+    <Content Include="Content\less\normalize.less" />
+    <Content Include="Content\less\pager.less" />
+    <Content Include="Content\less\pagination.less" />
+    <Content Include="Content\less\panels.less" />
+    <Content Include="Content\less\popovers.less" />
+    <Content Include="Content\less\print.less" />
+    <Content Include="Content\less\progress-bars.less" />
+    <Content Include="Content\less\responsive-embed.less" />
+    <Content Include="Content\less\responsive-utilities.less" />
+    <Content Include="Content\less\scaffolding.less" />
+    <Content Include="Content\less\tables.less" />
+    <Content Include="Content\less\theme.less" />
+    <Content Include="Content\less\thumbnails.less" />
+    <Content Include="Content\less\tooltip.less" />
+    <Content Include="Content\less\type.less" />
+    <Content Include="Content\less\utilities.less" />
+    <Content Include="Content\less\variables.less" />
+    <Content Include="Content\less\wells.less" />
+    <Content Include="fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="fonts\fontawesome-webfont.eot" />
+    <Content Include="fonts\fontawesome-webfont.ttf" />
+    <Content Include="fonts\fontawesome-webfont.woff" />
+    <Content Include="fonts\fontawesome-webfont.woff2" />
+    <Content Include="fonts\FontAwesome.otf" />
+    <Content Include="Scripts\create\create.js" />
+    <Content Include="Scripts\create\validation.js" />
+    <Content Include="Scripts\module\images-resizer.js" />
+    <Content Include="Scripts\module\jquery.popeye-2.0.4.js" />
+    <Content Include="Scripts\module\jquery.popeye-2.0.4.min.js" />
+    <Content Include="Scripts\module\option-plugin-popeye.js" />
+    <Content Include="Scripts\show\car-ads.js" />
+    <Content Include="Scripts\show\wares_by_r.js" />
+    <Content Include="Scripts\trik\blocket-ui.min.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-select.js" />
+    <Content Include="Scripts\bootstrap\bootstrap-select.min.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.js" />
+    <Content Include="Scripts\bootstrap\bootstrap.min.js" />
+    <Content Include="Scripts\show\ads.js" />
+    <Content Include="Scripts\create\car-create-js.js" />
+    <Content Include="Scripts\create\car_validation.js" />
+    <Content Include="Scripts\trik\defaults-1.min.js" />
+    <Content Include="Scripts\trik\jqBootstrapValidation.js" />
+    <Content Include="Scripts\jquery\jquery-1.6.min.js" />
+    <Content Include="Content\css\toujjar-theme\bootstrap-theme.css.map" />
+    <Content Include="Content\css\toujjar-theme\bootstrap-theme.min.css.map" />
+    <Content Include="Content\css\toujjar-theme\bootstrap.css.map" />
+    <Content Include="Content\css\toujjar-theme\bootstrap.min.css.map" />
+    <None Include="Scripts\jquery\jquery-1.9.1-vsdoc.js" />
+    <Content Include="Scripts\jquery\jquery-1.9.1.min.js" />
+    <Content Include="Scripts\jquery\jquery-2.0.0.js" />
+    <Content Include="Scripts\trik\jquery.reveal.js" />
+    <Content Include="Scripts\trik\knockout-2.2.0.debug.js" />
+    <Content Include="Scripts\trik\knockout-2.2.0.js" />
+    <Content Include="Scripts\less.min.js" />
+    <Content Include="Scripts\trik\lightslider.js" />
+    <Content Include="Scripts\trik\modernizr-2.6.2.js" />
+    <Content Include="Scripts\myScript.js" />
+    <Content Include="Scripts\bootstrap\npm.js" />
+    <Content Include="Scripts\module\pace.js" />
+    <Content Include="Scripts\show\show-product.js" />
+    <None Include="Scripts\trik\_references.js" />
+    <Content Include="Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </Content>
+    <Content Include="Images\accent.png" />
+    <Content Include="Images\bullet.png" />
+    <Content Include="Images\heroAccent.png" />
+    <Content Include="Images\orderedList0.png" />
+    <Content Include="Images\orderedList1.png" />
+    <Content Include="Images\orderedList2.png" />
+    <Content Include="Images\orderedList3.png" />
+    <Content Include="Images\orderedList4.png" />
+    <Content Include="Images\orderedList5.png" />
+    <Content Include="Images\orderedList6.png" />
+    <Content Include="Images\orderedList7.png" />
+    <Content Include="Images\orderedList8.png" />
+    <Content Include="Images\orderedList9.png" />
+    <Content Include="Views\_ViewStart.cshtml" />
+    <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Shared\Error.cshtml" />
+    <Content Include="Views\Shared\_LoginPartial.cshtml" />
+    <Content Include="Views\Shared\_Layout.cshtml" />
+    <Content Include="Views\Web.config">
+      <SubType>Designer</SubType>
+    </Content>
+    <Content Include="Views\sm\_PanneauDeRecherche.cshtml" />
+    <Content Include="Views\xs\_PanneauDeRecherche.cshtml" />
+    <Content Include="Views\Shared\_CategoriesController.cshtml" />
+    <Content Include="Views\Ad\Awfc.cshtml" />
+    <Content Include="Views\map\_Rimmap.cshtml" />
+    <Content Include="Views\Ad\_WaresList.cshtml" />
+    <Content Include="Views\Voiture\Ads.cshtml" />
+    <Content Include="Views\Voiture\Create.cshtml" />
+    <Content Include="Views\Voiture\Delete.cshtml" />
+    <Content Include="Views\Voiture\Details.cshtml" />
+    <Content Include="Views\Voiture\Edit.cshtml" />
+    <Content Include="Views\Voiture\Index.cshtml" />
+    <Content Include="Views\Voiture\ShowWare.cshtml" />
+    <Content Include="Views\Voiture\_CarsList.cshtml" />
+    <Content Include="Views\Voiture\_UserWare.cshtml" />
+    <Content Include="Views\Voiture\_SelectMarqueAds.cshtml" />
+    <Content Include="Views\Voiture\_SelectMarqueCreate.cshtml" />
+    <Content Include="Views\Voiture\_SelectModels.cshtml" />
+    <Content Include="Views\Voiture\_SelectModelsCreate.cshtml" />
+    <Content Include="Views\Vetement\Index.cshtml" />
+    <Content Include="Views\Vetement\Details.cshtml" />
+    <Content Include="Views\Vetement\Create.cshtml" />
+    <Content Include="Views\Vetement\Edit.cshtml" />
+    <Content Include="Views\Vetement\Delete.cshtml" />
+    <Content Include="Views\Vetement\ShowWare.cshtml" />
+    <Content Include="Views\Vetement\_VetWhere.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="App_Data\" />
+    <Folder Include="Content\css\share\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201703271635513_first-mig.resx">
+      <DependentUpon>201703271635513_first-mig.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.fr.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.fr.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resource.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resource.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ad\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ad\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ad\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ad\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ad\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_CategoriesTable.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="TypeFile.htaccess" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_AdDesign.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gallerie\Index.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gallerie\Details.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gallerie\Create.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gallerie\Edit.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Gallerie\Delete.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Search\Control.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Ads.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_ProduitsList.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_CheckCategorieSelect.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Shared\_CheckVilleSelect.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Error\Httpnotfound.cshtml.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Views\Error\DelaiDepassee.cshtml.cshtml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Scripts\jquery\jquery-1.9.1.min.map" />
+  </ItemGroup>
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <Target Name="MvcBuildViews" AfterTargets="AfterBuild" Condition="'$(MvcBuildViews)'=='true'">
+    <AspNetCompiler VirtualPath="temp" PhysicalPath="$(WebProjectOutputDir)" />
+  </Target>
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>52340</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:52340/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target> -->
+</Project>

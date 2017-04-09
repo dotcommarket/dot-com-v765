@@ -1,0 +1,314 @@
+﻿@model PagedList.IPagedList<Sough.Models.Vetement>
+@using PagedList.Mvc;
+
+@{
+    Sough.Helpers.Tdate tdate = new Sough.Helpers.Tdate();
+    Sough.Helpers.TraitementDonnees tdonnee = new Sough.Helpers.TraitementDonnees();
+    Sough.Models.Vetement Vetement = (Sough.Models.Vetement)Model[Model.Count - 1];
+
+    if (Vetement != null)
+    {
+        ViewBag.Title = Vetement.type;
+    }
+    else
+    {
+        ViewBag.Title = "Unknown ti";
+    }
+}
+
+@Styles.Render("~/Content/popey")
+
+@Styles.Render("~/Content/pace")
+@Scripts.Render("~/bundles/pace")
+
+@Styles.Render("~/Content/ads")
+@Styles.Render("~/Content/show-product")
+    
+@try {
+    
+        
+<div class="content" id="content">
+    <div class="row hidden-xs">
+    <div class="col-md-8 col-sm-12 ad-bg">
+        
+        <!-- div image-->
+        <div class="col-md-6 col-sm-6">
+            <div class="col-md-12 col-sm-12 row-img">
+                <div class="ppy" id="ppy1">
+                    <ul class="ppy-imglist">
+                        <li>
+                            <a href="@Url.Action("GetAdImageByName", "Vetement",
+                            routeValues: new { id = Vetement.Id,n=1 })">
+                                <img src="@Url.Action("GetAdImageByName", "Vetement",
+                                     routeValues: new { id = Vetement.Id,n=1 })"
+                                     alt="..." />
+                            </a>
+                            <span class="ppy-extcaption">
+                            </span>
+                        </li>
+                        <li style="display:none;">
+                            <a href="@Url.Action("GetAdImageByName", "Vetement",
+                             routeValues: new { id = Vetement.Id,n=2 })">
+                                <img src="@Url.Action("GetAdImageByName", "Vetement",
+                                routeValues: new { id = Vetement.Id,n=2 })"
+                                     alt="..." hidden />
+                            </a>
+                            <span class="ppy-extcaption">
+                            </span>
+                        </li>
+                        <li style="display:none;">
+                            <a href="@Url.Action("GetAdImageByName", "Vetement",
+                                    routeValues: new { id = Vetement.Id,n=3 })">
+                                <img src="@Url.Action("GetAdImageByName", "Vetement",
+                                    routeValues: new { id = Vetement.Id,n=3 })"
+                                     alt="..." hidden />
+                            </a>
+                            <span class="ppy-extcaption">
+                            </span>
+                        </li>
+                        <li style="display:none;">
+                            <a href="@Url.Action("GetAdImageByName", "Vetement",
+                                routeValues: new { id = Vetement.Id,n=4 })">
+                                <img src="@Url.Action("GetAdImageByName", "Vetement",
+                                    routeValues: new { id = Vetement.Id,n=4 })"
+                                     alt="..." hidden />
+                            </a>
+                            <span class="ppy-extcaption">
+                            </span>
+                        </li>
+
+
+                    </ul>
+                    <div class="ppy-outer">
+                        <div class="ppy-stage">
+                            <div class="ppy-nav">
+                                <a class="ppy-prev" title="Previous image">Previous image</a>
+                                <a class="ppy-switch-enlarge" title="Enlarge">Enlarge</a>
+                                <a class="ppy-switch-compact" title="Close">Close</a>
+                                <a class="ppy-next" title="Next image">Next image</a>
+                            </div>
+                        </div>
+                    </div>
+                    
+                </div>
+            </div>
+
+            <div class="col-md-12 col-sm-">
+                <div class="trader-data">
+                    <img class="whatsappPNG icon22" />
+                    <p><abbr title="Téléphone">Tel:</abbr>@Vetement.phone</p>
+                </div>
+            </div>
+            @if (tdonnee.StringIsValid(Vetement.trader_name))
+            {
+                <div class="col-md-12 col-sm-12">
+                    <div class="trader-data">
+                        <p title="nom du commerçant">Nom : @Vetement.trader_name</p>
+                    </div>
+                </div>
+            }
+            @if (tdonnee.StringIsValid(Vetement.trader_facebook))
+            {
+                <div class="col-md-12 col-sm-12">
+                    <div class="trader-data">
+                        <img class="facebook32 icon22" /><abbr title="Facebook du commerçant">@Vetement.trader_facebook</abbr>
+                    </div>
+                </div>
+            }
+            @if (tdonnee.StringIsValid(Vetement.trader_instagram))
+            {
+                <div class="col-md-12 col-sm-12">
+                    <div class="trader-data">
+                        <img class="instagram32 icon22" /><abbr title="Instagram du commerçant">@Vetement.trader_instagram</abbr>
+                    </div>
+                </div>
+            }
+            @if (tdonnee.StringIsValid(Vetement.email))
+            {
+                <div class="col-md-12 col-sm-12">
+                    <div class="trader-data">
+                        <abbr title="email du commerçant">@@email:</abbr>@Vetement.email<br />
+                    </div>
+                </div>
+            }
+
+        </div><!--  end div image-->
+
+        <!--  div product informations-->
+        <div class="col-md-6 col-sm-6">
+
+            <table class="table table-borderless">
+                <tbody>
+                    <tr>
+           
+                        <td><p>@Vetement.type</p></td>
+                    </tr>
+                    <tr>
+                        <td><p>@Vetement.description</p></td>
+                    </tr>
+                  
+                    <tr>
+                        <td><i class="@Sough.App_Code.Ticons.map_marker">Ville :</i></td>
+                        <td><p>@Vetement.ville</p></td>
+                    </tr>
+                    
+                    <tr>
+                        <td><p>Date :</p></td>
+                        <td><p>@tdate.FormaterDate(Vetement.temps, "fr")</p></td>
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="text-center">
+                <h3 id="txt-h3" class="text-success">@tdonnee.FormaterPrix(Vetement.prix) Mro</h3>
+            </div>
+        </div><!--  end div product informations-->
+
+        
+    </div>
+        </div>
+
+<div class="row visible-xs hidden-sm hidden-md ad-bg-xs">
+           <div class="col-xs-12">
+               <div class="div-img-xs">
+                   <a href="@Url.Action("GetAdImageByName", "Vetement",
+                            routeValues: new { id = Vetement.Id,n=1 })">
+                       <img src="@Url.Action("GetAdImageByName", "Vetement",
+                                     routeValues: new { id = Vetement.Id,n=1 })"
+                            alt="..." class="thumbnail img-xs" />
+                   </a>
+               </div>
+           </div>
+        <div class="col-xs-12">
+            <div class="data">
+            <table class="table">
+                <tbody>
+                    <tr>
+                        <td>@Vetement.type</td>
+                    </tr>
+                    <tr>
+                        <td>@Vetement.description</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Ville :</td>
+                        <td>@Vetement.ville</td>
+                    </tr>
+                    
+                    <tr>
+                        <td>Date :</td>
+                        @{
+    if (tdate.IsToday(Vetement.temps))
+    {
+        <td>Aujourd'hui</td>
+    }
+    else if (tdate.IsYesterday(Vetement.temps))
+    {
+        <td>Hier</td>
+    }
+    else
+    {
+        <td>@Vetement.temps.ToString()</td>
+    }
+                        }
+                    </tr>
+
+                </tbody>
+            </table>
+            <div class="text-center">
+                <h3 id="txt-h3" class="text-success">@Vetement.prix Mro</h3>
+            </div>
+            </div>
+        </div>
+        <div class="col-xs-12">
+            <div class="col-xs-12">
+                <div class="trader-data">
+                    <img class="whatsappPNG icon22" />
+                    <abbr title="Téléphone">Tel:</abbr>@Vetement.phone
+                </div>
+            </div>
+            @if (tdonnee.StringIsValid(Vetement.trader_name))
+                {
+    <div class="col-xs-12">
+        <div class="trader-data">
+            <p title="nom du commerçant">Nom : @Vetement.trader_name</p>
+        </div>
+    </div>
+                }
+            @if (tdonnee.StringIsValid(Vetement.trader_facebook))
+                {
+    <div class="col-xs-12">
+        <div class="trader-data">
+            <img class="facebook32 icon22" /><abbr title="Facebook du commerçant">@Vetement.trader_facebook</abbr>
+        </div>
+    </div>
+                }
+            @if (tdonnee.StringIsValid(Vetement.trader_instagram))
+                {
+    <div class="col-xs-12">
+        <div class="trader-data">
+            <img class="instagram32 icon22" /><abbr title="Instagram du commerçant">@Vetement.trader_instagram</abbr>
+        </div>
+    </div>
+                }
+            @if (tdonnee.StringIsValid(Vetement.email))
+                {
+                <div class="col-xs-12">
+                    <div class="trader-data">
+                        <abbr title="email du commerçant">@@email:</abbr>@Vetement.email<br />
+                    </div>
+                </div>
+                }
+
+        </div>
+    <div class="col-xs-12">
+        <div class="div-img-xs">
+            <a href="@Url.Action("GetAdImageByName", "Vetement",
+                 routeValues: new { id = Vetement.Id,n=2 })">
+                <img src="@Url.Action("GetAdImageByName", "Vetement",
+                  routeValues: new { id = Vetement.Id,n=2 })"
+                    alt="..." class="thumbnail img-xs" hidden/>
+            </a>
+        </div>
+
+        <div class="div-img-xs">
+            <a href="@Url.Action("GetAdImageByName", "Vetement",
+                 routeValues: new { id = Vetement.Id,n=3 })">
+                <img src="@Url.Action("GetAdImageByName", "Vetement",
+                  routeValues: new { id = Vetement.Id,n=3 })"
+                     alt="..." class="thumbnail img-xs" hidden/>
+            </a>
+        </div>
+          
+        <div class="div-img-xs">
+            <a href="@Url.Action("GetAdImageByName", "Vetement",
+                 routeValues: new { id = Vetement.Id,n=4 })">
+                <img src="@Url.Action("GetAdImageByName", "Vetement",
+                  routeValues: new { id = Vetement.Id,n=4 })"
+                     alt="..." class="thumbnail img-xs" hidden />
+            </a>
+        </div>
+    </div>
+
+
+</div>
+
+</div>
+
+    <div class="content">
+        <div class="row">
+            @Html.Partial("~/Views/Vetement/_VetWhere.cshtml", Model)
+        </div>
+    </div>
+
+}
+catch (Exception e)
+{
+    <p>@e.Message</p>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/popey")
+    @Scripts.Render("~/bundles/show-product")
+
+}

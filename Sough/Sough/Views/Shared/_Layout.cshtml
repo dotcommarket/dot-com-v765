@@ -1,0 +1,118 @@
+﻿<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <title>@ViewBag.Title</title>
+    <link href="~/Images/icon_site_48.png" rel="shortcut icon" type="image/x-icon" />
+    <meta name="viewport" content="width=device-width" />
+    <link rel="stylesheet" href="~/Content/css/toujjar-theme/font-awesome.min.css">
+
+    @Styles.Render("~/Content/css")
+
+    <link rel="stylesheet/less" type="text/css" href="~/Content/less/bootstrap.less" />
+    <link rel="stylesheet/less" type="text/css" href="~/Content/css/toujjar-theme/toujjar-style.css" />
+   
+   
+</head>
+<body id="body">
+
+    <div class="row navigation container">
+        @*<div class="col-md-2">
+            <a href="index.html" class="navbar-brand">Toujjar</a>
+        </div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2"></div>
+        <div class="col-md-2">
+            <form action="~/Ad/Create">
+                <button class="btn navbar-btn Btn-navbar" type="submit">
+                    <span class="@Sough.App_Code.Ticons.edit"></span>
+                    Deposez un produit
+                </button>
+            </form>
+        </div>*@
+        <div class="navbar navbar-default navbar-fixed-top navbar-center container" role="navigation">
+            <div class="navbar-header" id="logo">
+
+                <a href="#" class="navbar-brand" id="navbar-brand">toujjar</a>
+
+            </div>
+                <div class="navbar-collapse collapse navbar-right">
+                    <ul class="nav navbar-nav" style="float:right;">
+                        @*<li><a href="~/Home"><i class="@Sough.App_Code.Ticons.home" aria-hidden="true"></i>Acceuil</a></li>
+                        <li><a href="~/Voiture/Create"><i class="@Sough.App_Code.Ticons.car" aria-hidden="true"></i>Voiture</a></li>
+                        <li><a href="apropos.html"><i class="@Sough.App_Code.Ticons.mobile" aria-hidden="true"></i>Téléphone</a></li>
+                        <li><a href="offres.html"><i class="@Sough.App_Code.Ticons.money" aria-hidden="true"></i>Devise</a></li>
+                        <li><a href="offres.html"><i class="@Sough.App_Code.Ticons.certificate" aria-hidden="true"></i>Les offres</a></li>*@
+                        <li>
+                            <form action="~/Ad/Create">
+                                <button class="btn navbar-btn Btn-navbar" type="submit">
+                                    <span class="@Sough.App_Code.Ticons.edit"></span>
+                                    Deposez un produit
+                                </button>
+                            </form>
+
+
+                        </li>
+                    </ul>
+
+
+                </div>
+
+
+
+
+
+            </div>
+
+    </div> <!-- fin row navigation -->
+
+    <div class="container">
+
+        @RenderSection("featured", required: false)
+
+        @RenderBody()
+    </div>
+    <div class="footer text-left container">
+        <div class="row footer">
+
+            <ul class="list-inline">
+                <li><p><i class="@Sough.App_Code.Ticons.copyright"></i> Toujjar 2017</p></li>
+                <li><a href=""><span class="glyphicon glyphicon-home"></span> Mension légale</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-phone-alt"></span> Partenaires</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-certificate"></span> Conditions générale</a></li>
+                <li><a href=""><span class="glyphicon glyphicon-book"></span> Paiment en ligne</a></li>
+                
+                @{
+                    foreach (var i in Sough.GererLang.LangagesSite)
+                    {
+
+                        <li>
+                            @Html.ActionLink(i.langNomComplet,
+                                                  "ChangeLanguage", "Ad",
+                                                   new { lang = i.langNomCourt }, null)
+                        </li>
+
+                    }
+                }
+
+
+            </ul>
+
+        </div>
+    </div>
+
+    @Scripts.Render("~/bundles/jquery-1.6")
+    @Scripts.Render("~/bundles/jquery")
+
+    @Scripts.Render("~/bundles/js")
+    <script type="text/javascript">
+            $('.collapse').collapse();// activer le collapse pour le navbar
+    </script>
+    @RenderSection("scripts", required: false)
+    @RenderSection("styles", required: false)
+    
+</body>
+</html>

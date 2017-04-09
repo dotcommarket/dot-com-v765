@@ -1,0 +1,192 @@
+﻿@{
+
+    Sough.Helpers.Tdate t = new Sough.Helpers.Tdate();
+
+    int cpt = 0;
+try{
+    foreach (var car in Model)
+    {
+
+        if (((cpt % 3) == 0) && (cpt == 0))
+        {
+            @:<div class="row">
+                @:<div class="col-xs-12">
+                    <div class="col-xs-3 ad-bg2">
+                        <div class="thumbnail">
+                            <img src="@Url.Action("GetAdImageByName", "Voiture",
+                                       routeValues: new { id = car.IdVoiture,n=1 })"
+                                 class="ad-image img-reponsive" alt="loading...">
+                        </div>
+
+                        <div class="caption">
+
+                            <h6>@car.marque</h6>
+                            <p>@car.Modele</p>
+                            <p>@car.kilometrage</p>
+                            <p>@car.carburant</p>
+                            <p>@car.BoiteDeVitesse</p>
+                            <p>@car.ville</p>
+                            <p>@car.prix</p>
+                            @{
+
+
+            if (t.IsToday(car.temps))
+            { <p>Aujourd'hui</p> }
+            else if (t.IsYesterday(car.temps))
+            { <p>Hier</p> }
+            else
+            { <p>@car.temps.ToString()</p>}
+                            }
+                            <p>
+                                <a href="#" class="btn btn-default" role="button">
+                                    Oui, je veux
+                                </a>
+                            </p>
+
+                        </div>
+                    </div>
+
+        }
+        else if (cpt % 3 == 0)
+        {
+            @:</div>
+        @:</div>
+    @:<div class="row">
+        @:<div class="col-xs-12">
+            <div class="col-xs-3 ad-bg2">
+                <div class="thumbnail">
+                    <img src="@Url.Action("GetAdImageByName", "Voiture",
+                                       routeValues: new { id = car.IdVoiture,n=1 })"
+                         class="ad-image img-reponsive" alt="loading...">
+                </div>
+
+                <div class="caption">
+
+                    <h6>@car.marque</h6>
+                    <p>@car.Modele</p>
+                    <p>@car.kilometrage</p>
+                    <p>@car.carburant</p>
+                    <p>@car.BoiteDeVitesse</p>
+                    <p>@car.ville</p>
+                    <p>@car.prix</p>
+                    @{
+
+            if (t.IsToday(car.temps))
+            { <p>Aujourd'hui</p> }
+
+            else if (t.IsYesterday(car.temps))
+            { <p>Hier</p> }
+            else
+            { <p>@car.temps.ToString()</p>}
+                    }
+                    <p>
+                        <a href="#" class="btn btn-default" role="button">
+                            Oui, je veux
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        }
+        else
+        {
+            <div class="col-xs-3 ad-bg2">
+                <div class="thumbnail">
+                    <img src="@Url.Action("GetAdImageByName", "Voiture",
+                                       routeValues: new { id = car.IdVoiture,n=1 })"
+                         class="ad-image img-reponsive" alt="loading...">
+                </div>
+
+                <div class="caption">
+
+                    <h6>@car.marque</h6>
+                    <p>@car.Modele</p>
+                    <p>@car.kilometrage</p>
+                    <p>@car.carburant</p>
+                    <p>@car.BoiteDeVitesse</p>
+                    <p>@car.ville</p>
+                    <p>@car.prix</p>
+                    @{
+
+                        if (t.IsToday(car.temps))
+                        { <p>Aujourd'hui</p> }
+
+                        else if (t.IsYesterday(car.temps))
+                        { <p>Hier</p> }
+
+                        else
+                        { <p>@car.temps.ToString()</p>}
+                    }
+                    <p>
+                        <a href="#" class="btn btn-default" role="button">
+                            Oui, je veux
+                        </a>
+                    </p>
+
+                </div>
+            </div>
+        }
+
+        cpt++;
+    }
+}
+catch (System.NullReferenceException _xe)
+{
+    @*<div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-9 alert alert-danger nopadding1 div-err" role="alert">
+                <p>Erreur ! le prix maximum ne peut pas dépasser 2,147,483,647.</p>
+            </div>
+         </div>
+     </div>*@
+if (ViewBag.ex_int32 == "true")
+{
+     <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-9 alert alert-danger nopadding1 div-err" role="alert">
+                <p>Erreur ! le prix maximum ne peut pas dépasser 2,147,483,647.</p>
+            </div>
+         </div>
+     </div>
+}else if (ViewBag.IsNumber == "false")
+{
+     <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-9 alert alert-danger nopadding1 div-err" role="alert">
+                <p>Erreur ! Saisir des nombres.</p>
+            </div>
+         </div>
+     </div>
+}
+else if (ViewBag.IsPos == "false")
+{
+     <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-9 alert alert-danger nopadding1 div-err" role="alert">
+                <p>Erreur ! Saisir des nombres positive.</p>
+            </div>
+         </div>
+     </div>
+}
+else if (ViewBag.IsNull == "true")
+{
+     <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-9 alert alert-danger nopadding1 div-err" role="alert">
+                <p>Erreur ! Saisir des entrées pour la recherche.</p>
+            </div>
+         </div>
+     </div>
+}else if (ViewBag.MaxInfMin == "true")
+{
+     <div class="row">
+        <div class="col-xs-12">
+            <div class="col-xs-9 alert alert-danger nopadding1 div-err" role="alert">
+                <p>Erreur ! Le nombre maximum doit etre superieur au nombre inferieur.</p>
+            </div>
+         </div>
+     </div>
+}
+}
+    
+}

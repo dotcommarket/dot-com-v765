@@ -1,0 +1,367 @@
+﻿@if (ViewBag.ville == "all")
+{<option value="">&#171;Ville&#187; </option>
+                                <option value="Nouakchott">@Sough.Resource.select_ville_nktt</option>
+                                <option value="Néma">@Sough.Resource.select_ville_nema</option>
+                                <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+                                <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+                                <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+                                <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+                                <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+                                <option value="Atar">@Sough.Resource.select_ville_atar</option>
+                                <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+                                <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+                                <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+                                <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+                                <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+                                <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+                                <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+                                <option value="all" selected>toutes les villes</option>
+    @*<option value="">Ville</option>
+    <option value="Nouakchott">@Sough.Resource.select_ville_nktt</option>
+    <option value="Nema">@Sough.Resource.select_ville_nema</option>
+    <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+    <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+    <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+    <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+    <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+    <option value="Atar">@Sough.Resource.select_ville_atar</option>
+    <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+    <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+    <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+    <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+    <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+    <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+    <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+    <option value="all" selected>toutes les villes</option>*@
+}
+
+else if (ViewBag.ville == "Nouakchott")
+{
+<option value="">Ville</option>
+            
+            <option value="Nouakchott" selected>@Sough.Resource.select_ville_nktt</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Nema")
+        {
+            <option value="">Ville</option>
+            <option value="Nema" selected>@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Aioun")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun" selected>@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Kiffa")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa" selected>@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Kaédi")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi" selected>@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Aleg")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg" selected>@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Rosso")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso" selected>@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Atar")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar" selected>@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Nouadhibou")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou" selected>@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Tidjikdja")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja" selected>@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Selibaby")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby" selected>@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Zouerate")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate" selected>@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Akjoujt")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt" selected>@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Guerou")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou" selected>@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "Magta-Lahjar")
+        {
+<option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar" selected>@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all">toutes les villes</option>
+        }
+        else if (ViewBag.ville == "all")
+        {
+            <option value="">Ville</option>
+            <option value="Nema">@Sough.Resource.select_ville_nema</option>
+            <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+            <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+            <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+            <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+            <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+            <option value="Atar">@Sough.Resource.select_ville_atar</option>
+            <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+            <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+            <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+            <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+            <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+            <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+            <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+            <option value="all" selected>toutes les villes</option>
+        }else{
+            <option value="" selected>Ville</option>
+    <option value="Nouakchott">@Sough.Resource.select_ville_nktt</option>
+    <option value="Nema">@Sough.Resource.select_ville_nema</option>
+    <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+    <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+    <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+    <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+    <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+    <option value="Atar">@Sough.Resource.select_ville_atar</option>
+    <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+    <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+    <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+    <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+    <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+    <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+    <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+    <option value="all">toutes les villes</option>
+        }
+
+   
+
+

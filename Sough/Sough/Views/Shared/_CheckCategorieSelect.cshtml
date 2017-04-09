@@ -1,0 +1,1699 @@
+﻿        @if (ViewBag.cat == "all")
+        {
+            <option value="" selected>&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+<option value="Electromenagers">Electrom&eacute;nager</option>
+<option value="ArtTables">Arts de la table</option>
+<option value="Decorations">D&eacute;coration</option>
+<option value="Jardinages">Jardinage</option>
+
+<optgroup label="Multimedia"></optgroup>
+<option value="Ordinateurs">Ordinateur</option>
+<option value="Telephones">T&eacute;l&eacute;phone</option>
+<option value="Televisions">Television</option>
+<option value="Jeus">Les jeux</option>
+<option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+<optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+<option value="Mtransports">Mat&eacute;riel transport</option>
+<option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+<option value="EquipementIndustriels">Equipement industriels</option>
+<option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+<option value="FournitureBureaus">Fournitures de bureau</option>
+<option value="CommerceMarches">Commerce & March&eacute;s</option>
+<option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+<optgroup label="Services"></optgroup>
+<option value="ServiceMaisons">Services des maisons</option>
+<option value="CourParticuliers">Cours particuliers</option>
+<option value="EcoleAuto">Ecole Auto</option>
+<option value=autre>Autre</option>
+
+<optgroup label=autre></optgroup>
+<option value=autre>Autre</option>
+}
+else if (ViewBag.cat == "Voitures")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures" selected>Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+            
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Motoes")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes" selected>Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "EquipementAuto")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAuto" selected>Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "LocationImmobiliers")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers" selected>Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "VenteImmobiliers")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers" selected>Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "BureauCommerces")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces" selected>Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Chameaux")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux" selected>Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Chevres")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres" selected>Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Vaches")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches" selected>Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Vetements")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements" selected>V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Ammeublements")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements" selected>Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Electromenagers")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers" selected>Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "ArtTables")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables" selected>Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Decorations")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations" selected>D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Jardinages")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages" selected>Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Ordinateurs")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs" selected>Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Telephones")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones" selected>T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Televisions")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions" selected>Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Jeux")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus" selected>Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Informatiques")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques" selected>Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "Mtransports")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports" selected>Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "MGrosOeuvres")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres" selected>Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "EquipementIndustriels")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels" selected>Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "RestaurantHotelleries")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries" selected>Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "FournitureBureaux")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaux" selected>Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "CommerceMarches")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches" selected>Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "MaterielMedicals")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals" selected>Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "ServiceMaisons")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons" selected>Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "CourParticuliers")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers" selected>Cours particuliers</option>
+            <option value="EcoleAutos">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else if (ViewBag.cat == "EcoleAuto")
+        {
+            <option value="">&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAuto" selected>Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+        else
+        {
+            <option value="" selected>&#171;Categorie&#187;</option>
+            <optgroup label="Vehicules"></optgroup>
+            <option value="Voitures">Voitures</option>
+            <option value="Motoes">Moto</option>
+            <option value="EquipementAutos">Auto: Pi&egrave;ce et accessoires</option>
+
+            <optgroup label="Immobilier"></optgroup>
+            <option value="LocationImmobiliers">Location</option>
+            <option value="VenteImmobiliers">Ventes immobili&egrave;res</option>
+            <option value="BureauCommerces">Bureau & Commerce</option>
+
+            <optgroup label="Animaux"></optgroup>
+            <option value="Chameaux">Chameaux</option>
+            <option value="Chevres">Ch&egrave;vres</option>
+            <option value="Vaches">Vaches</option>
+
+            <optgroup label="V&ecirc;tements"></optgroup>
+            <option value="Vetements">V&ecirc;tements</option>
+
+            <optgroup label="Mat&eacute;riel maison"></optgroup>
+            <option value="Ammeublements">Ammeublement</option>
+            <option value="Electromenagers">Electrom&eacute;nager</option>
+            <option value="ArtTables">Arts de la table</option>
+            <option value="Decorations">D&eacute;coration</option>
+            <option value="Jardinages">Jardinage</option>
+
+            <optgroup label="Multimedia"></optgroup>
+            <option value="Ordinateurs">Ordinateur</option>
+            <option value="Telephones">T&eacute;l&eacute;phone</option>
+            <option value="Televisions">Television</option>
+            <option value="Jeus">Les jeux</option>
+            <option value="Informatiques">Inforamtique (Appareil ou Matériel)</option>
+
+            <optgroup label="Mat&eacute;riel proffessionel"></optgroup>
+            <option value="Mtransports">Mat&eacute;riel transport</option>
+            <option value="MGrosOeuvres">Mat&eacute;riel Gro-oeuvre</option>
+            <option value="EquipementIndustriels">Equipement industriels</option>
+            <option value="RestaurantHotelleries">Restaurant-Hotellerie</option>
+            <option value="FournitureBureaus">Fournitures de bureau</option>
+            <option value="CommerceMarches">Commerce & March&eacute;s</option>
+            <option value="MaterielMedicals">Mat&eacute;riel m&eacute;dical</option>
+
+            <optgroup label="Services"></optgroup>
+            <option value="ServiceMaisons">Services des maisons</option>
+            <option value="CourParticuliers">Cours particuliers</option>
+            <option value="EcoleAuto">Ecole Auto</option>
+            <option value=autre>Autre</option>
+
+            <optgroup label=autre></optgroup>
+            <option value=autre>Autre</option>
+        }
+
+  
+

@@ -1,0 +1,76 @@
+﻿@model Sough.Models.Ad
+
+@{
+    ViewBag.Title = "Details";
+    int _id = -1;
+    if (Model != null)
+    {
+        _id = (int)Model.Id;
+    }
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>Ad</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.categorie)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.categorie)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.data)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.data)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ville)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ville)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.prix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.prix)
+    </div>
+
+    @*<div class="display-label">
+         @Html.DisplayNameFor(model => model.ad_prix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ad_prix)
+    </div>*@
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.username)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.username)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phone)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.email)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.email)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

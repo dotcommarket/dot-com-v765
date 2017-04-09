@@ -1,0 +1,196 @@
+﻿.car_shapes {
+    margin-left: 15px;
+}
+
+ul.car_shapes li {
+    width: 80px;
+    height: 10px;
+    cursor: pointer;
+    display: block;
+    float: left;
+    margin: 0 2px 0 0;
+    padding: 25px 0 10px;
+    text-align: center;
+    background-repeat: no-repeat;
+    border: 1px solid #ff6500;
+    margin-right: 20px;
+}
+
+.ic-1-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-1-b.png") center;
+}
+
+.ic-1-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-1-o.png") center;
+}
+
+.ic-2-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-2-b.png") center;
+}
+
+.ic-2-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-2-o.png") center;
+}
+
+.ic-3-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-3-b.png") center;
+}
+
+.ic-3-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-3-o.png") center;
+}
+
+.ic-4-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-4-b.png") center;
+}
+
+.ic-4-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-4-o.png") center;
+}
+
+
+.car_shapes .car_shape_2 {
+    background-position: -16px -8px;
+}
+
+.car_shape_3 {
+    background-position: -110px -8px;
+}
+
+.car_shape_4 {
+    background-position: -208px -8px;
+}
+
+.car_shape_5 {
+    background-position: -309px -8px;
+}
+
+.car_shape_6 {
+    background-position: -404px -8px;
+}
+
+.car_shape_7 {
+    background-position: -498px -8px;
+}
+
+.car_colors {
+    *zoom: 1;
+    list-style-type: none;
+    margin: 6px 0 0;
+    padding: 0;
+    float: left;
+    margin-right: 20px;
+}
+
+    .car_colors li {
+        display: inline-block;
+        height: 22px;
+        width: 22px;
+        margin-left: 2px;
+        border: 1px solid #fff4e3;
+        border-radius: 2px;
+        *display: inline;
+        *zoom: 1;
+        padding: 1px;
+    }
+
+        .car_colors li.show-li-color {
+            width: 22px;
+            height: 22px;
+        }
+
+        .car_colors li.show-li-car {
+            width: 64px;
+            height: 38px;
+        }
+
+.modal-car_colors {
+    margin-top: 10px;
+}
+
+
+li.color_selected {
+    border: 1px solid #f60;
+}
+
+.car_colors li div {
+    cursor: pointer;
+    height: 18px;
+    width: 18px;
+    border-radius: 2px;
+    margin: 0;
+}
+
+
+
+#white div {
+    background-color: #FFF;
+}
+
+#grey div {
+    background-color: #CCC;
+}
+
+#red div {
+    background-color: red;
+}
+
+#black div {
+    background-color: #000;
+}
+
+#yellow div {
+    background-color: #FFD200;
+}
+
+#brown div {
+    background-color: #754C24;
+}
+
+#green div {
+    background-color: #2DB466;
+}
+
+#blue div {
+    background-color: #199CFF;
+}
