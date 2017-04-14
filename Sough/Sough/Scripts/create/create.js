@@ -1,4 +1,15 @@
-﻿
+﻿function estNeufClick(id, x) {
+    var EstNeuf = "";
+    if (document.getElementById('estneuf0').checked == true) {
+        if (x === "Neuf")
+            EstNeuf = "Neuf";
+    } else if (document.getElementById('estneuf1').checked == true) {
+        if (x === "Occasion")
+            EstNeuf = "Occasion";
+    }
+    document.getElementById('estneuf').value = EstNeuf;
+
+}
 
 function loadBoxImage(id) {
     var output = document.getElementById(id);

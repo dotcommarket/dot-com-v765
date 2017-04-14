@@ -10,8 +10,30 @@ namespace Sough.Controllers
     {
         public ActionResult Index()
         {
-            return View();
+            return RedirectToAction("Index" + GererLang.currentLang);
         }
 
+        public ActionResult Indexar() 
+        {
+            if (GererLang.currentLang.Equals("ar"))
+                return View();
+            else
+                return RedirectToAction("Indexfr");
+        }
+
+        public ActionResult Indexfr()
+        {
+            if (GererLang.currentLang.Equals("fr"))
+                return View();
+            else
+                return RedirectToAction("Indexar");
+        }
+
+        public ActionResult ChangeLanguage(string lang)
+        {
+            GererLang.currentLang = lang;
+            new GererLang().setLang(lang);
+            return RedirectToAction("Create", "Voiture");
+        }
     }
 }

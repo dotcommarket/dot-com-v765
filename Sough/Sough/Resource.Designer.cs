@@ -88,6 +88,15 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à انشر سلعتك.
+        /// </summary>
+        public static string btn_pub {
+            get {
+                return ResourceManager.GetString("btn_pub", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à تم.
         /// </summary>
         public static string btn1 {
@@ -435,6 +444,15 @@ namespace Sough {
         public static string LabelVitesse {
             get {
                 return ResourceManager.GetString("LabelVitesse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à تجار.
+        /// </summary>
+        public static string logo {
+            get {
+                return ResourceManager.GetString("logo", resourceCulture);
             }
         }
         

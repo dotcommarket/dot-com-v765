@@ -336,4 +336,10 @@
   <data name="pourquoi_pass" xml:space="preserve">
     <value>Le password et le numero du téléphone sont nécessaire pour pouvoir modifier et récupérer votre produit sur toujjar apps.</value>
   </data>
+  <data name="btn_pub" xml:space="preserve">
+    <value>Deposez un produit</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>toujjar</value>
+  </data>
 </root>

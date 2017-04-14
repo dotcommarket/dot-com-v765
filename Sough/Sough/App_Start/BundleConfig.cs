@@ -12,31 +12,46 @@ namespace Sough
         {
             bundles.IgnoreList.Clear();
             bundles.Add(new StyleBundle("~/Content/css_tamp").Include(
-
                         ));
-            bundles.Add(
-            new StyleBundle("~/Content/css")
+
+            bundles.Add(new StyleBundle("~/Content/css-ar")
+                .Include("~/Content/css/toujjar-theme/bootstrap.min.css", cssFixer)
+                .Include("~/Content/css/toujjar-theme/bootstrap-rtl.css", cssFixer)
+
+                .Include("~/Content/css/toujjar-theme/bootstrap-select.min.css", cssFixer)
+            );
+
+            bundles.Add(new StyleBundle("~/Content/css-fr")
                 .Include("~/Content/css/toujjar-theme/bootstrap.css", cssFixer)
                 .Include("~/Content/css/toujjar-theme/bootstrap.min.css", cssFixer)
                 .Include("~/Content/css/toujjar-theme/bootstrap-select.min.css", cssFixer)
-                
             );
-            bundles.Add(new StyleBundle("~/Content/featurebox_select").Include(
-                        "~/Content/css/toujjar-theme/featurebox_select.css"));
 
-            bundles.Add(new ScriptBundle("~/bundles/js").Include(
+            bundles.Add(new StyleBundle("~/Content/featurebox_select-fr").Include(
+                        "~/Content/css/toujjar-theme/featurebox_select-fr.css"));
+            bundles.Add(new StyleBundle("~/Content/featurebox_select-ar").Include(
+                        "~/Content/css/toujjar-theme/featurebox_select-ar.css"));
+
+            bundles.Add(new ScriptBundle("~/bundles/js-fr").Include(
                         "~/Scripts/bootstrap/bootstrap.js",
                         "~/Scripts/bootstrap/bootstrap.min.js",
                         "~/Scripts/less.min.js"));
 
+            bundles.Add(new ScriptBundle("~/bundles/js-ar").Include(
+                        "~/Scripts/bootstrap/bootstrap-rtl.js",
+                        "~/Scripts/bootstrap/bootstrap.min.js",
+                        "~/Scripts/less.min.js"));
 
             /*Create Page css & js*/
             bundles.Add(new ScriptBundle("~/bundles/create-js").Include(
                         "~/Scripts/create/car_input_data.js",
                         "~/Scripts/create/car-create-js.js"));
 
-            bundles.Add(new StyleBundle("~/Content/create").Include(
-                "~/Content/css/create/create.css"
+            bundles.Add(new StyleBundle("~/Content/create-fr").Include(
+                "~/Content/css/create/create-fr.css"
+                ));
+            bundles.Add(new StyleBundle("~/Content/create-ar").Include(
+                "~/Content/css/create/create-ar.css"
                 ));
 
             bundles.Add(new ScriptBundle("~/bundles/jquery").Include(
@@ -45,14 +60,23 @@ namespace Sough
             ));
 
 
-            bundles.Add(new StyleBundle("~/Content/search-main-css").Include(
-                        "~/Content/css/show-products/search_main.css"));
+            bundles.Add(new StyleBundle("~/Content/search-main-css-ar").Include(
+                        "~/Content/css/show-products/search_main-ar.css"));
 
-            bundles.Add(new StyleBundle("~/Content/ads").Include(
-                        "~/Content/css/show-products/ads.css"));
+            bundles.Add(new StyleBundle("~/Content/search-main-css-fr").Include(
+                        "~/Content/css/show-products/search_main-fr.css"));
 
-            bundles.Add(new StyleBundle("~/Content/show-product").Include(
-                        "~/Content/css/show-products/show-product.css"));
+            bundles.Add(new StyleBundle("~/Content/ads-ar").Include(
+                        "~/Content/css/show-products/ads-ar.css"));
+
+            bundles.Add(new StyleBundle("~/Content/ads-fr").Include(
+                        "~/Content/css/show-products/ads-fr.css"));
+
+            bundles.Add(new StyleBundle("~/Content/show-product-ar").Include(
+                        "~/Content/css/show-products/show-product-ar.css"));
+
+            bundles.Add(new StyleBundle("~/Content/show-product-fr").Include(
+                        "~/Content/css/show-products/show-product-fr.css"));
 
             bundles.Add(new ScriptBundle("~/bundles/jq-caresoul").Include(
                 "~/Scripts/jquery/jquery-1.9.1.js",
@@ -67,8 +91,10 @@ namespace Sough
             bundles.Add(new ScriptBundle("~/bundles/jquery-1.6").Include(
                 "~/Scripts/jquery/jquery-1.6.min.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/show-product").Include(
-                        "~/Scripts/show/show-product.js"));
+            bundles.Add(new ScriptBundle("~/bundles/show-product-ar").Include(
+                        "~/Scripts/show/show-product-ar.js"));
+            bundles.Add(new ScriptBundle("~/bundles/show-product-fr").Include(
+                        "~/Scripts/show/show-product-ar.fr"));
 
             bundles.Add(new ScriptBundle("~/bundles/ads").Include(
                         "~/Scripts/show/ads.js"));
@@ -85,10 +111,13 @@ namespace Sough
             bundles.Add(new StyleBundle("~/Content/pace").Include(
                         "~/Content/css/module/pace.css"));
 
-            bundles.Add(new StyleBundle("~/Content/popey").Include(
+            bundles.Add(new StyleBundle("~/Content/popey-ar").Include(
                         "~/Content/css/module/jquery.popeye.css",
-                        "~/Content/css/module/jquery.popeye.style.css"));
+                        "~/Content/css/module/jquery.popeye.style-ar.css"));
 
+            bundles.Add(new StyleBundle("~/Content/popey-fr").Include(
+                        "~/Content/css/module/jquery.popeye.css",
+                        "~/Content/css/module/jquery.popeye.style-fr.css"));
 
             // Extension js
             bundles.Add(new ScriptBundle("~/bundles/pace").Include(
@@ -97,9 +126,17 @@ namespace Sough
             bundles.Add(new ScriptBundle("~/bundles/options").Include(
                       "~/Scripts/options.js"));
 
-            bundles.Add(new ScriptBundle("~/bundles/popey").Include(
-                      "~/Scripts/module/option-plugin-popeye.js",
-                      "~/Scripts/module/jquery.popeye-2.0.4.min.js"));
+            bundles.Add(new ScriptBundle("~/bundles/popey-ar").Include(
+                      "~/Scripts/module/jquery.popeye-2.0.4.min.js",
+                      "~/Scripts/module/option-popeye-ar.js"
+                      ));
+            bundles.Add(new ScriptBundle("~/bundles/popey-fr").Include(
+                      "~/Scripts/module/jquery.popeye-2.0.4.min.js",
+                      "~/Scripts/module/option-popeye-fr.js"
+                      ));
+
+                     
+
             bundles.Add(new ScriptBundle("~/bundles/detect-media").Include(
                         "~/Scripts/bootstrap/bootstrap-toolkit.min.js"));
 

@@ -1,0 +1,61 @@
+//
+// RTL Pagination (multiple pages)
+// --------------------------------------------------
+.pagination {
+  padding-right: 0;
+
+  > li {
+    > a,
+    > span {
+      float: right; // Collapse white-space
+      margin-right: -1px;
+      margin-left: 0px;
+      line-height: @line-height-base;
+      text-decoration: none;
+      color: @pagination-color;
+      background-color: @pagination-bg;
+      border: 1px solid @pagination-border;
+    }
+    &:first-child {
+      > a,
+      > span {
+        margin-left: 0;
+        .border-right-radius(@border-radius-base);
+        .border-left-radius(0);
+      }
+    }
+    &:last-child {
+      > a,
+      > span {
+        margin-right: -1px;
+        .border-left-radius(@border-radius-base);
+        .border-right-radius(0);
+      }
+    }
+  }
+
+  > li > a,
+  > li > span {
+    &:hover,
+    &:focus {
+      z-index: 2;
+      color: @pagination-hover-color;
+      background-color: @pagination-hover-bg;
+      border-color: @pagination-hover-border;
+    }
+  }
+   > .active > a,
+  > .active > span {
+    &,
+    &:hover,
+    &:focus {
+      z-index: 3;
+      color: @pagination-active-color;
+      background-color: @pagination-active-bg;
+      border-color: @pagination-active-border;
+      cursor: default;
+
+
+    }
+  }
+}

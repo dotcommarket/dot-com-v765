@@ -104,7 +104,7 @@ function checkNom() {
         help.innerText = 'Erreur , Le nom est long!';
 
         node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () { node.style.boxShadow = ""; checkNom(); }
+        node.onblur = function () {  checkNom(); }
         window.scrollTo(0, 100); 
         return false;
     }
@@ -116,7 +116,7 @@ function checkNom() {
         help.innerText = 'Erreur , Le nom est incorrect!';
 
         node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () { node.style.boxShadow = ""; checkNom(); }
+        node.onblur = function () {  checkNom(); }
         window.scrollTo(0, 100);
         return false;
     }
@@ -126,9 +126,9 @@ function checkNom() {
 
         node.onfocus = function () {
             node.style.borderColor = "#0a67c7";
-            node.style.boxShadow = "0 0 5px #0a67c7";
+            //node.style.boxShadow = "0 0 5px #0a67c7";
         }
-        node.onblur = function () { node.style.boxShadow = ""; checkNom(); }
+        node.onblur = function () {  checkNom(); }
         help.innerText = "";
         return true;
     }
@@ -147,8 +147,8 @@ function checkPhone() {
         help.style.color = "#cc0000";
         help.innerText = "Le num\351ro du t\351l\351phone est obligatoire";
 
-        node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () { node.style.boxShadow = ""; checkPhone(); }
+        //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
+        node.onblur = function () { checkPhone(); }
         window.scrollTo(0, 100);
         return false;
     }
@@ -169,9 +169,9 @@ function checkPhone() {
 
         node.onfocus = function () {
             this.style.borderColor = "#0a67c7";
-            this.style.boxShadow = "0 0 5px #0a67c7";
+            //this.style.boxShadow = "0 0 5px #0a67c7";
         }
-        node.onblur = function () { node.style.boxShadow = ""; checkPhone(); }
+        node.onblur = function () {  checkPhone(); }
         help.innerText = "";
         return true;
     }
@@ -182,8 +182,8 @@ function checkPhone() {
         help.style.color = "#cc0000";
         help.innerText = 'le format du num\351ro du t\351l\351phone est incorrect';
 
-        node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () { node.style.boxShadow = ""; checkPhone(); }
+        //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
+        node.onblur = function () { checkPhone(); }
         window.scrollTo(0, 100);
         return false;
     }
@@ -203,9 +203,9 @@ function checkEmail() {
 
             node.onfocus = function () {
                 this.style.borderColor = "#0a67c7";
-                this.style.boxShadow = "0 0 5px #0a67c7";
+                //this.style.boxShadow = "0 0 5px #0a67c7";
             }
-            node.onblur = function () { node.style.boxShadow = ""; checkEmail(); }
+            node.onblur = function () {  checkEmail(); }
             help.innerText = "";
             return true;
         }
@@ -216,8 +216,8 @@ function checkEmail() {
             help.style.color = "#cc0000";
             help.innerText = 'Email incorrect!';
 
-            node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-            node.onblur = function () { node.style.boxShadow = ""; checkEmail(); }
+            //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
+            node.onblur = function () {  checkEmail(); }
             window.scrollTo(0, 100);
             return false;
         }
@@ -229,12 +229,12 @@ function checkEmail() {
 
         node.onfocus = function () {
             this.style.borderColor = "#0a67c7";
-            this.style.boxShadow = "0 0 5px #0a67c7";
+            //this.style.boxShadow = "0 0 5px #0a67c7";
         }
 
         node.onblur = function () {
             this.style.borderColor = "#999999";
-            this.style.boxShadow = "";
+           // this.style.boxShadow = "";
             checkEmail();
         }
 
@@ -280,8 +280,8 @@ function checkPass() {
         help.style.color = "#cc0000";
         help.innerText = 'Erreur , Creer un password pour votre produit!';
 
-        node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () { node.style.boxShadow = ""; checkPass(); }
+        //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
+        node.onblur = function () {  checkPass(); }
         window.scrollTo(0, 1380);
         return false;
     }
@@ -291,9 +291,9 @@ function checkPass() {
 
         node.onfocus = function () {
             node.style.borderColor = "#0a67c7";
-            node.style.boxShadow = "0 0 5px #0a67c7";
+            // node.style.boxShadow = "0 0 5px #0a67c7";
         }
-        node.onblur = function () { node.style.boxShadow = ""; checkPass(); }
+        node.onblur = function () {  checkPass(); }
         help.innerText = "";
         return true;
     }
@@ -310,8 +310,8 @@ function checkConfPass() {
         help.style.color = "#cc0000";
         help.innerText = 'Erreur , le mot de pass n\'est pas identique!';
 
-        conf_pass.onfocus = function () { conf_pass.style.boxShadow = "0 0 5px #cc0000"; }
-        conf_pass.onblur = function () { conf_pass.style.boxShadow = ""; checkConfPass(); }
+        //conf_pass.onfocus = function () { conf_pass.style.boxShadow = "0 0 5px #cc0000"; }
+        conf_pass.onblur = function () {  checkConfPass(); }
         window.scrollTo(0, 1400);
         return false;
     } else {
@@ -320,9 +320,9 @@ function checkConfPass() {
 
         conf_pass.onfocus = function () {
             conf_pass.style.borderColor = "#0a67c7";
-            conf_pass.style.boxShadow = "0 0 5px #0a67c7";
+            //conf_pass.style.boxShadow = "0 0 5px #0a67c7";
         }
-        conf_pass.onblur = function () { conf_pass.style.boxShadow = ""; checkConfPass(); }
+        conf_pass.onblur = function () {  checkConfPass(); }
         help.innerText = "";
         return true;
     }

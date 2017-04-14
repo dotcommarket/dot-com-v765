@@ -521,6 +521,7 @@ namespace Sough.Controllers
 
         public ActionResult ChangeLanguage(string lang)
         {
+            GererLang.currentLang = lang;
             new GererLang().setLang(lang);
             return RedirectToAction("Create", "Voiture");
         }

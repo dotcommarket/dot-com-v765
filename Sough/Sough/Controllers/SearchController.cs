@@ -758,5 +758,12 @@ namespace Sough.Controllers
                 ViewBag.p_cat = "Services";
             }
         }
+
+        public ActionResult ChangeLanguage(string lang)
+        {
+            GererLang.currentLang = lang;
+            new GererLang().setLang(lang);
+            return RedirectToAction("Create", "Voiture");
+        }
     }
 }

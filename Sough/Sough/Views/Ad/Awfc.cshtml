@@ -3,33 +3,14 @@
 
 @{
     ViewBag.Title = "wilaya";
+    var culture = Sough.GererLang.currentLang;
 }
 
-@Styles.Render("~/Content/ads")
-<link href="~/Content/css/show-products/wares_byr_searchmain.css" rel="stylesheet" type="text/css" />
-<link href="@Url.Content("~/Content/css/index/index.css")" rel="stylesheet" type="text/css" />
-<link href="~/Content/css/toujjar-theme/featurebox_select_wfr.css" rel="stylesheet" type="text/css" />
+@Styles.Render("~/Content/ads-"+culture)
+<link href="@Url.Content("~/Content/css/show-products/wares_byr_searchmain-"+culture+".css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/index/index-"+culture+".css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/toujjar-theme/featurebox_select_wfr-"+culture+".css")" rel="stylesheet" type="text/css" />
 
-<style type="text/css">
-    .gw-search {
-        padding-top: 20px;
-        padding-bottom: 20px;
-        padding-left:3px;
-        background-color: #f3fafe; /*#eceff1*/
-        border: 1px solid #ddd;
-        -webkit-border-radius: 4px;
-        -moz-border-radius: 4px;
-        border-radius: 4px;
-    }
-
-    #cat {
-        width: 190px;
-    }
-
-    #ville {
-        width: 155px;
-    }
-</style>
 
 <div id="content">
     <div class="row">

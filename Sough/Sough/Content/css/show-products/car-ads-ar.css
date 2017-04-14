@@ -1,0 +1,327 @@
+﻿
+
+ 
+.ic-1-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-1-b.png") center;
+}
+
+.ic-1-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-1-o.png") center;
+}
+
+.ic-2-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-2-b.png") center;
+}
+
+.ic-2-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-2-o.png") center;
+}
+
+.ic-3-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-3-b.png") center;
+}
+
+.ic-3-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-3-o.png") center;
+}
+
+.ic-4-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-4-b.png") center;
+}
+
+.ic-4-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-4-o.png") center;
+}
+
+.ic-5-b {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-5-b.png") center;
+}
+
+.ic-5-o {
+    position: relative;
+    width: 64px;
+    height: 54px;
+    margin: 0 auto;
+    margin-top: -35px;
+    background: url("/Content/icons/ic-5-o.png") center;
+}
+
+
+ul.car_shapes li {
+    width: 80px !important;
+    height: 10px !important;
+    cursor: pointer !important;
+    display: block !important;
+    float: right !important;
+    margin: 0 0 0 2px;
+    padding: 25px 0 10px !important;
+    text-align: center !important;
+    background-repeat: no-repeat !important;
+    border: 1px solid #fab387 !important;
+    margin-left: 20px !important;
+}
+
+.grid_row ul.car_shapes li.car_shape_box_orange {
+    background-image: url("");
+    color: #F60;
+    border: 1px solid #F60;
+}
+
+    .grid_row ul.car_shapes li.car_shape_box_orange label {
+        color: #F60;
+    }
+
+ul.car_shapes li label {
+    display: block;
+    margin-top: -7.9px;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+
+.car_shapes .car_shape_2 {
+    background-position: -16px -8px;
+}
+
+.car_shape_3 {
+    background-position: -110px -8px;
+}
+
+.car_shape_4 {
+    background-position: -208px -8px;
+}
+
+.car_shape_5 {
+    background-position: -309px -8px;
+}
+
+.car_shape_6 {
+    background-position: -404px -8px;
+}
+
+.car_shape_7 {
+    background-position: -498px -8px;
+}
+
+.car_params, .car_params_expand {
+    position: relative;
+}
+
+    .car_params h2, .car_params_expand h2 {
+        margin-bottom: 5px;
+    }
+
+.car_params {
+    height: 20px;
+}
+
+.car_params_expand {
+    height: 245px;
+    *height: 255px;
+    width: 100%;
+}
+
+.car_params_column {
+    float: right;
+    width: 185px;
+}
+
+    .car_params_column ul {
+        margin: 0;
+    }
+
+.car_params_column_margin {
+    float: right;
+    width: 185px;
+    margin-top: 10px;
+}
+
+.grid_row span.car_params_normal_search, .grid_row span.car_params_advance_search {
+    color: #0066D5;
+    cursor: pointer;
+    display: block;
+    height: 16px;
+    padding-right: 20px;
+    clear: both;
+}
+
+/*.car_params_advance_search {
+    background: url("/img/search_open.png") no-repeat;
+}
+
+.car_params_normal_search {
+    top: 220px;
+    background: url("/img/search_close.png") no-repeat;
+}*/
+
+.car_colors {
+    *zoom:1;list-style-type:none;margin:6px 0 0;padding:0;float:right
+}
+
+.car_colors li {
+   display:inline-block;height:22px;width:22px;margin-right:2px;*display:inline;*zoom:1;padding:1px
+}
+
+li.color_selected {
+    border: 1px solid #f60;
+}
+
+.car_colors li div {
+   cursor:pointer;height:18px;width:18px;border-radius:2px;margin:0
+}
+
+
+ul.car_shapes {
+    margin: 0  ;
+    padding: 0  ;
+    float: right  ;
+}
+
+    ul.car_shapes li {
+        width: 80px  ;
+        height: 10px  ;
+        cursor: pointer  ;
+        display: block  ;
+        float: right  ;
+        margin: 0 0 0 2px  ;
+        padding: 25px 0 10px  ;
+        text-align: center  ;
+        background-repeat: no-repeat  ;
+        border: 1px solid #fff4e3  ;
+    }
+
+.car_shape_box_black {
+    color: #000  ;
+}
+
+ ul.car_shapes li.car_shape_box_orange {
+    color: #F60  ;
+    border: 1px solid #ff6500;
+}
+
+     ul.car_shapes li.car_shape_box_orange label {
+        color: #ff6500  ;
+    }
+
+ul.car_shapes li label {
+    display: block  ;
+    padding-bottom: 5px  ;
+}
+
+
+#md_white div {
+    background-color: #FFF  ;
+}
+
+#md_grey div {
+    background-color: #CCC  ;
+}
+
+#md_red div {
+    background-color: red  ;
+}
+
+#md_black div {
+    background-color: #000  ;
+}
+
+#md_yellow div {
+    background-color: #FFD200  ;
+}
+
+#md_brown div {
+    background-color: #754C24  ;
+}
+
+#md_green div {
+    background-color: #2DB466  ;
+}
+
+#md_blue div {
+    background-color: #199CFF  ;
+}
+
+.item{
+    margin-right:30px;
+}
+
+#btn-md{
+    width:140px;
+}
+
+
+@media(max-width:991px){
+#km-min{
+    margin-top:9px;
+}
+#km-max{
+    margin-top:9px;
+}
+#marque{
+    margin-top:9px;
+}
+#sp-modele{
+    margin-top:9px;
+}
+
+#btn-md{
+    margin-top:40px;
+}       
+}
+@media(max-width:772px) {
+    #colors-list {
+        margin-top:20px;
+    }
+} 
+
+#sp-ville{
+    margin-left:5px;
+}
+
+#sp-cat{
+    margin-left:5px;
+}

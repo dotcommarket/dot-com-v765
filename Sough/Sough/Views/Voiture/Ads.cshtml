@@ -3,14 +3,13 @@
 
 @{
     ViewBag.Title = "Voitures";
+    var culture = Sough.GererLang.currentLang;
 }
 
-
-
-@Styles.Render("~/Content/ads")
-@Styles.Render("~/Content/featurebox_select")
-<link href="~/Content/css/show-products/car-ads.css" rel="stylesheet" type="text/css" />
-@Styles.Render("~/Content/search-main-css")
+@Styles.Render("~/Content/ads-"+culture)
+@Styles.Render("~/Content/featurebox_select-"+culture)
+<link href="@Url.Content("~/Content/css/show-products/car-ads-"+culture+".css")" rel="stylesheet" type="text/css" />
+@Styles.Render("~/Content/search-main-css-"+culture)
 <div id="content">
     <div class="row leftmarge">
     
@@ -57,8 +56,8 @@
 
 
                         <div class="col-md-3 col-xs-5">
-                            <span>
-                                    @Html.Partial("~/Views/Voiture/_SelectModels.cshtml")
+                            <span id="sp-modele">
+                                @Html.Partial("~/Views/Voiture/_SelectModels.cshtml")
                             </span>
                         </div>
 
@@ -68,14 +67,14 @@
                     </div>
                     <div class="row">
                         <div class="col-md-3 col-xs-5">
-                            <span style="margin-right:5px;">
+                            <span id="sp-ville">
                                 <select id="md_ville" name="ville" class="featurebox_select_medium">
                                     @Html.Partial("_CheckVilleSelect")
                                 </select>
                             </span>
                         </div>
                         <div class="col-md-3 col-xs-5">
-                            <span style="margin-right:5px;">
+                            <span id="sp-cat">
                                 <select name="cat" id="cat" class="featurebox_select_medium">
                                     @Html.Partial("_CheckCategorieSelect")
                                 </select>
@@ -83,30 +82,30 @@
                         </div>
                         <div class="col-md-3 col-xs-5">
                             <span>
-                                    <select class="featurebox_select" name="km_min">
-                                        <option value="" selected="selected">KM min</option>
-                                        <option value="0">0</option>
-                                        <option value="5000">5.000</option>
-                                        <option value="10000">10.000</option>
-                                        <option value="15000">15.000</option>
-                                        <option value="20000">20.000</option>
-                                        <option value="25000">25.000</option>
-                                        <option value="30000">30.000</option>
-                                        <option value="35000">35.000</option>
-                                        <option value="40000">40.000</option>
-                                        <option value="45000">45.000</option>
-                                        <option value="50000">50.000</option>
-                                        <option value="55000">55.000</option>
-                                        <option value="60000">60.000</option>
-                                        <option value="65000">65.000</option>
-                                        <option value="70000">70.000</option>
+                                <select class="featurebox_select" name="km_min" id="km-min">
+                                    <option value="" selected="selected">KM min</option>
+                                    <option value="0">0</option>
+                                    <option value="5000">5.000</option>
+                                    <option value="10000">10.000</option>
+                                    <option value="15000">15.000</option>
+                                    <option value="20000">20.000</option>
+                                    <option value="25000">25.000</option>
+                                    <option value="30000">30.000</option>
+                                    <option value="35000">35.000</option>
+                                    <option value="40000">40.000</option>
+                                    <option value="45000">45.000</option>
+                                    <option value="50000">50.000</option>
+                                    <option value="55000">55.000</option>
+                                    <option value="60000">60.000</option>
+                                    <option value="65000">65.000</option>
+                                    <option value="70000">70.000</option>
 
-                                        <option value="70000">80.000</option>
-                                        <option value="70000">90.000</option>
-                                        <option value="70000">100.000</option>
-                                        <option value="70000">110.000</option>
-                                        <option value="70000">150.000</option>
-                                    </select>
+                                    <option value="70000">80.000</option>
+                                    <option value="70000">90.000</option>
+                                    <option value="70000">100.000</option>
+                                    <option value="70000">110.000</option>
+                                    <option value="70000">150.000</option>
+                                </select>
                             </span>
                         </div>
 
@@ -239,7 +238,7 @@
                             <div class="col-md-2"></div>
                             <div class="col-md-2"></div>
                             <div class="col-md-1"></div>
-                            <div class="col-md-3 text-left">
+                            <div class="col-md-3">
                                 <button class="btn Btn3" id="btn-md" type="submit">
                                     Chercher <i class="@Sough.App_Code.Ticons.search"></i>
                                 </button>

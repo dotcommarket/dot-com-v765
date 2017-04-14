@@ -14,23 +14,24 @@
     {
         ViewBag.Title = "Unknown ti";
     }
+    var culture = Sough.GererLang.currentLang;
 }
 
-@Styles.Render("~/Content/popey")
+@Styles.Render("~/Content/popey-"+culture)
 
-@Styles.Render("~/Content/ads")
-@Styles.Render("~/Content/show-product")
+@Styles.Render("~/Content/ads-"+culture)
+@Styles.Render("~/Content/show-product-"+culture)
     
 @try {
         
 <div class="content" id="content">
-    <div class="row hidden-xs">
+    <div class="row"> <!-- hidden-xs-->
     <div class="col-md-8 col-sm-12 ad-bg">
         
         <!-- div image-->
         <div class="col-md-6 col-sm-6">
             <div class="col-md-12 col-sm-12 row-img">
-                <div class="ppy" id="ppy1">
+                <div class="ppy" id="ppy2">
                     <ul class="ppy-imglist">
                         <li>
                             <a href="@Url.Action("GetAdImageByName", "Voiture",
@@ -85,7 +86,7 @@
                             </div>
                         </div>
                     </div>
-                    
+
                 </div>
             </div>
 
@@ -179,7 +180,7 @@
     </div>
         </div>
 
-<div class="row visible-xs hidden-sm hidden-md ad-bg-xs">
+@*<div class="row visible-xs hidden-sm hidden-md ad-bg-xs">
            <div class="col-xs-12">
                <div class="div-img-xs">
                    <a href="@Url.Action("GetAdImageByName", "Voiture",
@@ -318,7 +319,7 @@
     </div>
 
 
-</div>
+</div>*@
 
 </div>
 
@@ -340,7 +341,6 @@ catch (Exception e)
 }
 
 @section Scripts {
-@Scripts.Render("~/bundles/popey")
-@Scripts.Render("~/bundles/show-product")
+@Scripts.Render("~/bundles/popey-" + culture)
 @Scripts.Render("~/bundles/ads")
 }

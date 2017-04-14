@@ -1,22 +1,19 @@
-﻿@*@model Sough.Models.Ad*@
-
-
+﻿
 @{
-    ViewBag.Title = "Sujet";  
+    ViewBag.Title = "Sujet";
+    var culture = Sough.GererLang.currentLang; 
 }
 
-@Styles.Render("~/Content/featurebox_select")
+@Styles.Render("~/Content/featurebox_select-"+culture)
 
 <div class="container content">
     <div class="row content">
-        <div class="col-md-6">
+        <div class="col-md-12">
            <span>
-               <div>
                    <select onchange="setSubject();" id="cat" name="cat" class="featurebox_select_large">
                        <option value="">&#171;Sujet&#187;</option>
                        @Html.Partial("_CategoriesController")
                    </select>
-               </div>
            </span>
 
         </div>

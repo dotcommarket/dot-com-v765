@@ -345,4 +345,10 @@
   <data name="pourquoi_pass" xml:space="preserve">
     <value>الكود ورقم الهاتف أساسيين من أجل تغيير البيانات إذا أردتم ذلك, والوصول إلى بضاعتكم.</value>
   </data>
+  <data name="btn_pub" xml:space="preserve">
+    <value>انشر سلعتك</value>
+  </data>
+  <data name="logo" xml:space="preserve">
+    <value>تجار</value>
+  </data>
 </root>

@@ -1,0 +1,105 @@
+﻿
+.div-span span {
+        float: right;
+        display: inline-block;
+        margin: 0 0 0 12px;
+        padding: 0;
+    }
+
+         .div-span span.right {
+            margin-left: 0;
+        }
+
+         .div-span span.checkbox {
+            padding-top: 9px;
+        }
+
+     li label {
+        color: #666;
+    }
+
+     .div-span span input {
+        width: 94%;
+        box-shadow: inset 0 4px 4px 0 #EBEBEB;
+    }
+
+     .div-span span input,  .div-span span select {
+        font-family: Verdana,sans-serif;
+        font-size: 12px;
+        padding: 6px;
+        margin: 0 auto;
+        border: 1px solid #CCC;
+        border-radius: 5px;
+    }
+
+         .div-span span input:focus {
+            box-shadow: none;
+        }
+
+         .div-span span input.checkbox {
+            width: auto;
+            margin-left: 3px;
+            box-shadow: none;
+            border: 0;
+            padding: 0;
+            border-radius: 0;
+        }
+
+input.checkbox:checked + label {
+    color: #000;
+}
+
+ .div-span span select {
+    width: 100%;
+    height: 30px;
+    background: linear-gradient(to bottom,#fff,#f0f0f0);
+    box-shadow: none;
+}
+
+div.safari .div-span span select {
+    -webkit-appearance: none;
+    background: url(/img/list_dropdown_arrows.png) no-repeat #FFF 5%;
+}
+
+    div.safari .div-span span select#sort_by {
+        padding-left: 24px;
+    }
+
+ .div-span span select:focus {
+    background: linear-gradient(to bottom,#f0f0f0,#fff);
+}
+
+div.safari .div-span span select:focus {
+    -webkit-appearance: none;
+    background: url(/img/list_dropdown_arrows.png) no-repeat #FFF 5%;
+}
+ .div-span span select option {
+    background: #fff;
+}
+.featurebox_select_small {
+    width: 100px;
+}
+
+.featurebox_select {
+    width: 120px;
+}
+
+.featurebox_select_medium {
+    width: 140px;
+}
+
+.featurebox_select_large {
+    width: 160px;
+}
+
+.featurebox_select_extra_large {
+    width: 190px;
+}
+
+.featurebox_select_medium {
+    width: 140px;
+}
+
+.featurebox_select_large {
+    width: 160px;
+}

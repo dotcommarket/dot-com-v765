@@ -2,26 +2,12 @@
 
 @{
     ViewBag.Title = "Formulaire";
+    var culture = Sough.GererLang.currentLang;
 
 }
-<script type="text/javascript">
-    
-    function estNeufClick(id,x) {
-        var EstNeuf = "";
-        if (document.getElementById('estneuf0').checked == true) {
-            if (x === "Neuf")
-                EstNeuf = "Neuf";
-        } else if (document.getElementById('estneuf1').checked == true) {
-            if (x === "Occasion")
-                EstNeuf = "Occasion";
-        }
-        document.getElementById('estneuf').value = EstNeuf;
-        
-    }
-</script>
-@Styles.Render("~/Content/create")
-<link href="~/Content/css/create/car_create.css" rel="stylesheet" type="text/css" />
-<link href="~/Content/css/toujjar-theme/span-input-select.css" rel="stylesheet" type="text/css" />
+@Styles.Render("~/Content/create-"+culture)
+<link href="@Url.Content("~/Content/css/create/car_create-"+culture+".css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/toujjar-theme/span-input-select-"+culture+".css")" rel="stylesheet" type="text/css" />
 
 <!-- /-->
 <div class="col-xs-12 col-sm-12 col-md-12">
@@ -83,36 +69,36 @@
                             <div class="lbl">
                                 <h3>@Html.LabelFor(model => model.trader_name, new { @class = "control-label" })</h3>
                             </div>
-                            <div class="controls">
+                            <div class="input-group">
                                 <input class="form-control" type="text" id="name" name="trader_name"
                                        onblur="checkNom()" pattern=".{0}|.{2,}" />
                                 <p class="help-block" id="help-name"></p>
                             </div>
+
                         </div>
                     </div>
                     <div class="row">
-                        <div class="col-xs-6 col-sm-6 col-md-2">
-                            <div class="lbl">
-                                <input name="agree_face" type="checkbox" value="" onclick="inputFace()">
-                                @Sough.Resource.LabelFacebook
+
+                            <div class="col-xs-6 col-sm-6 col-md-2">
+                                <div class="lbl">
+                                    <input name="agree_face" type="checkbox" value="" onclick="inputFace()">
+                                    @Sough.Resource.LabelFacebook
+                                </div>
                             </div>
-                        </div>
-                        <div class="col-xs-6 col-sm-6 col-md-2">
-                            <div class="lbl">
-                                <input name="agree_insta" type="checkbox" value="" onclick="inputInsta();">
-                                @Sough.Resource.LabelInstagram
-                            </div>
+                            <div class="col-xs-6 col-sm-6 col-md-2">
+                                <div class="lbl">
+                                    <input name="agree_insta" type="checkbox" value="" onclick="inputInsta();">
+                                    @Sough.Resource.LabelInstagram
+                                </div>
                         </div>
                     </div>
                     <div class="row" id="row-sn" style="display:none">
                         <div class="col-md-6 col-xs-11 col-sm-5" id="col-fb" style="display:none">
                             <div class="control-group">
-
-                                <div class="input-group margin-bottom-sm" style="margin-right: 33px;">
+                                <div class="input-group margin-bottom-sm" id="in-gr-face">
                                     <input class="form-control" type="text" id="face_input" name="trader_facebook"
                                            pattern=".{0}|.{2,}" placeholder="facebook" /><span class="input-group-addon"><i class="fa fa-facebook"></i></span>
                                 </div>
-
                             </div>
                             <p class="help-block"></p>
 
@@ -120,7 +106,7 @@
                         <div class="col-md-6 col-xs-11 col-sm-5" id="col-insta" style="display:none">
                             <div class="control-group">
 
-                                <div class="input-group margin-bottom-sm" style="position:relative; margin-right: 33px;">
+                                <div class="input-group margin-bottom-sm" id="in-gr-insta">
                                     <input class="form-control" type="text" id="insta_input" name="trader_instagram"
                                            pattern=".{0}|.{2,}" placeholder="instagram">
                                     <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.instagram"></i></span>
@@ -393,7 +379,7 @@
                                    title="Veuillerz selectionné 4 images pour votre voiture" />
                         </div>
                         <div id="div-img1" style="padding: 0 !important;">
-                            <span class="img-thumbnail avatar2" style="margin-left: 0 !important;" onclick="imgClickUpload(1);">
+                            <span class="img-thumbnail avatar2" id="span-image1" onclick="imgClickUpload(1);">
                                 <i class="@Sough.App_Code.Ticons.spinner fa-3x" id="load1"
                                    style="display:none;"></i>
                                 <i class="@Sough.App_Code.Ticons.camera fa-3x" id="i1"></i>
