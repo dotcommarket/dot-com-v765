@@ -53,11 +53,11 @@
     padding: 10px;
     padding-left: 20px;
     margin: 0px;
-    margin-right:20px;
+    margin-right: 20px;
     background-color: #fff;
-    border:1px solid #87CEFA;
-    border-radius:5px;
-    margin-left:-15px;
+    border: 1px solid #87CEFA;
+    border-radius: 5px;
+    margin-left: -15px;
     font-family: Verdana,sans-serif;
     font-size: 12px;
 }
@@ -69,56 +69,34 @@ div.searchmain_long {
 div.searchmain_extra_long {
     min-height: 141px;
 }
-#searchmain{
-    padding-right:5px !important;
+
+#searchmain {
+    padding-right: 5px !important;
     background-color: #f3fafe;
 }
-  
+
 div.featurebox {
     margin: 0 0 6px;
     overflow: hidden;
 }
 
 
- input::-webkit-input-placeholder {
+input::-webkit-input-placeholder {
     color: #666;
 }
 
- input:-moz-placeholder,  input::-moz-placeholder {
+input:-moz-placeholder, input::-moz-placeholder {
     color: #666;
     opacity: 1;
 }
 
- input:-ms-input-placeholder {
+input:-ms-input-placeholder {
     color: #666;
 }
 
-/*.Btn3{
+.Btn3 {
     background-color: #3eb0f7;
     color: #fff;
-
-    border-radius: 0px;
-    width:200px;
-    font-size:17px;
-
-}
-
-    .Btn3:focus,
-    .Btn3.focus {
-        background-color:#6ca4c8;
-        color:#fff;
-    }
-
-    .Btn3:hover {
-        background-color:#6ca4c8;
-        color:#fff;
-    }*/
-
-
-.Btn3{
-    background-color: #3eb0f7;
-    color: #fff;
-    
     background: linear-gradient(to bottom,#56baf8,#3eb0f7)no-repeat,#3eb0f7;
     filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#56baf8', endColorstr='#3eb0f7');
     background-size: 100% 36px;
@@ -133,12 +111,19 @@ div.featurebox {
     min-width: 120px;
     padding: 12px;
     outline: none;
-
 }
-.Btn3:hover, .Btn3:active, .Btn3:focus {
-        color:white;
+
+    .Btn3:hover, .Btn3:active, .Btn3:focus {
+        color: white;
         background-position: 0 -36px;
     }
-    .Btn3:active{
-        color:white;
+
+    .Btn3:active {
+        color: white;
     }
+
+ 
+span select:focus {
+    border: 1px solid #FF6600;
+}
+

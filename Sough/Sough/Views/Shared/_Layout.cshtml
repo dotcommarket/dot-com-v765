@@ -66,9 +66,8 @@
                     foreach (var i in Sough.GererLang.LangagesSite)
                     {
                         
-                            if(i.langNomCourt.Equals(Sough.GererLang.currentLang))
-                            { <li>@i.langNomComplet</li>}
-                            else{
+                            if(!(i.langNomCourt.Equals(Sough.GererLang.currentLang)))
+                            {
                                 <li class="active">@Html.ActionLink(i.langNomComplet,
                                                   "ChangeLanguage", "Ad",
                                                    new { lang = i.langNomCourt },

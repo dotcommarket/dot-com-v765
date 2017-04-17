@@ -10,7 +10,7 @@ namespace Sough.Helpers
         private int cpt_color = 0;
         private int cpt_car_shape = 0;
         public  static string last_query = "select * from Voitures";
-        public static List<Voiture> lastResult = null;
+        public static List<Voiture> lastResult = new List<Voiture>();
 
         public VoitureHelp()
         {

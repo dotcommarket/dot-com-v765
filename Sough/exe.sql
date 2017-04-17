@@ -3,5 +3,8 @@
 -- db.Voitures.Where(s => s.phone == voiture.phone &&
 -- s.Id != voiture.Id).OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
                 
-select * from Voitures 
+--select * from Voitures 
 --where phone = '46255544';
+
+
+select temps from Voitures;

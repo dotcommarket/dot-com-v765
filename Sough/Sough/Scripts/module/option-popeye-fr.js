@@ -1,10 +1,9 @@
-﻿var options = {  //ltl
+﻿var options = {  //ltr
     caption: 'permanent',
     opacity: 1
 }
 
-$('#ppy2').popeye(options);
-
+$('#ppy1').popeye(options);
 
 
 

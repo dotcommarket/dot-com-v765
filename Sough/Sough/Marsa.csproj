@@ -199,10 +199,7 @@
     <Content Include="Content\css\show-products\wares_byr_searchmain-ar.css" />
     <Content Include="Content\css\show-products\wares_byr_searchmain-fr.css" />
     <Content Include="Content\css\toujjar-theme\bootstrap-rtl.css" />
-    <Content Include="Content\css\toujjar-theme\featurebox_select-ar.css" />
-    <Content Include="Content\css\toujjar-theme\featurebox_select-fr.css" />
-    <Content Include="Content\css\toujjar-theme\featurebox_select_wfr-ar.css" />
-    <Content Include="Content\css\toujjar-theme\featurebox_select_wfr-fr.css" />
+    <Content Include="Content\css\toujjar-theme\img\list_dropdown_arrows.png" />
     <Content Include="Content\css\toujjar-theme\span-input-select-ar.css" />
     <Content Include="Content\css\toujjar-theme\toujjar-style-ar.css" />
     <Content Include="Content\icons\map\rim_r10_c3.jpg" />

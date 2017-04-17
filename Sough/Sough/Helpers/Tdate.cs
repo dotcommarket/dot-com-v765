@@ -7,12 +7,30 @@ namespace Sough.Helpers
 {
     public class Tdate
     {
+        private string ReplaceFrMonths(string d)
+        {
+            string _d = "";
+            if (d.Contains("janvier")) _d = d.Replace("janvier", "يناير");
+            else if (d.Contains("février")) _d = d.Replace("février", "فبراير");
+            else if (d.Contains("mars")) _d = d.Replace("mars", "مارس");
+            else if (d.Contains("avril")) _d = d.Replace("avril", "ابريل");
+            else if (d.Contains("mai")) _d = d.Replace("mai", "مايو");
+            else if (d.Contains("juin")) _d = d.Replace("juin", "يونيو");
+            else if (d.Contains("juillet")) _d = d.Replace("juillet", "يوليو");
+            else if (d.Contains("août")) _d = d.Replace("août", "اغشت");
+            else if (d.Contains("septembre")) _d = d.Replace("septembre", "سبتمبر");
+            else if (d.Contains("octobre")) _d = d.Replace("octobre", "اكتوبر");
+            else if (d.Contains("novembre")) _d = d.Replace("novembre", "نفمبر");
+            else if (d.Contains("décembre")) _d = d.Replace("décembre", "دجمبر");
+
+            return _d;
+        }
 
         public string FormaterDate(DateTime dt, string format)
         {
             try
             {
-                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo(format); //ar-EG            
+                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("fr"); //ar-EG            
                 DateTime dateValue = dt;
                 string FormatDate = "";
                 string _date = "";
@@ -45,8 +63,10 @@ namespace Sough.Helpers
                     FormatDate = "dd MMMM, hh:MM";
 
                 _date = dateValue.ToString(FormatDate, culture);
-
-                return _date;
+                if (format.Equals("ar"))
+                    return ReplaceFrMonths(_date);
+                else
+                    return _date;
             }
             catch (Exception e)
             {

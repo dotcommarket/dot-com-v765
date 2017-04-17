@@ -2,9 +2,30 @@
 
 @{
     Sough.Helpers.TraitementDonnees td = new Sough.Helpers.TraitementDonnees();
+    string culture = Sough.GererLang.currentLang;
 }
 
-@if (Model.Count > 1) { 
+@if (Model == null && ViewBag.err == "true")
+    {
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-8">
+        <div class="jumbotron" style="margin-top:21px;">
+            <h1>
+                <span class="@Sough.App_Code.Ticons.attention"></span>
+                Vous avez deconnecter apres l'ancienne requete
+            </h1>
+            <p>
+                Veuillez actualiser la page !
+            </p>
+        </div>
+    </div>
+</div>
+    }
+else { 
+
+
+
+if (Model.Count > 1) { 
 
     <div class="content">
     <div class="row">
@@ -27,12 +48,12 @@
 }
 
 
-    @{
+    
 
         Sough.Helpers.Tdate t;
         string src = "";
-
-        for (int i = 0; i < Model.Count; i++)
+        <div class="row">
+        @for (int i = 0; i < Model.Count; i++)
         {
             if((Model.PageNumber == 1) && (i == 0)){ continue; }
            
@@ -78,7 +99,7 @@
                                 </td>
                             </tr>
                             <tr>
-                                <td class="td1"><h5>@t.FormaterDate(car.temps, "fr")</h5></td>
+                                <td class="td1"><h5>@t.FormaterDate(car.temps, culture)</h5></td>
                             </tr>
                             <tr>
                                 <td class="td1">
@@ -94,13 +115,12 @@
                     </div>
                 </div>
             </div>
-
+        
         }
-    }
+        </div>
 
-@{
-    if (Model.PageCount > 1)
-    {
+if (Model.PageCount > 1)
+{
 
 <div class="row">
     <div id="myPager" class="text-center">
@@ -150,8 +170,8 @@
 </div>
 
 }
-}
 
+}
 <script type="text/javascript">
     var loading = document.getElementById('loading');
     loading.style.display = "none";

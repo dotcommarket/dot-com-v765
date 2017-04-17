@@ -9,7 +9,7 @@
 @Styles.Render("~/Content/ads-"+culture)
 <link href="@Url.Content("~/Content/css/show-products/wares_byr_searchmain-"+culture+".css")" rel="stylesheet" type="text/css" />
 <link href="@Url.Content("~/Content/css/index/index-"+culture+".css")" rel="stylesheet" type="text/css" />
-<link href="@Url.Content("~/Content/css/toujjar-theme/featurebox_select_wfr-"+culture+".css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/toujjar-theme/span-input-select-"+culture+".css")" rel="stylesheet" type="text/css" />
 
 
 <div id="content">
@@ -17,14 +17,20 @@
         <div class="col-sm-9 col-md-7 gw-search">
             <form action="../Search/Control" method="post" id="form1" class="navbar-form navbar-left" role="search">
                 <div class="form-group" id="cat">
-                    <select id="basic" name="cat" class="selectpicker show-tick form-control select-navbar" required>
-                        @Html.Partial("_CheckCategorieSelect")
-                    </select>
+                    <span>
+                        <select name="cat" class="featurebox_select_large" required>
+
+                            @Html.Partial("_CheckCategorieSelect")
+                        </select>
+                    </span>
                 </div>
                 <div class="form-group" id="ville">
-                    <select name="ville" id="basic" class="selectpicker show-tick form-control select-navbar" required>
-                       @Html.Partial("_CheckVilleSelect")
-                    </select>
+                    <span>
+                        <select name="ville" class="featurebox_select_medium" required>
+
+                            @Html.Partial("_CheckVilleSelect")
+                        </select>
+                    </span>
                 </div>
                 <div class="input-group" id="btn-search">
                     <div class="input-group-btn">

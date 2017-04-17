@@ -27,11 +27,6 @@ namespace Sough
                 .Include("~/Content/css/toujjar-theme/bootstrap-select.min.css", cssFixer)
             );
 
-            bundles.Add(new StyleBundle("~/Content/featurebox_select-fr").Include(
-                        "~/Content/css/toujjar-theme/featurebox_select-fr.css"));
-            bundles.Add(new StyleBundle("~/Content/featurebox_select-ar").Include(
-                        "~/Content/css/toujjar-theme/featurebox_select-ar.css"));
-
             bundles.Add(new ScriptBundle("~/bundles/js-fr").Include(
                         "~/Scripts/bootstrap/bootstrap.js",
                         "~/Scripts/bootstrap/bootstrap.min.js",

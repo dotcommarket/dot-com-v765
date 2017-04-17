@@ -1,5 +1,7 @@
 ﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic);
-
+td img {
+        display: block;
+    }
 .home-div-search {
     padding: 20px;
     background-color: #f3fafe;  /*#eceff1*/
@@ -232,3 +234,4 @@
 .tlc{
     float:right;
 }
+

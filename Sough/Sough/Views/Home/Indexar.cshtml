@@ -1,16 +1,17 @@
 ﻿@{
     ViewBag.Title = "Index Ar";
+    string culture = Sough.GererLang.currentLang;    
 }
 
 
 @section Styles{
+
+
     <link href="@Url.Content("~/Content/css/index/figure.css")" rel="stylesheet" type="text/css" />
     <link href="@Url.Content("~/Content/css/index/index-ar.css")" rel="stylesheet" type="text/css" />
-    <style type="text/css">
-        td img {
-            display: block;
-        }
-    </style>
+    
+    <link href="@Url.Content("~/Content/css/toujjar-theme/span-input-select-"+culture+".css")" rel="stylesheet" type="text/css" />
+    
 }
 @section Scripts {
 
@@ -129,31 +130,35 @@
                     <form action="../Search/Control" method="post" id="form1" class="navbar-form navbar-left" role="search">
 
                         <div class="form-group" id="cat">
-                            <select id="basic" name="cat" class="selectpicker show-tick form-control select-navbar" required>
-                                <option value="">&#171;Categorie&#187;</option>
-                                @Html.Partial("_CategoriesTable")
-                            </select>
+                            <span>
+                                <select name="cat" class="featurebox_select_extra_large" required>
+                                    <option value="">&#171;Categorie&#187;</option>
+                                    @Html.Partial("_CategoriesTable")
+                                </select>
+                            </span>
                         </div>
                         <div class="form-group" id="ville">
-                            <select name="ville" id="basic" class="selectpicker show-tick form-control select-navbar" required>
-                                <option value="">&#171;Ville&#187; </option>
-                                <option value="Nouakchott">@Sough.Resource.select_ville_nktt</option>
-                                <option value="Néma">@Sough.Resource.select_ville_nema</option>
-                                <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
-                                <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
-                                <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
-                                <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
-                                <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
-                                <option value="Atar">@Sough.Resource.select_ville_atar</option>
-                                <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
-                                <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
-                                <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
-                                <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
-                                <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
-                                <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
-                                <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
-                                <option value="all">toutes les villes</option>
-                            </select>
+                            <span>
+                                <select name="ville" class="featurebox_select_extra_large" required>
+                                    <option value="">&#171;Ville&#187; </option>
+                                    <option value="Nouakchott">@Sough.Resource.select_ville_nktt</option>
+                                    <option value="Néma">@Sough.Resource.select_ville_nema</option>
+                                    <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+                                    <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+                                    <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+                                    <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+                                    <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+                                    <option value="Atar">@Sough.Resource.select_ville_atar</option>
+                                    <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+                                    <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+                                    <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+                                    <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+                                    <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+                                    <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+                                    <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+                                    <option value="all">toutes les villes</option>
+                                </select>
+                            </span>
                         </div>
                         <div class="input-group" id="btn-search">
                             <div class="input-group-btn">
@@ -161,6 +166,7 @@
                             </div>
                         </div>
                     </form>
+
                 </div>
             </div>
             <div class="row row-map">

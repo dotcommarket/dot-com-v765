@@ -212,10 +212,17 @@ namespace Sough.Controllers
         {
             try
             {
-                    listVoitures = VoitureHelp.lastResult;
-                    PagedList<Voiture> model = new PagedList<Voiture>(listVoitures, page, PageSize);
+                listVoitures = VoitureHelp.lastResult;
 
+                PagedList<Voiture> model = null;
+                if (listVoitures.Count < 1)
+                {
+                    ViewBag.err = "true";
                     return PartialView("~/Views/Voiture/_UserWare.cshtml", model);
+                }
+                model = new PagedList<Voiture>(listVoitures, page, PageSize);
+
+                return PartialView("~/Views/Voiture/_UserWare.cshtml", model);
             }
             catch (Exception e)
             {
@@ -355,6 +362,16 @@ namespace Sough.Controllers
                 else
                 {
                     listVoitures = VoitureHelp.lastResult;
+
+                    if (listVoitures.Count < 1)
+                    {
+                        PagedList<Ware> plware = null;
+
+                        ViewBag.err = "true";
+                        return PartialView("~/Views/Voiture/_CarsList.cshtml", plware);
+                    }
+
+
                     if (AdHelper.trie == 1) listVoitures = listVoitures.OrderByDescending(v => v.temps).ThenBy(v => v.Id).ToList();
                     else listVoitures = listVoitures.OrderBy(v => v.prix).ThenBy(v => v.Id).ToList();
 
@@ -533,8 +550,10 @@ namespace Sough.Controllers
 
             PagedList<Voiture> model = null;
             if (VoitureHelp.lastResult.Count < 1)
+            {
+                ViewBag.err = "true";
                 return PartialView("~/Views/Voiture/_CarsList.cshtml", model);
-
+            }
             List<Voiture> listVoitures = VoitureHelp.lastResult;
             listVoitures = listVoitures.OrderByDescending(v => v.temps).ThenBy(v => v.Id).ToList();
             
@@ -551,8 +570,10 @@ namespace Sough.Controllers
 
             PagedList<Voiture> model = null;
             if(VoitureHelp.lastResult.Count < 1)
+            {
+                ViewBag.err = "true";
                 return PartialView("~/Views/Voiture/_CarsList.cshtml", model);
-
+            }
             List<Voiture> listVoitures = VoitureHelp.lastResult;
             listVoitures = listVoitures.OrderBy(v => v.prix).ThenBy(v => v.Id).ToList();
             model = new PagedList<Voiture>(listVoitures, page, PageSize);

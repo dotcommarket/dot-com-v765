@@ -234,6 +234,8 @@ namespace Sough.Controllers
 
         public ActionResult ChangeLanguage(string lang)
         {
+            //string sql = "UPDATE StatisticLang SET " + lang + " = " + lang + " + 1;";
+            
             GererLang.currentLang = lang;
             new GererLang().setLang(lang);
             return RedirectToAction("Index", "Home");

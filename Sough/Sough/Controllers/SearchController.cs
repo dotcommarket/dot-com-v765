@@ -541,8 +541,7 @@ namespace Sough.Controllers
                 else if (cat.Equals("Voitures"))
                 {
 
-                    //string sql = "SELECT * FROM Voitures;";
-                    //VoitureHelp.last_query = sql;
+                    
                     List<Voiture> listVoitures;
                     if (AdHelper.trie == 1)
                         listVoitures = db.Voitures.OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();

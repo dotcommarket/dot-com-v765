@@ -7,9 +7,10 @@
 }
 
 @Styles.Render("~/Content/ads-"+culture)
-@Styles.Render("~/Content/featurebox_select-"+culture)
+<link href="@Url.Content("~/Content/css/toujjar-theme/span-input-select-"+culture+".css")" rel="stylesheet" type="text/css" />
 <link href="@Url.Content("~/Content/css/show-products/car-ads-"+culture+".css")" rel="stylesheet" type="text/css" />
 @Styles.Render("~/Content/search-main-css-"+culture)
+
 <div id="content">
     <div class="row leftmarge">
     
@@ -37,15 +38,18 @@
                     <div class="row">
 
                         <div class="col-md-3 col-xs-5">
-                            <span class="price_filter">
-                                    <input type="number" class="price_filter" min="0" max="400000000"
-                                           name="pmn" placeholder="Prix min">
-                               </span>
+                            <span id="sp-cat">
+                                <select name="cat" id="cat" class="featurebox_select_extra_large">
+                                    @Html.Partial("_CheckCategorieSelect")
+                                </select>
+                            </span>
                         </div>
                         <div class="col-md-3 col-xs-5">
-                            <span class="price_filter">
-                                    <input type="number" class="price_filter" min="0" max="400000000" name="pmx"
-                                           placeholder="Prix max">
+                            
+                            <span id="sp-ville">
+                                <select id="md_ville" name="ville" class="featurebox_select_medium">
+                                    @Html.Partial("_CheckVilleSelect")
+                                </select>
                             </span>
                         </div>
                         <div class="col-md-3 col-xs-5">
@@ -67,18 +71,18 @@
                     </div>
                     <div class="row">
                         <div class="col-md-3 col-xs-5">
-                            <span id="sp-ville">
-                                <select id="md_ville" name="ville" class="featurebox_select_medium">
-                                    @Html.Partial("_CheckVilleSelect")
-                                </select>
+                            <span class="price_filter">
+                                <input type="number" class="price_filter" min="0" max="400000000"
+                                       name="pmn" placeholder="Prix min">
                             </span>
+                            
                         </div>
                         <div class="col-md-3 col-xs-5">
-                            <span id="sp-cat">
-                                <select name="cat" id="cat" class="featurebox_select_medium">
-                                    @Html.Partial("_CheckCategorieSelect")
-                                </select>
+                            <span class="price_filter">
+                                <input type="number" class="price_filter" min="0" max="400000000" name="pmx"
+                                       placeholder="Prix max">
                             </span>
+                            
                         </div>
                         <div class="col-md-3 col-xs-5">
                             <span>

@@ -142,3 +142,8 @@ div.featurebox {
     .Btn3:active{
         color:white;
     }
+
+
+span select:focus {
+    border: 1px solid #FF6600;
+}
