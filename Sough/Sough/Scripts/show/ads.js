@@ -55,36 +55,16 @@ function trierPar(controller) {
 
     switch (t) {
         case "1":
-            loading.style.display = "block";
-
-            $.ajax({
-                url: "../" + controller + "/TrierParDate",
-                type: "GET",
-
-                success: function (result) {
-                    $("#List").html(result);
-                        loading.style.display = "none";
-                }
-            });
+            window.location.href = '../' + controller + '/TrierParDate';
 
             break;
         case "2":
-                loading.style.display = "block";
 
-            $.ajax({
-                url: "../" + controller + "/TrierParPrix",
-                type: "GET",
-
-                success: function (result) {
-                    $("#List").html(result);
-                        loading.style.display = "none";
-
-                }
-            });
+            window.location.href = '../' + controller + '/TrierParPrix';
 
             break;
         default:
-            window.location.href = '../'+controller+'/TrierParDate';
+            window.location.href = '../' + controller + '/TrierParDate';
             break;
     }
 }

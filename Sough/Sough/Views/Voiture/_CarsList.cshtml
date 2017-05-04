@@ -22,40 +22,6 @@ if (Model == null && ViewBag.err == "true")
     }
 else { 
 
-
-
-
-
-<div class="row row-trie">
-    <div class="col-xs-6 col-sm-4 col-md-2" id="div-trie" style="visibility:visible;">
-        <span class="span-trie">
-            <select id="TrieID" onchange="trierPar('Voiture')" class="featurebox_select_medium">
-                @if (Sough.Helpers.AdHelper.trie == 1)
-                {
-                    <option id="opt1" value="1" selected>Trier par : Date</option>
-                    <option id="opt2" value="2">Trier par : Prix</option>
-                }
-                else
-                {
-                    <option id="opt1" value="1">Trier par : Date</option>
-                    <option id="opt2" value="2" selected>Trier par : Prix</option>
-                }
-
-            </select>
-        </span>
-
-    </div>
-
-    <div class="col-md-2"></div>
-    <div class="col-md-2"></div>
-    <div class="col-md-2">
-
-    </div>
-    <div class="col-md-2"></div>
-</div> <!-- Trier par -->
-
-
- 
 if (Model.Count <1)
 {
     <div class="row">
@@ -384,7 +350,7 @@ if (Model.Count <1)
                     
                     for (int i = 1; i <= Model.PageCount; i++)
                     {
-                        string href = "../Voiture/TrierParPrix?page=" + i;
+                        string href = "../Voiture/TrierParPrix?page=" + i + "&pgn="+1;
                         int page;
 
                         if ((Model.PageNumber != 1) && (Model.PageCount >= 2) && (first == 0))
@@ -392,7 +358,7 @@ if (Model.Count <1)
                             first = 1;
                             page = (Model.PageNumber - 1);
 
-                            string prev = "../Voiture/TrierParPrix?page=" + page;
+                            string prev = "../Voiture/TrierParPrix?page=" + page + "&pgn=" + 1;
                             <li class="PagedList-skipToPrevious">
                                 <a class="page-number" href="javascript:void();" onclick="aPager('@prev',@page);" rel="prev">
                                     «
@@ -412,7 +378,7 @@ if (Model.Count <1)
                         if ((Model.PageCount >= 2) && (i == Model.PageCount) && (Model.PageNumber != Model.PageCount))
                         {
                             page = (Model.PageNumber + 1);
-                            href = "../Voiture/TrierParPrix?page=" + page;
+                            href = "../Voiture/TrierParPrix?page=" + page + "&pgn=" + 1;
                             <li class="PagedList-skipToNext">
                                 <a class="page-number" href="javascript:void();" onclick="aPager('@href',@page);" rel="next">
                                     »
@@ -438,7 +404,7 @@ if (Model.Count <1)
                     
                         for (int i = 1; i <= Model.PageCount; i++)
                     {
-                        string href = "../Voiture/TrierParDate?page=" + i;
+                        string href = "../Voiture/TrierParDate?page=" + i + "&pgn=" + 1;
                         int page;
 
                         if ((Model.PageNumber != 1) && (Model.PageCount >= 2) && (first == 0))
@@ -446,7 +412,7 @@ if (Model.Count <1)
                             first = 1;
                             page = (Model.PageNumber - 1);
 
-                            string prev = "../Voiture/TrierParDate?page=" + page;
+                            string prev = "../Voiture/TrierParDate?page=" + page + "&pgn=" + 1;
                             <li class="PagedList-skipToPrevious">
                                 <a class="page-number" href="javascript:void();" onclick="aPager('@prev',@page);" rel="prev">
                                     «
@@ -466,7 +432,7 @@ if (Model.Count <1)
                         if ((Model.PageCount >= 2) && (i == Model.PageCount) && (Model.PageNumber != Model.PageCount))
                         {
                             page = (Model.PageNumber + 1);
-                            href = "../Voiture/TrierParDate?page=" + page;
+                            href = "../Voiture/TrierParDate?page=" + page + "&pgn=" + 1;
                             <li class="PagedList-skipToNext">
                                 <a class="page-number" href="javascript:void();" onclick="aPager('@href',@page);" rel="next">
                                     »

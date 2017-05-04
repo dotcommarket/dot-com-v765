@@ -27,6 +27,7 @@ namespace Sough.Controllers
                 setCat(cat);
 
                 ViewBag.cat = cat;
+                AdHelper.trie = 1;
                 if (ville.Equals("all"))
                 {
                     ViewBag.ville = ville;
@@ -173,7 +174,7 @@ namespace Sough.Controllers
                 //        return View("~/Views/VenteImmobilier/Ads.cshtml", _model);
                 //    }
                 //    else 
-                        if (cat.Equals("Vetements"))
+                    if (cat.Equals("Vetements"))
                     {
                         List<Vetement> _model = db.Vetements.ToList();
                         return View("~/Views/Vetement/Ads.cshtml", _model);
@@ -181,9 +182,8 @@ namespace Sough.Controllers
                     else if (cat.Equals("Voitures"))
                     {
                         List<Voiture> listVoitures;
-                        if(AdHelper.trie == 1)
-                            listVoitures = db.Voitures.OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
-                        else listVoitures = db.Voitures.OrderBy(a => a.prix).ThenBy(a => a.Id).ToList();
+                        
+                        listVoitures = db.Voitures.OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
                         
                         VoitureHelp.lastResult = listVoitures;
 
@@ -352,9 +352,7 @@ namespace Sough.Controllers
 
                         //query = "SELECT * FROM Voitures WHERE ville = '" + ville + "';";
                         //VoitureHelp.last_query = query;
-                        if(AdHelper.trie == 1)
-                            listVoitures = db.Voitures.Where(s => s.ville == ville).OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
-                        else listVoitures = db.Voitures.Where(s => s.ville == ville).OrderBy(a => a.prix).ThenBy(a => a.Id).ToList();
+                        listVoitures = db.Voitures.Where(s => s.ville == ville).OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
                         
                         VoitureHelp.lastResult = listVoitures;
 
@@ -540,12 +538,8 @@ namespace Sough.Controllers
                 }
                 else if (cat.Equals("Voitures"))
                 {
-
-                    
                     List<Voiture> listVoitures;
-                    if (AdHelper.trie == 1)
-                        listVoitures = db.Voitures.OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
-                    else listVoitures = db.Voitures.OrderBy(a => a.prix).ThenBy(a => a.Id).ToList();
+                    listVoitures = db.Voitures.OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
                     
                     VoitureHelp.lastResult = listVoitures;
                     PagedList<Voiture> model = new PagedList<Voiture>(listVoitures, page, PageSize);
@@ -710,9 +704,7 @@ namespace Sough.Controllers
                     //VoitureHelp.last_query = sql;
 
                     List<Voiture> listVoitures;
-                    if (AdHelper.trie == 1)
-                        listVoitures = db.Voitures.Where(s => s.ville == ville).OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
-                    else listVoitures = db.Voitures.Where(s => s.ville == ville).OrderBy(a => a.prix).ThenBy(a => a.Id).ToList();
+                    listVoitures = db.Voitures.Where(s => s.ville == ville).OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
                     
                     PagedList<Voiture> model = new PagedList<Voiture>(listVoitures, page, PageSize);
                     return PartialView("~/Views/Voiture/_CarsList.cshtml", model);

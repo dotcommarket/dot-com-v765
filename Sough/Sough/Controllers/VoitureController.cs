@@ -345,6 +345,7 @@ namespace Sough.Controllers
             {
                 if (v_p.Equals("v"))
                 {
+                    AdHelper.trie = 1;
                     string sql = "select * from Voitures";
 
                     if(AdHelper.trie == 1) 
@@ -544,7 +545,7 @@ namespace Sough.Controllers
         }
 
         [HttpGet]
-        public ActionResult TrierParDate(int page = 1)
+        public ActionResult TrierParDate(int page = 1, int pgn = 0)
         {
             AdHelper.trie = 1;
 
@@ -552,19 +553,22 @@ namespace Sough.Controllers
             if (VoitureHelp.lastResult.Count < 1)
             {
                 ViewBag.err = "true";
-                return PartialView("~/Views/Voiture/_CarsList.cshtml", model);
+                return View("~/Views/Voiture/Ads.cshtml", model);
             }
             List<Voiture> listVoitures = VoitureHelp.lastResult;
             listVoitures = listVoitures.OrderByDescending(v => v.temps).ThenBy(v => v.Id).ToList();
             
             model = new PagedList<Voiture>(listVoitures, page, PageSize);
-            
-            return PartialView("~/Views/Voiture/_CarsList.cshtml", model);
+
+            if (pgn != 0)
+                return PartialView("~/Views/Voiture/_CarsList.cshtml", model);
+
+            return View("~/Views/Voiture/Ads.cshtml", model);
 
         }
 
         [HttpGet]
-        public ActionResult TrierParPrix(int page = 1)
+        public ActionResult TrierParPrix(int page = 1,int pgn = 0)
         {
             AdHelper.trie = 2;
 
@@ -572,13 +576,17 @@ namespace Sough.Controllers
             if(VoitureHelp.lastResult.Count < 1)
             {
                 ViewBag.err = "true";
-                return PartialView("~/Views/Voiture/_CarsList.cshtml", model);
+                return View("~/Views/Voiture/Ads.cshtml", model);
+
             }
             List<Voiture> listVoitures = VoitureHelp.lastResult;
             listVoitures = listVoitures.OrderBy(v => v.prix).ThenBy(v => v.Id).ToList();
             model = new PagedList<Voiture>(listVoitures, page, PageSize);
-            return PartialView("~/Views/Voiture/_CarsList.cshtml", model);
 
+            if (pgn != 0)
+              return PartialView("~/Views/Voiture/_CarsList.cshtml", model);
+            
+            return View("~/Views/Voiture/Ads.cshtml", model);
         }
 
         private void setCat(string cat)

@@ -10,7 +10,8 @@ function selectRequird(id, help, msg,pos) {
         select.style.border = "1px solid #cc0000";
         help.style.color = "#cc0000";
         help.innerText = '' + msg;
-        window.scrollTo(0, pos);
+        if(pos != 0)
+         window.scrollTo(0, pos);
         return false;
     }
     else {

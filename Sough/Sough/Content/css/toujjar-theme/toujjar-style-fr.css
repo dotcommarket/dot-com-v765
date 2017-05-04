@@ -5,6 +5,24 @@ body {
     padding-top: 70px;
 }
 
+/* Text Size */
+/*p{
+    font-size:15px;
+
+}
+li a {
+    font-size:17px;
+}
+li a span{
+    font-size:17px;
+}
+li span{
+    font-size:17px;
+}
+select option,select optgroup{
+    font-size:16px;
+}*/
+
 /* Traitement de responsivite 
  *    xs (Tlf):  < 768 px
  *    sm (tablete): >= 768 px
@@ -23,11 +41,11 @@ body {
 }
 
 @media (max-width: 992px) {
-
     .container {
         min-width: 100%;
         max-width: 100%;
     }
+   
 }
 
 @media (max-width: 768px) {

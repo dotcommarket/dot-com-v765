@@ -1,8 +1,5 @@
-﻿@*<select name="marque" id="marque" onblur="checkMarque();" onchange="getModels('marque');" required>*@
-@*<select name="marque" id="marque" class="featurebox_select" onchange="getModels('marque');">*@
-
-    <select name="marque" id="marque" class="featurebox_select"
-        onblur="selectRequird('marque', 'help-marque', 'Choisissez la marque du voiture')"
+﻿<select name="marque" id="marque" class="featurebox_select_medium"
+        onblur="selectRequird('marque', 'help-marque', 'Choisissez la marque du voiture',0)"
         onchange="getModels('marque');" required>
     <option value="">&#171;@Sough.Resource.select_choisir&#187;</option>
     <optgroup label="Marques courantes" data-subtext="">

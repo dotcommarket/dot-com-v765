@@ -120,8 +120,8 @@
   <data name="adPrix" xml:space="preserve">
     <value>adPrix</value>
   </data>
-  <data name="categorie" xml:space="preserve">
-    <value>categorie</value>
+  <data name="index_select_categorie" xml:space="preserve">
+    <value>Categorie</value>
   </data>
   <data name="btn1" xml:space="preserve">
     <value>Valider</value>
@@ -341,5 +341,182 @@
   </data>
   <data name="logo" xml:space="preserve">
     <value>toujjar</value>
+  </data>
+  <data name="adrar" xml:space="preserve">
+    <value>Adrar</value>
+  </data>
+  <data name="assaba" xml:space="preserve">
+    <value>Assaba</value>
+  </data>
+  <data name="brakna" xml:space="preserve">
+    <value>Brakna</value>
+  </data>
+  <data name="btn_cherche" xml:space="preserve">
+    <value>Cherche</value>
+  </data>
+  <data name="cat_accessoires" xml:space="preserve">
+    <value>Accessoires</value>
+  </data>
+  <data name="cat_accessoires1" xml:space="preserve">
+    <value>Accessoires</value>
+  </data>
+  <data name="cat_agriculture" xml:space="preserve">
+    <value>Agriculture</value>
+  </data>
+  <data name="cat_annimaux" xml:space="preserve">
+    <value>Les annimaux</value>
+  </data>
+  <data name="cat_apparence" xml:space="preserve">
+    <value>L'apparence</value>
+  </data>
+  <data name="cat_autres" xml:space="preserve">
+    <value>Autres</value>
+  </data>
+  <data name="cat_beaute_bienetre" xml:space="preserve">
+    <value>Beauté et bien-être</value>
+  </data>
+  <data name="cat_bijoux_montres" xml:space="preserve">
+    <value>Bijoux et montres</value>
+  </data>
+  <data name="cat_camera" xml:space="preserve">
+    <value>Caméras</value>
+  </data>
+  <data name="cat_chameaux" xml:space="preserve">
+    <value>Les chameaux</value>
+  </data>
+  <data name="cat_chevres_moutons" xml:space="preserve">
+    <value>Chèvres et moutons</value>
+  </data>
+  <data name="cat_electromenagers" xml:space="preserve">
+    <value>Electroménagers</value>
+  </data>
+  <data name="cat_emploi" xml:space="preserve">
+    <value>Emploi</value>
+  </data>
+  <data name="cat_emploi_services" xml:space="preserve">
+    <value>Emploi et Services</value>
+  </data>
+  <data name="cat_enfant_bebe" xml:space="preserve">
+    <value>Enfant et bébé</value>
+  </data>
+  <data name="cat_immobilier" xml:space="preserve">
+    <value>Immobilier</value>
+  </data>
+  <data name="cat_jeux" xml:space="preserve">
+    <value>Jeux</value>
+  </data>
+  <data name="cat_livres" xml:space="preserve">
+    <value>Livres</value>
+  </data>
+  <data name="cat_location" xml:space="preserve">
+    <value>Locations</value>
+  </data>
+  <data name="cat_maison" xml:space="preserve">
+    <value>Maisons</value>
+  </data>
+  <data name="cat_meuble" xml:space="preserve">
+    <value>Meubles</value>
+  </data>
+  <data name="cat_multimedia" xml:space="preserve">
+    <value>Multimédia</value>
+  </data>
+  <data name="cat_ordinateurs_bureau" xml:space="preserve">
+    <value>Ordinateurs de bureau</value>
+  </data>
+  <data name="cat_ordinateurs_portables" xml:space="preserve">
+    <value>Ordinateurs portables</value>
+  </data>
+  <data name="cat_parfums" xml:space="preserve">
+    <value>Parfums</value>
+  </data>
+  <data name="cat_pieces_detachees" xml:space="preserve">
+    <value>pièces détachées</value>
+  </data>
+  <data name="cat_serveurs" xml:space="preserve">
+    <value>serveurs</value>
+  </data>
+  <data name="cat_services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="cat_sports" xml:space="preserve">
+    <value>Sports</value>
+  </data>
+  <data name="cat_tablette" xml:space="preserve">
+    <value>Tablettes</value>
+  </data>
+  <data name="cat_telephones" xml:space="preserve">
+    <value>Téléphones</value>
+  </data>
+  <data name="cat_televisions" xml:space="preserve">
+    <value>Télévisions</value>
+  </data>
+  <data name="cat_ustensiles" xml:space="preserve">
+    <value>Ustensiles</value>
+  </data>
+  <data name="cat_vaches" xml:space="preserve">
+    <value>Les vaches</value>
+  </data>
+  <data name="cat_vehicules" xml:space="preserve">
+    <value>Véhicules</value>
+  </data>
+  <data name="cat_vente_immobilier" xml:space="preserve">
+    <value>Ventes immobilières</value>
+  </data>
+  <data name="cat_Vetements" xml:space="preserve">
+    <value>Vêtements</value>
+  </data>
+  <data name="cat_voiture" xml:space="preserve">
+    <value>Voitures</value>
+  </data>
+  <data name="dakhlet_nouadhibou" xml:space="preserve">
+    <value>Dakhlet Nouadhibou</value>
+  </data>
+  <data name="footer_condition_gene" xml:space="preserve">
+    <value>Conditions généraux</value>
+  </data>
+  <data name="footer_mention_legal" xml:space="preserve">
+    <value>Mension légale</value>
+  </data>
+  <data name="footer_partenaires" xml:space="preserve">
+    <value>Partenaires</value>
+  </data>
+  <data name="gorgol" xml:space="preserve">
+    <value>Gorgol</value>
+  </data>
+  <data name="guidimaka" xml:space="preserve">
+    <value>Guidimaka</value>
+  </data>
+  <data name="hodh_chargui" xml:space="preserve">
+    <value>Hodh Ech Chargui</value>
+  </data>
+  <data name="hodh_gharbi" xml:space="preserve">
+    <value>Hodh El Gharbi</value>
+  </data>
+  <data name="inchiri" xml:space="preserve">
+    <value>Inchiri</value>
+  </data>
+  <data name="label_toute_les_cat" xml:space="preserve">
+    <value>TOUTES LES CATÉGORIES</value>
+  </data>
+  <data name="tagant" xml:space="preserve">
+    <value>Tagant</value>
+  </data>
+  <data name="tiris" xml:space="preserve">
+    <value>Tiris Zemmour</value>
+  </data>
+  <data name="top_cat" xml:space="preserve">
+    <value>Top categories</value>
+  </data>
+  <data name="toute_les_villes" xml:space="preserve">
+    <value>Toutes les villes</value>
+  </data>
+  <data name="trarza" xml:space="preserve">
+    <value>Trarza</value>
+  </data>
+  <data name="Neuf" xml:space="preserve">
+    <value>Neuf</value>
+  </data>
+  <data name="Occasion" xml:space="preserve">
+    <value>Occasion</value>
   </data>
 </root>

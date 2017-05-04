@@ -37,34 +37,6 @@
     }
     else { 
        
-    <div class="row" style="margin-top:-10px;margin-bottom:-10px;">
-        <div class="col-xs-6 col-sm-4 col-md-2 div-span" id="div-trie" style="visibility:visible;">
-            <span class="span-trie">
-                <select id="TrieID" onchange="trierPar('Ad');" class="featurebox_select_medium">
-                    @if (Sough.Helpers.AdHelper.trie == 1)
-                    {
-                        <option id="opt1" value="1" selected>Trier par : Date</option>
-                        <option id="opt2" value="2">Trier par : Prix</option>
-                    }
-                    else
-                    {
-                        <option id="opt1" value="1">Trier par : Date</option>
-                        <option id="opt2" value="2" selected>Trier par : Prix</option>
-                    }
-
-                </select>
-            </span>
-        </div>
-
-        <div class="col-md-2"></div>
-        <div class="col-md-2"></div>
-        <div class="col-md-2">
-
-        </div>
-        <div class="col-md-2"></div>
-    </div> <!-- Trier par -->
-    
-
     Sough.Helpers.Tdate t = new Sough.Helpers.Tdate();
     Sough.Helpers.TraitementDonnees td = new Sough.Helpers.TraitementDonnees();
    

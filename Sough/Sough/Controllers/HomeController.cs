@@ -15,16 +15,20 @@ namespace Sough.Controllers
 
         public ActionResult Indexar() 
         {
-            if (GererLang.currentLang.Equals("ar"))
+            if (GererLang.currentLang.Equals("ar")){
+                new GererLang().setLang("ar");
                 return View();
+            }
             else
                 return RedirectToAction("Indexfr");
         }
 
         public ActionResult Indexfr()
         {
-            if (GererLang.currentLang.Equals("fr"))
+            if (GererLang.currentLang.Equals("fr")){
+                new GererLang().setLang("fr");
                 return View();
+            }
             else
                 return RedirectToAction("Indexar");
         }

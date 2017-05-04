@@ -12,7 +12,6 @@ namespace Sough.Helpers
         public static string region = "";
         public static int f = 0;
         public static List<Ware> last_wares = new List<Ware>();
-        public static short trie = 1;
-         
+        public static int trie = 1;
     }
 }

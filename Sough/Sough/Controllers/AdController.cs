@@ -19,7 +19,7 @@ namespace Sough.Controllers
         private ToujjarDatabase db = new ToujjarDatabase();
 
         private const int PageSize = 6;
-
+        
         [HttpGet]
         public ActionResult GetWaresFC(string r = "", int f = 0, int page = 1)
         {
@@ -33,6 +33,7 @@ namespace Sough.Controllers
 
                 if (f == 1)
                 {
+                    AdHelper.trie = 1;
                     AdHelper.last_Region = r;
                     switch (r)
                     {
@@ -64,9 +65,8 @@ namespace Sough.Controllers
                             wares.Add(ware[j]);
                         }
                     }
-
-                    if (AdHelper.trie == 1) wares.Sort((p, q) => -1 * p.temps.CompareTo(q.temps));
-                    else if (AdHelper.trie == 2) wares.Sort((p, q) => p.prix.CompareTo(q.prix));
+                    
+                    wares.Sort((p, q) => -1 * p.temps.CompareTo(q.temps));
 
                     AdHelper.last_wares = wares;
                     PagedList<Ware> plwares = new PagedList<Ware>(wares, page, PageSize);
@@ -78,6 +78,7 @@ namespace Sough.Controllers
                 }
                 else if (f == 0)
                 {
+                    
                     if (AdHelper.last_Region.Equals("") && AdHelper.last_wares.Count < 1)
                     {
                         PagedList<Ware> plware = null;
@@ -135,7 +136,6 @@ namespace Sough.Controllers
                 return View("~/Views/Error/Exception.cshtml");
             }
             return View("~/Views/Error/Exception.cshtml");
-
         }
 
         [HttpGet]
@@ -150,7 +150,7 @@ namespace Sough.Controllers
                 if (AdHelper.last_wares.Count < 1)
                 {
                     ViewBag.err = "true";
-                    return PartialView("~/Views/Ad/_WaresList.cshtml", plwares);
+                    return View("~/Views/Ad/Awfc.cshtml", plwares);
                 }
 
                 List<Ware> wares = new List<Ware>();
@@ -161,7 +161,8 @@ namespace Sough.Controllers
 
                 plwares = new PagedList<Ware>(wares, page, PageSize);
 
-                return PartialView("~/Views/Ad/_WaresList.cshtml", plwares);
+                return View("~/Views/Ad/Awfc.cshtml", plwares);
+
             }
             catch (Exception e)
             {
@@ -182,7 +183,7 @@ namespace Sough.Controllers
                 if (AdHelper.last_wares.Count < 1)
                 {
                     ViewBag.err = "true";
-                    return PartialView("~/Views/Ad/_WaresList.cshtml", plwares);
+                    return View("~/Views/Ad/Awfc.cshtml", plwares);
                 }
 
                 List<Ware> wares = new List<Ware>();
@@ -191,7 +192,7 @@ namespace Sough.Controllers
 
                 plwares = new PagedList<Ware>(wares, page, PageSize);
 
-                return PartialView("~/Views/Ad/_WaresList.cshtml", plwares);
+                return View("~/Views/Ad/Awfc.cshtml", plwares);
             }
             catch (Exception e)
             {
@@ -220,8 +221,6 @@ namespace Sough.Controllers
 
         public ActionResult Create()
         {
-            //ViewBag.cat = TempData["cat"];
-            //ViewBag.msg = "0";
             return View();
         }
 

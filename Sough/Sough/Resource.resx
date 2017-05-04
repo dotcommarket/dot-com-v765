@@ -120,8 +120,8 @@
   <data name="adPrix" xml:space="preserve">
     <value>السعر</value>
   </data>
-  <data name="categorie" xml:space="preserve">
-    <value>التصنيف</value>
+  <data name="index_select_categorie" xml:space="preserve">
+    <value>الفئات</value>
   </data>
   <data name="btn1" xml:space="preserve">
     <value>تم</value>
@@ -256,7 +256,7 @@
     <value>واحدة أو أكثر</value>
   </data>
   <data name="CreatAdValueBtn" xml:space="preserve">
-    <value>valider</value>
+    <value>تم</value>
   </data>
   <data name="SGb" xml:space="preserve">
     <value>Gb</value>
@@ -350,5 +350,179 @@
   </data>
   <data name="logo" xml:space="preserve">
     <value>تجار</value>
+  </data>
+  <data name="adrar" xml:space="preserve">
+    <value>أدرار</value>
+  </data>
+  <data name="assaba" xml:space="preserve">
+    <value>لعصابة</value>
+  </data>
+  <data name="brakna" xml:space="preserve">
+    <value>لبراكنة</value>
+  </data>
+  <data name="btn_cherche" xml:space="preserve">
+    <value> بحث</value>
+  </data>
+  <data name="cat_accessoires" xml:space="preserve">
+    <value>إكسسوارات</value>
+  </data>
+  <data name="cat_agriculture" xml:space="preserve">
+    <value>الزراعة</value>
+  </data>
+  <data name="cat_annimaux" xml:space="preserve">
+    <value>الحيوان</value>
+  </data>
+  <data name="cat_apparence" xml:space="preserve">
+    <value>المظهر</value>
+  </data>
+  <data name="cat_autres" xml:space="preserve">
+    <value>غير مصنف عندنا</value>
+  </data>
+  <data name="cat_beaute_bienetre" xml:space="preserve">
+    <value>الجمال والصحة</value>
+  </data>
+  <data name="cat_bijoux_montres" xml:space="preserve">
+    <value>الحلي و الساعات</value>
+  </data>
+  <data name="cat_camera" xml:space="preserve">
+    <value>كاميرات</value>
+  </data>
+  <data name="cat_chameaux" xml:space="preserve">
+    <value>الإبل</value>
+  </data>
+  <data name="cat_chevres_moutons" xml:space="preserve">
+    <value>الغنم</value>
+  </data>
+  <data name="cat_electromenagers" xml:space="preserve">
+    <value>الأجهزة المنزلية</value>
+  </data>
+  <data name="cat_emploi" xml:space="preserve">
+    <value>التوظيف</value>
+  </data>
+  <data name="cat_emploi_services" xml:space="preserve">
+    <value>الوظائف والخدمات</value>
+  </data>
+  <data name="cat_enfant_bebe" xml:space="preserve">
+    <value>حوائج الأطفال</value>
+  </data>
+  <data name="cat_immobilier" xml:space="preserve">
+    <value>العقار</value>
+  </data>
+  <data name="cat_jeux" xml:space="preserve">
+    <value>الألعاب</value>
+  </data>
+  <data name="cat_livres" xml:space="preserve">
+    <value>الكتب</value>
+  </data>
+  <data name="cat_location" xml:space="preserve">
+    <value>الإيجار</value>
+  </data>
+  <data name="cat_maison" xml:space="preserve">
+    <value>المنزل</value>
+  </data>
+  <data name="cat_meuble" xml:space="preserve">
+    <value>الأثاث</value>
+  </data>
+  <data name="cat_multimedia" xml:space="preserve">
+    <value>الميلتيميديا</value>
+  </data>
+  <data name="cat_ordinateurs_bureau" xml:space="preserve">
+    <value>الحواسيب المكتبية</value>
+  </data>
+  <data name="cat_ordinateurs_portables" xml:space="preserve">
+    <value>الحواسيب المحمولة</value>
+  </data>
+  <data name="cat_parfums" xml:space="preserve">
+    <value>العطور</value>
+  </data>
+  <data name="cat_pieces_detachees" xml:space="preserve">
+    <value>قطع الغيار</value>
+  </data>
+  <data name="cat_serveurs" xml:space="preserve">
+    <value>السيرفيرات</value>
+  </data>
+  <data name="cat_services" xml:space="preserve">
+    <value>الخدمات</value>
+  </data>
+  <data name="cat_sports" xml:space="preserve">
+    <value>مسائل الرياضة</value>
+  </data>
+  <data name="cat_tablette" xml:space="preserve">
+    <value>التابليت</value>
+  </data>
+  <data name="cat_telephones" xml:space="preserve">
+    <value>الهواتف</value>
+  </data>
+  <data name="cat_televisions" xml:space="preserve">
+    <value>التيلفيزيون</value>
+  </data>
+  <data name="cat_ustensiles" xml:space="preserve">
+    <value>الأواني</value>
+  </data>
+  <data name="cat_vaches" xml:space="preserve">
+    <value>البقر</value>
+  </data>
+  <data name="cat_vehicules" xml:space="preserve">
+    <value>المركبات</value>
+  </data>
+  <data name="cat_vente_immobilier" xml:space="preserve">
+    <value>مبيعات العقارات</value>
+  </data>
+  <data name="cat_Vetements" xml:space="preserve">
+    <value>الملابس</value>
+  </data>
+  <data name="cat_voiture" xml:space="preserve">
+    <value>السيارات</value>
+  </data>
+  <data name="dakhlet_nouadhibou" xml:space="preserve">
+    <value>داخلة انواذيبوا</value>
+  </data>
+  <data name="footer_condition_gene" xml:space="preserve">
+    <value>القوانين العامة</value>
+  </data>
+  <data name="footer_mention_legal" xml:space="preserve">
+    <value>اشعار قانوني</value>
+  </data>
+  <data name="footer_partenaires" xml:space="preserve">
+    <value>شركائنا</value>
+  </data>
+  <data name="gorgol" xml:space="preserve">
+    <value>كوركول</value>
+  </data>
+  <data name="guidimaka" xml:space="preserve">
+    <value>كيديماغا</value>
+  </data>
+  <data name="hodh_chargui" xml:space="preserve">
+    <value>الحوض الشرقي</value>
+  </data>
+  <data name="hodh_gharbi" xml:space="preserve">
+    <value>الحوض الغربي</value>
+  </data>
+  <data name="inchiri" xml:space="preserve">
+    <value>انشيري</value>
+  </data>
+  <data name="label_toute_les_cat" xml:space="preserve">
+    <value>جميع الفئات</value>
+  </data>
+  <data name="tagant" xml:space="preserve">
+    <value>تكانت</value>
+  </data>
+  <data name="tiris" xml:space="preserve">
+    <value>تيرس زمور</value>
+  </data>
+  <data name="top_cat" xml:space="preserve">
+    <value>الأكثر تداول</value>
+  </data>
+  <data name="toute_les_villes" xml:space="preserve">
+    <value>كامل موريتانيا</value>
+  </data>
+  <data name="trarza" xml:space="preserve">
+    <value>اترارزة</value>
+  </data>
+  <data name="Neuf" xml:space="preserve">
+    <value>جديد (ة)</value>
+  </data>
+  <data name="Occasion" xml:space="preserve">
+    <value>مستعمل(ة)</value>
   </data>
 </root>

@@ -7,4 +7,4 @@
 --where phone = '46255544';
 
 
-select temps from Voitures;
+select * from Voitures where ville='Nouakchott';

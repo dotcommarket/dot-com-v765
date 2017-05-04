@@ -643,7 +643,9 @@
     <Content Include="Images\rim.fw.png" />
     <Content Include="Scripts\bootstrap\bootstrap-rtl.js" />
     <Content Include="Scripts\bootstrap\bootstrap-toolkit.min.js" />
+    <Content Include="Scripts\index\carte.js" />
     <Content Include="Scripts\create\create-ad.js" />
+    <Content Include="Scripts\index\index.js" />
     <Content Include="Scripts\module\jquery.popeye-2.0.4.js" />
     <Content Include="Scripts\module\jquery.popeye-2.0.4.min.js" />
     <Content Include="Scripts\module\option-popeye-ar.js" />

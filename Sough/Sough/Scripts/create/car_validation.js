@@ -77,7 +77,6 @@ function toggleCarShape(type,x) {
     } 
 }
 
-/* Set the border around the selected color and set a value in the hidden field */
 function toggleCarColor(color, id) {
     var white = document.getElementById('white');
     var grey = document.getElementById('grey');
@@ -191,6 +190,7 @@ function checkModele(type,id) {
     }
    
 }
+
 function checkColorShape() {
     var input1 = String(document.getElementById('color').value);
     var input2 = String(document.getElementById('car_shape').value);
@@ -221,16 +221,7 @@ function checkColorShape() {
 
 function checkEstNeuf() {
 
-    //var EstNeuf = "null";
-    //var radios = document.getElementsByName('EstNeuf');
     var help = document.getElementById("help-EstNeuf");
-
-    //for (var i = 0, length = radios.length; i < length; i++) {
-    //    if (radios[i].checked) {
-    //        EstNeuf = radios[i].value;
-    //        break;
-    //    }
-    //}
 
     if (document.getElementById('estneuf').value.length < 1) {
         help.style.color = "#cc0000";

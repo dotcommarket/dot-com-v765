@@ -1,5 +1,4 @@
-﻿@import url(http://fonts.googleapis.com/css?family=Open+Sans:400,300,300italic,700,400italic);
-td img {
+﻿td img {
         display: block;
 }
 .home-div-search {
@@ -225,4 +224,12 @@ td img {
     padding-left:100px;
 }
 
+.ttl-center{
+    margin-left:45px;
+    color:#0066D5;
+    font-size:25px;
+}
 
+#ltc{
+    margin-bottom:43px;
+}

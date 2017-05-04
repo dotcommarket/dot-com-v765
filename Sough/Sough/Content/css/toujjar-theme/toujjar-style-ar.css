@@ -4,6 +4,24 @@
 body {
     padding-top: 70px;
 }
+/* Text Size */
+p{
+    font-size:15px;
+}
+li a {
+    font-size:17px;
+}
+li a span{
+    font-size:17px;
+}
+li span{
+    font-size:17px;
+}
+select option,select optgroup{
+    font-size:16px;
+}
+
+
 
 /* Traitement de responsivite 
  *    xs (Tlf):  < 768 px
@@ -28,13 +46,12 @@ body {
         min-width: 100%;
         max-width: 100%;
     }
-    
+     body {
+        padding-top: 118px;
+    }
 }
 
 @media (max-width: 768px) {
-    body {
-        padding-top: 100px;
-    }
     fieldset{
         margin-right:17px;
         margin-left:17px;
@@ -59,7 +76,6 @@ body {
     padding: 0 !important;
     margin: 0 !important;
 }
-
 
 li {
     list-style-type: none;
