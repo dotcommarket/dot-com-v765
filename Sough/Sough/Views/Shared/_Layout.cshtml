@@ -6,13 +6,17 @@
     <title>@ViewBag.Title</title>
     <link href="~/Images/icon_site_48.png" rel="shortcut icon" type="image/x-icon" />
     <meta name="viewport" content="width=device-width" />
+   
+    <link rel="stylesheet" href="~/Content/css/index/headercss.css">
+
     <link rel="stylesheet" href="~/Content/css/toujjar-theme/font-awesome.min.css">
     @{
         var culture = Sough.GererLang.currentLang;
     }
-    @Styles.Render("~/Content/css-" + culture)
 
+    @Styles.Render("~/Content/css-" + culture)
     <link href="@Url.Content("~/Content/less-"+culture+"/bootstrap.less")" rel="stylesheet/less" type="text/css" />
+
     <link href="@Url.Content("~/Content/css/toujjar-theme/toujjar-style-"+culture+".css")" rel="stylesheet" type="text/css" />
 
 </head>

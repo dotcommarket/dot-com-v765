@@ -34,20 +34,22 @@ function inputRequird(id, help, msg,type,pos) {
             help.style.color = "#cc0000";
             help.innerText = '' + msg;
 
-            node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-            node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type); }
-            window.scrollTo(0, pos);
+            node.onfocus = function () {
+                node.style.borderColor = "#cc0000";
+            }
+
+            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type); }
+            if(pos != 0)
+                window.scrollTo(0, pos);
             return false;
         }
         else {
             node.style.backgroundColor = "#ffffff";
             node.style.borderColor = "#999999";
-
             node.onfocus = function () {
                 node.style.borderColor = "#0a67c7";
-                node.style.boxShadow = "0 0 5px #0a67c7";
             }
-            node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type); }
+            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type); }
             help.innerText = "";
             return true;
         }
@@ -60,10 +62,12 @@ function inputRequird(id, help, msg,type,pos) {
 
             help.style.color = "#cc0000";
             help.innerText = msg+'';
-
-            node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-            node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
-            window.scrollTo(0, pos);
+            node.onfocus = function () {
+                node.style.borderColor = "#cc0000";
+            }
+            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
+            if (pos != 0)
+                window.scrollTo(0, pos);
             return false;
         } else if (node.value.match(regex)) {
             node.style.backgroundColor = "#ffe6e6";
@@ -71,22 +75,23 @@ function inputRequird(id, help, msg,type,pos) {
 
             help.style.color = "#cc0000";
             help.innerText = msg+'';
-
-            node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-            node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
-            window.scrollTo(0, pos);
+            node.onfocus = function () {
+                node.style.borderColor = "#cc0000";
+            }
+            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
+            if (pos != 0)
+                window.scrollTo(0, pos);
             return false;
         }
         else {
             node.style.backgroundColor = "#ffffff";
             node.style.borderColor = "#999999";
+            help.innerText = "";
 
             node.onfocus = function () {
                 node.style.borderColor = "#0a67c7";
-                node.style.boxShadow = "0 0 5px #0a67c7";
             }
-            node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
-            help.innerText = "";
+            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
             return true;
         }
     }
@@ -104,9 +109,8 @@ function checkNom() {
         help.style.color = "#cc0000";
         help.innerText = 'Erreur , Le nom est long!';
 
-        node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
         node.onblur = function () {  checkNom(); }
-        window.scrollTo(0, 100); 
+        window.scrollTo(0, 1); 
         return false;
     }
     else if (!isAlphabetic(value)) {
@@ -116,9 +120,8 @@ function checkNom() {
         help.style.color = "#cc0000";
         help.innerText = 'Erreur , Le nom est incorrect!';
 
-        node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
         node.onblur = function () {  checkNom(); }
-        window.scrollTo(0, 100);
+        window.scrollTo(0, 1);
         return false;
     }
     else {
@@ -127,7 +130,7 @@ function checkNom() {
 
         node.onfocus = function () {
             node.style.borderColor = "#0a67c7";
-            //node.style.boxShadow = "0 0 5px #0a67c7";
+            node.style.boxShadow = "";
         }
         node.onblur = function () {  checkNom(); }
         help.innerText = "";
@@ -285,6 +288,17 @@ function checkPass() {
         node.onblur = function () {  checkPass(); }
         window.scrollTo(0, 1380);
         return false;
+    }else if (node.value.length <= 3) {
+        node.style.backgroundColor = "#ffe6e6";
+        node.style.borderColor = "#cc0000";
+
+        help.style.color = "#cc0000";
+        help.innerText = 'Password faible!';
+
+        //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
+        node.onblur = function () {  checkPass(); }
+        window.scrollTo(0, 1380);
+        return false;
     }
     else {
         node.style.backgroundColor = "#ffffff";
@@ -329,37 +343,16 @@ function checkConfPass() {
     }
 }
 
-function formValidate() {
-    var cn = checkNom();
-    var cp = checkPhone();
-    var ce = checkEmail();
-
-    var cmarque = selectRequird('marque', 'help-marque', 'Choisissez la marque du voiture',190);
-    var ccarburant = selectRequird('carburant', 'help-carburant', 'Selectionnez le type du carburant', 510);
-    var cboite = selectRequird('boite', 'help-boite', 'Selectionnez le type du boite', 600);
-    var cville = selectRequird('ville', 'help-ville', 'Selectionnez une ville',680);
-
-    var cmodele = checkModele(type_modele, id_modele);
-    var cklm = inputRequird('kilometrage', 'help-kilometrage', 'Erreur! Verifier ici.', 'num', 570);
-    var ccs = checkColorShape();
-    var cprix = inputRequird('prix', 'help-prix', 'Erreur! Verifier ici.', 'num', 900);
-    var cimages = checkImages();
-    var cEstNeuf = checkEstNeuf();
-
-    if (cn && cp && ce && cmarque && cmodele && cEstNeuf && cklm & ccarburant && ccs
-        && cboite && cville && cprix && cimages) {
-        return true;
-    } else {
-        return false;        
-    }
-
-}
-
 function isAlphabetic(str) {
     var code, i, len;
+    //  ar (1569 -1599) || (1601-1610)
 
     for (i = 0, len = str.length; i < len; i++) {
         code = str.charCodeAt(i);
+
+        if ((code >= 1569 && code <= 1599) || (code >= 1601 && code <= 1610))
+            return true;
+
         if ((code > 32 && code < 65)
             || (code > 32 && code < 58)
             || (code > 90 && code < 97)
@@ -370,4 +363,4 @@ function isAlphabetic(str) {
         }
     }
     return true;
-};
+}

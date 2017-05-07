@@ -189,6 +189,7 @@
     <Content Include="Content\css\create\car_create-ar.css" />
     <Content Include="Content\css\create\car_create-fr.css" />
     <Content Include="Content\css\create\create-ar.css" />
+    <Content Include="Content\css\index\headercss.css" />
     <Content Include="Content\css\index\index-ar.css" />
     <Content Include="Content\css\module\jquery.popeye.style-ar.css" />
     <Content Include="Content\css\show-products\ads-ar.css" />

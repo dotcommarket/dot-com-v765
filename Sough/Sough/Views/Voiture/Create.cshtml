@@ -207,7 +207,7 @@
                     </div>
                     <div class="controls">
                         <div class="input-group">
-                            <input class="form-control" id="kilometrage" type="number" min="0" max="40000000" name="kilometrage" onblur="checkKilometrage();" required /><span class="input-group-addon">km</span>
+                            <input class="form-control" id="kilometrage" type="number" min="0" max="40000000" name="kilometrage" onblur="inputRequird('kilometrage', 'help-kilometrage', 'Erreur! Verifier ici.', 'num', 0);" required /><span class="input-group-addon">km</span>
                         </div>
                         <p class="help-block" id="help-kilometrage"></p>
                     </div>
@@ -355,7 +355,7 @@
                     </div>
                     <div class="controls">
                         <div class="input-group">
-                            <input type="number" id="prix" class="form-control" min="200000" max="400000000" name="prix" onblur="checkPrix();" required />
+                            <input type="number" id="prix" class="form-control" min="200000" max="400000000" name="prix" onblur="inputRequird('prix', 'help-prix', 'Erreur! Verifier ici.', 'num', 0);" required />
                             <span class="input-group-addon">@Sough.Resource.uguiya</span>
                         </div>
                         <p class="help-block" id="help-prix"></p>

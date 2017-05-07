@@ -7,4 +7,4 @@
 --where phone = '46255544';
 
 
-select * from Voitures where ville='Nouakchott';
+select Id,marque,Modele,EstNeuf,car_shape,color,ville,temps from Voitures;

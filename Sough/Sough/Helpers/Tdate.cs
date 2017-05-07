@@ -30,7 +30,6 @@ namespace Sough.Helpers
         {
             try
             {
-                System.Globalization.CultureInfo culture = new System.Globalization.CultureInfo("fr"); //ar-EG            
                 DateTime dateValue = dt;
                 string FormatDate = "";
                 string _date = "";
@@ -42,27 +41,27 @@ namespace Sough.Helpers
                         if (dateValue.Day == DateTime.Now.Day)
                         {
                             if (format.Equals("fr"))
-                                return "Aujourd\'hui, " + dateValue.ToString("hh:MM", culture);
+                                return "Aujourd\'hui, " + dateValue.ToString("hh:mm");
                             else
-                                return "اليوم, " + dateValue.ToString("hh:MM", culture);
+                                return "اليوم, " + dateValue.ToString("hh:mm");
                         }
                         if (IsYesterday(dateValue))
                         {
                             if (format.Equals("fr"))
-                                return "Hier, " + dateValue.ToString("hh:MM", culture);
+                                return "Hier, " + dateValue.ToString("hh:mm");
                             else
-                                return "أمس, " + dateValue.ToString("hh:MM", culture);
+                                return "أمس, " + dateValue.ToString("hh:mm");
                         }
                         else
-                            FormatDate = "dd MMMM, hh:MM";
+                            FormatDate = "dd MMMM, hh:mm";
                     }
                     else
-                        FormatDate = "dd MMMM, hh:MM";
+                        FormatDate = "dd MMMM, hh:mm";
                 }
                 else
-                    FormatDate = "dd MMMM, hh:MM";
+                    FormatDate = "dd MMMM, hh:mm";
 
-                _date = dateValue.ToString(FormatDate, culture);
+                _date = dateValue.ToString(FormatDate);
                 if (format.Equals("ar"))
                     return ReplaceFrMonths(_date);
                 else

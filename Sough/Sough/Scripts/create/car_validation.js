@@ -234,3 +234,29 @@ function checkEstNeuf() {
     }
     
 }
+
+function formValidate() {
+    var cn = checkNom();
+    var cp = checkPhone();
+    var ce = checkEmail();
+
+    var cmarque = selectRequird('marque', 'help-marque', 'Choisissez la marque du voiture', 190);
+    var ccarburant = selectRequird('carburant', 'help-carburant', 'Selectionnez le type du carburant', 510);
+    var cboite = selectRequird('boite', 'help-boite', 'Selectionnez le type du boite', 600);
+    var cville = selectRequird('ville', 'help-ville', 'Selectionnez une ville', 680);
+
+    var cmodele = checkModele(type_modele, id_modele);
+    var cklm = inputRequird('kilometrage', 'help-kilometrage', 'Erreur! Verifier ici.', 'num', 570);
+    var ccs = checkColorShape();
+    var cprix = inputRequird('prix', 'help-prix', 'Erreur! Verifier ici.', 'num', 900);
+    var cimages = checkImages();
+    var cEstNeuf = checkEstNeuf();
+
+    if (cn && cp && ce && cmarque && cmodele && cEstNeuf && cklm & ccarburant && ccs
+        && cboite && cville && cprix && cimages) {
+        return true;
+    } else {
+        return false;
+    }
+
+}
