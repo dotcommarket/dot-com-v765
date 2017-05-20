@@ -9,7 +9,7 @@ namespace Sough
 {
     public class GererLang
     {
-        public static string currentLang = "fr";
+        public static string currentLang = "ar";
 
         public static List<Langages> LangagesSite = new List<Langages>
         {

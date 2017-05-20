@@ -644,6 +644,10 @@
     <Content Include="Images\rim.fw.png" />
     <Content Include="Scripts\bootstrap\bootstrap-rtl.js" />
     <Content Include="Scripts\bootstrap\bootstrap-toolkit.min.js" />
+    <Content Include="Scripts\edit\car-validation.js" />
+    <Content Include="Scripts\edit\edit-car.js" />
+    <Content Include="Scripts\edit\edit-validation.js" />
+    <Content Include="Scripts\edit\edit.js" />
     <Content Include="Scripts\index\carte.js" />
     <Content Include="Scripts\create\create-ad.js" />
     <Content Include="Scripts\index\index.js" />
@@ -669,7 +673,9 @@
     <Compile Include="App_Start\WebApiConfig.cs" />
     <Compile Include="BaseController.cs" />
     <Compile Include="Controllers\AdController.cs" />
+    <Compile Include="Controllers\AdminController.cs" />
     <Compile Include="Controllers\CategorieController.cs" />
+    <Compile Include="Controllers\DeleteInfoController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GallerieController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
@@ -695,6 +701,7 @@
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\AccountModels.cs" />
+    <Compile Include="Models\Admin.cs" />
     <Compile Include="Models\Ammeublement.cs" />
     <Compile Include="Models\ArtTable.cs" />
     <Compile Include="Models\BureauCommerce.cs" />
@@ -704,6 +711,7 @@
     <Compile Include="Models\CommerceMarche.cs" />
     <Compile Include="Models\CourParticulier.cs" />
     <Compile Include="Models\Decoration.cs" />
+    <Compile Include="Models\DeleteInfo.cs" />
     <Compile Include="Models\EcoleAuto.cs" />
     <Compile Include="Models\Electromenager.cs" />
     <Compile Include="Models\EquipementAuto.cs" />
@@ -1008,6 +1016,19 @@
     <Content Include="Views\Vetement\ShowWare.cshtml" />
     <Content Include="Views\Vetement\_VetWhere.cshtml" />
     <Content Include="Views\Home\Indexar.cshtml" />
+    <Content Include="Views\Ad\editer.cshtml" />
+    <Content Include="Views\Ad\supprimer.cshtml" />
+    <Content Include="Views\Voiture\PutPass.cshtml" />
+    <Content Include="Views\Admin\Index.cshtml" />
+    <Content Include="Views\Admin\Details.cshtml" />
+    <Content Include="Views\Admin\Create.cshtml" />
+    <Content Include="Views\Admin\Edit.cshtml" />
+    <Content Include="Views\Admin\Delete.cshtml" />
+    <Content Include="Views\DeleteInfo\Index.cshtml" />
+    <Content Include="Views\DeleteInfo\Details.cshtml" />
+    <Content Include="Views\DeleteInfo\Create.cshtml" />
+    <Content Include="Views\DeleteInfo\Edit.cshtml" />
+    <Content Include="Views\DeleteInfo\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -1045,7 +1066,7 @@
     <Content Include="Views\Ad\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Shared\_CategoriesTable.cshtml" />
+    <Content Include="Views\Shared\_CategoriesTables.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="TypeFile.htaccess" />

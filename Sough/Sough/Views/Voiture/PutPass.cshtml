@@ -1,0 +1,138 @@
+﻿
+@if (ViewBag.operation == "ok")
+{
+    <div class="row">
+                    <div class="col-xs-12 col-sm-6  col-md-7">
+                        <div class="alert alert-info" role="alert">
+
+                            <div class="div-icon-info">
+                                <i class="@Sough.App_Code.Ticons.ok fa-3x icon-info" aria-hidden="true"></i>
+                                <span class="t-text">
+                                    تم الحذف بنجاح
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+}
+else {
+
+
+    if (ViewBag.err == "err1")
+    {
+        <div class="row">
+                    <div class="col-xs-12 col-sm-6  col-md-7">
+                        <div class="alert alert-danger" role="alert">
+
+                            <div class="div-icon-info">
+                                <i class="@Sough.App_Code.Ticons.attention fa-3x icon-info" aria-hidden="true"></i>
+                                <span class="t-text">
+                                    خطأ في البيانات
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    }
+    else if (ViewBag.err == "err2")
+    {
+        <div class="row">
+                    <div class="col-xs-12 col-sm-6  col-md-7">
+                        <div class="alert alert-danger" role="alert">
+
+                            <div class="div-icon-info">
+                                <i class="@Sough.App_Code.Ticons.attention fa-3x icon-info" aria-hidden="true"></i>
+                                <span class="t-text">
+                                    كلمة المرور غير صحيحة
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+    }
+    
+<div id="loginbox" style="margin-top:50px;" class="mainbox col-md-6 col-md-offset-3 col-sm-8 col-sm-offset-2">
+    <div class="panel panel-info">
+        <div class="panel-heading">
+            <div class="panel-title">تفحص بضائعك</div>
+            <div style="float:right; font-size: 80%; position: relative; top:-10px"><a href="#">Forgot password?</a></div>
+        </div>
+        <div style="padding-top:30px" class="panel-body">
+            <div style="display:none" id="login-alert" class="alert alert-danger col-sm-12"></div>
+
+            @if (ViewBag.op == "del") {           
+            <form id="loginform" method="post" action="~/Voiture/Delete" class="form-horizontal" role="form">
+               
+                @Html.AntiForgeryToken()
+                
+                <input name="key" type="hidden" value="@ViewBag.Key" />
+                <div>
+                    <div class="input-group">
+                    <div class="div-radio">
+                        <input type="radio" name="why" value="buy from toujjar" required>تم البيع عن طريق تجار
+                    </div>
+                    <div class="div-radio">
+                        <input type="radio" name="why" value="buy from another">تم البيع عن طريق أخرى
+                    </div>
+                    <div class="div-radio">
+                        <input type="radio" name="why" value="no buying">لم أنجح في البيع هذه المرة
+                    </div>
+                    <div class="div-radio">
+                        <input type="radio" name="why" value="no want to buy">لم أعد أريد البيع
+                    </div>
+                        <div class="div-radio">
+                            <input type="radio" name="why" value="other">أسباب أخرى
+                        </div>
+                </div>
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input id="login-password" type="password" class="form-control" name="password" placeholder="كلمة المرور" required>
+                </div>
+                </div>
+
+
+                <div style="margin-top:10px" class="form-group">
+                    <!-- Button -->
+                    <div class="col-sm-12 controls">
+                        <button class="btn Btn3" type="submit">ارسال</button>
+                    </div>
+                </div>
+
+            </form>
+            }
+            else if (ViewBag.op == "edit")
+            {
+                
+            <form id="loginform" method="post" action="~/Voiture/Edite" class="form-horizontal" role="form">
+               
+                @Html.AntiForgeryToken()
+                
+                <input name="key" type="hidden" value="@ViewBag.Key" />
+                <div>
+                   
+
+                    <div style="margin-bottom: 25px" class="input-group">
+                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                    <input  type="password" class="form-control" name="password" placeholder="كلمة المرور" required>
+                
+                    
+                 </div>
+                </div>
+
+
+                <div style="margin-top:10px" class="form-group">
+                    <!-- Button -->
+                    <div class="col-sm-12 controls">
+                        <button class="btn Btn3" type="submit">ارسال</button>
+                    </div>
+                </div>
+
+            </form>
+            }
+        </div>
+    </div>
+</div>
+
+
+}

@@ -1,0 +1,64 @@
+﻿@model Sough.Models.DeleteInfo
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<fieldset>
+    <legend>DeleteInfo</legend>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.why)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.why)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.delete_time)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.delete_time)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.create_time)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.create_time)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.categorie)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.categorie)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.prix)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.prix)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.ville)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.ville)
+    </div>
+
+    <div class="display-label">
+         @Html.DisplayNameFor(model => model.phone)
+    </div>
+    <div class="display-field">
+        @Html.DisplayFor(model => model.phone)
+    </div>
+</fieldset>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id=Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

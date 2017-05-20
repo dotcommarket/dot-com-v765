@@ -20,5 +20,9 @@ namespace Sough.Models
         public DbSet<Voiture> Voitures { get; set; }
 
         public DbSet<Vetement> Vetements { get; set; }
+
+        public DbSet<Admin> Admins { get; set; }
+
+        public DbSet<DeleteInfo> DeleteInfoes { get; set; }
     }
 }

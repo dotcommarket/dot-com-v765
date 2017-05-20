@@ -1,113 +1,573 @@
 ﻿@model Sough.Models.Voiture
 
 @{
-    ViewBag.Title = "Edit";
+    ViewBag.Title = "Formulaire";
+    var culture = Sough.GererLang.currentLang;
 }
 
-<h2>Edit</h2>
+@Styles.Render("~/Content/create-" + culture)
+<link href="@Url.Content("~/Content/css/create/car_create-" + culture + ".css")" rel="stylesheet" type="text/css" />
+<link href="@Url.Content("~/Content/css/toujjar-theme/span-input-select-" + culture + ".css")" rel="stylesheet" type="text/css" />
 
-@using (Html.BeginForm()) {
-    @Html.AntiForgeryToken()
-    @Html.ValidationSummary(true)
-
-    <fieldset>
-        <legend>Voiture</legend>
-
-        @Html.HiddenFor(model => model.Id)
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.prix)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.prix)
-            @Html.ValidationMessageFor(model => model.prix)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.marque)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.marque)
-            @Html.ValidationMessageFor(model => model.marque)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.Modele)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.Modele)
-            @Html.ValidationMessageFor(model => model.Modele)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.ville)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.ville)
-            @Html.ValidationMessageFor(model => model.ville)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.kilometrage)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.kilometrage)
-            @Html.ValidationMessageFor(model => model.kilometrage)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.carburant)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.carburant)
-            @Html.ValidationMessageFor(model => model.carburant)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.BoiteDeVitesse)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.BoiteDeVitesse)
-            @Html.ValidationMessageFor(model => model.BoiteDeVitesse)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.trader_name)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.trader_name)
-            @Html.ValidationMessageFor(model => model.trader_name)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.email)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.email)
-            @Html.ValidationMessageFor(model => model.email)
-        </div>
-
-        <div class="editor-label">
-            @Html.LabelFor(model => model.phone)
-        </div>
-        <div class="editor-field">
-            @Html.EditorFor(model => model.phone)
-            @Html.ValidationMessageFor(model => model.phone)
-        </div>
+    <script type="text/javascript" src="~/Scripts/edit/edit.js"></script>
+    <script type="text/javascript" src="~/Scripts/edit/edit-car.js"></script>
 
 
 
+<!-- /-->
+<div class="col-xs-12 col-sm-12 col-md-12">
+    
+    <form action="~/Voiture/Edit" id="form" name="Form" method="post" 
+          onsubmit="return formValidate('ed');">
 
-        <p>
-            <input type="submit" value="Save" />
-        </p>
-    </fieldset>
-}
+        @Html.ValidationSummary(true)
+        @Html.AntiForgeryToken()
 
-<div>
-    @Html.ActionLink("Back to List", "Index")
+        <fieldset class="container">
+
+            <input type="hidden" name="Id" value="@Model.Id" />
+            <input type="hidden" id="color" name="color" value="" />
+            <input type="hidden" name="car_shape" id="car_shape" value="" />
+            <input type="hidden" name="EstNeuf" id="estneuf" value="@Model.EstNeuf" />
+            @*<input type="hidden" />*@
+
+            @if (ViewBag.msg == "ok")
+            {
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6  col-md-7">
+                        <div class="alert alert-info" role="alert">
+
+                            <div class="div-icon-info">
+                                <i class="@Sough.App_Code.Ticons.ok fa-3x icon-info" aria-hidden="true"></i>
+                                <span class="t-text">
+                                    Votre produit est maintenent sur la plate-forme Toujjar
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+            else if (ViewBag.msg == "nook")
+            {
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6  col-md-7">
+                        <div class="alert alert-danger" role="alert">
+
+                            <div class="div-icon-info">
+                                <i class="@Sough.App_Code.Ticons.attention fa-3x icon-info" aria-hidden="true"></i>
+                                <span class="t-text">
+                                    Les données sont incompletes !!
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            }
+
+
+            <div class="row leftmarge">
+                <div class="col-xs-12 col-sm-9 col-md-7">
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6  col-md-4">
+                            <div class="lbl">
+                                <h3>@Html.LabelFor(model => model.trader_name, new { @class = "control-label" })</h3>
+                            </div>
+                            <div class="input-group">
+                                <input class="form-control" type="text" id="name" name="trader_name" value="@Model.trader_name"
+                                       onblur="checkNom()" pattern=".{0}|.{2,}" />
+                                <p class="help-block" id="help-name"></p>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div class="row">
+
+                        <div class="col-xs-6 col-sm-6 col-md-2">
+                            <div class="lbl">
+                                <input name="agree_face" type="checkbox" value="@Model.trader_facebook" onclick="inputFace()">
+                                @Sough.Resource.LabelFacebook
+                            </div>
+                        </div>
+                        <div class="col-xs-6 col-sm-6 col-md-2">
+                            <div class="lbl">
+                                <input name="agree_insta" type="checkbox" value="@Model.trader_instagram" onclick="inputInsta();">
+                                @Sough.Resource.LabelInstagram
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row" id="row-sn" style="display:none">
+                        <div class="col-md-6 col-xs-11 col-sm-5" id="col-fb" style="display:none">
+                            <div class="control-group">
+                                <div class="input-group margin-bottom-sm" id="in-gr-face">
+                                    <input class="form-control" type="text" id="face_input" name="trader_facebook" value="@Model.trader_facebook"
+                                           pattern=".{0}|.{2,}" placeholder="facebook" /><span class="input-group-addon"><i class="fa fa-facebook"></i></span>
+                                </div>
+                            </div>
+                            <p class="help-block"></p>
+
+                        </div>
+                        <div class="col-md-6 col-xs-11 col-sm-5" id="col-insta" style="display:none">
+                            <div class="control-group">
+
+                                <div class="input-group margin-bottom-sm" id="in-gr-insta">
+                                    <input class="form-control" type="text" id="insta_input" name="trader_instagram" value="@Model.trader_instagram"
+                                           pattern=".{0}|.{2,}" placeholder="instagram">
+                                    <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.instagram"></i></span>
+                                </div>
+
+                            </div>
+                            <p class="help-block"></p>
+
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-6  col-md-5">
+                            <div class="control-group">
+                                <div class="lbl">
+                                    <h3>@Html.LabelFor(model => model.email, new { @class = "control-label" })</h3>
+                                </div>
+                                <div class="input-group margin-bottom-sm" style="position:relative;">
+                                    <input class="form-control" type="email" name="Email" id="email"
+                                           value="@Model.email" onblur="checkEmail()" style="padding-right: 33px;"
+                                           placeholder="@Sough.Resource.placeholder_email" />
+                                    <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.envelope"></i></span>
+                                </div>
+                            </div>
+                            <p class="help-block" id="help-email"></p>
+
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col-xs-12 col-sm-8 col-md-5">
+                            <div class="control-group">
+                                <div class="lbl">
+                                    <h3>@Html.LabelFor(model => model.phone, new { @class = "control-label" })</h3>
+                                </div>
+                                <div class="input-group margin-bottom-sm" style="position:relative;">
+
+                                    <input class="form-control" type="text" id="phone" value="@Model.phone"
+                                           pattern=".{8,13}" name="phone" onblur="checkPhone()"
+                                           title="minimum 8 numero et maximum 13"
+                                           style="padding-right: 33px;"
+                                           placeholder="@Sough.Resource.create_placeholder_tel" />
+                                    <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.whatsapp"></i></span>
+                                </div>
+                                <p class="help-block" id="help-phone"></p>
+
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-3 col-md-5">
+                    <blockquote>
+                        <p>@Sough.Resource.create_blockquote1_p</p>
+                        <footer>@Sough.Resource.create_blockquote1_footer</footer>
+                    </blockquote>
+                </div>
+            </div>
+
+            <div class="row input-space1">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <h3>@Html.LabelFor(model => model.marque, new { @class = "control-label" })</h3>
+                    <span>
+                        <select name="marque" id="marque" class="featurebox_select_medium"
+                                onchange="getModels('marque');">
+                            <option value="@Model.marque" selected>@Model.marque</option>
+                            <optgroup label="Marques courantes" data-subtext="">
+                                <option value="Audi">Audi</option>
+                                <option value="Bmw">BMW</option>
+                                <option value="Citroen">Citroën</option>
+                                <option value="Fiat">Fiat</option>
+                                <option value="Ford">Ford</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Land-Rover">Land Rover</option>
+                                <option value="Mercedes">Mercedes</option>
+                                <option value="Mitsubishi">Mitsubishi</option>
+                                <option value="Nissan">Nissan</option>
+                                <option value="Opel">Opel</option>
+                                <option value="Peugeot">Peugeot</option>
+                                <option value="Renault">Renault</option>
+                                <option value="Toyota">Toyota</option>
+                                <option value="Volkswagen">Volkswagen</option>
+                            </optgroup>
+                            <optgroup label="Autres marques" data-subtext="">
+                                <option value="Alfa Romeo">Alfa Romeo</option>
+                                <option value="Buick">Buick</option>
+                                <option value="Cadillac">Cadillac</option>
+                                <option value="Chevrolet">Chevrolet</option>
+                                <option value="Chryslervc">Chrysler</option>
+                                <option value="Dacia">Dacia</option>
+                                <option value="Daewoo">Daewoo</option>
+                                <option value="Daihatsu">Daihatsu</option>
+                                <option value="Dodge">Dodge</option>
+                                <option value="Ferrari">Ferrari</option>
+                                <option value="Honda">Honda</option>
+                                <option value="HUMMER">HUMMER</option>
+                                <option value="Hyundai">Hyundai</option>
+                                <option value="Jaguar">Jaguar</option>
+                                <option value="Jeep">Jeep</option>
+                                <option value="Kia">Kia</option>
+                                <option value="Lada">Lada</option>
+                                <option value="Lamborghini">Lamborghini</option>
+                                <option value="Lancia">Lancia</option>
+                                <option value="Lexus">Lexus</option>
+                                <option value="Lincoln">Lincoln</option>
+                                <option value="Lotus">Lotus</option>
+                                <option value="Maserati">Maserati</option>
+                                <option value="Mazda">Mazda</option>
+                                <option value="Mercedes-Benz">Mercedes-Benz</option>
+                                <option value="MG">MG</option>
+                                <option value="MINI">MINI</option>
+                                <option value="Pontiac">Pontiac</option>
+                                <option value="Porsche">Porsche</option>
+                                <option value="Rover">Rover</option>
+                                <option value="Saab">Saab</option>
+                                <option value="Seat">Seat</option>
+                                <option value="Skoda">Skoda</option>
+                                <option value="smart">smart</option>
+                                <option value="Ssangyong">Ssangyong</option>
+                                <option value="Subaru">Subaru</option>
+                                <option value="Suzuki">Suzuki</option>
+                                <option value="Volvo">Volvo</option>
+                                <option value="0">Autres</option>
+                            </optgroup>
+                        </select>
+
+                    </span>
+                    <p class="help-block" id="help-marque"></p>
+                </div>
+            </div>
+            <div class="row input-space2">
+                <div class="col-xs-12 col-sm-8 col-md-5" id="div-model" style="display:none;">
+                    <div class="lbl">
+                        <h3>@Html.LabelFor(model => model.Modele, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="btn-group rich_dropdown">
+                        @Html.Partial("~/Views/Voiture/_SelectModelsCreate.cshtml")
+                        <p class="help-block" id="help-modele"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-6 col-sm-6 col-md-6">
+
+                    <div class="controls control-label">
+                        <div class="div-radio">
+                            @if (Model.EstNeuf == "Neuf")
+                            {
+                                <input type="radio" name="EstNeuf" checked="checked" id="estneuf0" onclick="estNeufClick('estneuf0','Neuf');" value="Neuf">@:Neuf
+                            }
+                            else
+                            {
+                                <input type="radio" name="EstNeuf" id="estneuf0" onclick="estNeufClick('estneuf0','Neuf');" value="Neuf">@:Neuf
+                            }
+                        </div>
+                        <div class="div-radio">
+                            @if (Model.EstNeuf == "Occasion")
+                            {
+                                <input type="radio" name="EstNeuf" id="estneuf1" checked="checked" onclick="estNeufClick('estneuf1','Occasion');" value="Occasion">@:Occasion
+                            }
+                            else
+                            {
+                                <input type="radio" name="EstNeuf" id="estneuf1" onclick="estNeufClick('estneuf1','Occasion');" value="Occasion">@:Occasion
+                            }
+                        </div>
+                        <p class="help-block" id="help-EstNeuf"></p>
+                    </div>
+                </div>
+            </div>
+            <div class="row input-space2">
+                <div class="col-xs-12 col-sm-6  col-md-4">
+                    <div class="lbl">
+                        <h3>@Html.LabelFor(model => model.kilometrage, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="controls">
+                        <div class="input-group">
+                            <input class="form-control" value="@Model.kilometrage" id="kilometrage" type="number" min="0" max="40000000" name="kilometrage" onblur="inputRequird('kilometrage', 'help-kilometrage', 'Erreur! Verifier ici.', 'num', 0);" /><span class="input-group-addon">km</span>
+                        </div>
+                        <p class="help-block" id="help-kilometrage"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <div class="lbl">
+                        <h3>@Html.LabelFor(model => model.carburant, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="form-group">
+                        <span>
+                            <select name="carburant" id="carburant" class="featurebox_select_medium">
+                                <option value="@Model.carburant">@Model.carburant</option>
+                                <option value="essance">@Sough.Resource.essance</option>
+                                <option value="gasoile">@Sough.Resource.gasoile</option>
+                            </select>
+                        </span>
+                        <p class="help-block" id="help-carburant"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row input-space2">
+                <div class="col-xs-12">
+                    <h3>@Html.LabelFor(model => model.color, new { @class = "control-label" })</h3><br />
+
+                    <ul class="car_colors">
+                        <li id="grey" onclick="toggleCarColor('grey',2);" class="">
+                            <div title="gris">
+                                <input type="hidden" id="color_grey" />
+                            </div>
+                        </li>
+                        <li id="white" onclick="toggleCarColor('white',1);" class="">
+                            <div title="blanc">
+                                <input type="hidden" id="color_white" />
+                            </div>
+                        </li>
+                        <li id="brown" onclick="toggleCarColor('brown',3);" class="">
+                            <div title="marron">
+                                <input type="hidden" id="color_brown" />
+                            </div>
+                        </li>
+                        <li id="black" onclick="toggleCarColor('black',4);" class="">
+                            <div title="noire"> <input type="hidden" id="color_black" /> </div>
+                        </li>
+                        <li id="red" onclick="toggleCarColor('red',5);" class="">
+                            <div title="rouge">
+                                <input type="hidden" id="color_red" />
+                            </div>
+                        </li>
+                        <li id="yellow" onclick="toggleCarColor('yellow',6);" class="">
+                            <div title="jaune">
+                                <input type="hidden" id="color_yellow" />
+                            </div>
+                        </li>
+                        <li id="green" onclick="toggleCarColor('green',7);" class="">
+                            <div title="vert">
+                                <input type="hidden" id="color_green" />
+                            </div>
+                        </li>
+                        <li id="blue" onclick="toggleCarColor('blue',8);" class="">
+                            <div title="bleu">
+                                <input type="hidden" id="color_blue" />
+                            </div>
+                        </li>
+                    </ul>
+
+                    <ul class="car_shapes">
+
+                        <li id="cs_2" class="car_shape_2 car_shape_box_black" onclick="toggleCarShape('SUV', '2');">
+                            <div class="ic-1-b" id="vic1"></div>
+                            <div class="lbl">
+                                SUV
+                            </div>
+                        </li>
+                        <li id="cs_3" class="car_shape_3 car_shape_box_black" onclick="toggleCarShape('Berline', '3');">
+                            <div class="ic-2-b" id="vic2"></div>
+                            <div class="lbl">
+                                Berline
+                            </div>
+                        </li>
+                        <li id="cs_4" class="car_shape_4 car_shape_box_black" onclick="toggleCarShape('Pickup', '4');">
+                            <div class="ic-3-b" id="vic3"></div>
+                            <div class="lbl">Pickup</div>
+                        </li>
+                        <li id="cs_5" class="car_shape_5 car_shape_box_black" onclick="toggleCarShape('Break', '5');">
+                            <div class="ic-4-b" id="vic4"></div>
+                            <div class="lbl">
+                                Break
+                            </div>
+                        </li>
+
+                    </ul>
+
+                </div>
+                <div class="col-xs-12 col-sm-12 col-md-3" style="margin-top:25px;">
+                    <p class="help-block" id="help-color-shape"></p>
+                </div>
+            </div>
+
+            <div class="row input-space2">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <div>
+                        <h3>@Html.LabelFor(model => model.BoiteDeVitesse, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="form-group">
+                        <span>
+                            <select name="BoiteDeVitesse" id="boite" class="featurebox_select_medium">
+                                <option value="@Model.BoiteDeVitesse">@Model.BoiteDeVitesse</option>
+                                <option value="manuel">@Sough.Resource.manuel</option>
+                                <option value="automatique">@Sough.Resource.automatique</option>
+                            </select>
+                        </span>
+                        <p class="help-block" id="help-boite"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row input-space1">
+                <div class="col-xs-12 col-sm-8 col-md-5">
+                    <h3>@Html.LabelFor(model => model.ville, new { @class = "control-label" })</h3>
+                    <div class="form-group">
+                        <span>
+                            <select name="ville" id="ville" class="featurebox_select_medium">
+                                <option value="@Model.ville">@Model.ville</option>
+                                <option value="Nouakchott">@Sough.Resource.select_ville_nktt</option>
+                                <option value="Nema">@Sough.Resource.select_ville_nema</option>
+                                <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+                                <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+                                <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+                                <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+                                <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+                                <option value="Atar">@Sough.Resource.select_ville_atar</option>
+                                <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+                                <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+                                <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+                                <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+                                <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+                                <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+                                <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+
+                            </select>
+                        </span>
+                        <p class="help-block" id="help-ville"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row content">
+                <div class="col-xs-12 col-sm-6  col-md-4">
+                    <div class="lbl">
+                        <h3>@Html.LabelFor(model => model.prix, new { @class = "control-label" })</h3>
+                    </div>
+                    <div class="controls">
+                        <div class="input-group">
+                            <input type="number" id="prix" class="form-control"
+                                   name="prix" value="@Model.prix"
+                                   onblur="inputRequird('prix', 'help-prix', 'Erreur! Verifier ici.', 'num', 0);" />
+                            <span class="input-group-addon">@Sough.Resource.uguiya</span>
+                        </div>
+                        <p class="help-block" id="help-prix"></p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row input-space1 content">
+                <div class="col-xs-12 col-sm-8 col-md-7">
+                    <div class="col-xs-12 col-sm-8  col-md-8">
+                        <div class="control-group">
+                            <h3>@Sough.Resource.LabelPassword</h3>
+                            <div class="controls input-group margin-bottom-sm">
+                                <input class="form-control" type="password" onblur="checkPass('ed', 1380);" id="password" name="password"
+                                       placeholder="@Sough.Resource.placeholder_password">
+                                <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.ilock"></i></span>
+                            </div>
+                            <p class="help-block" id="help-pass"></p>
+                        </div>
+                    </div>
+
+                    <div class="col-xs-12 col-sm-8  col-md-8">
+                        <div class="control-group">
+                            <h3>@Sough.Resource.LabelPasswordConfirme</h3>
+                            <div class="controls input-group margin-bottom-sm">
+                                <input class="form-control" name="password" type="password" id="conf_pass" onblur="checkConfPass('ed', 1400);" />
+                                <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.ilock"></i></span>
+
+                            </div>
+                            <p class="help-block" id="help-conf-pass"></p>
+
+                        </div>
+                    </div>
+
+                </div>
+                <div class="col-xs-12 col-sm-4 col-md-5">
+                    <div class="pass-blockquote">
+                        <blockquote id="blockquote-pass">
+                            <p>@Sough.Resource.create_pourquoi</p>
+                            <footer>@Sough.Resource.pourquoi_pass</footer>
+                        </blockquote>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row input-space1 hidden-xs row-submit">
+                <!-- row md-->
+                <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div>
+                        <button type="submit" id="show_box" class="btn Btn2" onclick="formValidate('ed');">
+                            <span class="@Sough.App_Code.Ticons.ok"></span>
+                            @Sough.Resource.btn1
+                        </button>
+                    </div>
+                </div>
+                
+            </div>
+            <div class="row input-space1 hidden-sm hidden-md hidden-lg input-space1">
+                <!-- row sm-->
+
+                <div class="col-xs-6 col-sm-6 col-md-4">
+                    <div>
+                        <button type="submit" onclick="formValidate('ed');" id="submit" class="btn Btn1">
+                            <span class="@Sough.App_Code.Ticons.ok"></span>
+                            @Sough.Resource.btn1
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </fieldset>
+
+    </form>
+
 </div>
 
+
+@Scripts.Render("~/bundles/jquery")
+
+<script type="text/javascript">
+
+    getModels('marque');
+
+    var color = '@Model.color';
+    var car_shape = '@Model.car_shape';
+
+    switch (color) {
+        case 'white': document.getElementById('white').click();
+            break; 
+        case 'grey': document.getElementById('grey').click();
+            break;
+        case 'brown': document.getElementById('brown').click();
+            break;
+        case 'black': document.getElementById('black').click();
+            break;
+        case 'red': document.getElementById('red').click();
+            break;
+        case 'yellow': document.getElementById('yellow').click();
+            break;
+        case 'green': document.getElementById('green').click();
+            break;
+        case 'blue': document.getElementById('blue').click();
+            break;
+        default: break;
+    }
+
+    switch (car_shape) {
+        case 'SUV': document.getElementById('cs_2').click();
+            break;
+        case 'Berline': document.getElementById('cs_3').click();
+            break;
+        case 'Pickup': document.getElementById('cs_4').click();
+            break;
+        case 'Break': document.getElementById('cs_5').click();
+            break;
+        default: break;
+    }
+
+</script>
+
 @section Scripts {
-    @Scripts.Render("~/bundles/jqueryval")
+    <script type="text/javascript" src="~/Scripts/create/car_validation.js"></script>
+    <script type="text/javascript" src="~/Scripts/create/validation.js"></script>
+
 }

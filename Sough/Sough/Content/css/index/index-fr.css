@@ -6,6 +6,7 @@
     -webkit-border-radius: 4px;
     -moz-border-radius: 4px;
     border-radius: 4px;
+    float: left;
 }
 
 #cat {
@@ -147,7 +148,7 @@
 
 @media (min-width: 970px) {
     #ville {
-        margin-right: 50px;
+        /*margin-left: 50px;*/
     }
 
     .list_left_navigation {
@@ -155,55 +156,55 @@
     }
 }
 
-@media (min-width: 992px) and (max-width:1093px) {
-    #btn-search {
-        margin-top: 10px;
+.col-space1{
+    height: 150px;
+}
+@media (min-width: 1046px) and (max-width:1155px) {
+     #btn-search{
+        margin-top:10px;
     }
 }
-
-@media (min-width: 801px) and (max-width:946px) {
-    #btn-search {
-        margin-top: 10px;
+@media (min-width:1156px){
+    #btn-search{
+        margin-left: 35px;
     }
 }
-
-@media (min-width: 1094px) and (max-width:1100px) {
-    #btn-search {
-        margin-top: 10px;
-    }
-}
-
-@media (min-width: 970px) and (max-width:991px) {
-    #btn-search {
-        margin-top: 10px;
-    }
-}
-
-@media (max-width: 800px) {
-    #btn-search {
-        margin-top: 10px;
-    }
-}
-
-@media (max-width:992px) { /* Tablet */
-    #cat {
-        margin-left: 25px;
-    }
-
+@media (min-width: 992px) and (max-width:1155px){
     #ville {
-        margin-left: 25px;
+        margin-left: 20px;
+    }
+    #btn-search{
+        display:block;
+        margin-top: 15px;
+    }
+}
+@media (min-width: 768px) and (max-width:991px) {  /* Tablet */
+    #btn-search{
+        margin-left:38px;
     }
 
-    #btn-search {
-        margin-left: 25px;
+    #cat {
+        margin-left: -8px;
     }
+    #ville {
+        margin-left: 2px;
+    }
+}
 
+@media (max-width:992px) { 
     .list_left_navigation {
         padding: 5px;
     }
 
     .row-ville {
         text-align: center;
+    }
+}
+
+@media (max-width:767px) {
+    .home-div-search {
+        width: 250px;
+        margin-left: 7px;
     }
 }
 
@@ -221,27 +222,40 @@
 }
 
 .row-map {
+    float: left;
     margin-top: 50px;
+    margin-left: 80px;
     margin-bottom: 50px;
 }
 
-.top-cat {
-    /*margin-top:95.1px;*/
+.row-top-cat {
+    margin-top: 95.1px;
     margin-bottom: 50.1px;
 }
+
+    .row-top-cat .col-top-cat {
+        float: left;
+    }
 
 .list_left_navigation_cat_list {
     padding-left: 100px;
 }
 
+.tlc {
+    float: left;
+}
+
 .ttl-center {
     margin-left: 45px;
     color: #0066D5;
-    font-size: 25px;
 }
 
 #ltc {
     margin-bottom: 43px;
+}
+
+.input-group-btn .btn-default {
+    width: 100px;
 }
 
 a.HomepageCategories-item-link:active, a.HomepageCategories-item-link:focus {

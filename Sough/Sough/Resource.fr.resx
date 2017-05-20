@@ -127,7 +127,7 @@
     <value>Valider</value>
   </data>
   <data name="LabelEmail" xml:space="preserve">
-    <value>Email (optionnel)</value>
+    <value>Email</value>
   </data>
   <data name="info" xml:space="preserve">
     <value>info</value>
@@ -148,7 +148,7 @@
     <value>entrée votre ville</value>
   </data>
   <data name="LabelTraderName" xml:space="preserve">
-    <value>Nom (optionnel)</value>
+    <value>Nom</value>
   </data>
   <data name="LabelBoiteDeVitesse" xml:space="preserve">
     <value>Boite de vitesse</value>
@@ -518,5 +518,17 @@
   </data>
   <data name="Occasion" xml:space="preserve">
     <value>Occasion</value>
+  </data>
+  <data name="operation_unknown" xml:space="preserve">
+    <value>Erreur ! L'opération n'est pas définie.</value>
+  </data>
+  <data name="Erreur_data" xml:space="preserve">
+    <value>Les données sont Incorrecte 1</value>
+  </data>
+  <data name="Erreur_password" xml:space="preserve">
+    <value>Le password est incorrecte</value>
+  </data>
+  <data name="Supp_prod_ok" xml:space="preserve">
+    <value>La Suppression a réussie</value>
   </data>
 </root>

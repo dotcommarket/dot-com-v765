@@ -28,10 +28,33 @@ namespace Sough.Helpers
             return src;
         }
 
+        public string GetsrcFromTable(string table)
+        {
+            //~/Views/Operations/
+            
+            string src = "";
+
+            if (table.Equals("Voitures"))
+            {
+                //src = "~/Views/Voiture/Waresfrph.cshtml";
+            }
+            else if (table.Equals("Vetements"))
+            {
+                //src = "~/Views/Vetement/Waresfrph.cshtml";
+            }
+
+
+            return src;
+        }
+
 
         public bool StringIsValid(string s)
         {
-            return ((s != null) && (s.Length > 1));
+            return ((s != null) && (s.Length >= 1));
+        }
+        public bool InputNotNull(string s)
+        {
+            return ((s != null) && ((s.Equals("")) || (s.Length >= 1)));
         }
 
         public bool NumberIsValid(long n)
@@ -149,6 +172,21 @@ namespace Sough.Helpers
                 return _prix;
             }
             
+        }
+
+        public string GetQueryEdite(ref string query,string name, string value)
+        {
+            if (value == null) value = "";
+
+            if (query.Length > 3)
+            {
+                query += " , "+name+" = N'" + value + "' ";
+            }
+            else
+            {
+                query = " "+name + " = N'" + value + "' ";
+            }
+            return query;
         }
     }
 }

@@ -269,16 +269,59 @@ namespace Sough.Controllers
         }
 
         //
-        // GET: /Voiture/Edit/5
-
-        public ActionResult Edit(long id = 0)
+        
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult Edite(FormCollection param)
         {
-            Voiture voiture = db.Voitures.Find(id);
-            if (voiture == null)
+            try
             {
-                return HttpNotFound();
+                string key = param["key"];
+                string pass = param["password"];
+                tdonnee = new TraitementDonnees();
+                //System.Diagnostics.Debug.WriteLine("key:" + key + "--pass: " + pass);
+                if (!tdonnee.StringIsValid(key))
+                {
+                    ViewBag.err = "err1";
+                    ViewBag.op = "edit";
+                    return View("~/Views/Voiture/PutPass.cshtml");
+                }
+
+                long id = Int64.Parse(key);
+
+                if (id <= 0)
+                {
+                    ViewBag.Key = key;
+                    ViewBag.err = "err1";
+                    ViewBag.op = "edit";
+                    return View("~/Views/Voiture/PutPass.cshtml");
+                }
+
+                Voiture v = db.Voitures.Find(id);
+                if (v == null)
+                {
+                    ViewBag.Key = key;
+                    ViewBag.err = "err1";
+                    ViewBag.op = "edit";
+                    return View("~/Views/Voiture/PutPass.cshtml");
+                }
+
+                pass = tdonnee.GetMd5(pass);
+                if (v.password != pass)
+                {
+                    ViewBag.Key = key;
+                    ViewBag.err = "err2";
+                    ViewBag.op = "edit";
+                    return View("~/Views/Voiture/PutPass.cshtml");
+                }
+
+                return View("~/Views/Voiture/Edit.cshtml", v);
             }
-            return View(voiture);
+            catch (Exception e)
+            {
+                ViewBag.ex = "Erreur sur le passage de donnees";
+                return View("~/Views/Error/Exception.cshtml");
+            }
         }
 
         //
@@ -286,50 +329,195 @@ namespace Sough.Controllers
 
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit(Voiture voiture)
+        public ActionResult Edit([Bind(Include = "Id,prix, marque, Modele,ville,kilometrage,BoiteDeVitesse,carburant,"
+            + "trader_name,Email,phone,color,car_shape,trader_facebook,trader_instagram,password"
+            )]Voiture voiture, string EstNeuf = "")
         {
-            if (ModelState.IsValid)
+
+            try
             {
-                db.Entry(voiture).State = EntityState.Modified;
+
+                tdonnee = new TraitementDonnees();
+
+                string query = "";
+                
+                if (!(voiture.Id > 0))
+                {
+                    ViewBag.err = "err1";
+                    return View();
+                }
+
+                
+                tdonnee.GetQueryEdite(ref query, "trader_name", voiture.trader_name);
+                tdonnee.GetQueryEdite(ref query, "email", voiture.email);
+                tdonnee.GetQueryEdite(ref query, "trader_facebook", voiture.trader_facebook);
+                tdonnee.GetQueryEdite(ref query, "trader_instagram", voiture.trader_instagram);
+                
+                if (tdonnee.StringIsValid(voiture.phone))
+                {
+                    tdonnee.GetQueryEdite(ref query, "phone", voiture.phone);
+                }
+                if (tdonnee.StringIsValid(voiture.marque))
+                {
+                    tdonnee.GetQueryEdite(ref query, "marque", voiture.marque);
+                }
+                if (tdonnee.StringIsValid(voiture.Modele))
+                {
+                    tdonnee.GetQueryEdite(ref query, "Modele", voiture.Modele);
+                }
+                if (tdonnee.StringIsValid(voiture.EstNeuf))
+                {
+                    tdonnee.GetQueryEdite(ref query, "EstNeuf", voiture.EstNeuf);
+                }
+                if (voiture.kilometrage >= 0)
+                {
+                    tdonnee.GetQueryEdite(ref query, "kilometrage", Convert.ToString(voiture.kilometrage));
+                }
+                if (tdonnee.StringIsValid(voiture.carburant))
+                {
+                    tdonnee.GetQueryEdite(ref query, "carburant", voiture.carburant);
+                }
+                if (tdonnee.StringIsValid(voiture.color))
+                {
+                    tdonnee.GetQueryEdite(ref query, "color", voiture.color);
+                }
+                if (tdonnee.StringIsValid(voiture.car_shape))
+                {
+                    voiture.car_shape = setCarType(voiture.car_shape.Trim().ToString());
+                    tdonnee.GetQueryEdite(ref query, "car_shape", voiture.car_shape);
+                }
+                if (tdonnee.StringIsValid(voiture.BoiteDeVitesse))
+                {
+                    tdonnee.GetQueryEdite(ref query, "BoiteDeVitesse", voiture.BoiteDeVitesse);
+                }                
+                if (tdonnee.StringIsValid(voiture.ville))
+                {
+                    tdonnee.GetQueryEdite(ref query, "ville", voiture.ville);
+                }
+                if (voiture.prix >= 400000)
+                {
+                    tdonnee.GetQueryEdite(ref query, "prix", Convert.ToString(voiture.prix));
+                }
+                if (tdonnee.StringIsValid(voiture.password))
+                {
+                    tdonnee.Tmd5<Voiture>(voiture.password, ref voiture);
+                    System.Diagnostics.Debug.WriteLine("Password : " + voiture.password);
+                    tdonnee.GetQueryEdite(ref query, "password", voiture.password);
+                }
+                
+                string sql = "UPDATE Voitures SET " + query + " WHERE Id = " + voiture.Id +" ;";
+                System.Diagnostics.Debug.WriteLine(sql);
+
+                db.Database.ExecuteSqlCommand(sql);
+                
                 db.SaveChanges();
-                return RedirectToAction("Index");
+
+                return RedirectToAction("ShowWare", new { id = voiture.Id });
             }
-            return View(voiture);
+            catch (Exception e)
+            {
+                ViewBag.ex = e.Message;
+                return View("~/Views/Error/Exception.cshtml");
+            }
         }
 
-        //
-        // GET: /Voiture/Delete/5
-
-        public ActionResult Delete(long id = 0)
+        public ActionResult PutPass(string k,string op)
         {
-            // --------Original-----------
-            //Voiture voiture = db.Voitures.Find(id);
-            //if (voiture == null)
-            //{
-            //    return HttpNotFound();
-            //}
-            //return View(voiture);
-            Voiture voiture = db.Voitures.Find(id);
+            if (op == "del") ViewBag.op = "del";
+            else if (op == "edit") ViewBag.op = "edit";
+
+
+            ViewBag.Key = k;
+            return View();
+        }
+
+        [ValidateAntiForgeryToken]
+        [HttpPost]
+        public ActionResult Delete(FormCollection param)
+        {
+            string key = param["key"];
+            string why = param["why"];
+            string pass = param["password"];
+
+            tdonnee = new TraitementDonnees();
+            if (!tdonnee.StringIsValid(key) || !tdonnee.StringIsValid(why) || !tdonnee.StringIsValid(pass))
+            {
+                ViewBag.ex = "Erreur sur le passage de donnees";
+                return View("~/Views/Error/Exception.cshtml");
+            }
+
+            long Id = Int64.Parse(key);
+
+            if (Id == 0)
+            {
+                ViewBag.ex = "Erreur sur le passage de donnees";
+                return View("~/Views/Error/Exception.cshtml");
+            }
+
+            Voiture voiture = db.Voitures.Find(Id);
             if (voiture == null)
             {
-                return HttpNotFound();
+                ViewBag.err = "err1";
+                return View();
             }
-            db.Voitures.Remove(voiture);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+
+            tdonnee = new TraitementDonnees();
+            pass = tdonnee.GetMd5(pass);
+
+            System.Diagnostics.Debug.WriteLine("hash password:" + pass);
+
+            if (voiture.password.Equals(pass))
+            {
+                ViewBag.why = why;
+                return View(voiture);
+            }
+            else
+            {
+                ViewBag.Key = key;
+                ViewBag.err = "err2";
+                return View("~/Views/Voiture/PutPass.cshtml");
+            }
+
+            
         }
 
         //
         // POST: /Voiture/Delete/5
 
-        [HttpPost, ActionName("Delete")]
+        
         [ValidateAntiForgeryToken]
-        public ActionResult DeleteConfirmed(long id)
+        [HttpPost]
+        public ActionResult DeleteConfirmed(string key,string why)
         {
-            Voiture voiture = db.Voitures.Find(id);
-            db.Voitures.Remove(voiture);
-            db.SaveChanges();
-            return RedirectToAction("Index");
+            try
+            {
+                //string key = param["key"];
+                System.Diagnostics.Debug.WriteLine("key :" + key);
+
+                long id = Int64.Parse(key);
+                Voiture voiture = db.Voitures.Find(id);
+                db.Voitures.Remove(voiture);
+
+                DeleteInfo di = new DeleteInfo();
+                di.why = why;
+                di.delete_time = DateTime.Now;
+                di.categorie = "Voiture";
+                di.create_time = voiture.temps;
+                di.prix = voiture.prix;
+                di.ville = voiture.ville;
+                di.phone = voiture.phone;
+
+                db.DeleteInfoes.Add(di);
+                db.SaveChanges();
+
+                ViewBag.operation = "ok";
+                return View("~/Views/Voiture/PutPass.cshtml");
+            }
+            catch (Exception e)
+            {
+                ViewBag.ex = e.Data +" & "+ e.Message;
+                return View("~/Views/Error/Exception.cshtml");
+            }
         }
 
 
@@ -509,27 +697,7 @@ namespace Sough.Controllers
 
         }
 
-        //[HttpGet]
-        //public ActionResult getByPhone(string p, int page = 0)
-        //{
-        //    string phone;
-        //    if (!tdonnee.StringIsValid(p))
-        //    {
-        //        return View();
-        //    }
-        //    else
-        //    {
-        //        phone = p;
-        //    }
-
-        //    List<Voiture> listVoitures = db.Voitures.Where(v => v.phone == phone).ToList();
-        //    PagedList<Voiture> model = new PagedList<Voiture>(listVoitures, page, PageSize);
-
-        //    return PartialView("~/Views/Voiture/_CarsWhere.cshtml", model);
-
-        //}
-
-
+        
         /*-------------------------------------------------*/
         protected override void Dispose(bool disposing)
         {
@@ -632,8 +800,8 @@ namespace Sough.Controllers
             // Les types de voitures : SUV, Berline , Break , Pickup
             if (nt.Equals("2")) type = "SUV";
             else if (nt.Equals("3")) type = "Berline";
-            else if (nt.Equals("4")) type = "Break";
-            else if (nt.Equals("5")) type = "Pickup";
+            else if (nt.Equals("4")) type = "Pickup";
+            else if (nt.Equals("5")) type = "Break";
 
             return type;
         }
@@ -641,349 +809,3 @@ namespace Sough.Controllers
     }
 }
 
-
-/*
- if (string.IsNullOrWhiteSpace(pmx_s))
-                        {
-   
-                            if (ville.Equals("all"))
-                            {
-                                ViewBag.ville = ville;
-
-                                if (cat.Equals("Ammeublements"))
-                                {
-                                    List<Ammeublement> _model2 = db.Ammeublements.ToList();
-                                    return View("~/Views/Ammeublement/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("ArtTables"))
-                                {
-                                    List<ArtTable> _model2 = db.ArtTables.ToList();
-                                    return View("~/Views/ArtTable/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("BureauCommerces"))
-                                {
-                                    List<BureauCommerce> _model2 = db.BureauCommerces.ToList();
-                                    return View("~/Views/BureauCommerce/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Chameaux"))
-                                {
-                                    List<Chameau> _model2 = db.Chameaux.ToList();
-                                    return View("~/Views/Chameau/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Chevres"))
-                                {
-                                    List<Chevre> _model2 = db.Chevres.ToList();
-                                    return View("~/Views/Chevre/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("CommerceMarches"))
-                                {
-                                    List<CommerceMarche> _model2 = db.CommerceMarches.ToList();
-                                    return View("~/Views/CommerceMarche/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("CourParticuliers"))
-                                {
-                                    List<CourParticulier> _model2 = db.CourParticuliers.ToList();
-                                    return View("~/Views/CourParticulier/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Decorations"))
-                                {
-                                    List<Decoration> _model2 = db.Decorations.ToList();
-                                    return View("~/Views/Decoration/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("EcoleAuto"))
-                                {
-                                    List<EcoleAuto> _model2 = db.EcoleAutoes.ToList();
-                                    return View("~/Views/EcoleAuto/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Electromenagers"))
-                                {
-                                    List<Electromenager> _model2 = db.Electromenagers.ToList();
-                                    return View("~/Views/Electromenager/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("EquipementAuto"))
-                                {
-                                    List<EquipementAuto> _model2 = db.EquipementAutoes.ToList();
-                                    return View("~/Views/EquipementAuto/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("EquipementIndustriels"))
-                                {
-                                    List<EquipementIndustriel> _model2 = db.EquipementIndustriels.ToList();
-                                    return View("~/Views/EquipementIndustriel/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("FournitureBureaux"))
-                                {
-                                    List<FournitureBureau> _model2 = db.FournitureBureaux.ToList();
-                                    return View("~/Views/FournitureBureau/Ads.cshtml", _model2);
-                                }
-
-
-                                else if (cat.Equals("Informatiques"))
-                                {
-                                    List<Informatique> _model2 = db.Informatiques.ToList();
-                                    return View("~/Views/Informatique/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Jardinages"))
-                                {
-                                    List<Jardinage> _model2 = db.Jardinages.ToList();
-                                    return View("~/Views/Jardinage/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Jeux"))
-                                {
-                                    List<Jeu> _model2 = db.Jeus.ToList();
-                                    return View("~/Views/Jeu/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("LocationImmobiliers"))
-                                {
-                                    List<LocationImmobilier> _model2 = db.LocationImmobiliers.ToList();
-                                    return View("~/Views/LocationImmobilier/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("MaterielMedicals"))
-                                {
-                                    List<MaterielMedical> _model2 = db.MaterielMedicals.ToList();
-                                    return View("~/Views/MaterielMedical/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("MGrosOeuvres"))
-                                {
-                                    List<MGrosOeuvre> _model2 = db.MGrosOeuvres.ToList();
-                                    return View("~/Views/MGrosOeuvre/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Moto"))
-                                {
-                                    List<Moto> _model2 = db.Motoes.ToList();
-                                    return View("~/Views/Moto/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Mtransports"))
-                                {
-                                    List<Mtransport> _model2 = db.Mtransports.ToList();
-                                    return View("~/Views/Mtransport/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Ordinateurs"))
-                                {
-                                    List<Ordinateur> _model2 = db.Ordinateurs.ToList();
-                                    return View("~/Views/Ordinateur/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("RestaurantHotelleries"))
-                                {
-                                    List<RestaurantHotellerie> _model2 = db.RestaurantHotelleries.ToList();
-                                    return View("~/Views/RestaurantHotellerie/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("ServiceMaisons"))
-                                {
-                                    List<ServiceMaison> _model2 = db.ServiceMaisons.ToList();
-                                    return View("~/Views/ServiceMaison/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Telephones"))
-                                {
-                                    List<Telephone> _model2 = db.Telephones.ToList();
-                                    return View("~/Views/Telephone/Ads.cshtml", _model2);
-                                }
-
-                                else if (cat.Equals("Televisions"))
-                                {
-                                    List<Television> _model2 = db.Televisions.ToList();
-                                    return View("~/Views/Television/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Vaches"))
-                                {
-                                    List<Vache> _model2 = db.Vaches.ToList();
-                                    return View("~/Views/Vache/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("VenteImmobiliers"))
-                                {
-                                    List<VenteImmobilier> _model2 = db.VenteImmobiliers.ToList();
-                                    return View("~/Views/VenteImmobilier/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Vetements"))
-                                {
-                                    List<Vetement> _model2 = db.Vetements.ToList();
-                                    return View("~/Views/Vetement/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Voitures"))
-                                {
-                                    List<Voiture> _model2;
-                                    if (VoitureSCH.trier.Equals("prix"))
-                                    {
-                                        _model2 = db.Voitures.OrderBy(a => a.prix).ThenBy(a => a.Id).ToList();
-                                        return View("~/Views/Voiture/Ads.cshtml", _model2);
-                                    }
-                                    else
-                                    {
-                                        _model2 = db.Voitures.OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
-                                        return View("~/Views/Voiture/Ads.cshtml", _model2);
-                                    }
-                                }
-                            }
-                            else
-                            {
-                                ViewBag.ville = ville;
-                                if (cat.Equals("Ammeublements"))
-                                {
-                                    List<string> l = new List<string>();
-                                    l.Add("d");
-                                    //List<Ammeublement> _mode = db.Ammeublements.Where(l).ToList();
-                                    List<Ammeublement> _model2 = db.Ammeublements.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Ammeublement/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("ArtTables"))
-                                {
-                                    List<ArtTable> _model2 = db.ArtTables.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/ArtTable/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("BureauCommerces"))
-                                {
-                                    List<BureauCommerce> _model2 = db.BureauCommerces.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/BureauCommerce/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Chameaux"))
-                                {
-                                    List<Chameau> _model2 = db.Chameaux.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Chameau/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Chevres"))
-                                {
-                                    List<Chevre> _model2 = db.Chevres.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Chevre/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("CommerceMarches"))
-                                {
-                                    List<CommerceMarche> _model2 = db.CommerceMarches.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/CommerceMarche/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("CourParticuliers"))
-                                {
-                                    List<CourParticulier> _model2 = db.CourParticuliers.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/CourParticulier/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Decorations"))
-                                {
-                                    List<Decoration> _model2 = db.Decorations.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Decoration/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("EcoleAuto"))
-                                {
-                                    List<EcoleAuto> _model2 = db.EcoleAutoes.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/EcoleAuto/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Electromenagers"))
-                                {
-                                    List<Electromenager> _model2 = db.Electromenagers.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Electromenager/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("EquipementAuto"))
-                                {
-                                    List<EquipementAuto> _model2 = db.EquipementAutoes.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/EquipementAuto/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("EquipementIndustriels"))
-                                {
-                                    List<EquipementIndustriel> _model2 = db.EquipementIndustriels.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/EquipementIndustriel/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("FournitureBureaux"))
-                                {
-                                    List<FournitureBureau> _model2 = db.FournitureBureaux.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/FournitureBureau/Ads.cshtml", _model2);
-                                }
-
-
-                                else if (cat.Equals("Informatiques"))
-                                {
-                                    List<Informatique> _model2 = db.Informatiques.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Informatique/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Jardinages"))
-                                {
-                                    List<Jardinage> _model2 = db.Jardinages.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Jardinage/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Jeux"))
-                                {
-                                    List<Jeu> _model2 = db.Jeus.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Jeu/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("LocationImmobiliers"))
-                                {
-                                    List<LocationImmobilier> _model2 = db.LocationImmobiliers.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/LocationImmobilier/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("MaterielMedicals"))
-                                {
-                                    List<MaterielMedical> _model2 = db.MaterielMedicals.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/MaterielMedical/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("MGrosOeuvres"))
-                                {
-                                    List<MGrosOeuvre> _model2 = db.MGrosOeuvres.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/MGrosOeuvre/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Moto"))
-                                {
-                                    List<Moto> _model2 = db.Motoes.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Moto/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Mtransports"))
-                                {
-                                    List<Mtransport> _model2 = db.Mtransports.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Mtransport/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Ordinateurs"))
-                                {
-                                    List<Ordinateur> _model2 = db.Ordinateurs.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Ordinateur/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("RestaurantHotelleries"))
-                                {
-                                    List<RestaurantHotellerie> _model2 = db.RestaurantHotelleries.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/RestaurantHotellerie/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("ServiceMaisons"))
-                                {
-                                    List<ServiceMaison> _model2 = db.ServiceMaisons.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/ServiceMaison/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Telephones"))
-                                {
-                                    List<Telephone> _model2 = db.Telephones.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Telephone/Ads.cshtml", _model2);
-                                }
-
-                                else if (cat.Equals("Televisions"))
-                                {
-                                    List<Television> _model2 = db.Televisions.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Television/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Vaches"))
-                                {
-                                    List<Vache> _model2 = db.Vaches.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Vache/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("VenteImmobiliers"))
-                                {
-                                    List<VenteImmobilier> _model2 = db.VenteImmobiliers.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/VenteImmobilier/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Vetements"))
-                                {
-                                    List<Vetement> _model2 = db.Vetements.Where(s => s.ville == ville).ToList();
-                                    return View("~/Views/Vetement/Ads.cshtml", _model2);
-                                }
-                                else if (cat.Equals("Voitures"))
-                                {
-                                    List<Voiture> _model2;
-                                    if (VoitureSCH.trier.Equals("prix"))
-                                    {
-                                        _model2 = db.Voitures.Where(s => s.ville == ville).OrderBy(a => a.prix).ThenBy(a => a.Id).ToList();
-                                        return View("~/Views/Voiture/Ads.cshtml", _model2);
-                                    }
-                                    else
-                                    {
-                                        _model2 = db.Voitures.Where(s => s.ville == ville).OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
-                                        return View("~/Views/Voiture/Ads.cshtml", _model2);
-                                    }
-
-                                }
-                            }
-
-                        }
-                       
- */

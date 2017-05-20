@@ -148,7 +148,7 @@
 
 @media (min-width: 970px) {
     #ville {
-        margin-left: 50px;
+        /*margin-left: 50px;*/
     }
 
     .list_left_navigation {
@@ -156,91 +156,48 @@
     }
 }
 
-/*@media (min-width: 992px) and (max-width:1093px) {
-    #btn-search{
+.col-space1{
+    height: 150px;
+}
+@media (min-width: 1046px) and (max-width:1155px) {
+     #btn-search{
         margin-top:10px;
     }
-    
 }
-@media (min-width: 801px) and (max-width:946px) {
+@media (min-width:1156px){
     #btn-search{
-        margin-top:10px;
-    }
-    
-}
-@media (min-width: 1094px) and (max-width:1100px) {
-    #btn-search{
-        margin-top:10px;
-    } 
-}
-@media (min-width: 970px) and (max-width:991px) {
-    #btn-search{
-        margin-top:10px;
-    } 
-}
-
-@media (max-width: 800px) {
-    #btn-search{
-        margin-top:10px;
-    }
-    
-}*/
-@media (min-width: 970px) and (max-width:1045px) {
-    #btn-search {
-        margin-top: 10px;
+        margin-right: 35px;
     }
 }
-
-@media (min-width: 768px) and (max-width:904px) {
-    #btn-search {
-        margin-top: 10px;
-    }
-}
-
-@media (max-width:992px) { /* Tablet */
-    #cat {
-        margin-right: 25px;
-    }
-
+@media (min-width: 992px) and (max-width:1155px){
     #ville {
-        margin-right: 25px;
+        margin-right: 20px;
+    }
+    #btn-search{
+        display:block;
+        margin-top: 15px;
+    }
+}
+@media (min-width: 768px) and (max-width:991px) {  /* Tablet */
+    #btn-search{
+        margin-right:38px;
     }
 
-    #btn-search {
-        margin-right: 25px;
+    #cat {
+        margin-right: -8px;
     }
+    #ville {
+        margin-right: 2px;
+    }
+}
 
+@media (max-width:992px) { 
     .list_left_navigation {
         padding: 5px;
     }
 
     .row-ville {
         text-align: center;
-    }
-}
-
-@media (min-width: 905px) and (max-width:969px) {
-    #btn-search {
-        margin-right: 50px;
-    }
-
-    #cat {
-        margin-right: 10px;
-    }
-
-    #ville {
-        margin-right: 10px;
-    }
-}
-
-@media (min-width: 787px) and (max-width:790px) {
-
-    #cat {
-        margin-right: 5px;
-    }
-
-    #ville {
-        margin-right: 5px;
     }
 }
 

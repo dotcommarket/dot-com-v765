@@ -1,0 +1,84 @@
+﻿@model Sough.Models.DeleteInfo
+
+@{
+    ViewBag.Title = "Create";
+}
+
+<h2>Create</h2>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary(true)
+
+    <fieldset>
+        <legend>DeleteInfo</legend>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.why)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.why)
+            @Html.ValidationMessageFor(model => model.why)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.delete_time)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.delete_time)
+            @Html.ValidationMessageFor(model => model.delete_time)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.create_time)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.create_time)
+            @Html.ValidationMessageFor(model => model.create_time)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.categorie)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.categorie)
+            @Html.ValidationMessageFor(model => model.categorie)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.prix)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.prix)
+            @Html.ValidationMessageFor(model => model.prix)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.ville)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.ville)
+            @Html.ValidationMessageFor(model => model.ville)
+        </div>
+
+        <div class="editor-label">
+            @Html.LabelFor(model => model.phone)
+        </div>
+        <div class="editor-field">
+            @Html.EditorFor(model => model.phone)
+            @Html.ValidationMessageFor(model => model.phone)
+        </div>
+
+        <p>
+            <input type="submit" value="Create" />
+        </p>
+    </fieldset>
+}
+
+<div>
+    @Html.ActionLink("Back to List", "Index")
+</div>
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

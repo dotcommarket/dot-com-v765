@@ -25,13 +25,15 @@
 @try {
         
 <div class="content" id="content">
-    <div class="row"> <!-- hidden-xs-->
+    <div class="row">
+    <!-- hidden-xs-->
     <div class="col-md-8 col-sm-12 ad-bg">
-        
+
         <!-- div image-->
         <div class="col-md-6 col-sm-6">
             <div class="col-md-12 col-sm-12 row-img">
-                <div class="ppy" id="ppy1">  <!-- style="float:right;"-->
+                <div class="ppy" id="ppy1">
+                    <!-- style="float:right;"-->
                     <ul class="ppy-imglist">
                         <li>
                             <a href="@Url.Action("GetAdImageByName", "Voiture",
@@ -130,7 +132,6 @@
             }
 
         </div><!--  end div image-->
-
         <!--  div product informations-->
         <div class="col-md-6 col-sm-6">
 
@@ -176,150 +177,162 @@
             </div>
         </div><!--  end div product informations-->
 
-        
+
     </div>
+
+    <div class="col-md-2">
+        <div class="panel panel-success">
+            <div class="panel-heading"> لديك تجارة هنا؟ </div>
+            <ul class="nav nav-staked">
+                <li><a href="~/Voiture/PutPass?k=@voiture.Id&op=edit">تعديل بيانات</a></li>
+                <li><a href="~/Voiture/PutPass?k=@voiture.Id&op=del">حذف المباعة</a></li>
+            </ul>
         </div>
+    </div>
+
+
+</div>
 
 @*<div class="row visible-xs hidden-sm hidden-md ad-bg-xs">
-           <div class="col-xs-12">
-               <div class="div-img-xs">
-                   <a href="@Url.Action("GetAdImageByName", "Voiture",
-                            routeValues: new { id = voiture.Id,n=1 })">
-                       <img src="@Url.Action("GetAdImageByName", "Voiture",
-                                     routeValues: new { id = voiture.Id,n=1 })"
-                            alt="..." class="thumbnail img-xs" />
-                   </a>
+               <div class="col-xs-12">
+                   <div class="div-img-xs">
+                       <a href="@Url.Action("GetAdImageByName", "Voiture",
+                                routeValues: new { id = voiture.Id,n=1 })">
+                           <img src="@Url.Action("GetAdImageByName", "Voiture",
+                                         routeValues: new { id = voiture.Id,n=1 })"
+                                alt="..." class="thumbnail img-xs" />
+                       </a>
+                   </div>
                </div>
-           </div>
-        <div class="col-xs-12">
-            <div class="data">
-            <table class="table">
-                <tbody>
-                    <tr>
-                        <td>Marque :</td>
-                        <td>@voiture.marque</td>
-                    </tr>
-                    <tr>
-                        <td>Modele :</td>
-                        <td>@voiture.Modele</td>
-                    </tr>
-                    <tr>
-                        <td>kilometrage :</td>
-                        <td>@voiture.kilometrage</td>
-                    </tr>
-                    <tr>
-                        <td>Carburant :</td>
-                        <td>@voiture.carburant</td>
-                    </tr>
-                    <tr>
-                        <td>Boite :</td>
-                        <td>@voiture.BoiteDeVitesse</td>
-                    </tr>
-                    <tr>
-                        <td>Ville :</td>
-                        <td>@voiture.ville</td>
-                    </tr>
-                    <tr>
-                        <td>type :</td>
-                        <td>@voiture.car_shape</td>
-                    </tr>
-                    <tr>
-                        <td>Date :</td>
-                        @{
-    if (tdate.IsToday(voiture.temps))
-    {
-        <td>Aujourd'hui</td>
-    }
-    else if (tdate.IsYesterday(voiture.temps))
-    {
-        <td>Hier</td>
-    }
-    else
-    {
-        <td>@voiture.temps.ToString()</td>
-    }
-                        }
-                    </tr>
-
-                </tbody>
-            </table>
-            <div class="text-center">
-                <h3 id="txt-h3" class="text-success">@voiture.prix Mro</h3>
-            </div>
-            </div>
-        </div>
-        <div class="col-xs-12">
             <div class="col-xs-12">
-                <div class="trader-data">
-                    <img class="whatsappPNG icon22" />
-                    <abbr title="Téléphone">Tel:</abbr>@voiture.phone
+                <div class="data">
+                <table class="table">
+                    <tbody>
+                        <tr>
+                            <td>Marque :</td>
+                            <td>@voiture.marque</td>
+                        </tr>
+                        <tr>
+                            <td>Modele :</td>
+                            <td>@voiture.Modele</td>
+                        </tr>
+                        <tr>
+                            <td>kilometrage :</td>
+                            <td>@voiture.kilometrage</td>
+                        </tr>
+                        <tr>
+                            <td>Carburant :</td>
+                            <td>@voiture.carburant</td>
+                        </tr>
+                        <tr>
+                            <td>Boite :</td>
+                            <td>@voiture.BoiteDeVitesse</td>
+                        </tr>
+                        <tr>
+                            <td>Ville :</td>
+                            <td>@voiture.ville</td>
+                        </tr>
+                        <tr>
+                            <td>type :</td>
+                            <td>@voiture.car_shape</td>
+                        </tr>
+                        <tr>
+                            <td>Date :</td>
+                            @{
+        if (tdate.IsToday(voiture.temps))
+        {
+            <td>Aujourd'hui</td>
+        }
+        else if (tdate.IsYesterday(voiture.temps))
+        {
+            <td>Hier</td>
+        }
+        else
+        {
+            <td>@voiture.temps.ToString()</td>
+        }
+                            }
+                        </tr>
+
+                    </tbody>
+                </table>
+                <div class="text-center">
+                    <h3 id="txt-h3" class="text-success">@voiture.prix Mro</h3>
+                </div>
                 </div>
             </div>
-            @if (tdonnee.StringIsValid(voiture.trader_name))
-                {
-    <div class="col-xs-12">
-        <div class="trader-data">
-            <p title="nom du commerçant">Nom : @voiture.trader_name</p>
-        </div>
-    </div>
-                }
-            @if (tdonnee.StringIsValid(voiture.trader_facebook))
-                {
-    <div class="col-xs-12">
-        <div class="trader-data">
-            <img class="facebook32 icon22" /><abbr title="Facebook du commerçant">@voiture.trader_facebook</abbr>
-        </div>
-    </div>
-                }
-            @if (tdonnee.StringIsValid(voiture.trader_instagram))
-                {
-    <div class="col-xs-12">
-        <div class="trader-data">
-            <img class="instagram32 icon22" /><abbr title="Instagram du commerçant">@voiture.trader_instagram</abbr>
-        </div>
-    </div>
-                }
-            @if (tdonnee.StringIsValid(voiture.email))
-                {
+            <div class="col-xs-12">
                 <div class="col-xs-12">
                     <div class="trader-data">
-                        <abbr title="email du commerçant">@@email:</abbr>@voiture.email<br />
+                        <img class="whatsappPNG icon22" />
+                        <abbr title="Téléphone">Tel:</abbr>@voiture.phone
                     </div>
                 </div>
-                }
-
+                @if (tdonnee.StringIsValid(voiture.trader_name))
+                    {
+        <div class="col-xs-12">
+            <div class="trader-data">
+                <p title="nom du commerçant">Nom : @voiture.trader_name</p>
+            </div>
         </div>
-    <div class="col-xs-12">
-        <div class="div-img-xs">
-            <a href="@Url.Action("GetAdImageByName", "Voiture",
-                 routeValues: new { id = voiture.Id,n=2 })">
-                <img src="@Url.Action("GetAdImageByName", "Voiture",
-                  routeValues: new { id = voiture.Id,n=2 })"
-                    alt="..." class="thumbnail img-xs" hidden/>
-            </a>
+                    }
+                @if (tdonnee.StringIsValid(voiture.trader_facebook))
+                    {
+        <div class="col-xs-12">
+            <div class="trader-data">
+                <img class="facebook32 icon22" /><abbr title="Facebook du commerçant">@voiture.trader_facebook</abbr>
+            </div>
+        </div>
+                    }
+                @if (tdonnee.StringIsValid(voiture.trader_instagram))
+                    {
+        <div class="col-xs-12">
+            <div class="trader-data">
+                <img class="instagram32 icon22" /><abbr title="Instagram du commerçant">@voiture.trader_instagram</abbr>
+            </div>
+        </div>
+                    }
+                @if (tdonnee.StringIsValid(voiture.email))
+                    {
+                    <div class="col-xs-12">
+                        <div class="trader-data">
+                            <abbr title="email du commerçant">@@email:</abbr>@voiture.email<br />
+                        </div>
+                    </div>
+                    }
+
+            </div>
+        <div class="col-xs-12">
+            <div class="div-img-xs">
+                <a href="@Url.Action("GetAdImageByName", "Voiture",
+                     routeValues: new { id = voiture.Id,n=2 })">
+                    <img src="@Url.Action("GetAdImageByName", "Voiture",
+                      routeValues: new { id = voiture.Id,n=2 })"
+                        alt="..." class="thumbnail img-xs" hidden/>
+                </a>
+            </div>
+
+            <div class="div-img-xs">
+                <a href="@Url.Action("GetAdImageByName", "Voiture",
+                     routeValues: new { id = voiture.Id,n=3 })">
+                    <img src="@Url.Action("GetAdImageByName", "Voiture",
+                      routeValues: new { id = voiture.Id,n=3 })"
+                         alt="..." class="thumbnail img-xs" hidden/>
+                </a>
+            </div>
+
+            <div class="div-img-xs">
+                <a href="@Url.Action("GetAdImageByName", "Voiture",
+                     routeValues: new { id = voiture.Id,n=4 })">
+                    <img src="@Url.Action("GetAdImageByName", "Voiture",
+                      routeValues: new { id = voiture.Id,n=4 })"
+                         alt="..." class="thumbnail img-xs" hidden />
+                </a>
+            </div>
         </div>
 
-        <div class="div-img-xs">
-            <a href="@Url.Action("GetAdImageByName", "Voiture",
-                 routeValues: new { id = voiture.Id,n=3 })">
-                <img src="@Url.Action("GetAdImageByName", "Voiture",
-                  routeValues: new { id = voiture.Id,n=3 })"
-                     alt="..." class="thumbnail img-xs" hidden/>
-            </a>
-        </div>
-          
-        <div class="div-img-xs">
-            <a href="@Url.Action("GetAdImageByName", "Voiture",
-                 routeValues: new { id = voiture.Id,n=4 })">
-                <img src="@Url.Action("GetAdImageByName", "Voiture",
-                  routeValues: new { id = voiture.Id,n=4 })"
-                     alt="..." class="thumbnail img-xs" hidden />
-            </a>
-        </div>
-    </div>
 
-
-</div>*@
+    </div>*@
 
 </div>
 

@@ -547,6 +547,24 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à البيانا ناقصة أو خاطئة.
+        /// </summary>
+        public static string Erreur_data {
+            get {
+                return ResourceManager.GetString("Erreur_data", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à كلمة المرور غير صحيحة.
+        /// </summary>
+        public static string Erreur_password {
+            get {
+                return ResourceManager.GetString("Erreur_password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à اسانس.
         /// </summary>
         public static string essance {
@@ -984,6 +1002,15 @@ namespace Sough {
         public static string Occasion_mas {
             get {
                 return ResourceManager.GetString("Occasion_mas", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à خطأ! العملية غير محددة..
+        /// </summary>
+        public static string operation_unknown {
+            get {
+                return ResourceManager.GetString("operation_unknown", resourceCulture);
             }
         }
         

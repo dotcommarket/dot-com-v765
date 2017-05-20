@@ -525,4 +525,13 @@
   <data name="Occasion" xml:space="preserve">
     <value>مستعمل(ة)</value>
   </data>
+  <data name="operation_unknown" xml:space="preserve">
+    <value>خطأ! العملية غير محددة.</value>
+  </data>
+  <data name="Erreur_data" xml:space="preserve">
+    <value>البيانا ناقصة أو خاطئة</value>
+  </data>
+  <data name="Erreur_password" xml:space="preserve">
+    <value>كلمة المرور غير صحيحة</value>
+  </data>
 </root>

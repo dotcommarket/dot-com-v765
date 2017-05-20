@@ -63,96 +63,12 @@
     }*@
 }
 
+
 <div class="content">
-    
+
     <div class="row">
-        <div class="col-xs-12 col-sm-9 col-md-9 col-md-push-3 col-sm-push-3">
-            <div class="row" style="margin-top:-0px;">
-                <div class="col-sm-9 col-md-9 home-div-search">
-                    <form action="../Search/Control" method="post" id="form1" class="navbar-form navbar-left" role="search">
 
-                        <div class="form-group" id="cat">
-                            <span>
-                                <select name="cat" class="featurebox_select_large" required>
-                                    <option value="">&#171;@Sough.Resource.index_select_categorie&#187;</option>
-                                    @Html.Partial("_CategoriesTable")
-                                </select>
-                            </span>
-                        </div>
-                        <div class="form-group" id="ville">
-                            <span>
-                                <select name="ville" class="featurebox_select_medium" required>
-                                    <option value="">&#171;@Sough.Resource.LabelVilles&#187; </option>
-                                    <option value="Nouakchott">@Sough.Resource.select_ville_nktt</option>
-                                    <option value="Néma">@Sough.Resource.select_ville_nema</option>
-                                    <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
-                                    <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
-                                    <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
-                                    <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
-                                    <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
-                                    <option value="Atar">@Sough.Resource.select_ville_atar</option>
-                                    <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
-                                    <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
-                                    <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
-                                    <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
-                                    <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
-                                    <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
-                                    <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
-                                    <option value="all">@Sough.Resource.toute_les_villes</option>
-                                </select>
-                            </span>
-                        </div>
-                        <div class="input-group" id="btn-search">
-                            <div class="input-group-btn">
-                                <button class="btn btn-default" type="submit">@Sough.Resource.btn_cherche <i class="@Sough.App_Code.Ticons.search"></i></button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div class="row row-map">
-                <div class="col-sm-9 col-md-9">
-                    @Html.Partial("~/Views/map/_Rimmap.cshtml")
-                </div>
-            </div>
-            <div class="row top-cat">
-                <!-- row top categorie-->
-                <div class="col-sm-9 col-md-9 text-center">
-                    <h1>@Sough.Resource.top_cat</h1>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <ul class="HomepageCategories-list">
-                            <li class="HomepageCategories-item">
-                                <a href="~/Voiture/Ads?v_p=v" class="HomepageCategories-item-link" data-qtsb-subsection="Category2">
-                                    <figure class="HomepageCategories-item-figure">
-                                        <span id="icon-car-fr" class="HomepageCategories-item-image"></span>
-                                    </figure>
-                                    <div class="HomepageCategories-item-name">
-                                        @Sough.Resource.cat_vehicules
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
-                        <ul class="HomepageCategories-list">
-                            <li class="HomepageCategories-item">
-                                <a href="~/Vetement/Ads?v_p=v" class="HomepageCategories-item-link" data-qtsb-subsection="Category2">
-                                    <figure class="HomepageCategories-item-figure">
-                                        <span id="icon-vetement-fr" class="HomepageCategories-item-image"></span>
-                                    </figure>
-                                    <div class="HomepageCategories-item-name">
-                                        @Sough.Resource.cat_Vetements
-                                    </div>
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
-
-                </div>
-            </div><!-- end row top cat-->
-
-        </div>
-        <div class="col-xs-12 col-sm-3 col-md-3 col-md-pull-9 col-sm-pull-9 div-cat">
+        <div class="col-xs-12 col-sm-3 col-md-3 col-md-pull-0 col-sm-pull-0 div-cat">
             <ul>
                 <li>
                     <a id="rim_r14_c2" href="~/Ad/GetWaresFC?r=Nouakchott&f=1" onmouseout="MM_swapImage2('rim_r14_c2','','/Content/icons/map/rim_r14_c2.jpg','rim_r14_c4','','/Content/icons/map/rim_r14_c4.jpg',1);" onmouseover="MM_swapImage1('rim_r14_c2','','/Content/icons/map/rim_r14_c2_s4.jpg','rim_r14_c4','','/Content/icons/map/rim_r14_c4_s6.jpg',1);">@Sough.Resource.select_ville_nktt </a>
@@ -198,13 +114,145 @@
                 </li>
             </ul>
         </div>
+
+        <div class="col-xs-12 col-sm-9 col-md-7 col-md-push-0 col-sm-push-0">
+
+            <div class="row" style="margin-top:-0px;">
+                <div class="col-sm-11 col-md-11 home-div-search">
+                    <form action="../Search/Control" method="post" id="form1" class="navbar-form navbar-left" role="search">
+
+                        <div class="form-group" id="cat">
+                            <span>
+                                <select name="cat" class="featurebox_select_extra_large" required>
+                                    <option value="">&#171;@Sough.Resource.index_select_categorie&#187;</option>
+                                    @Html.Partial("_CategoriesTables")
+                                </select>
+                            </span>
+                        </div>
+                        <div class="form-group" id="ville">
+                            <span>
+                                <select name="ville" class="featurebox_select_extra_large" required>
+                                    <option value="">&#171;@Sough.Resource.LabelVilles&#187; </option>
+                                    <option value="Nouakchott">@Sough.Resource.select_ville_nktt</option>
+                                    <option value="Néma">@Sough.Resource.select_ville_nema</option>
+                                    <option value="Aïoun">@Sough.Resource.select_ville_aioun</option>
+                                    <option value="Kiffa">@Sough.Resource.select_ville_kiffa</option>
+                                    <option value="Kaédi">@Sough.Resource.select_ville_kaedi</option>
+                                    <option value="Aleg">@Sough.Resource.select_ville_aleg</option>
+                                    <option value="Rosso">@Sough.Resource.select_ville_rosso</option>
+                                    <option value="Atar">@Sough.Resource.select_ville_atar</option>
+                                    <option value="Nouadhibou">@Sough.Resource.select_ville_ndb</option>
+                                    <option value="Tidjikdja">@Sough.Resource.select_ville_tidjikja</option>
+                                    <option value="Selibaby">@Sough.Resource.select_ville_selibaby</option>
+                                    <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
+                                    <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
+                                    <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
+                                    <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
+                                    <option value="all">@Sough.Resource.toute_les_villes</option>
+                                </select>
+                            </span>
+                        </div>
+                        <div class="input-group" id="btn-search">
+                            <div class="input-group-btn">
+                                <button class="btn btn-default" type="submit">@Sough.Resource.btn_cherche <i class="@Sough.App_Code.Ticons.search"></i></button>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div class="row row-map">
+                <div class="col-sm-9 col-md-9">
+                    @Html.Partial("~/Views/map/_Rimmap.cshtml")
+                </div>
+                <div class="col-sm-3 hidden-lg hidden-md hidden-xs">
+                    <!-- placeX -->
+                    <div class="panel panel-success">
+                        <div class="panel-heading"> Vos produits </div>
+                        <ul class="nav nav-staked">
+                            <li><a href="">Modifier un produit</a></li>
+                            <li><a href="">Supprimer un produit</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+
+            <div class="row row-top-cat">
+                <!-- row top categorie-->
+                <div class="col-sm-9 col-md-9 text-center col-top-cat">
+                    <h1>@Sough.Resource.top_cat</h1>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <ul class="HomepageCategories-list">
+                            <li class="HomepageCategories-item">
+                                <a href="~/Voiture/Ads?v_p=v" class="HomepageCategories-item-link" data-qtsb-subsection="Category2">
+                                    <figure class="HomepageCategories-item-figure">
+                                        <span id="icon-car-fr" class="HomepageCategories-item-image"></span>
+                                    </figure>
+                                    <div class="HomepageCategories-item-name">
+                                        @Sough.Resource.cat_vehicules
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6">
+                        <ul class="HomepageCategories-list">
+                            <li class="HomepageCategories-item">
+                                <a href="~/Vetement/Ads?v_p=v" class="HomepageCategories-item-link" data-qtsb-subsection="Category2">
+                                    <figure class="HomepageCategories-item-figure">
+                                        <span id="icon-vetement-fr" class="HomepageCategories-item-image"></span>
+                                    </figure>
+                                    <div class="HomepageCategories-item-name">
+                                        @Sough.Resource.cat_Vetements
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </div><!-- end row top cat-->
+
+        </div>
+
+        <div class="row hidden-sm hidden-xs">
+           <div class="col-md-2 col-space1">
+           </div>
+           <div class="col-md-2">
+                <div class="panel panel-success">
+                   <div class="panel-heading"> Vos produits </div>
+                   <ul class="nav nav-staked">
+                       <li><a href="~/Operations/GetProductsFromPN?o=m">Modifier un produit</a></li>
+                       <li><a href="~/Operations/GetProductsFromPN?o=s">Supprimer un produit</a></li>
+                   </ul>
+               </div>
+           </div>
+        </div>
+
+        <div class="row hidden-sm hidden-md hidden-lg">
+            <div class="col-xs-5">
+                <div class="panel panel-success">
+                    <div class="panel-heading"> Vos produits </div>
+                    <ul class="nav nav-staked">
+                        <li><a href="">Modifier un produit</a></li>
+                        <li><a href="">Supprimer un produit</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="col-xs-2"></div>
+            <div class="col-xs-5">
+                <!-- placeX -->
+            </div>
+        </div>
+
     </div>
+
     <div class="row" id="ltc">
         <!-- row top categorie-->
         <div class="col-md-12 text-center">
             <h1 class="ttl-center">@Sough.Resource.label_toute_les_cat</h1>
         </div>
     </div>
+
     <div class="row">
 
         <div class="col-md-4 col-sm-4 col-xs-6">
@@ -212,11 +260,11 @@
                 <div>
                     <div class="navigation list_left_navigation_cat_list">
                         <ul id="cat_list" class="cat_level_0">
-                            <li id="cat_list_1000" class="cat_level_0"><span>@Sough.Resource.cat_vehicules </span></li>
+                            <li id="cat_list_1000" class="cat_level_0"> <span> @Sough.Resource.cat_vehicules</span> </li>
                             <li id="cat_list_1080" class="cat_level_1"> <a class="nohistory" title="" href="~/Voiture/Ads?v_p=v"><span class="nohistory">@Sough.Resource.cat_voiture</span></a>  </li>
                             <li id="cat_list_1080" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/auto-pieces-et-accessoires"><span class="nohistory">@Sough.Resource.cat_pieces_detachees</span></a>  </li>
                             <li id="cat_list_1140" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/moto-pieces-et-accessoires"><span class="nohistory">@Sough.Resource.cat_accessoires</span></a>  </li>
-                            <li id="cat_list_5000" class="cat_level_0">  <span>@Sough.Resource.cat_immobilier </span></li>
+                            <li id="cat_list_5000" class="cat_level_0"> <span> @Sough.Resource.cat_immobilier</span> </li>
                             <li id="cat_list_5020" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/ventes-immobilieres"><span class="nohistory">@Sough.Resource.cat_vente_immobilier</span></a>  </li>
                             <li id="cat_list_5040" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/locations"><span class="nohistory">@Sough.Resource.cat_location</span></a>  </li>
                         </ul>
@@ -232,7 +280,7 @@
                 <div>
                     <div class="navigation list_left_navigation_cat_list">
                         <ul id="cat_list" class="cat_level_0">
-                            <li id="cat_list_4000" class="cat_level_0">  <span>@Sough.Resource.cat_multimedia </span></li>
+                            <li id="cat_list_4000" class="cat_level_0"><span>@Sough.Resource.cat_multimedia</span></span></li>
 
                             <li id="cat_list_4041" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/musique-et-audio"><span class="nohistory">@Sough.Resource.cat_ordinateurs_portables</span></a>  </li>
                             <li id="cat_list_4043" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/photos-et-cameras"><span class="nohistory">@Sough.Resource.cat_ordinateurs_bureau</span></a>  </li>
@@ -244,11 +292,11 @@
 
                             <li id="cat_list_2000" class="cat_level_0"> <span> @Sough.Resource.cat_maison </span></li>
                             <li id="cat_list_2020" class="cat_level_1"> <a class="nohistory" title="" href=""><span class="nohistory">@Sough.Resource.cat_meuble</span></a>  </li>
-                            <li id="cat_list_2021" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/ustensiles-et-gastronomie" ><span class="nohistory">@Sough.Resource.cat_electromenagers</span></a>  </li>
-                            <li id="cat_list_4060" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/electromenagers" ><span class="nohistory">@Sough.Resource.cat_ustensiles</span></a>  </li>
-                            <li id="cat_list_2040" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/art-et-antiquites" ><span class="nohistory">@Sough.Resource.cat_enfant_bebe</span></a>  </li>
-                            <li id="cat_list_2060" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/jardin" ><span class="nohistory">@Sough.Resource.cat_accessoires</span></a>  </li>
-                            </ul>
+                            <li id="cat_list_2021" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/ustensiles-et-gastronomie"><span class="nohistory">@Sough.Resource.cat_electromenagers</span></a>  </li>
+                            <li id="cat_list_4060" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/electromenagers"><span class="nohistory">@Sough.Resource.cat_ustensiles</span></a>  </li>
+                            <li id="cat_list_2040" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/art-et-antiquites"><span class="nohistory">@Sough.Resource.cat_enfant_bebe</span></a>  </li>
+                            <li id="cat_list_2060" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/jardin"><span class="nohistory">@Sough.Resource.cat_accessoires</span></a>  </li>
+                        </ul>
                     </div>
                     <div>
                     </div>
@@ -262,10 +310,10 @@
                     <div class="navigation list_left_navigation_cat_list">
                         <ul class="cat_level_0">
                             <li id="cat_list_3000" class="cat_level_0">  </li>
-                            <li id="cat_list_3020" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/animaux" ><span class="nohistory">@Sough.Resource.cat_livres</span></a>  </li>
-                            <li id="cat_list_3040" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/velo" ><span class="nohistory">@Sough.Resource.cat_annimaux</span></a>  </li>
+                            <li id="cat_list_3020" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/animaux"><span class="nohistory">@Sough.Resource.cat_livres</span></a>  </li>
+                            <li id="cat_list_3040" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/velo"><span class="nohistory">@Sough.Resource.cat_annimaux</span></a>  </li>
                             <li id="cat_list_3140" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/tickets-et-billetterie"><span class="nohistory">@Sough.Resource.cat_sports</span></a>  </li>
-                            <li id="cat_list_6000" class="cat_level_0"> <span> @Sough.Resource.cat_emploi_services </span></li>
+                            <li id="cat_list_6000" class="cat_level_0"> <span> @Sough.Resource.cat_emploi_services</span> </li>
                             <li id="cat_list_6020" class="cat_level_1"> <a class="nohistory" title="Emploi, " href="~/fr/emploi"><span class="nohistory">@Sough.Resource.cat_emploi</span></a>  </li>
                             <li id="cat_list_6060" class="cat_level_1"> <a class="nohistory" title="Services, " href="~/fr/services"><span class="nohistory">@Sough.Resource.cat_services</span></a>  </li>
                             <li id="cat_list_7000" class="cat_level_0 empty_li_ie7"> </li>
@@ -278,4 +326,6 @@
             </div>
         </div>
     </div>
+
 </div>
+

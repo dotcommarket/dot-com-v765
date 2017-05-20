@@ -13,7 +13,7 @@
 <div class="col-xs-12 col-sm-12 col-md-12">
    
     <form action="~/Voiture/Create" id="form" name="Form" method="post" 
-          onsubmit="return formValidate();">
+          onsubmit="return formValidate('cr');">
 
         @Html.ValidationSummary(true)
 
@@ -445,7 +445,7 @@
                         <div class="control-group">
                             <h3>@Sough.Resource.LabelPassword</h3>
                             <div class="controls input-group margin-bottom-sm">
-                                <input class="form-control" type="password" onblur="checkPass();" id="password" name="password"
+                                <input class="form-control" type="password" onblur="checkPass('cr', 1380);" id="password" name="password"
                                        placeholder="@Sough.Resource.placeholder_password" required>
                                 <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.ilock"></i></span>
                             </div>
@@ -457,7 +457,7 @@
                         <div class="control-group">
                             <h3>@Sough.Resource.LabelPasswordConfirme</h3>
                             <div class="controls input-group margin-bottom-sm">
-                                <input class="form-control" name="password" type="password" id="conf_pass" onblur="checkConfPass();" required />
+                                <input class="form-control" name="password" type="password" id="conf_pass" onblur="checkConfPass('cr', 1380);" required />
                                 <span class="input-group-addon"><i class="@Sough.App_Code.Ticons.ilock"></i></span>
 
                             </div>
@@ -489,7 +489,7 @@
                 </div>
                 <div class="col-xs-6 col-sm-6 col-md-4">
                     <div class="btn-ok">
-                        <button type="submit" onclick="formValidate();" id="submit" class="btn Btn1">
+                        <button type="submit" onclick="formValidate('cr');" id="submit" class="btn Btn1">
                             <span class="@Sough.App_Code.Ticons.ok"></span>
                             @Sough.Resource.btn1
                         </button>
@@ -501,7 +501,7 @@
 
                 <div class="col-xs-6 col-sm-6 col-md-4">
                     <div>
-                        <button type="submit" onclick="formValidate();" id="submit" class="btn Btn1">
+                        <button type="submit" onclick="formValidate('cr');" id="submit" class="btn Btn1">
                             <span class="@Sough.App_Code.Ticons.ok"></span>
                             @Sough.Resource.btn1
                         </button>

@@ -11,7 +11,8 @@ function selectRequird(id, help, msg,pos) {
         help.style.color = "#cc0000";
         help.innerText = '' + msg;
         if(pos != 0)
-         window.scrollTo(0, pos);
+            window.scrollTo(0, pos);
+
         return false;
     }
     else {
@@ -38,9 +39,9 @@ function inputRequird(id, help, msg,type,pos) {
                 node.style.borderColor = "#cc0000";
             }
 
-            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type); }
             if(pos != 0)
                 window.scrollTo(0, pos);
+
             return false;
         }
         else {
@@ -49,7 +50,7 @@ function inputRequird(id, help, msg,type,pos) {
             node.onfocus = function () {
                 node.style.borderColor = "#0a67c7";
             }
-            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type); }
+
             help.innerText = "";
             return true;
         }
@@ -65,7 +66,7 @@ function inputRequird(id, help, msg,type,pos) {
             node.onfocus = function () {
                 node.style.borderColor = "#cc0000";
             }
-            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
+
             if (pos != 0)
                 window.scrollTo(0, pos);
             return false;
@@ -78,7 +79,7 @@ function inputRequird(id, help, msg,type,pos) {
             node.onfocus = function () {
                 node.style.borderColor = "#cc0000";
             }
-            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
+
             if (pos != 0)
                 window.scrollTo(0, pos);
             return false;
@@ -91,13 +92,14 @@ function inputRequird(id, help, msg,type,pos) {
             node.onfocus = function () {
                 node.style.borderColor = "#0a67c7";
             }
-            //node.onblur = function () { node.style.boxShadow = ""; inputRequird(id, help, msg, type, pos); }
+
             return true;
         }
     }
 }
 
 function checkNom() {
+    
     var node = document.getElementById("name");
     var help = document.getElementById("help-name");
     var value = String(node.value);
@@ -105,12 +107,16 @@ function checkNom() {
     if (value.length > 25) {
         node.style.backgroundColor = "#ffe6e6";
         node.style.borderColor = "#cc0000";
+        
+        node.onfocus = function () { node.style.borderColor = "#cc0000"; }
 
         help.style.color = "#cc0000";
         help.innerText = 'Erreur , Le nom est long!';
 
+        window.scrollTo(0, 1);
+
         node.onblur = function () {  checkNom(); }
-        window.scrollTo(0, 1); 
+
         return false;
     }
     else if (!isAlphabetic(value)) {
@@ -120,8 +126,11 @@ function checkNom() {
         help.style.color = "#cc0000";
         help.innerText = 'Erreur , Le nom est incorrect!';
 
-        node.onblur = function () {  checkNom(); }
         window.scrollTo(0, 1);
+
+        node.onfocus = function () { node.style.borderColor = "#cc0000"; }
+        node.onblur = function () { checkNom(); }
+
         return false;
     }
     else {
@@ -151,16 +160,17 @@ function checkPhone() {
         help.style.color = "#cc0000";
         help.innerText = "Le num\351ro du t\351l\351phone est obligatoire";
 
-        //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () { checkPhone(); }
         window.scrollTo(0, 100);
+
+        node.onfocus = function () { node.style.borderColor = "#cc0000"; }
+        node.onblur = function () { checkPhone(); }
+
         return false;
     }
 
     if (phone_input.charAt(0) == '+') {
         phone_input = phone_input.substring(1);
     }
-
 
     var regexPhone = new RegExp("^([0-9]{8,13})$");
 
@@ -173,7 +183,6 @@ function checkPhone() {
 
         node.onfocus = function () {
             this.style.borderColor = "#0a67c7";
-            //this.style.boxShadow = "0 0 5px #0a67c7";
         }
         node.onblur = function () {  checkPhone(); }
         help.innerText = "";
@@ -186,9 +195,11 @@ function checkPhone() {
         help.style.color = "#cc0000";
         help.innerText = 'le format du num\351ro du t\351l\351phone est incorrect';
 
-        //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () { checkPhone(); }
         window.scrollTo(0, 100);
+
+        node.onfocus = function () { node.style.borderColor = "#cc0000"; }
+        node.onblur = function () { checkPhone(); }
+
         return false;
     }
 }
@@ -207,7 +218,6 @@ function checkEmail() {
 
             node.onfocus = function () {
                 this.style.borderColor = "#0a67c7";
-                //this.style.boxShadow = "0 0 5px #0a67c7";
             }
             node.onblur = function () {  checkEmail(); }
             help.innerText = "";
@@ -220,9 +230,11 @@ function checkEmail() {
             help.style.color = "#cc0000";
             help.innerText = 'Email incorrect!';
 
-            //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-            node.onblur = function () {  checkEmail(); }
             window.scrollTo(0, 100);
+
+            node.onfocus = function () { node.style.borderColor = "#cc0000"; }
+            node.onblur = function () { checkEmail(); }
+
             return false;
         }
 
@@ -233,12 +245,10 @@ function checkEmail() {
 
         node.onfocus = function () {
             this.style.borderColor = "#0a67c7";
-            //this.style.boxShadow = "0 0 5px #0a67c7";
         }
 
         node.onblur = function () {
             this.style.borderColor = "#999999";
-           // this.style.boxShadow = "";
             checkEmail();
         }
 
@@ -249,12 +259,7 @@ function checkEmail() {
 
 }
 
-function checkPrix() {
-    var node = document.getElementById("prix");
-    var help = document.getElementById("help-prix");
-    
-}
-function checkImages() {
+function checkImages(pos) {
 
     var img1 = document.getElementById("_f1");
     var img2 = document.getElementById("_f2");
@@ -265,81 +270,162 @@ function checkImages() {
     if ((img1.files.length != 1) || (img2.files.length != 1) || (img3.files.length != 1) || (img4.files.length != 1)) {
         help.style.color = "#cc0000";
         help.innerText = 'Selectionnez quatre images';
-        window.scrollTo(0, 1250);
+
+        window.scrollTo(0, pos);
         return false;
     } else {
         help.innerText = '';
         return true;
     }
 }
-function checkPass() {
+function checkPass(view,pos) {
 
     var node = document.getElementById("password");
     var help = document.getElementById("help-pass");
+    if (view != "ed") {
+        
+        if (node.value.length <= 0) {
+            node.style.backgroundColor = "#ffe6e6";
+            node.style.borderColor = "#cc0000";
 
-    if (node.value.length <= 0) {
-        node.style.backgroundColor = "#ffe6e6";
-        node.style.borderColor = "#cc0000";
+            help.style.color = "#cc0000";
+            help.innerText = 'Erreur , Creer un password pour votre produit!';
+            node.onfocus = function () { node.style.borderColor = "#cc0000"; }
 
-        help.style.color = "#cc0000";
-        help.innerText = 'Erreur , Creer un password pour votre produit!';
+            window.scrollTo(0, pos);
 
-        //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () {  checkPass(); }
-        window.scrollTo(0, 1380);
-        return false;
-    }else if (node.value.length <= 3) {
-        node.style.backgroundColor = "#ffe6e6";
-        node.style.borderColor = "#cc0000";
+            node.onblur = function () { checkPass(view, pos); }
+            return false;
+        } else if (node.value.length <= 3) {
+            node.style.backgroundColor = "#ffe6e6";
+            node.style.borderColor = "#cc0000";
+            node.onfocus = function () { node.style.borderColor = "#cc0000"; }
 
-        help.style.color = "#cc0000";
-        help.innerText = 'Password faible!';
+            help.style.color = "#cc0000";
+            help.innerText = 'Password faible!';
+            window.scrollTo(0, pos);
 
-        //node.onfocus = function () { node.style.boxShadow = "0 0 5px #cc0000"; }
-        node.onblur = function () {  checkPass(); }
-        window.scrollTo(0, 1380);
-        return false;
-    }
-    else {
-        node.style.backgroundColor = "#ffffff";
-        node.style.borderColor = "#999999";
-
-        node.onfocus = function () {
-            node.style.borderColor = "#0a67c7";
-            // node.style.boxShadow = "0 0 5px #0a67c7";
+            node.onblur = function () { checkPass(view, pos); }
+            return false;
         }
-        node.onblur = function () {  checkPass(); }
-        help.innerText = "";
-        return true;
+        else {
+            node.style.backgroundColor = "#ffffff";
+            node.style.borderColor = "#999999";
+
+            node.onfocus = function () {
+                node.style.borderColor = "#0a67c7";
+            }
+            node.onblur = function () { checkPass(view, pos); }
+            help.innerText = "";
+            return true;
+        }
+    } else {
+        
+        if (node.value.length <= 0) {
+            node.style.backgroundColor = "#ffffff";
+            node.style.borderColor = "#999999";
+
+            node.onfocus = function () {
+                node.style.borderColor = "#0a67c7";
+            }
+            node.onblur = function () { checkPass(view, pos); }
+            help.innerText = "";
+            return true;
+        } else if (node.value.length <= 3) {
+            node.style.backgroundColor = "#ffe6e6";
+            node.style.borderColor = "#cc0000";
+            node.onfocus = function () { node.style.borderColor = "#cc0000"; }
+
+            help.style.color = "#cc0000";
+            help.innerText = 'Password faible!';
+            window.scrollTo(0, pos);
+
+            node.onblur = function () { checkPass(view, pos); }
+
+            return false;
+        }
+        else {
+            node.style.backgroundColor = "#ffffff";
+            node.style.borderColor = "#999999";
+
+            node.onfocus = function () {
+                node.style.borderColor = "#0a67c7";
+            }
+            node.onblur = function () { checkPass(view, pos); }
+            help.innerText = "";
+            return true;
+        }
     }
 }
-function checkConfPass() {
+function checkConfPass(view,pos) {
+
     var help = document.getElementById("help-conf-pass");
     var password = document.getElementById("password");
     var conf_pass = document.getElementById("conf_pass");
 
-    if (password.value != conf_pass.value) {
-        conf_pass.style.backgroundColor = "#ffe6e6";
-        conf_pass.style.borderColor = "#cc0000";
 
-        help.style.color = "#cc0000";
-        help.innerText = 'Erreur , le mot de pass n\'est pas identique!';
+    if (view != "ed") {
+        
+        if (password.value != conf_pass.value) {
+            conf_pass.style.backgroundColor = "#ffe6e6";
+            conf_pass.style.borderColor = "#cc0000";
 
-        //conf_pass.onfocus = function () { conf_pass.style.boxShadow = "0 0 5px #cc0000"; }
-        conf_pass.onblur = function () {  checkConfPass(); }
-        window.scrollTo(0, 1400);
-        return false;
-    } else {
-        conf_pass.style.backgroundColor = "#ffffff";
-        conf_pass.style.borderColor = "#999999";
+            help.style.color = "#cc0000";
+            help.innerText = 'Erreur , le mot de pass n\'est pas identique!';
+            window.scrollTo(0, pos);
 
-        conf_pass.onfocus = function () {
-            conf_pass.style.borderColor = "#0a67c7";
-            //conf_pass.style.boxShadow = "0 0 5px #0a67c7";
+            conf_pass.onfocus = function () { conf_pass.style.borderColor = "#cc0000"; }
+            conf_pass.onblur = function () { checkConfPass(view, pos); }
+            return false;
+        } else {
+            conf_pass.style.backgroundColor = "#ffffff";
+            conf_pass.style.borderColor = "#999999";
+
+            conf_pass.onfocus = function () {
+                conf_pass.style.borderColor = "#0a67c7";
+            }
+            conf_pass.onblur = function () { checkConfPass(view, pos); }
+            help.innerText = "";
+            return true;
         }
-        conf_pass.onblur = function () {  checkConfPass(); }
-        help.innerText = "";
-        return true;
+    } else {
+        if (password.value.length < 1) {
+            conf_pass.style.backgroundColor = "#ffffff";
+            conf_pass.style.borderColor = "#999999";
+
+            conf_pass.onfocus = function () {
+                conf_pass.style.borderColor = "#0a67c7";
+            }
+            conf_pass.onblur = function () { checkConfPass(view, pos); }
+            help.innerText = "";
+            return true;
+        }
+        else {
+            if (password.value != conf_pass.value) {
+                conf_pass.style.backgroundColor = "#ffe6e6";
+                conf_pass.style.borderColor = "#cc0000";
+
+                help.style.color = "#cc0000";
+                help.innerText = 'Erreur , le mot de pass n\'est pas identique!';
+                window.scrollTo(0, pos);
+
+                conf_pass.onfocus = function () { conf_pass.style.borderColor = "#cc0000"; }
+                conf_pass.onblur = function () { checkConfPass(view, pos); }
+
+                return false;
+            } else {
+                conf_pass.style.backgroundColor = "#ffffff";
+                conf_pass.style.borderColor = "#999999";
+
+                conf_pass.onfocus = function () {
+                    conf_pass.style.borderColor = "#0a67c7";
+                }
+                conf_pass.onblur = function () { checkConfPass(view, pos); }
+                help.innerText = "";
+                return true;
+            }
+        }
+        
     }
 }
 
