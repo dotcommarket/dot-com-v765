@@ -3303,6 +3303,7 @@ textarea.input-group-sm > .input-group-btn > .btn {
   position: relative;
   display: block;
   padding: 10px 15px;
+
 }
 .nav > li > a:hover,
 .nav > li > a:focus {
@@ -4788,6 +4789,9 @@ a.list-group-item:focus {
 .panel-info > .panel-footer + .panel-collapse .panel-body {
   border-bottom-color: #bce8f1;
 }
+
+
+
 .well {
   min-height: 20px;
   padding: 19px;
@@ -5912,3 +5916,4 @@ td.visible-print {
     display: none !important;
   }
 }
+

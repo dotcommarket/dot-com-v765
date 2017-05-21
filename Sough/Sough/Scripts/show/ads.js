@@ -68,5 +68,13 @@ function trierPar(controller) {
             break;
     }
 }
+         
+function stylePanel(el, act) {
+    if (act === 'over')
+        el.childNodes[1].style.color = "#555";
+    else
+        el.childNodes[1].style.color = "#BFBFBF";
+
+}
 
 

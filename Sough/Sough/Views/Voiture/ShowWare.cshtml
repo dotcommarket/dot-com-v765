@@ -180,19 +180,52 @@
 
     </div>
 
+    <div class="col-md-2 hidden-sm hidden-xs"></div>
     <div class="col-md-2">
-        <div class="panel panel-success">
+        <div class="panel panel-tjj" style="visibility:hidden">
             <div class="panel-heading"> لديك تجارة هنا؟ </div>
             <ul class="nav nav-staked">
-                <li><a href="~/Voiture/PutPass?k=@voiture.Id&op=edit">تعديل بيانات</a></li>
-                <li><a href="~/Voiture/PutPass?k=@voiture.Id&op=del">حذف المباعة</a></li>
+                <li>
+                    <a href="~/Voiture/PutPass?k=@voiture.Id&op=edit" onmouseover="stylePanel(this, 'over')" onmouseout="stylePanel(this, 'out')">
+                        <i class="@Sough.App_Code.Ticons.pencil" aria-hidden="true"></i>
+                        تعديل بيانات
+                    </a>
+                </li>
+                <li>
+                    <a href="~/Voiture/PutPass?k=@voiture.Id&op=del" onmouseover="stylePanel(this, 'over')" onmouseout="stylePanel(this, 'out')">
+                        <i class="@Sough.App_Code.Ticons.remove" aria-hidden="true"></i>
+                        حذف المباعة
+                    </a>
+                </li>
             </ul>
         </div>
+    
+        <div class="panel panel-tjj">
+            <div class="panel-heading"> إدارة تجارتك </div>
+            <ul class="nav nav-staked">
+                <li>
+                    <a href="~/Voiture/PutPass?k=@voiture.Id&op=edit" onmouseover="stylePanel(this, 'over')" onmouseout="stylePanel(this, 'out')">
+                        <i class="@Sough.App_Code.Ticons.pencil" aria-hidden="true"></i>
+                        تعديل معلومات
+                    </a>
+                </li>
+                <li>
+                    <a href="~/Voiture/PutPass?k=@voiture.Id&op=del" onmouseover="stylePanel(this, 'over')" onmouseout="stylePanel(this, 'out')">
+                        <i class="@Sough.App_Code.Ticons.remove" aria-hidden="true"></i>
+                        تريد حذفها ؟
+                    </a>
+                </li>
+                
+            </ul>
+        </div>
+
+        
+    
+    
+    
     </div>
 
-
 </div>
-
 @*<div class="row visible-xs hidden-sm hidden-md ad-bg-xs">
                <div class="col-xs-12">
                    <div class="div-img-xs">

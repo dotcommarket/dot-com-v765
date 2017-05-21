@@ -279,7 +279,7 @@ namespace Sough.Controllers
                 string key = param["key"];
                 string pass = param["password"];
                 tdonnee = new TraitementDonnees();
-                //System.Diagnostics.Debug.WriteLine("key:" + key + "--pass: " + pass);
+
                 if (!tdonnee.StringIsValid(key))
                 {
                     ViewBag.err = "err1";
@@ -401,12 +401,11 @@ namespace Sough.Controllers
                 if (tdonnee.StringIsValid(voiture.password))
                 {
                     tdonnee.Tmd5<Voiture>(voiture.password, ref voiture);
-                    System.Diagnostics.Debug.WriteLine("Password : " + voiture.password);
                     tdonnee.GetQueryEdite(ref query, "password", voiture.password);
                 }
                 
                 string sql = "UPDATE Voitures SET " + query + " WHERE Id = " + voiture.Id +" ;";
-                System.Diagnostics.Debug.WriteLine(sql);
+                //System.Diagnostics.Debug.WriteLine(sql);
 
                 db.Database.ExecuteSqlCommand(sql);
                 
@@ -464,7 +463,7 @@ namespace Sough.Controllers
             tdonnee = new TraitementDonnees();
             pass = tdonnee.GetMd5(pass);
 
-            System.Diagnostics.Debug.WriteLine("hash password:" + pass);
+            //System.Diagnostics.Debug.WriteLine("hash password:" + pass);
 
             if (voiture.password.Equals(pass))
             {
@@ -475,6 +474,7 @@ namespace Sough.Controllers
             {
                 ViewBag.Key = key;
                 ViewBag.err = "err2";
+                ViewBag.op = "del";
                 return View("~/Views/Voiture/PutPass.cshtml");
             }
 
@@ -491,9 +491,6 @@ namespace Sough.Controllers
         {
             try
             {
-                //string key = param["key"];
-                System.Diagnostics.Debug.WriteLine("key :" + key);
-
                 long id = Int64.Parse(key);
                 Voiture voiture = db.Voitures.Find(id);
                 db.Voitures.Remove(voiture);
@@ -672,8 +669,7 @@ namespace Sough.Controllers
                 }
 
                 query += " ;";
-                //VoitureHelp.last_query = query;
-                System.Diagnostics.Debug.WriteLine(query);
+                //System.Diagnostics.Debug.WriteLine(query);
 
                 ViewBag.ville = ville;
                 ViewBag.cat = cat;

@@ -22,8 +22,8 @@ namespace Sough
             );
 
             bundles.Add(new StyleBundle("~/Content/css-fr")
-                .Include("~/Content/css/toujjar-theme/bootstrap.css", cssFixer)
                 .Include("~/Content/css/toujjar-theme/bootstrap.min.css", cssFixer)
+                .Include("~/Content/css/toujjar-theme/bootstrap.css", cssFixer)
                 .Include("~/Content/css/toujjar-theme/bootstrap-select.min.css", cssFixer)
             );
 

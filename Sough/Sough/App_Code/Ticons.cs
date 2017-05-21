@@ -36,5 +36,7 @@ namespace Sough.App_Code
         public static string map_marker  = "glyphicon glyphicon-map-marker";
         public static string showAD = "fa fa-play-circle";
         public static string copyright = "fa fa-copyright";
+        public static string pencil = "fa fa-pencil";
+        public static string remove = "fa fa-times";
     }
 }

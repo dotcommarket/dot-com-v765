@@ -5,23 +5,6 @@ body {
     padding-top: 70px;
 }
 
-/* Text Size */
-/*p{
-    font-size:15px;
-
-}
-li a {
-    font-size:17px;
-}
-li a span{
-    font-size:17px;
-}
-li span{
-    font-size:17px;
-}
-select option,select optgroup{
-    font-size:16px;
-}*/
 
 /* Traitement de responsivite 
  *    xs (Tlf):  < 768 px
@@ -291,4 +274,33 @@ a {
 
 .navbar-nav{
     float:right;
+}
+
+/* panel nav */
+.panel-tjj {
+  border-color: #B0BEC5;
+}
+.panel-tjj > .panel-heading {
+  color: #243238;
+  background-color: #F7F7F7;
+}
+.panel-tjj > .panel-heading + .panel-collapse > .panel-body {
+  border-top-color: #B0BEC5;
+}
+.panel-tjj > .panel-heading .badge {
+  color: #243238;
+  background-color: #fff;
+}
+.panel-tjj > .panel-footer + .panel-collapse > .panel-body {
+  border-bottom-color: #B0BEC5;
+}
+.panel-tjj > .nav > li > a > i{
+    color:#BFBFBF;
+    font-size:14px;
+}
+.panel-tjj > .nav > li > a:hover,
+.panel-tjj > .nav > li > a:focus {
+  color:#3EB0F7;
+  text-decoration: underline;
+  background-color: #fff;
 }
