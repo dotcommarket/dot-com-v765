@@ -151,6 +151,15 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à ارسل طلب.
+        /// </summary>
+        public static string btn3 {
+            get {
+                return ResourceManager.GetString("btn3", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à إكسسوارات.
         /// </summary>
         public static string cat_accessoires {

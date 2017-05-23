@@ -192,6 +192,8 @@
     <Content Include="Content\css\index\headercss.css" />
     <Content Include="Content\css\index\index-ar.css" />
     <Content Include="Content\css\module\jquery.popeye.style-ar.css" />
+    <Content Include="Content\css\share\modal.css" />
+    <Content Include="Content\css\share\putpass.css" />
     <Content Include="Content\css\show-products\ads-ar.css" />
     <Content Include="Content\css\show-products\car-ads-ar.css" />
     <Content Include="Content\css\show-products\car-ads-fr.css" />
@@ -656,6 +658,7 @@
     <Content Include="Scripts\module\option-popeye-ar.js" />
     <Content Include="Scripts\module\option-popeye-fr.js" />
     <Content Include="Scripts\options.js" />
+    <Content Include="Scripts\share\modal.js" />
     <Content Include="Scripts\show\cookies.js" />
     <Content Include="Content\icons\ic-1-b.png" />
     <Content Include="Content\icons\ic-1-o.png" />
@@ -678,6 +681,7 @@
     <Compile Include="Controllers\DeleteInfoController.cs" />
     <Compile Include="Controllers\ErrorController.cs" />
     <Compile Include="Controllers\GallerieController.cs" />
+    <Compile Include="Controllers\HelpPasswordController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\SearchController.cs" />
     <Compile Include="Controllers\VetementController.cs" />
@@ -718,6 +722,7 @@
     <Compile Include="Models\EquipementIndustriel.cs" />
     <Compile Include="Models\FournitureBureau.cs" />
     <Compile Include="Models\Gallerie1.cs" />
+    <Compile Include="Models\HelpPassword.cs" />
     <Compile Include="Models\Informatique.cs" />
     <Compile Include="Models\Jardinage.cs" />
     <Compile Include="Models\Jeu.cs" />
@@ -1029,10 +1034,14 @@
     <Content Include="Views\DeleteInfo\Create.cshtml" />
     <Content Include="Views\DeleteInfo\Edit.cshtml" />
     <Content Include="Views\DeleteInfo\Delete.cshtml" />
+    <Content Include="Views\HelpPassword\Index.cshtml" />
+    <Content Include="Views\HelpPassword\Details.cshtml" />
+    <Content Include="Views\HelpPassword\Create.cshtml" />
+    <Content Include="Views\HelpPassword\Edit.cshtml" />
+    <Content Include="Views\HelpPassword\Delete.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
-    <Folder Include="Content\css\share\" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="packages.config" />

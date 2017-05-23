@@ -24,5 +24,7 @@ namespace Sough.Models
         public DbSet<Admin> Admins { get; set; }
 
         public DbSet<DeleteInfo> DeleteInfoes { get; set; }
+
+        public DbSet<HelpPassword> HelpPasswords { get; set; }
     }
 }

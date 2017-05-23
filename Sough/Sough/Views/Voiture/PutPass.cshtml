@@ -1,43 +1,6 @@
-﻿<style>
-    .panel-footer {
-        height: 47px;
-    }
-
-    .f-pass {
-        float: left;
-        position: relative;
-    }
-
-        .f-pass > a {
-            font-size: 17px;
-            color: #4169e1;
-            font-weight: bold;
-        }
-
-    .cancel {
-        float: right;
-        position: relative;
-    }
-
-        .cancel > a {
-            font-size: 17px;
-            color: #4169e1;
-            font-weight: bold;
-        }
-
-        .cancel > i {
-            color: #ff0000;
-        }
-
-    .btn-default {
-        width: 300px;
-        font-weight: 700;
-    }
-
-    .t-text {
-        font-weight: bold;
-    }
-</style>
+﻿
+<link rel="stylesheet" href="~/Content/css/share/modal.css" />
+<link rel="stylesheet" href="~/Content/css/share/putpass.css" />
 
 @if (ViewBag.operation == "ok")
 {
@@ -197,9 +160,8 @@ else
                         }
                     </div>
                     <div class="panel-footer">
-                        <div class="f-pass"><a href="#">نسيت كلمة المرور؟</a></div>
-                        <div class="cancel"><i class="fa fa-ban" aria-hidden="true"></i> <a href="#">الغاء العملية</a></div>
-
+                        <div class="f-pass"><a id="show_box" href="#">نسيت كلمة المرور؟</a></div>
+                        <div class="cancel"><i class="fa fa-ban" aria-hidden="true"></i> <a href="~/Voiture/ShowWare?id=@ViewBag.Key">الغاء العملية</a></div>
                     </div>
                 </div>
             </div>
@@ -208,3 +170,27 @@ else
     </div>
 
 }
+
+<div id="Modal-AD" class="modal-ad" style="display:none;">
+    <div class="content modal-content">
+        <span class="close">×</span>
+        <div class="row">
+            <div class="col-xs-12 text-center">
+                <h1>نسيت كلمة المرور</h1>
+                <div>
+                    <p>هل تريد ارسال طلب من أجل استعادة كلمة المرور؟</p>
+                    <p>سيتم ارسال كلمة المرور خلال 24 ساعة -قد تزيد- على رقم الهاتف الخاص بهذه الحقيبة.</p>
+                    <i class="@Sough.App_Code.Ticons.ikey fa-5x"></i>
+                    
+                    <form action="~/HelpPassword/Create?ck=@ViewBag.key&cat=Voiture" method="post" style="margin-top:28px;margin-bottom:20px;">
+                        <input type="submit" class="btn btn-modal" width="350" height="50" value="@Sough.Resource.btn3" />
+                    </form>
+                </div>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+
+<script type="text/javascript" src="~/Scripts/share/modal.js"></script>

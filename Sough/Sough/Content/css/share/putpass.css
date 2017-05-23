@@ -1,0 +1,38 @@
+﻿.panel-footer {
+        height: 47px;
+    }
+
+    .f-pass {
+        float: left;
+        position: relative;
+    }
+
+        .f-pass > a {
+            font-size: 17px;
+            color: #4169e1;
+            font-weight: bold;
+        }
+
+    .cancel {
+        float: right;
+        position: relative;
+    }
+
+        .cancel > a {
+            font-size: 17px;
+            color: #4169e1;
+            font-weight: bold;
+        }
+
+        .cancel > i {
+            color: #ff0000;
+        }
+
+    .btn-default {
+        width: 300px;
+        font-weight: 700;
+    }
+
+    .t-text {
+        font-weight: bold;
+    }

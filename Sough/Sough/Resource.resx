@@ -534,4 +534,7 @@
   <data name="Erreur_password" xml:space="preserve">
     <value>كلمة المرور غير صحيحة</value>
   </data>
+  <data name="btn3" xml:space="preserve">
+    <value>ارسل طلب</value>
+  </data>
 </root>

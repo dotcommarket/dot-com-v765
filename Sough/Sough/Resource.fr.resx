@@ -531,4 +531,7 @@
   <data name="Supp_prod_ok" xml:space="preserve">
     <value>La Suppression a réussie</value>
   </data>
+  <data name="btn3" xml:space="preserve">
+    <value>Envoyer une demande</value>
+  </data>
 </root>

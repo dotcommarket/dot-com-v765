@@ -1,0 +1,69 @@
+﻿/* Modal panel */
+
+    .modal-ad {
+        position: fixed;
+        top: 25%;
+        right: 30%;
+        padding: 2px;
+        /* needed styles for the overlay */
+        z-index: 10; /* keep on top of other elements on the page */
+        overflow: auto;
+        width: 500px;
+        height: auto;
+        padding-right: 20px;
+    }
+
+    
+    .modal-content {
+        background-color: #fefefe;
+        margin: auto;
+        padding-right: 20px;
+        padding-left: 20px;
+        padding-bottom: 10px;
+        border: 1px solid #888;
+        width: 100%;
+    }
+
+    /* The Close Button */
+    .close {
+        color: #aaaaaa;
+        float: left;
+        font-size: 28px;
+        font-weight: bold;
+    }
+
+        .close:hover,
+        .close:focus {
+            color: #000;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+    .btn-modal {
+        direction: rtl;
+        font-size: 105%;
+        background-color: #3eb0f7;
+        color: #fff;
+        border: 1px solid #3eb0f7;
+        background: linear-gradient(to bottom,#56baf8,#3eb0f7)no-repeat,#3eb0f7;
+        filter: progid:DXImageTransform.Microsoft.gradient(GradientType=0,startColorstr='#56baf8', endColorstr='#3eb0f7');
+        background-size: 100% 36px;
+        border-radius: 5px;
+        color: #fff;
+        font-weight: 600;
+        transition: background 150ms ease;
+        cursor: pointer;
+        font-family: Verdana,sans-serif;
+        min-width: 200px;
+        padding-top: 8px;
+        outline: none;
+    }
+
+        .btn-modal:hover, .btn-modal:active, .btn-modal:focus {
+            color: white;
+            background-position: 100% -36px;
+        }
+
+        .btn-modal:active {
+            color: white;
+        }
