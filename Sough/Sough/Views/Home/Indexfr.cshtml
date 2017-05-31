@@ -118,7 +118,7 @@
         <div class="col-xs-12 col-sm-9 col-md-7 col-md-push-0 col-sm-push-0">
 
             <div class="row" style="margin-top:-0px;">
-                <div class="col-sm-11 col-md-11 home-div-search">
+                <div class="col-sm-11 col-md-11 home-div-search" id="hds" style="visibility:hidden">
                     <form action="../Search/Control" method="post" id="form1" class="navbar-form navbar-left" role="search">
 
                         <div class="form-group" id="cat">
@@ -212,6 +212,9 @@
                 </div>
             </div><!-- end row top cat-->
 
+            <script type="text/javascript">
+                document.getElementById('hds').style.visibility = "visible";
+            </script>
         </div>
 
         <div class="row hidden-sm hidden-xs">

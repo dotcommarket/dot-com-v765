@@ -1114,9 +1114,6 @@
     <Content Include="Views\Shared\_CheckVilleSelect.cshtml" />
   </ItemGroup>
   <ItemGroup>
-    <Content Include="Views\Error\Httpnotfound.cshtml.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
     <Content Include="Views\Error\DelaiDepassee.cshtml.cshtml" />
   </ItemGroup>
   <ItemGroup>

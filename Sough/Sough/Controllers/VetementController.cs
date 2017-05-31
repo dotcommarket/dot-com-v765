@@ -15,6 +15,7 @@ namespace Sough.Controllers
     {
         private ToujjarDatabase db = new ToujjarDatabase();
         private TraitementDonnees tdonnee;
+        private Tdate tdate;
         private const int PageSize = 6;
 
         //
@@ -55,9 +56,10 @@ namespace Sough.Controllers
             , IEnumerable<HttpPostedFileBase> files = null)
         {
             tdonnee = new TraitementDonnees();
+            tdate = new Tdate();
             Sough.Helpers.ImagesActions.ImagesModel<Vetement>(ref vetement, ref image1, ref image2, ref image3, ref image4, ref files);
 
-                tdonnee.SaveDate<Vetement>(ref vetement);
+                tdate.SaveDate<Vetement>(ref vetement);
                 db.Vetements.Add(vetement);
                 db.SaveChanges();
                 return RedirectToAction("Index");

@@ -153,13 +153,6 @@ namespace Sough.Helpers
             return hashedString;
         }
         
-        /* Save Date in model */
-        public void SaveDate<T>(ref T w) where T : Ware
-        {
-            DateTime dt = DateTime.Now;
-            w.temps = dt;
-        }
-
         public string FormaterPrix(long prix)
         {
             string _prix = prix.ToString();

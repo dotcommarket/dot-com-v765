@@ -353,7 +353,7 @@ namespace Sough.Controllers
                         //query = "SELECT * FROM Voitures WHERE ville = '" + ville + "';";
                         //VoitureHelp.last_query = query;
                         listVoitures = db.Voitures.Where(s => s.ville == ville).OrderByDescending(a => a.temps).ThenBy(a => a.Id).ToList();
-                        
+
                         VoitureHelp.lastResult = listVoitures;
 
                         PagedList<Voiture> model = new PagedList<Voiture>(listVoitures, page, PageSize);

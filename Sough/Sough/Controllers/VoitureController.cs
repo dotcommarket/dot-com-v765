@@ -26,6 +26,7 @@ namespace Sough.Controllers
         List<Voiture> listVoitures;
         private VoitureHelp Vsql;
         private TraitementDonnees tdonnee;
+        private Tdate tdate;
         private const int PageSize = 3;
         //
         // GET: /Voiture/
@@ -76,6 +77,7 @@ namespace Sough.Controllers
             {
 
                 tdonnee = new TraitementDonnees();
+                tdate  = new Tdate();
                 Voiture _voiture = new Voiture();
                 
 
@@ -131,7 +133,7 @@ namespace Sough.Controllers
                 tdonnee.Tmd5<Voiture>(st_pass, ref _voiture);
 
                 /* Date */
-                tdonnee.SaveDate<Voiture>(ref _voiture);
+                tdate.SaveDate<Voiture>(ref _voiture);
 
                 _voiture.prix = prix;
                 _voiture.marque = marque;
@@ -181,9 +183,12 @@ namespace Sough.Controllers
             try
             {
                 Voiture voiture = db.Voitures.Find(id);
+                
+                System.Diagnostics.Debug.WriteLine("ShowWare : voiture :" + voiture.temps);
+
                 if (voiture == null)
                 {
-                    return HttpNotFound();
+                    return View("~/Views/Error/Httpnotfound.cshtml");
                 }
 
                 List<Voiture> listVoitures = db.Voitures.Where(s => s.phone == voiture.phone &&
@@ -196,6 +201,14 @@ namespace Sough.Controllers
                 voiture = listVoitures[0];
                 listVoitures[0] = listVoitures[listVoitures.Count - 1];
                 listVoitures[listVoitures.Count - 1] = voiture;
+                //if (Sough.GererLang.currentLang == "ar")
+                //{
+                //    foreach (var car in listVoitures)
+                //    {
+                //        car.temps = tdate.dateEnFrancais((car.temps).ToString());
+                //    }
+                //}
+                
 
                 PagedList<Voiture> model = new PagedList<Voiture>(listVoitures, 1, PageSize);
                 return View(model);
