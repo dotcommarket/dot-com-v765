@@ -2,7 +2,7 @@
 @using PagedList.Mvc;
 
 @{
-    ViewBag.Title = "Voitures";
+    ViewBag.Title = @Sough.Resource.cat_voiture;
     var culture = Sough.GererLang.currentLang;
 }
 
@@ -12,12 +12,9 @@
 @Styles.Render("~/Content/search-main-css-"+culture)
 
 
-
-
-
 <div id="content">
     <div class="row leftmarge">
-    
+   
         <!-- Div pour Chercher dans les produit -->
         <div class="col-xs-12 col-sm-12 col-md-10">
             <form action="/Search/Control" enctype="multipart/form-data" method="post" name="Form" id="form"
@@ -77,21 +74,21 @@
                         <div class="col-md-3 col-xs-5">
                             <span class="price_filter">
                                 <input type="number" class="price_filter" min="0" max="400000000"
-                                       name="pmn" placeholder="Prix min">
+                                       name="pmn" placeholder="@Sough.Resource.LabelPrixMin">
                             </span>
                             
                         </div>
                         <div class="col-md-3 col-xs-5">
                             <span class="price_filter">
                                 <input type="number" class="price_filter" min="0" max="400000000" name="pmx"
-                                       placeholder="Prix max">
+                                       placeholder="@Sough.Resource.LabelPrixMax">
                             </span>
                             
                         </div>
                         <div class="col-md-3 col-xs-5">
                             <span>
                                 <select class="featurebox_select" name="km_min" id="km-min">
-                                    <option value="" selected="selected">KM min</option>
+                                    <option value="" selected="selected">@Sough.Resource.LabelKmMin</option>
                                     <option value="0">0</option>
                                     <option value="5000">5.000</option>
                                     <option value="10000">10.000</option>
@@ -113,6 +110,9 @@
                                     <option value="70000">100.000</option>
                                     <option value="70000">110.000</option>
                                     <option value="70000">150.000</option>
+                                    <option value="70000">250.000</option>
+                                    <option value="70000">550.000</option>
+                                    <option value="70000">1.000.000</option>
                                 </select>
                             </span>
                         </div>
@@ -120,7 +120,7 @@
                         <div class="col-md-3 col-xs-5">
                             <span>
                                     <select class="featurebox_select" id="km-max" name="km_max">
-                                        <option value="" selected="selected">KM max</option>
+                                        <option value="" selected="selected">@Sough.Resource.LabelKmMax</option>
                                         <option value="0">0</option>
                                         <option value="5000">5.000</option>
                                         <option value="10000">10.000</option>
@@ -142,6 +142,9 @@
                                         <option value="70000">100.000</option>
                                         <option value="70000">110.000</option>
                                         <option value="70000">150.000</option>
+                                        <option value="70000">250.000</option>
+                                        <option value="70000">550.000</option>
+                                        <option value="70000">1.000.000</option>
                                     </select>
                             </span>
                         </div>
@@ -186,19 +189,19 @@
                                 <ul class="car_shapes">
                                     <li id="md_cs_1" class="car_shape_2 car_shape_box_black" onclick="toggleCarShape(1, 'SUV');">
                                         <div class="ic-1-b" id="md_vic1"></div>
-                                        <label for="label" title="grands voiture 4x4">SUV</label>
+                                        <label for="label" title="grands voiture 4x4">@Sough.Resource.LabelSuv</label>
                                     </li>
                                     <li id="md_cs_2" class="car_shape_3 car_shape_box_black" onclick="toggleCarShape(2, 'Berline');">
                                         <div class="ic-2-b" id="md_vic2"></div>
-                                        <label title="Voiture berline , exemple: toyota avensis , mercedess 190" for="label">Berline</label>
+                                        <label title="Voiture berline , exemple: toyota avensis , mercedess 190" for="label">@Sough.Resource.LabelBerline</label>
                                     </li>
                                     <li id="md_cs_3" class="car_shape_4 car_shape_box_black" onclick="toggleCarShape(3, 'Pickup');">
                                         <div class="ic-3-b" id="md_vic3"></div>
-                                        <label for="car_shape" title="voiture 4x4 avec bassin, exemple : toyota hilux">Pickup</label>
+                                        <label for="car_shape" title="voiture 4x4 avec bassin, exemple : toyota hilux">@Sough.Resource.LabelPickup</label>
                                     </li>
                                     <li id="md_cs_4" class="car_shape_5 car_shape_box_black" onclick="toggleCarShape(4, 'Break');">
                                         <div class="ic-4-b" id="md_vic4"></div>
-                                        <label for="car_shape" title="voiture break">Break</label>
+                                        <label for="car_shape" title="voiture break">@Sough.Resource.LabelBreak</label>
                                     </li>
 
                                 </ul>
@@ -248,7 +251,7 @@
                             <div class="col-md-1"></div>
                             <div class="col-md-3">
                                 <button class="btn Btn3" id="btn-md" type="submit">
-                                    Chercher <i class="@Sough.App_Code.Ticons.search"></i>
+                                    @Sough.Resource.btn_cherche <i class="@Sough.App_Code.Ticons.search"></i>
                                 </button>
                             </div>
                         </div>
@@ -271,7 +274,7 @@
     <div class="row" id="loading" style="display: none;">
         <div class="col-md-8 col-sm-12 text-center">
             <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">@Sough.Resource.LabelLoading...</span>
         </div>
     </div>
     <div class="row row-z">
@@ -283,23 +286,22 @@
                 <select id="TrieID" onchange="trierPar('Voiture')" class="featurebox_select_medium">
                     @if (Sough.Helpers.AdHelper.trie == 1)
                     {
-                        <option id="opt1" value="1" selected>Trier par : Date</option>
-                        <option id="opt2" value="2">Trier par : Prix</option>
+                        <option id="opt1" value="1" selected>@Sough.Resource.LabelTrie1</option>
+                        <option id="opt2" value="2">@Sough.Resource.LabelTrie2</option>
                     }
                     else
                     {
-                        <option id="opt1" value="1">Trier par : Date</option>
-                        <option id="opt2" value="2" selected>Trier par : Prix</option>
+                        <option id="opt1" value="1">@Sough.Resource.LabelTrie1</option>
+                        <option id="opt2" value="2" selected>@Sough.Resource.LabelTrie2</option>
                     }
                </select>
             </span>
-
         </div>
 
         <div class="col-md-2"></div>
         <div class="col-md-2" id="loading" style="display: none;">
             <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">@Sough.Resource.LabelLoading...</span>
         </div>
         <div class="col-md-2"></div>
         
@@ -315,7 +317,7 @@
 
 @section Scripts {
     
-    @Scripts.Render("~/bundles/ads")
+    @Scripts.Render("~/bundles/ads")  @*~/Scripts/show/ads.js*@
     <script type="text/javascript" src="~/Scripts/show/car-ads.js"></script>
 
 }

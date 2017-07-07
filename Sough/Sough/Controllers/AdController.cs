@@ -30,27 +30,27 @@ namespace Sough.Controllers
                 List<Ware> ware;
                 List<Ware> wares = new List<Ware>();
                 string qr = "";
-
+                string cap = "";
                 if (f == 1)
                 {
                     AdHelper.trie = 1;
                     AdHelper.last_Region = r;
                     switch (r)
                     {
-                        case "Nouakchott": qr = " WHERE ville = 'Nouakchott'"; break;
-                        case "adrar": qr = " WHERE ville = 'Atar'";  break;
-                        case "assaba": qr = " WHERE ville = 'Kiffa' OR ville ='Guerou'";  break;
-                        case "brakna": qr = " WHERE ville = 'Aleg' OR ville = 'Magta-Lahjar'"; break;
-                        case "dakhlet-nouadhibou": qr = " WHERE ville = 'Nouadhibou'";break;
-                        case "gorgol": qr = " WHERE ville = 'gorgol'"; break;
-                        case "hodh-chargui": qr = " WHERE ville = 'Nema'";  break;
-                        case "hodh-gharbi": qr = " WHERE ville = 'Aioun'"; break;
-                        case "guidimaka": qr = " WHERE ville = 'Selibaby'";  break;
-                        case "inchiri": qr = " WHERE ville = 'Akjoujt'"; break;
-                        case "tagant": qr = " WHERE ville = 'Tidjikdja'"; break;
-                        case "tiris": qr = " WHERE ville = 'Zouerate'"; break;
-                        case "trarza": qr = " WHERE ville = 'Rosso'"; break;
-                        case "all": qr = ""; break;
+                        case "Nouakchott": qr = " WHERE ville = 'Nouakchott'"; cap = "Nouakchott"; break;
+                        case "adrar": qr = " WHERE ville = 'Atar'"; cap = "Atar"; break;
+                        case "assaba": qr = " WHERE ville = 'Kiffa' OR ville ='Guerou'"; cap = "Kiffa"; break;
+                        case "brakna": qr = " WHERE ville = 'Aleg'"; cap = "Aleg"; break;
+                        case "dakhlet-nouadhibou": qr = " WHERE ville = 'Nouadhibou'"; cap = "Nouadhibou"; break;
+                        case "gorgol": qr = " WHERE ville = 'Kaedi'"; cap = "Kaedi"; break;
+                        case "hodh-chargui": qr = " WHERE ville = 'Nema'"; cap = "Nema"; break;
+                        case "hodh-gharbi": qr = " WHERE ville = 'Aioun'"; cap = "Aioun"; break;
+                        case "guidimaka": qr = " WHERE ville = 'Selibaby'"; cap = "Selibaby"; break;
+                        case "inchiri": qr = " WHERE ville = 'Akjoujt'"; cap = "Akjoujt"; break;
+                        case "tagant": qr = " WHERE ville = 'Tidjikdja'"; cap = "Tidjikdja"; break;
+                        case "tiris": qr = " WHERE ville = 'Zouerate'"; cap = "Zouerate"; break;
+                        case "trarza": qr = " WHERE ville = 'Rosso'"; cap = "Rosso"; break;
+                        case "all": qr = ""; cap = "all"; break;
 
                         default: break;
                     }
@@ -71,7 +71,7 @@ namespace Sough.Controllers
                     AdHelper.last_wares = wares;
                     PagedList<Ware> plwares = new PagedList<Ware>(wares, page, PageSize);
                     
-                    ViewBag.region = r;
+                    ViewBag.ville = cap ;
                     ViewBag.cat = "all";
                     
                     return View("~/Views/Ad/Awfc.cshtml", plwares);
@@ -90,21 +90,20 @@ namespace Sough.Controllers
                     qr = "";
                     switch (AdHelper.last_Region)
                     {
-                        case "Nouakchott": qr = " WHERE ville = 'Nouakchott'"; break;
-                        case "adrar": qr = " WHERE ville = 'Atar'"; break;
-                        case "assaba": qr = " WHERE ville = 'Kiffa' OR ville ='Guerou'"; break;
-                        case "brakna": qr = " WHERE ville = 'Aleg' OR ville = 'Magta-Lahjar'"; break;
-                        case "dakhlet-nouadhibou": qr = " WHERE ville = 'Nouadhibou'"; break;
-                        case "gorgol": qr = " WHERE ville = 'gorgol'"; break;
-                        case "hodh-chargui": qr = " WHERE ville = 'Nema'"; break;
-                        case "hodh-gharbi": qr = " WHERE ville = 'Aioun'"; break;
-                        case "guidimaka": qr = " WHERE ville = 'Selibaby'"; break;
-                        case "inchiri": qr = " WHERE ville = 'Akjoujt'"; break;
-                        case "tagant": qr = " WHERE ville = 'Tidjikdja'"; break;
-                        case "tiris": qr = " WHERE ville = 'Zouerate'"; break;
-                        case "trarza": qr = " WHERE ville = 'Rosso'"; break;
-                        case "all": qr = ""; break;
-
+                        case "Nouakchott": qr = " WHERE ville = 'Nouakchott'"; cap = "Nouakchott"; break;
+                        case "adrar": qr = " WHERE ville = 'Atar'"; cap = "Atar"; break;
+                        case "assaba": qr = " WHERE ville = 'Kiffa' OR ville ='Guerou'"; cap = "Kiffa"; break;
+                        case "brakna": qr = " WHERE ville = 'Aleg'"; cap = "Aleg"; break;
+                        case "dakhlet-nouadhibou": qr = " WHERE ville = 'Nouadhibou'"; cap = "Nouadhibou"; break;
+                        case "gorgol": qr = " WHERE ville = 'Kaedi'"; cap = "Kaedi"; break;
+                        case "hodh-chargui": qr = " WHERE ville = 'Nema'"; cap = "Nema"; break;
+                        case "hodh-gharbi": qr = " WHERE ville = 'Aioun'"; cap = "Aioun"; break;
+                        case "guidimaka": qr = " WHERE ville = 'Selibaby'"; cap = "Selibaby"; break;
+                        case "inchiri": qr = " WHERE ville = 'Akjoujt'"; cap = "Akjoujt"; break;
+                        case "tagant": qr = " WHERE ville = 'Tidjikdja'"; cap = "Tidjikdja"; break;
+                        case "tiris": qr = " WHERE ville = 'Zouerate'"; cap = "Zouerate"; break;
+                        case "trarza": qr = " WHERE ville = 'Rosso'"; cap = "Rosso"; break;
+                        case "all": qr = ""; cap = "all"; break;
                         default: break;
                     }
 
@@ -124,7 +123,7 @@ namespace Sough.Controllers
                     AdHelper.last_wares = wares;
                     PagedList<Ware> plwares = new PagedList<Ware>(wares, page, PageSize);
 
-                    ViewBag.region = r;
+                    ViewBag.ville = cap;
                     ViewBag.cat = "all";
 
                     return PartialView("~/Views/Ad/_WaresList.cshtml", plwares);
@@ -139,7 +138,7 @@ namespace Sough.Controllers
         }
 
         [HttpGet]
-        public ActionResult TrierParDate(int page = 1)
+        public ActionResult TrierParDate(int page = 1,string r="")
         {
             try
             {
@@ -152,6 +151,9 @@ namespace Sough.Controllers
                     ViewBag.err = "true";
                     return View("~/Views/Ad/Awfc.cshtml", plwares);
                 }
+
+                ViewBag.cat = "all";
+                ViewBag.ville = r;
 
                 List<Ware> wares = new List<Ware>();
 
@@ -172,7 +174,7 @@ namespace Sough.Controllers
         }
 
         [HttpGet]
-        public ActionResult TrierParPrix(int page = 1)
+        public ActionResult TrierParPrix(int page = 1,string r="")
         {
             try
             {
@@ -186,7 +188,11 @@ namespace Sough.Controllers
                     return View("~/Views/Ad/Awfc.cshtml", plwares);
                 }
 
+                ViewBag.cat = "all";
+                ViewBag.ville = r;
+
                 List<Ware> wares = new List<Ware>();
+
                 wares = AdHelper.last_wares;
                 wares.Sort((p, q) => p.prix.CompareTo(q.prix));
 

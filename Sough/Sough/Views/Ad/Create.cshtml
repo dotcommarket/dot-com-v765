@@ -1,6 +1,6 @@
 ﻿
 @{
-    ViewBag.Title = "Sujet";
+    ViewBag.Title = @Sough.Resource.TitleIndex;
     var culture = Sough.GererLang.currentLang; 
 }
 
@@ -11,7 +11,7 @@
         <div class="col-md-12">
            <span>
                    <select onchange="setSubject();" id="cat" name="cat" class="featurebox_select_extra_large">
-                       <option value="">&#171;Sujet&#187;</option>
+                       <option value="">&#171;@Sough.Resource.Categorie&#187;</option>
                        @Html.Partial("_CategoriesController")
                    </select>
            </span>

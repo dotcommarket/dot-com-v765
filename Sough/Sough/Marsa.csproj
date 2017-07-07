@@ -653,6 +653,7 @@
     <Content Include="Scripts\index\carte.js" />
     <Content Include="Scripts\create\create-ad.js" />
     <Content Include="Scripts\index\index.js" />
+    <None Include="Scripts\index\test.cshtml" />
     <Content Include="Scripts\module\jquery.popeye-2.0.4.js" />
     <Content Include="Scripts\module\jquery.popeye-2.0.4.min.js" />
     <Content Include="Scripts\module\option-popeye-ar.js" />

@@ -111,7 +111,7 @@ function checkNom() {
         node.onfocus = function () { node.style.borderColor = "#cc0000"; }
 
         help.style.color = "#cc0000";
-        help.innerText = 'Erreur , Le nom est long!';
+        help.innerText = err_data;
 
         window.scrollTo(0, 1);
 
@@ -124,7 +124,7 @@ function checkNom() {
         node.style.borderColor = "#cc0000";
 
         help.style.color = "#cc0000";
-        help.innerText = 'Erreur , Le nom est incorrect!';
+        help.innerText = err_data;
 
         window.scrollTo(0, 1);
 
@@ -158,7 +158,7 @@ function checkPhone() {
         node.style.borderColor = "#cc0000";
 
         help.style.color = "#cc0000";
-        help.innerText = "Le num\351ro du t\351l\351phone est obligatoire";
+        help.innerText = err_data;
 
         window.scrollTo(0, 100);
 
@@ -193,7 +193,7 @@ function checkPhone() {
         node.style.borderColor = "#cc0000";
 
         help.style.color = "#cc0000";
-        help.innerText = 'le format du num\351ro du t\351l\351phone est incorrect';
+        help.innerText = err_data;
 
         window.scrollTo(0, 100);
 
@@ -228,7 +228,7 @@ function checkEmail() {
             node.style.borderColor = "#cc0000";
 
             help.style.color = "#cc0000";
-            help.innerText = 'Email incorrect!';
+            help.innerText = err_data;
 
             window.scrollTo(0, 100);
 
@@ -269,7 +269,7 @@ function checkImages(pos) {
     var help = document.getElementById("help-image");
     if ((img1.files.length != 1) || (img2.files.length != 1) || (img3.files.length != 1) || (img4.files.length != 1)) {
         help.style.color = "#cc0000";
-        help.innerText = 'Selectionnez quatre images';
+        help.innerText = err_data;
 
         window.scrollTo(0, pos);
         return false;
@@ -289,7 +289,7 @@ function checkPass(view,pos) {
             node.style.borderColor = "#cc0000";
 
             help.style.color = "#cc0000";
-            help.innerText = 'Erreur , Creer un password pour votre produit!';
+            help.innerText = err_data;
             node.onfocus = function () { node.style.borderColor = "#cc0000"; }
 
             window.scrollTo(0, pos);
@@ -302,7 +302,7 @@ function checkPass(view,pos) {
             node.onfocus = function () { node.style.borderColor = "#cc0000"; }
 
             help.style.color = "#cc0000";
-            help.innerText = 'Password faible!';
+            help.innerText = err_data;
             window.scrollTo(0, pos);
 
             node.onblur = function () { checkPass(view, pos); }
@@ -337,7 +337,7 @@ function checkPass(view,pos) {
             node.onfocus = function () { node.style.borderColor = "#cc0000"; }
 
             help.style.color = "#cc0000";
-            help.innerText = 'Password faible!';
+            help.innerText = err_data;
             window.scrollTo(0, pos);
 
             node.onblur = function () { checkPass(view, pos); }
@@ -371,7 +371,7 @@ function checkConfPass(view,pos) {
             conf_pass.style.borderColor = "#cc0000";
 
             help.style.color = "#cc0000";
-            help.innerText = 'Erreur , le mot de pass n\'est pas identique!';
+            help.innerText = err_data;
             window.scrollTo(0, pos);
 
             conf_pass.onfocus = function () { conf_pass.style.borderColor = "#cc0000"; }
@@ -406,7 +406,7 @@ function checkConfPass(view,pos) {
                 conf_pass.style.borderColor = "#cc0000";
 
                 help.style.color = "#cc0000";
-                help.innerText = 'Erreur , le mot de pass n\'est pas identique!';
+                help.innerText = err_data;
                 window.scrollTo(0, pos);
 
                 conf_pass.onfocus = function () { conf_pass.style.borderColor = "#cc0000"; }

@@ -191,10 +191,9 @@
                     
                     <div class="controls control-label">
                         <div class="div-radio">
-                            <input type="radio" name="EstNeuf" id="estneuf0" onclick="estNeufClick('estneuf0','Neuf');" value="Neuf">Neuf
-                        </div>
+                            <input type="radio" name="EstNeuf" id="estneuf0" onclick="estNeufClick('estneuf0','Neuf');" value="Neuf">@Sough.Resource.Neuf                        </div>
                         <div class="div-radio">
-                            <input type="radio" name="EstNeuf" id="estneuf1" onclick="estNeufClick('estneuf1','Occasion');" value="Occasion">Occasion
+                            <input type="radio" name="EstNeuf" id="estneuf1" onclick="estNeufClick('estneuf1','Occasion');" value="Occasion">@Sough.Resource.Occasion
                         </div>
                         <p class="help-block" id="help-EstNeuf"></p>
                     </div>
@@ -284,23 +283,23 @@
                         <li id="cs_2" class="car_shape_2 car_shape_box_black" onclick="toggleCarShape('SUV', '2');">
                             <div class="ic-1-b" id="vic1"></div>
                             <div class="lbl">
-                                SUV
+                                @Sough.Resource.LabelSuv
                             </div>
                         </li>
                         <li id="cs_3" class="car_shape_3 car_shape_box_black" onclick="toggleCarShape('Berline', '3');">
                             <div class="ic-2-b" id="vic2"></div>
                             <div class="lbl">
-                                Berline
+                                @Sough.Resource.LabelBerline
                             </div>
                         </li>
                         <li id="cs_4" class="car_shape_4 car_shape_box_black" onclick="toggleCarShape('Pickup', '4');">
                             <div class="ic-3-b" id="vic3"></div>
-                            <div class="lbl">Pickup</div>
+                            <div class="lbl">@Sough.Resource.LabelPickup</div>
                         </li>
                         <li id="cs_5" class="car_shape_5 car_shape_box_black" onclick="toggleCarShape('Break', '5');">
                             <div class="ic-4-b" id="vic4"></div>
                             <div class="lbl">
-                                Break
+                                @Sough.Resource.LabelBreak
                             </div>
                         </li>
 
@@ -569,10 +568,25 @@
     </div>
 </div>
 
+
+
     @section Scripts {
-           
+           <script type="text/javascript">
+               var err_data = "@Sough.Resource.valid_data_error";
+
+               var r_nom = "@Sough.Resource.LabelTraderName";
+               var r_tel = "@Sough.Resource.LabelTel";
+               var r_ville = "@Sough.Resource.ville";
+
+               var r_boite = "@Sough.Resource.boite";
+               var r_carburant = "@Sough.Resource.LabelCarburant";
+               var r_kilometrage = "@Sough.Resource.LabelKilometrage";
+               var r_modele = "@Sough.Resource.LabelModele";
+               var r_marque = "@Sough.Resource.LabelMarque";
+
+            </script>
         <script type="text/javascript" src="~/Scripts/create/car_validation.js"></script>
         <script type="text/javascript" src="~/Scripts/create/car-create-js.js"></script>
-       
+
         @Scripts.Render("~/bundles/create")
     }

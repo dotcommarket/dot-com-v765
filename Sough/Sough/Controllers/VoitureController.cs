@@ -732,6 +732,9 @@ namespace Sough.Controllers
                 ViewBag.err = "true";
                 return View("~/Views/Voiture/Ads.cshtml", model);
             }
+
+            ViewBag.cat = "Voitures";
+
             List<Voiture> listVoitures = VoitureHelp.lastResult;
             listVoitures = listVoitures.OrderByDescending(v => v.temps).ThenBy(v => v.Id).ToList();
             
@@ -756,6 +759,9 @@ namespace Sough.Controllers
                 return View("~/Views/Voiture/Ads.cshtml", model);
 
             }
+
+            ViewBag.cat = "Voitures";
+
             List<Voiture> listVoitures = VoitureHelp.lastResult;
             listVoitures = listVoitures.OrderBy(v => v.prix).ThenBy(v => v.Id).ToList();
             model = new PagedList<Voiture>(listVoitures, page, PageSize);

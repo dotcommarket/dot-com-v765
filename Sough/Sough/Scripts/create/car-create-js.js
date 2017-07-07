@@ -39,8 +39,8 @@ function setModalData() {
     var face = document.getElementById('face_input');
     var insta = document.getElementById('insta_input');
 
-    if (marque.value === "audi" || marque.value === "bmw" || marque.value === "mercedes"
-        || marque.value === "nissan" || marque.value === "renault" || marque.value === "toyota") {
+    if (marque.value === "Audi" || marque.value === "Bmw" || marque.value === "Mercedes" || marque.value === "Land-Rover"
+        || marque.value === "Nissan" || marque.value === "Renault" || marque.value === "Toyota") {
         modele = document.getElementById("model_" + marque.value);
         var smodele = document.getElementById('s_modele');
     }
@@ -67,18 +67,18 @@ function setModalData() {
         }
     }
 
-    smarque.innerHTML = '<abbr title="">Marque</abbr>: ' + String(marque.value);
+    smarque.innerHTML = '<abbr title="">' + r_marque + '</abbr>:  ' + String(marque.value);
     if (modele != null) {
-        smodele.innerHTML = '<abbr title="">Modèle</abbr>: ' + String(modele.value);
+        smodele.innerHTML = '<abbr title="">' + r_modele + '</abbr>:  ' + String(modele.value);
     }
-    skilometrage.innerHTML = '<abbr title="">Kilometrage</abbr>: ' + String(kilometrage.value);
-    scarburant.innerHTML = '<abbr title="">Carburant</abbr>: ' + String(carburant.value);
-    sboite.innerHTML = '<abbr title="">Boite</abbr>: ' + String(boite.value);
+    skilometrage.innerHTML = '<abbr title="">' + r_kilometrage + '</abbr>:   ' + String(kilometrage.value);
+    scarburant.innerHTML = '<abbr title="">' + r_carburant + '</abbr>:  ' + String(carburant.options[carburant.selectedIndex].text);
+    sboite.innerHTML = '<abbr title="">' + r_boite + '</abbr>:   ' + String(boite.options[boite.selectedIndex].text);
     sEstNeuf.innerHTML = EstNeuf + "";
-    sville.innerHTML = '<abbr title="">Ville</abbr>: ' + String(ville.value);
+    sville.innerHTML = '<abbr title="">' + r_ville + '</abbr>:   ' + String(ville.options[ville.selectedIndex].text);
 
 
-    sphone.innerHTML = '<span class="fa fa-whatsapp"></span><abbr title="">Tel: </abbr>' + String(phone.value);
+    sphone.innerHTML = '<span class="fa fa-whatsapp"></span><abbr title="">' + r_tel + ': </abbr>' + String(phone.value);
 
     if (face.value.length > 1) {
         sface.innerHTML = '<span class="fa fa-facebook"></span><abbr>' + face.value + '</abbr>';
@@ -95,7 +95,7 @@ function setModalData() {
     if (email.value.length > 0)
         semail.innerHTML = '<span class="fa fa-envelope"></span>' + String(email.value);
     if (name.value.length > 0)
-        sname.innerHTML = '<abbr title="">Nom</abbr>: ' + String(name.value);
+        sname.innerHTML = '<abbr title="">' + r_nom + '</abbr>:   ' + String(name.value);
     sprix.innerHTML = String(prix.value) + ' Mro';
 
 }
@@ -107,19 +107,12 @@ function toggleCarShape(type, x) {
     var car3 = document.getElementById("vic3");
     var car4 = document.getElementById("vic4");
     var carShape = document.getElementById("car_shape");
-    //if (carShape.value.length <= 0) {
-    //carShape.value = x;
-    //console.log('shape : ' + carShape.value);
-
+    
     if (carShape.value === x) {
         carShape.value = "";
-        console.log('carShape : ' + carShape.value);
-        console.log('carShape length : ' + carShape.value.length);
     }
     else {
         carShape.value = x;
-        console.log('carShape : ' + carShape.value);
-        console.log('carShape length : ' + carShape.value.length);
     }
 
     if (x === '2') {

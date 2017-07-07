@@ -142,7 +142,7 @@
     <value>prix</value>
   </data>
   <data name="ville" xml:space="preserve">
-    <value>ville</value>
+    <value>Ville</value>
   </data>
   <data name="villeRqd" xml:space="preserve">
     <value>entrée votre ville</value>
@@ -263,9 +263,6 @@
   </data>
   <data name="select_ville_guerou" xml:space="preserve">
     <value>Guerou</value>
-  </data>
-  <data name="select_ville_magta_lahjar" xml:space="preserve">
-    <value>Magta-Lahjar</value>
   </data>
   <data name="label_couleur_et_type" xml:space="preserve">
     <value>Le couleur et le type de la voiture</value>
@@ -533,5 +530,230 @@
   </data>
   <data name="btn3" xml:space="preserve">
     <value>Envoyer une demande</value>
+  </data>
+  <data name="Akjoujt" xml:space="preserve">
+    <value>Akjoujt</value>
+  </data>
+  <data name="Aleg" xml:space="preserve">
+    <value>Aleg</value>
+  </data>
+  <data name="Atar" xml:space="preserve">
+    <value>Atar</value>
+  </data>
+  <data name="Aïoun" xml:space="preserve">
+    <value>Aïoun</value>
+  </data>
+  <data name="Guerou" xml:space="preserve">
+    <value>Guerou</value>
+  </data>
+  <data name="Kaedi" xml:space="preserve">
+    <value>Kaedi</value>
+  </data>
+  <data name="Kiffa" xml:space="preserve">
+    <value>Kiffa</value>
+  </data>
+  <data name="label_km" xml:space="preserve">
+    <value>km</value>
+  </data>
+  <data name="Nema" xml:space="preserve">
+    <value>Nema</value>
+  </data>
+  <data name="Nouadhibou" xml:space="preserve">
+    <value>Nouadhibou</value>
+  </data>
+  <data name="Nouakchott" xml:space="preserve">
+    <value>Nouakchott</value>
+  </data>
+  <data name="Rosso" xml:space="preserve">
+    <value>Rosso</value>
+  </data>
+  <data name="Selibaby" xml:space="preserve">
+    <value>Selibaby</value>
+  </data>
+  <data name="Tidjikdja" xml:space="preserve">
+    <value>Tidjikdja</value>
+  </data>
+  <data name="Zouerate" xml:space="preserve">
+    <value>Zouerate</value>
+  </data>
+  <data name="Ammeublement" xml:space="preserve">
+    <value>Ammeublement</value>
+  </data>
+  <data name="Animaux" xml:space="preserve">
+    <value>Animaux</value>
+  </data>
+  <data name="ArtTable" xml:space="preserve">
+    <value>Arts de la table</value>
+  </data>
+  <data name="Autre" xml:space="preserve">
+    <value>Autre</value>
+  </data>
+  <data name="Bureau_et_Commerce" xml:space="preserve">
+    <value>Bureau &amp; Commerce</value>
+  </data>
+  <data name="Categorie" xml:space="preserve">
+    <value>Categorie</value>
+  </data>
+  <data name="cat_auto_pi_et_acc" xml:space="preserve">
+    <value>Auto: Pi&amp;egrave;ce et accessoires</value>
+  </data>
+  <data name="Chameaux" xml:space="preserve">
+    <value>Chameaux</value>
+  </data>
+  <data name="Chevres" xml:space="preserve">
+    <value>Ch&amp;egrave;vres</value>
+  </data>
+  <data name="CommerceMarches" xml:space="preserve">
+    <value>Commerce &amp; March&amp;eacute;s</value>
+  </data>
+  <data name="CourParticuliers" xml:space="preserve">
+    <value>Cours particuliers</value>
+  </data>
+  <data name="Decoration" xml:space="preserve">
+    <value>D&amp;eacute;coration</value>
+  </data>
+  <data name="EcoleAuto" xml:space="preserve">
+    <value>Ecole Auto</value>
+  </data>
+  <data name="Electromenager" xml:space="preserve">
+    <value>Electrom&amp;eacute;nager</value>
+  </data>
+  <data name="EquipementIndustriels" xml:space="preserve">
+    <value>Equipement industriels</value>
+  </data>
+  <data name="FournitureBureaus" xml:space="preserve">
+    <value>Fournitures de bureau</value>
+  </data>
+  <data name="Immobilier" xml:space="preserve">
+    <value>Immobilier</value>
+  </data>
+  <data name="Informatique_app_et_mat" xml:space="preserve">
+    <value>Inforamtique (Appareil ou Matériel)</value>
+  </data>
+  <data name="Jeux" xml:space="preserve">
+    <value>Les jeux</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>Location</value>
+  </data>
+  <data name="MaterielMedicals" xml:space="preserve">
+    <value>Mat&amp;eacute;riel m&amp;eacute;dical</value>
+  </data>
+  <data name="Materiel_maison" xml:space="preserve">
+    <value>Mat&amp;eacute;riel maison</value>
+  </data>
+  <data name="Materiel_proff" xml:space="preserve">
+    <value>Mat&amp;eacute;riel proffessionel</value>
+  </data>
+  <data name="MGrosOeuvres" xml:space="preserve">
+    <value>Mat&amp;eacute;riel Gro-oeuvre</value>
+  </data>
+  <data name="Moto" xml:space="preserve">
+    <value>Moto</value>
+  </data>
+  <data name="Mtransports" xml:space="preserve">
+    <value>Mat&amp;eacute;riel transport</value>
+  </data>
+  <data name="Multimedia" xml:space="preserve">
+    <value>Multimedia</value>
+  </data>
+  <data name="Ordinateurs" xml:space="preserve">
+    <value>Ordinateurs</value>
+  </data>
+  <data name="RestaurantHotelleries" xml:space="preserve">
+    <value>Restaurant-Hotellerie</value>
+  </data>
+  <data name="ServiceMaisons" xml:space="preserve">
+    <value>Services des maisons</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>Services</value>
+  </data>
+  <data name="Telephones" xml:space="preserve">
+    <value>T&amp;eacute;l&amp;eacute;phones</value>
+  </data>
+  <data name="Televisions" xml:space="preserve">
+    <value>Televisions</value>
+  </data>
+  <data name="Vaches" xml:space="preserve">
+    <value>Vaches</value>
+  </data>
+  <data name="Vehicules" xml:space="preserve">
+    <value>Vehicules</value>
+  </data>
+  <data name="VenteImmobiliers" xml:space="preserve">
+    <value>Ventes immobili&amp;egrave;res</value>
+  </data>
+  <data name="Vetements" xml:space="preserve">
+    <value>V&amp;ecirc;tements</value>
+  </data>
+  <data name="MarquesCourantes" xml:space="preserve">
+    <value>Marques courantes</value>
+  </data>
+  <data name="AutresMarques" xml:space="preserve">
+    <value>Autres marques</value>
+  </data>
+  <data name="LabelBerline" xml:space="preserve">
+    <value>Berline</value>
+  </data>
+  <data name="LabelBreak" xml:space="preserve">
+    <value>Break</value>
+  </data>
+  <data name="LabelChercher" xml:space="preserve">
+    <value>Chercher</value>
+  </data>
+  <data name="LabelKmMax" xml:space="preserve">
+    <value>KM max</value>
+  </data>
+  <data name="LabelKmMin" xml:space="preserve">
+    <value>KM min</value>
+  </data>
+  <data name="LabelLoading" xml:space="preserve">
+    <value>Telechargement</value>
+  </data>
+  <data name="LabelPickup" xml:space="preserve">
+    <value>Pickup</value>
+  </data>
+  <data name="LabelPrixMax" xml:space="preserve">
+    <value>Prix max</value>
+  </data>
+  <data name="LabelPrixMin" xml:space="preserve">
+    <value>Prix min</value>
+  </data>
+  <data name="LabelSuv" xml:space="preserve">
+    <value>SUV</value>
+  </data>
+  <data name="LabelTrie1" xml:space="preserve">
+    <value>Trier par : Date</value>
+  </data>
+  <data name="LabelTrie2" xml:space="preserve">
+    <value>Trier par : Prix</value>
+  </data>
+  <data name="TitleIndex" xml:space="preserve">
+    <value>Toujjar</value>
+  </data>
+  <data name="boite" xml:space="preserve">
+    <value>Boite</value>
+  </data>
+  <data name="LabelTel" xml:space="preserve">
+    <value>Tel</value>
+  </data>
+  <data name="valid_data_error" xml:space="preserve">
+    <value>Erreur! Verifier ici.</value>
+  </data>
+  <data name="valid_required" xml:space="preserve">
+    <value>Informations Obligatoires</value>
+  </data>
+  <data name="actualiser_la_page" xml:space="preserve">
+    <value>Veuillez actualiser la page !</value>
+  </data>
+  <data name="AucunProduit1" xml:space="preserve">
+    <value>Aucun Produit trouver dans cette region</value>
+  </data>
+  <data name="connection_msg1" xml:space="preserve">
+    <value>Vous avez deconnecter apres l'ancienne requete</value>
+  </data>
+  <data name="VeuillezRechercher" xml:space="preserve">
+    <value>Veuillez rechercher</value>
   </data>
 </root>

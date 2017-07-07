@@ -61,6 +61,15 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à رجاء قم بتحديث الصفحة !.
+        /// </summary>
+        public static string actualiser_la_page {
+            get {
+                return ResourceManager.GetString("actualiser_la_page", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à السعر.
         /// </summary>
         public static string adPrix {
@@ -79,6 +88,60 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à لعيون.
+        /// </summary>
+        public static string Aïoun {
+            get {
+                return ResourceManager.GetString("Aïoun", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à اكجوجت.
+        /// </summary>
+        public static string Akjoujt {
+            get {
+                return ResourceManager.GetString("Akjoujt", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ألاك.
+        /// </summary>
+        public static string Aleg {
+            get {
+                return ResourceManager.GetString("Aleg", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الأثاث.
+        /// </summary>
+        public static string Ammeublement {
+            get {
+                return ResourceManager.GetString("Ammeublement", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الحيوان.
+        /// </summary>
+        public static string Animaux {
+            get {
+                return ResourceManager.GetString("Animaux", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الكدحان.
+        /// </summary>
+        public static string ArtTable {
+            get {
+                return ResourceManager.GetString("ArtTable", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à لعصابة.
         /// </summary>
         public static string assaba {
@@ -88,11 +151,56 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à أطار.
+        /// </summary>
+        public static string Atar {
+            get {
+                return ResourceManager.GetString("Atar", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à لاتوجد تجارة في هذه المنطقة حاليا !.
+        /// </summary>
+        public static string AucunProduit1 {
+            get {
+                return ResourceManager.GetString("AucunProduit1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à اتوماتيك.
         /// </summary>
         public static string automatique {
             get {
                 return ResourceManager.GetString("automatique", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à آخر.
+        /// </summary>
+        public static string Autre {
+            get {
+                return ResourceManager.GetString("Autre", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à سيارات أخرى.
+        /// </summary>
+        public static string AutresMarques {
+            get {
+                return ResourceManager.GetString("AutresMarques", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ابوات.
+        /// </summary>
+        public static string boite {
+            get {
+                return ResourceManager.GetString("boite", resourceCulture);
             }
         }
         
@@ -160,6 +268,15 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à المكاتب و مستلزمات التجارة.
+        /// </summary>
+        public static string Bureau_et_Commerce {
+            get {
+                return ResourceManager.GetString("Bureau_et_Commerce", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à إكسسوارات.
         /// </summary>
         public static string cat_accessoires {
@@ -192,6 +309,15 @@ namespace Sough {
         public static string cat_apparence {
             get {
                 return ResourceManager.GetString("cat_apparence", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à قطع الغيار .
+        /// </summary>
+        public static string cat_auto_pi_et_acc {
+            get {
+                return ResourceManager.GetString("cat_auto_pi_et_acc", resourceCulture);
             }
         }
         
@@ -313,7 +439,7 @@ namespace Sough {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à الإيجار.
+        ///   Recherche une chaîne localisée semblable à إيجار.
         /// </summary>
         public static string cat_location {
             get {
@@ -493,6 +619,60 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à الفئة.
+        /// </summary>
+        public static string Categorie {
+            get {
+                return ResourceManager.GetString("Categorie", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الإبل.
+        /// </summary>
+        public static string Chameaux {
+            get {
+                return ResourceManager.GetString("Chameaux", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الغنم.
+        /// </summary>
+        public static string Chevres {
+            get {
+                return ResourceManager.GetString("Chevres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à السمسرة.
+        /// </summary>
+        public static string CommerceMarches {
+            get {
+                return ResourceManager.GetString("CommerceMarches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à لقد تم قطع الإتصال بعد الطلب الأخير.
+        /// </summary>
+        public static string connection_msg1 {
+            get {
+                return ResourceManager.GetString("connection_msg1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à دروس خصوصية.
+        /// </summary>
+        public static string CourParticuliers {
+            get {
+                return ResourceManager.GetString("CourParticuliers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à تم.
         /// </summary>
         public static string CreatAdValueBtn {
@@ -556,6 +736,42 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à النقش.
+        /// </summary>
+        public static string Decoration {
+            get {
+                return ResourceManager.GetString("Decoration", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à تعليم السياقة.
+        /// </summary>
+        public static string EcoleAuto {
+            get {
+                return ResourceManager.GetString("EcoleAuto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الأجهزة المنزلية.
+        /// </summary>
+        public static string Electromenager {
+            get {
+                return ResourceManager.GetString("Electromenager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à المعدات الصناعية.
+        /// </summary>
+        public static string EquipementIndustriels {
+            get {
+                return ResourceManager.GetString("EquipementIndustriels", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à البيانا ناقصة أو خاطئة.
         /// </summary>
         public static string Erreur_data {
@@ -574,7 +790,7 @@ namespace Sough {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à اسانس.
+        ///   Recherche une chaîne localisée semblable à إصانص.
         /// </summary>
         public static string essance {
             get {
@@ -610,6 +826,15 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à مزودين المكاتب.
+        /// </summary>
+        public static string FournitureBureaus {
+            get {
+                return ResourceManager.GetString("FournitureBureaus", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à كزوال.
         /// </summary>
         public static string gasoile {
@@ -624,6 +849,15 @@ namespace Sough {
         public static string gorgol {
             get {
                 return ResourceManager.GetString("gorgol", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à كرو.
+        /// </summary>
+        public static string Guerou {
+            get {
+                return ResourceManager.GetString("Guerou", resourceCulture);
             }
         }
         
@@ -655,6 +889,15 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à العقار.
+        /// </summary>
+        public static string Immobilier {
+            get {
+                return ResourceManager.GetString("Immobilier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à انشيري.
         /// </summary>
         public static string inchiri {
@@ -682,11 +925,56 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à البرامج و الأجهزة الألكتونية.
+        /// </summary>
+        public static string Informatique_app_et_mat {
+            get {
+                return ResourceManager.GetString("Informatique_app_et_mat", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الألعاب.
+        /// </summary>
+        public static string Jeux {
+            get {
+                return ResourceManager.GetString("Jeux", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à كيهيدي.
+        /// </summary>
+        public static string Kaedi {
+            get {
+                return ResourceManager.GetString("Kaedi", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à كيفة.
+        /// </summary>
+        public static string Kiffa {
+            get {
+                return ResourceManager.GetString("Kiffa", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à لون و شكل السيارة.
         /// </summary>
         public static string label_couleur_et_type {
             get {
                 return ResourceManager.GetString("label_couleur_et_type", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à كم.
+        /// </summary>
+        public static string label_km {
+            get {
+                return ResourceManager.GetString("label_km", resourceCulture);
             }
         }
         
@@ -709,11 +997,29 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à اصغيرة.
+        /// </summary>
+        public static string LabelBerline {
+            get {
+                return ResourceManager.GetString("LabelBerline", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à ابوات فيتس.
         /// </summary>
         public static string LabelBoiteDeVitesse {
             get {
                 return ResourceManager.GetString("LabelBoiteDeVitesse", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ابريك.
+        /// </summary>
+        public static string LabelBreak {
+            get {
+                return ResourceManager.GetString("LabelBreak", resourceCulture);
             }
         }
         
@@ -732,6 +1038,15 @@ namespace Sough {
         public static string LabelCartier {
             get {
                 return ResourceManager.GetString("LabelCartier", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à بحث.
+        /// </summary>
+        public static string LabelChercher {
+            get {
+                return ResourceManager.GetString("LabelChercher", resourceCulture);
             }
         }
         
@@ -808,6 +1123,33 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à مسافة أطول.
+        /// </summary>
+        public static string LabelKmMax {
+            get {
+                return ResourceManager.GetString("LabelKmMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à مسافة أدنى.
+        /// </summary>
+        public static string LabelKmMin {
+            get {
+                return ResourceManager.GetString("LabelKmMin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à تنزيل.
+        /// </summary>
+        public static string LabelLoading {
+            get {
+                return ResourceManager.GetString("LabelLoading", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à سعر الإيجار للشهر.
         /// </summary>
         public static string LabelLoyerMensuel {
@@ -862,6 +1204,15 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à بيكوب.
+        /// </summary>
+        public static string LabelPickup {
+            get {
+                return ResourceManager.GetString("LabelPickup", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à عدد الغرف.
         /// </summary>
         public static string LabelPieces {
@@ -880,6 +1231,24 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à أعلى سعر.
+        /// </summary>
+        public static string LabelPrixMax {
+            get {
+                return ResourceManager.GetString("LabelPrixMax", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à أقل سعر.
+        /// </summary>
+        public static string LabelPrixMin {
+            get {
+                return ResourceManager.GetString("LabelPrixMin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à المساحة.
         /// </summary>
         public static string LabelSurface {
@@ -889,11 +1258,47 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à اكبيرة.
+        /// </summary>
+        public static string LabelSuv {
+            get {
+                return ResourceManager.GetString("LabelSuv", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à هاتف.
+        /// </summary>
+        public static string LabelTel {
+            get {
+                return ResourceManager.GetString("LabelTel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à الإسم.
         /// </summary>
         public static string LabelTraderName {
             get {
                 return ResourceManager.GetString("LabelTraderName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à تنظيم حسب : التاريخ.
+        /// </summary>
+        public static string LabelTrie1 {
+            get {
+                return ResourceManager.GetString("LabelTrie1", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à تنظيم حسب : السعر.
+        /// </summary>
+        public static string LabelTrie2 {
+            get {
+                return ResourceManager.GetString("LabelTrie2", resourceCulture);
             }
         }
         
@@ -934,6 +1339,15 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à الإيجار.
+        /// </summary>
+        public static string Location {
+            get {
+                return ResourceManager.GetString("Location", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à تجار.
         /// </summary>
         public static string logo {
@@ -948,6 +1362,87 @@ namespace Sough {
         public static string manuel {
             get {
                 return ResourceManager.GetString("manuel", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à سيارات شائعة.
+        /// </summary>
+        public static string MarquesCourante {
+            get {
+                return ResourceManager.GetString("MarquesCourante", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à حاجيات المنازل.
+        /// </summary>
+        public static string Materiel_maison {
+            get {
+                return ResourceManager.GetString("Materiel_maison", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à المعدات الحرفية.
+        /// </summary>
+        public static string Materiel_proff {
+            get {
+                return ResourceManager.GetString("Materiel_proff", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à المعدات الصحية.
+        /// </summary>
+        public static string MaterielMedicals {
+            get {
+                return ResourceManager.GetString("MaterielMedicals", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à المعدات الثقيلة.
+        /// </summary>
+        public static string MGrosOeuvres {
+            get {
+                return ResourceManager.GetString("MGrosOeuvres", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الدراجات النارية.
+        /// </summary>
+        public static string Moto {
+            get {
+                return ResourceManager.GetString("Moto", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à النقل.
+        /// </summary>
+        public static string Mtransports {
+            get {
+                return ResourceManager.GetString("Mtransports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ميلتيميديا.
+        /// </summary>
+        public static string Multimedia {
+            get {
+                return ResourceManager.GetString("Multimedia", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à النعمة.
+        /// </summary>
+        public static string Nema {
+            get {
+                return ResourceManager.GetString("Nema", resourceCulture);
             }
         }
         
@@ -988,6 +1483,24 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à انواذيبو.
+        /// </summary>
+        public static string Nouadhibou {
+            get {
+                return ResourceManager.GetString("Nouadhibou", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à انواكشوط.
+        /// </summary>
+        public static string Nouakchott {
+            get {
+                return ResourceManager.GetString("Nouakchott", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à مستعمل(ة).
         /// </summary>
         public static string Occasion {
@@ -1020,6 +1533,15 @@ namespace Sough {
         public static string operation_unknown {
             get {
                 return ResourceManager.GetString("operation_unknown", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الحواسيب.
+        /// </summary>
+        public static string Ordinateurs {
+            get {
+                return ResourceManager.GetString("Ordinateurs", resourceCulture);
             }
         }
         
@@ -1065,6 +1587,24 @@ namespace Sough {
         public static string prix {
             get {
                 return ResourceManager.GetString("prix", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الفندقة.
+        /// </summary>
+        public static string RestaurantHotelleries {
+            get {
+                return ResourceManager.GetString("RestaurantHotelleries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à روصو.
+        /// </summary>
+        public static string Rosso {
+            get {
+                return ResourceManager.GetString("Rosso", resourceCulture);
             }
         }
         
@@ -1141,15 +1681,6 @@ namespace Sough {
         }
         
         /// <summary>
-        ///   Recherche une chaîne localisée semblable à مقطع لحجار.
-        /// </summary>
-        public static string select_ville_magta_lahjar {
-            get {
-                return ResourceManager.GetString("select_ville_magta_lahjar", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Recherche une chaîne localisée semblable à انواذيبو.
         /// </summary>
         public static string select_ville_ndb {
@@ -1213,6 +1744,33 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à سيليبابي.
+        /// </summary>
+        public static string Selibaby {
+            get {
+                return ResourceManager.GetString("Selibaby", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à خدمات المنازل.
+        /// </summary>
+        public static string ServiceMaisons {
+            get {
+                return ResourceManager.GetString("ServiceMaisons", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à خدمات.
+        /// </summary>
+        public static string Services {
+            get {
+                return ResourceManager.GetString("Services", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à Gb.
         /// </summary>
         public static string SGb {
@@ -1249,11 +1807,47 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à الهواتف.
+        /// </summary>
+        public static string Telephones {
+            get {
+                return ResourceManager.GetString("Telephones", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à التلفزات.
+        /// </summary>
+        public static string Televisions {
+            get {
+                return ResourceManager.GetString("Televisions", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à تجكجة.
+        /// </summary>
+        public static string Tidjikdja {
+            get {
+                return ResourceManager.GetString("Tidjikdja", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à تيرس زمور.
         /// </summary>
         public static string tiris {
             get {
                 return ResourceManager.GetString("tiris", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à تجار للتجارة الألكترونية.
+        /// </summary>
+        public static string TitleIndex {
+            get {
+                return ResourceManager.GetString("TitleIndex", resourceCulture);
             }
         }
         
@@ -1303,6 +1897,69 @@ namespace Sough {
         }
         
         /// <summary>
+        ///   Recherche une chaîne localisée semblable à البقر.
+        /// </summary>
+        public static string Vaches {
+            get {
+                return ResourceManager.GetString("Vaches", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à خطأ في المعلومات.
+        /// </summary>
+        public static string valid_data_error {
+            get {
+                return ResourceManager.GetString("valid_data_error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à معلومات إلزامية.
+        /// </summary>
+        public static string valid_required {
+            get {
+                return ResourceManager.GetString("valid_required", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à المركبات.
+        /// </summary>
+        public static string Vehicules {
+            get {
+                return ResourceManager.GetString("Vehicules", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à بيع .
+        /// </summary>
+        public static string VenteImmobiliers {
+            get {
+                return ResourceManager.GetString("VenteImmobiliers", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à الملابس.
+        /// </summary>
+        public static string Vetements {
+            get {
+                return ResourceManager.GetString("Vetements", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ابحث مرة أخرى.
+        /// </summary>
+        public static string VeuillezRechercher {
+            get {
+                return ResourceManager.GetString("VeuillezRechercher", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Recherche une chaîne localisée semblable à المدينة.
         /// </summary>
         public static string ville {
@@ -1317,6 +1974,15 @@ namespace Sough {
         public static string villeRqd {
             get {
                 return ResourceManager.GetString("villeRqd", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Recherche une chaîne localisée semblable à ازويرات.
+        /// </summary>
+        public static string Zouerate {
+            get {
+                return ResourceManager.GetString("Zouerate", resourceCulture);
             }
         }
     }

@@ -49,23 +49,23 @@ function aPager(href, page) {
 
 }
 
-function trierPar(controller) {
+function trierPar(controller,reg) {
 
     var e = document.getElementById("TrieID");
     var t = e.options[e.selectedIndex].value;
 
     switch (t) {
         case "1":
-            window.location.href = '../' + controller + '/TrierParDate';
+            window.location.href = '../' + controller + '/TrierParDate?r='+reg;
 
             break;
         case "2":
             
-            window.location.href = '../' + controller + '/TrierParPrix';
+            window.location.href = '../' + controller + '/TrierParPrix?r='+reg;
 
             break;
         default:
-            window.location.href = '../' + controller + '/TrierParDate';
+            window.location.href = '../' + controller + '/TrierParDate?r='+reg;
             break;
     }
     

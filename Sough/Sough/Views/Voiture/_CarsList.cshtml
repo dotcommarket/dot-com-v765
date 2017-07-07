@@ -1,7 +1,6 @@
 ﻿@model PagedList.IPagedList<Sough.Models.Voiture>
 @using PagedList.Mvc;
 
-
 @try
 {
 if (Model == null && ViewBag.err == "true")
@@ -11,10 +10,10 @@ if (Model == null && ViewBag.err == "true")
         <div class="jumbotron" style="margin-top:21px;">
             <h1>
                 <span class="@Sough.App_Code.Ticons.attention"></span>
-                Vous avez deconnecter apres l'ancienne requete
+                @Sough.Resource.connection_msg1
             </h1>
             <p>
-                Veuillez actualiser la page !
+                @Sough.Resource.VeuillezRechercher
             </p>
         </div>
     </div>
@@ -29,10 +28,10 @@ if (Model.Count <1)
             <div class="jumbotron" style="margin-top:21px;">
                 <h1>
                     <span class="@Sough.App_Code.Ticons.exclamation"></span>
-                    Aucune voiture trouvé
+                    @Sough.Resource.AucunProduit1
                 </h1>
                 <p>
-                    Veuillez rechercher !
+                    @Sough.Resource.VeuillezRechercher
                 </p>
             </div>
         </div>
@@ -71,16 +70,16 @@ else {
                     </tr>
                     <tr>
                         <td class="td1">
-                            <i>@car.kilometrage km</i></td>
-                        <td>@car.carburant</td>
+                            <i>@car.kilometrage @Sough.Resource.label_km</i></td>
+                        <td>@Sough.Resource.ResourceManager.GetString(car.carburant)</td>
                     </tr>
                     <tr>
-                        <td class="td1">@car.BoiteDeVitesse</td>
-                        <td>@car.EstNeuf</td>
+                        <td class="td1">@Sough.Resource.ResourceManager.GetString(car.BoiteDeVitesse)</td>
+                        <td>@Sough.Resource.ResourceManager.GetString(car.EstNeuf)</td>
                     </tr>
                     <tr>
                         <td class="td1">
-                            <i class="@Sough.App_Code.Ticons.map_marker">@car.ville</i>
+                            <i class="@Sough.App_Code.Ticons.map_marker">@Sough.Resource.ResourceManager.GetString(car.ville)</i>
                         </td>
                     </tr>
                     <tr>
@@ -132,17 +131,17 @@ else {
                     </tr>
                     <tr>
                         <td class="td1">
-                            <i>@car.kilometrage km</i>
+                            <i>@car.kilometrage @Sough.Resource.label_km</i>
                         </td>
-                        <td>@car.carburant</td>
+                        <td>@Sough.Resource.ResourceManager.GetString(car.carburant)</td>
                     </tr>
                     <tr>
-                        <td class="td1">@car.BoiteDeVitesse</td>
-                        <td>@car.EstNeuf</td>
+                        <td class="td1">@Sough.Resource.ResourceManager.GetString(car.BoiteDeVitesse)</td>
+                        <td>@Sough.Resource.ResourceManager.GetString(car.EstNeuf)</td>
                     </tr>
                     <tr>
                         <td class="td1">
-                            <i class="@Sough.App_Code.Ticons.map_marker">@car.ville</i>
+                            <i class="@Sough.App_Code.Ticons.map_marker">@Sough.Resource.ResourceManager.GetString(car.ville)</i>
                         </td>
                     </tr>
                     <tr>
@@ -192,17 +191,17 @@ else {
                                 </tr>
                                 <tr>
                                     <td class="td1">
-                                        <i>@car.kilometrage km</i>
+                                        <i>@car.kilometrage @Sough.Resource.label_km</i>
                                     </td>
-                                    <td>@car.carburant</td>
+                                    <td>@Sough.Resource.ResourceManager.GetString(car.carburant)</td>
                                 </tr>
                                 <tr>
-                                    <td class="td1">@car.BoiteDeVitesse</td>
-                                    <td>@car.EstNeuf</td>
+                                    <td class="td1">@Sough.Resource.ResourceManager.GetString(car.BoiteDeVitesse)</td>
+                                    <td>@Sough.Resource.ResourceManager.GetString(car.EstNeuf)</td>
                                 </tr>
                                 <tr>
                                     <td class="td1">
-                                        <i class="@Sough.App_Code.Ticons.map_marker">@car.ville</i>
+                                        <i class="@Sough.App_Code.Ticons.map_marker">@Sough.Resource.ResourceManager.GetString(car.ville)</i>
                                     </td>
                                 </tr>
                                 <tr>

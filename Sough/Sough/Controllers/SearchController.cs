@@ -8,7 +8,7 @@ using PagedList;
 using Sough.Helpers;
 namespace Sough.Controllers
 {
-    public class SearchController : Controller
+    public class SearchController : BaseController
     {
         private ToujjarDatabase db = new ToujjarDatabase();
         private const int PageSize = 6;
@@ -358,6 +358,7 @@ namespace Sough.Controllers
 
                         PagedList<Voiture> model = new PagedList<Voiture>(listVoitures, page, PageSize);
                         return View("~/Views/Voiture/Ads.cshtml", model);
+
                     }
                 }
             }

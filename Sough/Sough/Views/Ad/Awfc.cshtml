@@ -34,7 +34,7 @@
                 </div>
                 <div class="input-group" id="btn-search">
                     <div class="input-group-btn">
-                        <button class="btn btn-default" type="submit">Cherche <i class="@Sough.App_Code.Ticons.search"></i></button>
+                        <button class="btn btn-default" type="submit">@Sough.Resource.btn_cherche <i class="@Sough.App_Code.Ticons.search"></i></button>
                     </div>
                 </div>
             </form>
@@ -47,16 +47,16 @@
     <div class="row" style="margin-top:-10px;margin-bottom:-10px;">
         <div class="col-xs-6 col-sm-4 col-md-2 div-span" id="div-trie" style="visibility:visible;">
             <span class="span-trie">
-                <select id="TrieID" onchange="trierPar('Ad');" class="featurebox_select_medium">
+                <select id="TrieID" onchange="trierPar('Ad','@ViewBag.ville');" class="featurebox_select_medium">
                     @if (Sough.Helpers.AdHelper.trie == 1)
                     {
-                        <option id="opt1" value="1" selected>Trier par : Date</option>
-                        <option id="opt2" value="2">Trier par : Prix</option>
+                        <option id="opt1" value="1" selected>@Sough.Resource.LabelTrie1</option>
+                        <option id="opt2" value="2">@Sough.Resource.LabelTrie2</option>
                     }
                     else
                     {
-                        <option id="opt1" value="1">Trier par : Date</option>
-                        <option id="opt2" value="2" selected>Trier par : Prix</option>
+                        <option id="opt1" value="1">@Sough.Resource.LabelTrie1</option>
+                        <option id="opt2" value="2" selected>@Sough.Resource.LabelTrie2</option>
                     }
                 </select>
             </span>
@@ -65,7 +65,7 @@
         <div class="col-md-2"></div>
         <div class="col-md-2" id="loading" style="display: none;">
             <i class="fa fa-spinner fa-spin fa-3x fa-fw"></i>
-            <span class="sr-only">Loading...</span>
+            <span class="sr-only">@Sough.Resource.LabelLoading...</span>
         </div>
         <div class="col-md-2">
 
@@ -91,10 +91,10 @@
 @section Scripts {
 
     @Scripts.Render("~/bundles/select-options")
-    @Scripts.Render("~/bundles/select-options")
+    @*@Scripts.Render("~/bundles/select-options")*@
 
     <script type="text/javascript" src="~/Scripts/show/wares_by_r.js"></script>
     
-    @Scripts.Render("~/bundles/select-options")
+    @*@Scripts.Render("~/bundles/select-options")*@
 
 }

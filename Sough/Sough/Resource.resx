@@ -228,9 +228,6 @@
   <data name="select_ville_kiffa" xml:space="preserve">
     <value>كيفة</value>
   </data>
-  <data name="select_ville_ndb" xml:space="preserve">
-    <value>انواذيبو</value>
-  </data>
   <data name="select_ville_nema" xml:space="preserve">
     <value>النعمة</value>
   </data>
@@ -270,9 +267,6 @@
   <data name="select_ville_guerou" xml:space="preserve">
     <value>كرو</value>
   </data>
-  <data name="select_ville_magta_lahjar" xml:space="preserve">
-    <value>مقطع لحجار</value>
-  </data>
   <data name="label_couleur_et_type" xml:space="preserve">
     <value>لون و شكل السيارة</value>
   </data>
@@ -298,7 +292,7 @@
     <value>اتوماتيك</value>
   </data>
   <data name="essance" xml:space="preserve">
-    <value>اسانس</value>
+    <value>إصانص</value>
   </data>
   <data name="gasoile" xml:space="preserve">
     <value>كزوال</value>
@@ -415,7 +409,7 @@
     <value>الكتب</value>
   </data>
   <data name="cat_location" xml:space="preserve">
-    <value>الإيجار</value>
+    <value>إيجار</value>
   </data>
   <data name="cat_maison" xml:space="preserve">
     <value>المنزل</value>
@@ -536,5 +530,233 @@
   </data>
   <data name="btn3" xml:space="preserve">
     <value>ارسل طلب</value>
+  </data>
+  <data name="Akjoujt" xml:space="preserve">
+    <value>اكجوجت</value>
+  </data>
+  <data name="Aleg" xml:space="preserve">
+    <value>ألاك</value>
+  </data>
+  <data name="Atar" xml:space="preserve">
+    <value>أطار</value>
+  </data>
+  <data name="Aïoun" xml:space="preserve">
+    <value>لعيون</value>
+  </data>
+  <data name="Guerou" xml:space="preserve">
+    <value>كرو</value>
+  </data>
+  <data name="Kaedi" xml:space="preserve">
+    <value>كيهيدي</value>
+  </data>
+  <data name="Kiffa" xml:space="preserve">
+    <value>كيفة</value>
+  </data>
+  <data name="label_km" xml:space="preserve">
+    <value>كم</value>
+  </data>
+  <data name="Nema" xml:space="preserve">
+    <value>النعمة</value>
+  </data>
+  <data name="Nouadhibou" xml:space="preserve">
+    <value>انواذيبو</value>
+  </data>
+  <data name="Nouakchott" xml:space="preserve">
+    <value>انواكشوط</value>
+  </data>
+  <data name="Rosso" xml:space="preserve">
+    <value>روصو</value>
+  </data>
+  <data name="select_ville_ndb" xml:space="preserve">
+    <value>انواذيبو</value>
+  </data>
+  <data name="Selibaby" xml:space="preserve">
+    <value>سيليبابي</value>
+  </data>
+  <data name="Tidjikdja" xml:space="preserve">
+    <value>تجكجة</value>
+  </data>
+  <data name="Zouerate" xml:space="preserve">
+    <value>ازويرات</value>
+  </data>
+  <data name="Ammeublement" xml:space="preserve">
+    <value>الأثاث</value>
+  </data>
+  <data name="Animaux" xml:space="preserve">
+    <value>الحيوان</value>
+  </data>
+  <data name="ArtTable" xml:space="preserve">
+    <value>الكدحان</value>
+  </data>
+  <data name="Autre" xml:space="preserve">
+    <value>آخر</value>
+  </data>
+  <data name="Bureau_et_Commerce" xml:space="preserve">
+    <value>المكاتب و مستلزمات التجارة</value>
+  </data>
+  <data name="Categorie" xml:space="preserve">
+    <value>الفئة</value>
+  </data>
+  <data name="cat_auto_pi_et_acc" xml:space="preserve">
+    <value>قطع الغيار </value>
+  </data>
+  <data name="Chameaux" xml:space="preserve">
+    <value>الإبل</value>
+  </data>
+  <data name="Chevres" xml:space="preserve">
+    <value>الغنم</value>
+  </data>
+  <data name="CommerceMarches" xml:space="preserve">
+    <value>السمسرة</value>
+  </data>
+  <data name="CourParticuliers" xml:space="preserve">
+    <value>دروس خصوصية</value>
+  </data>
+  <data name="Decoration" xml:space="preserve">
+    <value>النقش</value>
+  </data>
+  <data name="EcoleAuto" xml:space="preserve">
+    <value>تعليم السياقة</value>
+  </data>
+  <data name="Electromenager" xml:space="preserve">
+    <value>الأجهزة المنزلية</value>
+  </data>
+  <data name="EquipementIndustriels" xml:space="preserve">
+    <value>المعدات الصناعية</value>
+  </data>
+  <data name="FournitureBureaus" xml:space="preserve">
+    <value>مزودين المكاتب</value>
+  </data>
+  <data name="Immobilier" xml:space="preserve">
+    <value>العقار</value>
+  </data>
+  <data name="Informatique_app_et_mat" xml:space="preserve">
+    <value>البرامج و الأجهزة الألكتونية</value>
+  </data>
+  <data name="Jeux" xml:space="preserve">
+    <value>الألعاب</value>
+  </data>
+  <data name="Location" xml:space="preserve">
+    <value>الإيجار</value>
+  </data>
+  <data name="MaterielMedicals" xml:space="preserve">
+    <value>المعدات الصحية</value>
+  </data>
+  <data name="Materiel_maison" xml:space="preserve">
+    <value>حاجيات المنازل</value>
+  </data>
+  <data name="Materiel_proff" xml:space="preserve">
+    <value>المعدات الحرفية</value>
+  </data>
+  <data name="MGrosOeuvres" xml:space="preserve">
+    <value>المعدات الثقيلة</value>
+  </data>
+  <data name="Moto" xml:space="preserve">
+    <value>الدراجات النارية</value>
+  </data>
+  <data name="Mtransports" xml:space="preserve">
+    <value>النقل</value>
+  </data>
+  <data name="Multimedia" xml:space="preserve">
+    <value>ميلتيميديا</value>
+  </data>
+  <data name="Ordinateurs" xml:space="preserve">
+    <value>الحواسيب</value>
+  </data>
+  <data name="RestaurantHotelleries" xml:space="preserve">
+    <value>الفندقة</value>
+  </data>
+  <data name="ServiceMaisons" xml:space="preserve">
+    <value>خدمات المنازل</value>
+  </data>
+  <data name="Services" xml:space="preserve">
+    <value>خدمات</value>
+  </data>
+  <data name="Telephones" xml:space="preserve">
+    <value>الهواتف</value>
+  </data>
+  <data name="Televisions" xml:space="preserve">
+    <value>التلفزات</value>
+  </data>
+  <data name="Vaches" xml:space="preserve">
+    <value>البقر</value>
+  </data>
+  <data name="Vehicules" xml:space="preserve">
+    <value>المركبات</value>
+  </data>
+  <data name="VenteImmobiliers" xml:space="preserve">
+    <value>بيع </value>
+  </data>
+  <data name="Vetements" xml:space="preserve">
+    <value>الملابس</value>
+  </data>
+  <data name="AutresMarques" xml:space="preserve">
+    <value>سيارات أخرى</value>
+  </data>
+  <data name="LabelBerline" xml:space="preserve">
+    <value>اصغيرة</value>
+  </data>
+  <data name="LabelBreak" xml:space="preserve">
+    <value>ابريك</value>
+  </data>
+  <data name="LabelChercher" xml:space="preserve">
+    <value>بحث</value>
+  </data>
+  <data name="LabelKmMax" xml:space="preserve">
+    <value>مسافة أطول</value>
+  </data>
+  <data name="LabelKmMin" xml:space="preserve">
+    <value>مسافة أدنى</value>
+  </data>
+  <data name="LabelLoading" xml:space="preserve">
+    <value>تنزيل</value>
+  </data>
+  <data name="LabelPickup" xml:space="preserve">
+    <value>بيكوب</value>
+  </data>
+  <data name="LabelPrixMax" xml:space="preserve">
+    <value>أعلى سعر</value>
+  </data>
+  <data name="LabelPrixMin" xml:space="preserve">
+    <value>أقل سعر</value>
+  </data>
+  <data name="LabelSuv" xml:space="preserve">
+    <value>اكبيرة</value>
+  </data>
+  <data name="LabelTrie1" xml:space="preserve">
+    <value>تنظيم حسب : التاريخ</value>
+  </data>
+  <data name="LabelTrie2" xml:space="preserve">
+    <value>تنظيم حسب : السعر</value>
+  </data>
+  <data name="MarquesCourante" xml:space="preserve">
+    <value>سيارات شائعة</value>
+  </data>
+  <data name="TitleIndex" xml:space="preserve">
+    <value>تجار للتجارة الألكترونية</value>
+  </data>
+  <data name="boite" xml:space="preserve">
+    <value>ابوات</value>
+  </data>
+  <data name="LabelTel" xml:space="preserve">
+    <value>هاتف</value>
+  </data>
+  <data name="valid_data_error" xml:space="preserve">
+    <value>خطأ في المعلومات</value>
+  </data>
+  <data name="valid_required" xml:space="preserve">
+    <value>معلومات إلزامية</value>
+  </data>
+  <data name="actualiser_la_page" xml:space="preserve">
+    <value>رجاء قم بتحديث الصفحة !</value>
+  </data>
+  <data name="AucunProduit1" xml:space="preserve">
+    <value>لاتوجد تجارة في هذه المنطقة حاليا !</value>
+  </data>
+  <data name="connection_msg1" xml:space="preserve">
+    <value>لقد تم قطع الإتصال بعد الطلب الأخير</value>
+  </data>
+  <data name="VeuillezRechercher" xml:space="preserve">
+    <value>ابحث مرة أخرى</value>
   </data>
 </root>

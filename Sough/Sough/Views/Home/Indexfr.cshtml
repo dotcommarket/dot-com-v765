@@ -147,7 +147,6 @@
                                     <option value="Zouerate">@Sough.Resource.select_ville_zouerate</option>
                                     <option value="Akjoujt">@Sough.Resource.select_ville_akjoujt</option>
                                     <option value="Guerou">@Sough.Resource.select_ville_guerou</option>
-                                    <option value="Magta-Lahjar">@Sough.Resource.select_ville_magta_lahjar</option>
                                     <option value="all">@Sough.Resource.toute_les_villes</option>
                                 </select>
                             </span>
@@ -166,7 +165,7 @@
                 </div>
                 <div class="col-sm-3 hidden-lg hidden-md hidden-xs">
                     <!-- placeX -->
-                    <div class="panel panel-success">
+                    <div class="panel panel-success" style="display:none;">
                         <div class="panel-heading"> Vos produits </div>
                         <ul class="nav nav-staked">
                             <li><a href="">Modifier un produit</a></li>
@@ -221,7 +220,7 @@
            <div class="col-md-2 col-space1">
            </div>
            <div class="col-md-2">
-               <div class="panel panel-tjj" style="margin-right:5px">
+               <div class="panel panel-tjj" style="margin-right:5px;display:none;">
                    <ul class="nav nav-staked">
                        <li><a href="~/Operations/GetProductsFromPN?o=m">Modifier un produit</a></li>
                        <li><a href="~/Operations/GetProductsFromPN?o=s">Supprimer un produit</a></li>
@@ -234,7 +233,7 @@
 
         <div class="row hidden-sm hidden-md hidden-lg">
             <div class="col-xs-5">
-                <div class="panel panel-success">
+                <div class="panel panel-success" style="display:none;">
                     <div class="panel-heading"> Vos produits </div>
                     <ul class="nav nav-staked">
                         <li><a href="">Modifier un produit</a></li>
@@ -271,6 +270,10 @@
                             <li id="cat_list_5000" class="cat_level_0"> <span> @Sough.Resource.cat_immobilier</span> </li>
                             <li id="cat_list_5020" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/ventes-immobilieres"><span class="nohistory">@Sough.Resource.cat_vente_immobilier</span></a>  </li>
                             <li id="cat_list_5040" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/locations"><span class="nohistory">@Sough.Resource.cat_location</span></a>  </li>
+                            <li id="cat_list_5000" class="cat_level_0"> <span> @Sough.Resource.Vetements</span> </li>
+                            <li id="cat_list_2040" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/art-et-antiquites"><span class="nohistory">@Sough.Resource.cat_enfant_bebe</span></a>  </li>
+
+                        
                         </ul>
                     </div>
                     <div>
@@ -285,7 +288,7 @@
                     <div class="navigation list_left_navigation_cat_list">
                         <ul id="cat_list" class="cat_level_0">
                             <li id="cat_list_4000" class="cat_level_0"><span>@Sough.Resource.cat_multimedia</span></span></li>
-
+                            
                             <li id="cat_list_4041" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/musique-et-audio"><span class="nohistory">@Sough.Resource.cat_ordinateurs_portables</span></a>  </li>
                             <li id="cat_list_4043" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/photos-et-cameras"><span class="nohistory">@Sough.Resource.cat_ordinateurs_bureau</span></a>  </li>
                             <li id="cat_list_4080" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/telephonie"><span class="nohistory">@Sough.Resource.cat_telephones</span></a>  </li>
@@ -293,12 +296,12 @@
                             <li id="cat_list_4080" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/telephonie"><span class="nohistory">@Sough.Resource.cat_serveurs</span></a>  </li>
                             <li id="cat_list_4100" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/consoles-et-jeux-video"><span class="nohistory">@Sough.Resource.cat_jeux</span></a>  </li>
                             <li id="cat_list_4042" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/films-et-tv"><span class="nohistory">@Sough.Resource.cat_televisions</span></a>  </li>
+                            <li id="cat_list_4042" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/films-et-tv"><span class="nohistory">@Sough.Resource.Informatique_app_et_mat</span></a>  </li>
 
                             <li id="cat_list_2000" class="cat_level_0"> <span> @Sough.Resource.cat_maison </span></li>
                             <li id="cat_list_2020" class="cat_level_1"> <a class="nohistory" title="" href=""><span class="nohistory">@Sough.Resource.cat_meuble</span></a>  </li>
                             <li id="cat_list_2021" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/ustensiles-et-gastronomie"><span class="nohistory">@Sough.Resource.cat_electromenagers</span></a>  </li>
                             <li id="cat_list_4060" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/electromenagers"><span class="nohistory">@Sough.Resource.cat_ustensiles</span></a>  </li>
-                            <li id="cat_list_2040" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/art-et-antiquites"><span class="nohistory">@Sough.Resource.cat_enfant_bebe</span></a>  </li>
                             <li id="cat_list_2060" class="cat_level_1"> <a class="nohistory" title="" href="~/fr/jardin"><span class="nohistory">@Sough.Resource.cat_accessoires</span></a>  </li>
                         </ul>
                     </div>
